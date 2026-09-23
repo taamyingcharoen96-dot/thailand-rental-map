@@ -1,0 +1,34 @@
+[
+  {
+    "id": "manual-ds-tower-1-suk33-3br-236",
+    "source": "manual (Taam)",
+    "source_url": null,
+    "title": "D.S. Tower 1 Sukhumvit 33 — 3BR condo",
+    "price_thb": null,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size_sqm": 236,
+    "property_type": "condominium",
+    "district": "Watthana",
+    "neighborhood": "Sukhumvit 33 / Phrom Phong",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7371102,
+    "lng": 100.5685765,
+    "available_from": null,
+    "listed_at": null,
+    "scraped_at": "2026-09-23T15:35:09+07:00",
+    "status": "available",
+    "raw_notes": "Building: D.S. Tower 1. Owner-channel manual entry. Building: D.S. Tower 1, Sukhumvit 33 (Soi 33), Khlong Tan Nuea, Watthana. Coords from Google Maps place pin for D.S. Towers 1. Missing: rent price, contact (phone/Line). 6 photos saved under photos/ds-tower-1-sukhumvit-33/.",
+    "photo_urls": [
+      "photos/ds-tower-1-sukhumvit-33/01.jpg",
+      "photos/ds-tower-1-sukhumvit-33/02.jpg",
+      "photos/ds-tower-1-sukhumvit-33/03.jpg",
+      "photos/ds-tower-1-sukhumvit-33/04.jpg",
+      "photos/ds-tower-1-sukhumvit-33/05.jpg",
+      "photos/ds-tower-1-sukhumvit-33/06.jpg"
+    ],
+    "contact": null
+  }
+]
