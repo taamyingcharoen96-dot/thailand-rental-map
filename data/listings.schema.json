@@ -6,9 +6,13 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "id": { "type": "string" },
+    "id": { "type": "string", "minLength": 1 },
+    "building_id": {
+      "type": ["string", "null"],
+      "description": "Id of a building in data/buildings.json, or null when the building is not in the directory yet."
+    },
     "source": { "type": "string" },
-    "source_url": { "type": ["string", "null"], "format": "uri" },
+    "source_url": { "type": ["string", "null"] },
     "title": { "type": "string" },
     "price_thb": { "type": ["number", "null"], "minimum": 0 },
     "currency": { "type": "string", "default": "THB" },
@@ -22,21 +26,29 @@
     "province": { "type": ["string", "null"] },
     "lat": { "type": ["number", "null"], "minimum": -90, "maximum": 90 },
     "lng": { "type": ["number", "null"], "minimum": -180, "maximum": 180 },
-    "available_from": { "type": ["string", "null"], "format": "date" },
-    "listed_at": { "type": ["string", "null"], "format": "date-time" },
-    "scraped_at": { "type": ["string", "null"], "format": "date-time" },
+    "available_from": { "type": ["string", "null"] },
+    "listed_at": { "type": ["string", "null"] },
+    "scraped_at": { "type": ["string", "null"] },
     "status": { "type": "string", "enum": ["available", "unknown", "gone"] },
     "raw_notes": { "type": ["string", "null"] },
     "photo_urls": {
       "type": "array",
       "description": "Site-root relative paths such as photos/<slug>/01.jpg, or absolute http(s) URLs.",
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(photos/.+|https?://.+)$"
+      }
+    },
+    "contact": {
+      "type": ["string", "null"],
+      "description": "Phone, Line, or other contact string. Null when the owner has not provided one."
     }
   },
   "required": [
-    "id", "source", "source_url", "title", "price_thb", "currency",
+    "id", "building_id", "source", "source_url", "title", "price_thb", "currency",
     "bedrooms", "bathrooms", "size_sqm", "property_type", "district",
     "neighborhood", "city", "province", "lat", "lng", "available_from",
-    "listed_at", "scraped_at", "status", "raw_notes", "photo_urls"
+    "listed_at", "scraped_at", "status", "raw_notes", "photo_urls", "contact"
   ]
 }

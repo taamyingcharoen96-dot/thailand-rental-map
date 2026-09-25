@@ -1,5 +1,12 @@
 [
   {
+    "source": "OpenStreetMap",
+    "type": "open-data",
+    "status": "active",
+    "notes": "Phrom Phong building directory (Sukhumvit Soi 23–49). Names and coordinates only, under the Open Database License. Not a listing source.",
+    "last_checked": "2026-09-25"
+  },
+  {
     "source": "Manual (Taam)",
     "type": "manual",
     "status": "active",

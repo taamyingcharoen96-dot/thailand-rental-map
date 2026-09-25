@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/thailand-rental-map/buildings.schema.json",
+  "title": "Thailand Rental Map building directory",
+  "description": "Named residential buildings for one trial area. Names and coordinates come from OpenStreetMap under the Open Database License.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["area", "attribution", "retrieved_at", "buildings"],
+  "properties": {
+    "area": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "description", "bbox"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "bbox": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["south", "west", "north", "east"],
+          "properties": {
+            "south": { "type": "number" },
+            "west": { "type": "number" },
+            "north": { "type": "number" },
+            "east": { "type": "number" }
+          }
+        }
+      }
+    },
+    "attribution": { "type": "string" },
+    "retrieved_at": { "type": "string" },
+    "buildings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/building" }
+    }
+  },
+  "$defs": {
+    "building": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "name_en", "name_th", "aliases", "type", "lat", "lng", "source", "osm_ref"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "name_en": { "type": ["string", "null"] },
+        "name_th": { "type": ["string", "null"] },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "type": { "type": "string", "enum": ["condo", "apartment", "other"] },
+        "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+        "lng": { "type": "number", "minimum": -180, "maximum": 180 },
+        "source": { "type": "string", "minLength": 1 },
+        "osm_ref": { "type": "string" }
+      }
+    }
+  }
+}

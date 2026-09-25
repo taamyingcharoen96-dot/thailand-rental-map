@@ -1,0 +1,2769 @@
+{
+  "area": {
+    "id": "phrom-phong",
+    "name": "Phrom Phong",
+    "description": "Trial area along Sukhumvit from Soi 23 to Soi 49, covering the blocks around BTS Phrom Phong and the Asok and Thong Lo edges.",
+    "bbox": {
+      "south": 13.72,
+      "west": 100.558,
+      "north": 13.745,
+      "east": 100.582
+    }
+  },
+  "attribution": "© OpenStreetMap contributors. Building names and locations are from OpenStreetMap, available under the Open Database License (ODbL).",
+  "retrieved_at": "2026-09-25",
+  "buildings": [
+    {
+      "id": "osm-way-532862534",
+      "name": "137 Pillars Suites",
+      "name_en": "137 Pillars Suites",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7376349,
+      "lng": 100.572343,
+      "source": "openstreetmap",
+      "osm_ref": "way/532862534"
+    },
+    {
+      "id": "osm-way-340670160",
+      "name": "15 Sukhumvit Residences",
+      "name_en": "15 Sukhumvit Residences",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7420568,
+      "lng": 100.5581449,
+      "source": "openstreetmap",
+      "osm_ref": "way/340670160"
+    },
+    {
+      "id": "osm-way-324280509",
+      "name": "31 Residence",
+      "name_en": "31 Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7388614,
+      "lng": 100.5674599,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280509"
+    },
+    {
+      "id": "osm-way-340329155",
+      "name": "33 Residence",
+      "name_en": "33 Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7370167,
+      "lng": 100.5681414,
+      "source": "openstreetmap",
+      "osm_ref": "way/340329155"
+    },
+    {
+      "id": "osm-way-324280446",
+      "name": "33 Tower",
+      "name_en": "33 Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7357875,
+      "lng": 100.5684847,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280446"
+    },
+    {
+      "id": "osm-way-324280531",
+      "name": "39 by Sansiri",
+      "name_en": "39 by Sansiri",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7317664,
+      "lng": 100.570231,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280531"
+    },
+    {
+      "id": "osm-way-324280512",
+      "name": "39 Suites",
+      "name_en": "39 Suites",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7368081,
+      "lng": 100.5743667,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280512"
+    },
+    {
+      "id": "osm-way-76510923",
+      "name": "Acadamia Grand Tower",
+      "name_en": "Acadamia Grand Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7297241,
+      "lng": 100.5726523,
+      "source": "openstreetmap",
+      "osm_ref": "way/76510923"
+    },
+    {
+      "id": "osm-way-329919854",
+      "name": "Aequa Residence",
+      "name_en": "Aequa Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7275236,
+      "lng": 100.5750891,
+      "source": "openstreetmap",
+      "osm_ref": "way/329919854"
+    },
+    {
+      "id": "osm-relation-7583649",
+      "name": "Aguston Sukhumvit 22",
+      "name_en": "Aguston Sukhumvit 22",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7251436,
+      "lng": 100.5640555,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7583649"
+    },
+    {
+      "id": "osm-relation-15011617",
+      "name": "Aree Place",
+      "name_en": "Aree Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7244446,
+      "lng": 100.5707379,
+      "source": "openstreetmap",
+      "osm_ref": "relation/15011617"
+    },
+    {
+      "id": "osm-way-371218879",
+      "name": "Art Thonglor",
+      "name_en": "Art Thonglor",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7401587,
+      "lng": 100.5809665,
+      "source": "openstreetmap",
+      "osm_ref": "way/371218879"
+    },
+    {
+      "id": "osm-way-331962384",
+      "name": "AS Place",
+      "name_en": "AS Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7385971,
+      "lng": 100.5662306,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962384"
+    },
+    {
+      "id": "osm-way-1230362492",
+      "name": "Asa Garden",
+      "name_en": "Asa Garden",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7272155,
+      "lng": 100.5677089,
+      "source": "openstreetmap",
+      "osm_ref": "way/1230362492"
+    },
+    {
+      "id": "osm-way-586770732",
+      "name": "Ashton Asoke",
+      "name_en": "Ashton Asoke",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7390667,
+      "lng": 100.5608674,
+      "source": "openstreetmap",
+      "osm_ref": "way/586770732"
+    },
+    {
+      "id": "osm-way-329745983",
+      "name": "Asok Place",
+      "name_en": "Asok Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7416903,
+      "lng": 100.5623911,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745983"
+    },
+    {
+      "id": "osm-way-332192002",
+      "name": "Asoke Court",
+      "name_en": "Asoke Court",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7387034,
+      "lng": 100.5620642,
+      "source": "openstreetmap",
+      "osm_ref": "way/332192002"
+    },
+    {
+      "id": "osm-way-208691141",
+      "name": "Baan Jamjuree",
+      "name_en": "Baan Jamjuree",
+      "name_th": "บ้านจามจุรี",
+      "aliases": [
+        "บ้านจามจุรี"
+      ],
+      "type": "condo",
+      "lat": 13.7371242,
+      "lng": 100.5722409,
+      "source": "openstreetmap",
+      "osm_ref": "way/208691141"
+    },
+    {
+      "id": "osm-way-332674480",
+      "name": "Baan Mela",
+      "name_en": "Baan Mela",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.727522,
+      "lng": 100.5783703,
+      "source": "openstreetmap",
+      "osm_ref": "way/332674480"
+    },
+    {
+      "id": "osm-node-4460604838",
+      "name": "Baan Porn Tip",
+      "name_en": "Baan Porn Tip",
+      "name_th": "บ้านพรทิพย์",
+      "aliases": [
+        "บ้านพรทิพย์"
+      ],
+      "type": "condo",
+      "lat": 13.7254366,
+      "lng": 100.5625905,
+      "source": "openstreetmap",
+      "osm_ref": "node/4460604838"
+    },
+    {
+      "id": "osm-way-330253737",
+      "name": "Baan Siri Twenty Four",
+      "name_en": "Baan Siri Twenty Four",
+      "name_th": "บ้านสิริทเวนตี้โฟร์",
+      "aliases": [
+        "บ้านสิริทเวนตี้โฟร์",
+        "Baan Siri 24"
+      ],
+      "type": "condo",
+      "lat": 13.7260184,
+      "lng": 100.5682103,
+      "source": "openstreetmap",
+      "osm_ref": "way/330253737"
+    },
+    {
+      "id": "osm-way-208693782",
+      "name": "Baan Suanpetch",
+      "name_en": "Baan Suanpetch",
+      "name_th": "บ้านสวนเพชร",
+      "aliases": [
+        "บ้านสวนเพชร"
+      ],
+      "type": "condo",
+      "lat": 13.7317738,
+      "lng": 100.5714215,
+      "source": "openstreetmap",
+      "osm_ref": "way/208693782"
+    },
+    {
+      "id": "osm-way-340391178",
+      "name": "Baan Sukhumvit 27",
+      "name_en": "Baan Sukhumvit 27",
+      "name_th": "บ้านสุขุมวิท 27",
+      "aliases": [
+        "บ้านสุขุมวิท 27"
+      ],
+      "type": "condo",
+      "lat": 13.7357947,
+      "lng": 100.5647106,
+      "source": "openstreetmap",
+      "osm_ref": "way/340391178"
+    },
+    {
+      "id": "osm-way-324280450",
+      "name": "Bangkok View Tower",
+      "name_en": "Bangkok View Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7348898,
+      "lng": 100.5667662,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280450"
+    },
+    {
+      "id": "osm-way-76510916",
+      "name": "BEATNIQ",
+      "name_en": "BEATNIQ",
+      "name_th": "บีทนิค",
+      "aliases": [
+        "บีทนิค"
+      ],
+      "type": "condo",
+      "lat": 13.7258705,
+      "lng": 100.5754498,
+      "source": "openstreetmap",
+      "osm_ref": "way/76510916"
+    },
+    {
+      "id": "osm-way-340724924",
+      "name": "Belair Mansion",
+      "name_en": "Belair Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7415422,
+      "lng": 100.5637592,
+      "source": "openstreetmap",
+      "osm_ref": "way/340724924"
+    },
+    {
+      "id": "osm-way-329919878",
+      "name": "Belgravia Residences",
+      "name_en": "Belgravia Residences",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7263902,
+      "lng": 100.5737763,
+      "source": "openstreetmap",
+      "osm_ref": "way/329919878"
+    },
+    {
+      "id": "osm-way-331962381",
+      "name": "Bexley Mansion",
+      "name_en": "Bexley Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7388173,
+      "lng": 100.5727185,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962381"
+    },
+    {
+      "id": "osm-way-324280541",
+      "name": "Bio House",
+      "name_en": "Bio House",
+      "name_th": "ไบโอเฮ้าส์",
+      "aliases": [
+        "ไบโอเฮ้าส์"
+      ],
+      "type": "other",
+      "lat": 13.7372411,
+      "lng": 100.5713858,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280541"
+    },
+    {
+      "id": "osm-way-1251934131",
+      "name": "Boonsap Mansion",
+      "name_en": "Boonsap Mansion",
+      "name_th": "บุญทรัพย์ แมนชั่น",
+      "aliases": [
+        "บุญทรัพย์ แมนชั่น"
+      ],
+      "type": "condo",
+      "lat": 13.722662,
+      "lng": 100.5763714,
+      "source": "openstreetmap",
+      "osm_ref": "way/1251934131"
+    },
+    {
+      "id": "osm-way-25053995",
+      "name": "Cedar Tower",
+      "name_en": "Cedar Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7215207,
+      "lng": 100.5655789,
+      "source": "openstreetmap",
+      "osm_ref": "way/25053995"
+    },
+    {
+      "id": "osm-way-764336659",
+      "name": "Celes Asoke",
+      "name_en": "Celes Asoke",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7383155,
+      "lng": 100.5620862,
+      "source": "openstreetmap",
+      "osm_ref": "way/764336659"
+    },
+    {
+      "id": "osm-way-340272802",
+      "name": "Centre Point Residence Phromphong",
+      "name_en": "Centre Point Residence Phromphong",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7418791,
+      "lng": 100.5725033,
+      "source": "openstreetmap",
+      "osm_ref": "way/340272802"
+    },
+    {
+      "id": "osm-way-331962331",
+      "name": "Chanarat Place",
+      "name_en": "Chanarat Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.740007,
+      "lng": 100.5676336,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962331"
+    },
+    {
+      "id": "osm-way-331962374",
+      "name": "Charan Mansion",
+      "name_en": "Charan Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7363221,
+      "lng": 100.5654187,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962374"
+    },
+    {
+      "id": "osm-way-324280503",
+      "name": "Charan Tower",
+      "name_en": "Charan Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.731474,
+      "lng": 100.5732097,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280503"
+    },
+    {
+      "id": "osm-way-374417561",
+      "name": "Chatra Court",
+      "name_en": "Chatra Court",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7408908,
+      "lng": 100.5596024,
+      "source": "openstreetmap",
+      "osm_ref": "way/374417561"
+    },
+    {
+      "id": "osm-way-332208215",
+      "name": "Chodtayakorn",
+      "name_en": "Chodtayakorn",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7392253,
+      "lng": 100.5627356,
+      "source": "openstreetmap",
+      "osm_ref": "way/332208215"
+    },
+    {
+      "id": "osm-way-329919883",
+      "name": "Citi Smart",
+      "name_en": "Citi Smart",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7349469,
+      "lng": 100.5621807,
+      "source": "openstreetmap",
+      "osm_ref": "way/329919883"
+    },
+    {
+      "id": "osm-way-162623020",
+      "name": "City Lake Tower",
+      "name_en": "City Lake Tower",
+      "name_th": "ซิตี้เลค ทาวเวอร์",
+      "aliases": [
+        "ซิตี้เลค ทาวเวอร์"
+      ],
+      "type": "condo",
+      "lat": 13.7336754,
+      "lng": 100.5612247,
+      "source": "openstreetmap",
+      "osm_ref": "way/162623020"
+    },
+    {
+      "id": "osm-way-374417562",
+      "name": "City Studios",
+      "name_en": "City Studios",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7448112,
+      "lng": 100.5581437,
+      "source": "openstreetmap",
+      "osm_ref": "way/374417562"
+    },
+    {
+      "id": "osm-way-324280545",
+      "name": "CNC Residence",
+      "name_en": "CNC Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7345432,
+      "lng": 100.5684019,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280545"
+    },
+    {
+      "id": "osm-way-208693094",
+      "name": "Condo One X",
+      "name_en": "Condo One X",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7251749,
+      "lng": 100.5685413,
+      "source": "openstreetmap",
+      "osm_ref": "way/208693094"
+    },
+    {
+      "id": "osm-way-450634304",
+      "name": "Condolette Dwell",
+      "name_en": "Condolette Dwell",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.725878,
+      "lng": 100.5706268,
+      "source": "openstreetmap",
+      "osm_ref": "way/450634304"
+    },
+    {
+      "id": "osm-way-450615854",
+      "name": "CV12 The Residence",
+      "name_en": "CV12 The Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7262091,
+      "lng": 100.5776679,
+      "source": "openstreetmap",
+      "osm_ref": "way/450615854"
+    },
+    {
+      "id": "osm-way-324280507",
+      "name": "D.S. Tower II",
+      "name_en": "D.S. Tower II",
+      "name_th": null,
+      "aliases": [
+        "D.S. Tower 2"
+      ],
+      "type": "condo",
+      "lat": 13.7407065,
+      "lng": 100.5706786,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280507"
+    },
+    {
+      "id": "osm-way-340330015",
+      "name": "D.S. Towers",
+      "name_en": "D.S. Towers",
+      "name_th": null,
+      "aliases": [
+        "D.S. Tower",
+        "D.S. Tower 1",
+        "D.S. Tower 1 Sukhumvit 33",
+        "DS Tower 1",
+        "DS Towers"
+      ],
+      "type": "condo",
+      "lat": 13.7370981,
+      "lng": 100.568444,
+      "source": "openstreetmap",
+      "osm_ref": "way/340330015"
+    },
+    {
+      "id": "osm-way-331962421",
+      "name": "DH Grand Tower",
+      "name_en": "DH Grand Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7330191,
+      "lng": 100.5748139,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962421"
+    },
+    {
+      "id": "osm-way-162623025",
+      "name": "Domus 16",
+      "name_en": "Domus 16",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7333371,
+      "lng": 100.561555,
+      "source": "openstreetmap",
+      "osm_ref": "way/162623025"
+    },
+    {
+      "id": "osm-way-330253694",
+      "name": "Domus 18",
+      "name_en": "Domus 18",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7333766,
+      "lng": 100.5622588,
+      "source": "openstreetmap",
+      "osm_ref": "way/330253694"
+    },
+    {
+      "id": "osm-way-25053984",
+      "name": "Ebony Tower",
+      "name_en": "Ebony Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7224592,
+      "lng": 100.5650509,
+      "source": "openstreetmap",
+      "osm_ref": "way/25053984"
+    },
+    {
+      "id": "osm-way-571076407",
+      "name": "Edge Sukhumvit 23",
+      "name_en": "Edge Sukhumvit 23",
+      "name_th": "เอดจ์ สุขุมวิท 23",
+      "aliases": [
+        "เอดจ์ สุขุมวิท 23"
+      ],
+      "type": "condo",
+      "lat": 13.7363939,
+      "lng": 100.5634065,
+      "source": "openstreetmap",
+      "osm_ref": "way/571076407"
+    },
+    {
+      "id": "osm-way-318181489",
+      "name": "Ei8ht Thonglor Residences",
+      "name_en": "Ei8ht Thonglor Residences",
+      "name_th": "อาคาร เอททองหล่อ",
+      "aliases": [
+        "อาคาร เอททองหล่อ",
+        "Eight Thonglor Residences"
+      ],
+      "type": "condo",
+      "lat": 13.7306014,
+      "lng": 100.5820612,
+      "source": "openstreetmap",
+      "osm_ref": "way/318181489"
+    },
+    {
+      "id": "osm-way-340232736",
+      "name": "Executive Mansion",
+      "name_en": "Executive Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7379902,
+      "lng": 100.5720653,
+      "source": "openstreetmap",
+      "osm_ref": "way/340232736"
+    },
+    {
+      "id": "osm-way-176332751",
+      "name": "Fairview Tower",
+      "name_en": "Fairview Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.73186,
+      "lng": 100.5623396,
+      "source": "openstreetmap",
+      "osm_ref": "way/176332751"
+    },
+    {
+      "id": "osm-way-321882288",
+      "name": "Fifty Fith Tower Condominium",
+      "name_en": "Fifty Fith Tower Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7257856,
+      "lng": 100.5804491,
+      "source": "openstreetmap",
+      "osm_ref": "way/321882288"
+    },
+    {
+      "id": "osm-way-331962492",
+      "name": "G.M. Mansion",
+      "name_en": "G.M. Mansion",
+      "name_th": "จีเอ็ม แมนชั่น",
+      "aliases": [
+        "จีเอ็ม แมนชั่น"
+      ],
+      "type": "condo",
+      "lat": 13.7265185,
+      "lng": 100.5726837,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962492"
+    },
+    {
+      "id": "osm-way-329919860",
+      "name": "GM House",
+      "name_en": "GM House",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7324547,
+      "lng": 100.5647061,
+      "source": "openstreetmap",
+      "osm_ref": "way/329919860"
+    },
+    {
+      "id": "osm-way-330253761",
+      "name": "GM Serviced Apartment",
+      "name_en": "GM Serviced Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7290734,
+      "lng": 100.564267,
+      "source": "openstreetmap",
+      "osm_ref": "way/330253761"
+    },
+    {
+      "id": "osm-way-330253735",
+      "name": "GM Tower",
+      "name_en": "GM Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7293066,
+      "lng": 100.5643381,
+      "source": "openstreetmap",
+      "osm_ref": "way/330253735"
+    },
+    {
+      "id": "osm-way-329745940",
+      "name": "GMM Grammy Place",
+      "name_en": "GMM Grammy Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.743488,
+      "lng": 100.5626608,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745940"
+    },
+    {
+      "id": "osm-way-329745960",
+      "name": "Govind Tower",
+      "name_en": "Govind Tower",
+      "name_th": "โฆวินทร์ทาวเวอร์",
+      "aliases": [
+        "โฆวินทร์ทาวเวอร์"
+      ],
+      "type": "condo",
+      "lat": 13.7402167,
+      "lng": 100.5608205,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745960"
+    },
+    {
+      "id": "osm-way-329919862",
+      "name": "GP Grande Tower",
+      "name_en": "GP Grande Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7425744,
+      "lng": 100.5631651,
+      "source": "openstreetmap",
+      "osm_ref": "way/329919862"
+    },
+    {
+      "id": "osm-way-324280511",
+      "name": "Grand 39 Tower",
+      "name_en": "Grand 39 Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7328118,
+      "lng": 100.5715575,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280511"
+    },
+    {
+      "id": "osm-way-329745932",
+      "name": "Grandville House 2",
+      "name_en": "Grandville House 2",
+      "name_th": "แกรนด์วิล เฮ้าส์ 2",
+      "aliases": [
+        "แกรนด์วิล เฮ้าส์ 2"
+      ],
+      "type": "condo",
+      "lat": 13.7401261,
+      "lng": 100.559061,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745932"
+    },
+    {
+      "id": "osm-way-450623009",
+      "name": "Gunn's House",
+      "name_en": "Gunn's House",
+      "name_th": "กัญ เฮ้าส์",
+      "aliases": [
+        "กัญ เฮ้าส์"
+      ],
+      "type": "condo",
+      "lat": 13.7247807,
+      "lng": 100.5788173,
+      "source": "openstreetmap",
+      "osm_ref": "way/450623009"
+    },
+    {
+      "id": "osm-way-450546039",
+      "name": "H Sukhumvit 43",
+      "name_en": "H Sukhumvit 43",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7329791,
+      "lng": 100.5739882,
+      "source": "openstreetmap",
+      "osm_ref": "way/450546039"
+    },
+    {
+      "id": "osm-way-340724923",
+      "name": "Hawaii Tower",
+      "name_en": "Hawaii Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7411835,
+      "lng": 100.5641328,
+      "source": "openstreetmap",
+      "osm_ref": "way/340724923"
+    },
+    {
+      "id": "osm-way-337351095",
+      "name": "HQ by Sansiri",
+      "name_en": "HQ by Sansiri",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7297474,
+      "lng": 100.5817139,
+      "source": "openstreetmap",
+      "osm_ref": "way/337351095"
+    },
+    {
+      "id": "osm-way-1067654886",
+      "name": "Hyde Heritage Thonglor",
+      "name_en": "Hyde Heritage Thonglor",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7227596,
+      "lng": 100.5814892,
+      "source": "openstreetmap",
+      "osm_ref": "way/1067654886"
+    },
+    {
+      "id": "osm-way-176332733",
+      "name": "Ideal 24",
+      "name_en": "Ideal 24",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7236049,
+      "lng": 100.5671149,
+      "source": "openstreetmap",
+      "osm_ref": "way/176332733"
+    },
+    {
+      "id": "osm-way-331962362",
+      "name": "Ideo Morph",
+      "name_en": "Ideo Morph",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.720922,
+      "lng": 100.578835,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962362"
+    },
+    {
+      "id": "osm-way-449104805",
+      "name": "InHome",
+      "name_en": "InHome",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7272444,
+      "lng": 100.5608837,
+      "source": "openstreetmap",
+      "osm_ref": "way/449104805"
+    },
+    {
+      "id": "osm-way-341154442",
+      "name": "Jamy Twin Mansion",
+      "name_en": "Jamy Twin Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7428508,
+      "lng": 100.5682611,
+      "source": "openstreetmap",
+      "osm_ref": "way/341154442"
+    },
+    {
+      "id": "osm-way-340724921",
+      "name": "Jaspal's Residential I",
+      "name_en": "Jaspal's Residential I",
+      "name_th": null,
+      "aliases": [
+        "Jaspal's Residential 1"
+      ],
+      "type": "other",
+      "lat": 13.7409485,
+      "lng": 100.5636738,
+      "source": "openstreetmap",
+      "osm_ref": "way/340724921"
+    },
+    {
+      "id": "osm-way-329745970",
+      "name": "Jaspal's Residential II",
+      "name_en": "Jaspal's Residential II",
+      "name_th": null,
+      "aliases": [
+        "Jaspal's Residential 2"
+      ],
+      "type": "other",
+      "lat": 13.740637,
+      "lng": 100.5640496,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745970"
+    },
+    {
+      "id": "osm-way-331967743",
+      "name": "JC Tower",
+      "name_en": "JC Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7438218,
+      "lng": 100.5816354,
+      "source": "openstreetmap",
+      "osm_ref": "way/331967743"
+    },
+    {
+      "id": "osm-way-371218875",
+      "name": "JSP Mansion",
+      "name_en": "JSP Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7415486,
+      "lng": 100.5802522,
+      "source": "openstreetmap",
+      "osm_ref": "way/371218875"
+    },
+    {
+      "id": "osm-way-323691177",
+      "name": "KC Court Apartment",
+      "name_en": "KC Court Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7339471,
+      "lng": 100.5791272,
+      "source": "openstreetmap",
+      "osm_ref": "way/323691177"
+    },
+    {
+      "id": "osm-way-303716619",
+      "name": "Keyne by Sansiri",
+      "name_en": "Keyne by Sansiri",
+      "name_th": "คีนน์ บาย แสนสิริ",
+      "aliases": [
+        "คีนน์ บาย แสนสิริ"
+      ],
+      "type": "other",
+      "lat": 13.7248134,
+      "lng": 100.576869,
+      "source": "openstreetmap",
+      "osm_ref": "way/303716619"
+    },
+    {
+      "id": "osm-way-341151257",
+      "name": "Kiarti Thanee City Mansion",
+      "name_en": "Kiarti Thanee City Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7447296,
+      "lng": 100.5678242,
+      "source": "openstreetmap",
+      "osm_ref": "way/341151257"
+    },
+    {
+      "id": "osm-way-1230362481",
+      "name": "Kraam Sukhumvit 26",
+      "name_en": "Kraam Sukhumvit 26",
+      "name_th": "คราม สุขุมวิท 26",
+      "aliases": [
+        "คราม สุขุมวิท 26"
+      ],
+      "type": "condo",
+      "lat": 13.72605,
+      "lng": 100.570059,
+      "source": "openstreetmap",
+      "osm_ref": "way/1230362481"
+    },
+    {
+      "id": "osm-way-25054016",
+      "name": "Krungthep Thani Tower",
+      "name_en": "Krungthep Thani Tower",
+      "name_th": "กรุงเทพธานีทาวเวอร์",
+      "aliases": [
+        "กรุงเทพธานีทาวเวอร์"
+      ],
+      "type": "condo",
+      "lat": 13.7254962,
+      "lng": 100.5670683,
+      "source": "openstreetmap",
+      "osm_ref": "way/25054016"
+    },
+    {
+      "id": "osm-way-331962329",
+      "name": "La Vie En Rose",
+      "name_en": "La Vie En Rose",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7219086,
+      "lng": 100.5757583,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962329"
+    },
+    {
+      "id": "osm-way-27276233",
+      "name": "Lake Avenue",
+      "name_en": "Lake Avenue",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7316659,
+      "lng": 100.5615827,
+      "source": "openstreetmap",
+      "osm_ref": "way/27276233"
+    },
+    {
+      "id": "osm-way-329745923",
+      "name": "Las Colinas Condominium",
+      "name_en": "Las Colinas Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7374415,
+      "lng": 100.5619829,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745923"
+    },
+    {
+      "id": "osm-way-25054025",
+      "name": "Le Raffiné Sukhumvit 24",
+      "name_en": "Le Raffiné Sukhumvit 24",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7259072,
+      "lng": 100.5670956,
+      "source": "openstreetmap",
+      "osm_ref": "way/25054025"
+    },
+    {
+      "id": "osm-way-338483736",
+      "name": "Le Raffiné Sukhumvit 31",
+      "name_en": "Le Raffiné Sukhumvit 31",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7340204,
+      "lng": 100.5659275,
+      "source": "openstreetmap",
+      "osm_ref": "way/338483736"
+    },
+    {
+      "id": "osm-way-1249861556",
+      "name": "Life Rama 4–Asoke",
+      "name_en": "Life Rama 4–Asoke",
+      "name_th": "ไลฟ์ พระราม 4–อโศก",
+      "aliases": [
+        "ไลฟ์ พระราม 4–อโศก"
+      ],
+      "type": "condo",
+      "lat": 13.7200912,
+      "lng": 100.5616937,
+      "source": "openstreetmap",
+      "osm_ref": "way/1249861556"
+    },
+    {
+      "id": "osm-way-330243447",
+      "name": "Lily House",
+      "name_en": "Lily House",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7445243,
+      "lng": 100.5667777,
+      "source": "openstreetmap",
+      "osm_ref": "way/330243447"
+    },
+    {
+      "id": "osm-way-338004246",
+      "name": "Lumpini Suite",
+      "name_en": "Lumpini Suite",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7299247,
+      "lng": 100.5721319,
+      "source": "openstreetmap",
+      "osm_ref": "way/338004246"
+    },
+    {
+      "id": "osm-way-331963319",
+      "name": "Ma Peng Seng Apartment",
+      "name_en": "Ma Peng Seng Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.735241,
+      "lng": 100.5668476,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963319"
+    },
+    {
+      "id": "osm-node-3778175296",
+      "name": "Maestro 39 Residence",
+      "name_en": "Maestro 39 Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7398559,
+      "lng": 100.5726212,
+      "source": "openstreetmap",
+      "osm_ref": "node/3778175296"
+    },
+    {
+      "id": "osm-way-176191026",
+      "name": "Mahogany Tower",
+      "name_en": "Mahogany Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7225607,
+      "lng": 100.56662,
+      "source": "openstreetmap",
+      "osm_ref": "way/176191026"
+    },
+    {
+      "id": "osm-way-333134166",
+      "name": "Mandison Suites",
+      "name_en": "Mandison Suites",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7241097,
+      "lng": 100.5707414,
+      "source": "openstreetmap",
+      "osm_ref": "way/333134166"
+    },
+    {
+      "id": "osm-way-331962398",
+      "name": "Mano Tower",
+      "name_en": "Mano Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7440276,
+      "lng": 100.5723898,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962398"
+    },
+    {
+      "id": "osm-way-331962373",
+      "name": "Manutham Mansion",
+      "name_en": "Manutham Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7268393,
+      "lng": 100.5763522,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962373"
+    },
+    {
+      "id": "osm-way-521687098",
+      "name": "Marque Sukhumvit",
+      "name_en": "Marque Sukhumvit",
+      "name_th": "มาร์ค สุขุมวิท",
+      "aliases": [
+        "มาร์ค สุขุมวิท"
+      ],
+      "type": "condo",
+      "lat": 13.7303713,
+      "lng": 100.5711166,
+      "source": "openstreetmap",
+      "osm_ref": "way/521687098"
+    },
+    {
+      "id": "osm-way-329919877",
+      "name": "Mayfair Garden",
+      "name_en": "Mayfair Garden",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7285674,
+      "lng": 100.5615614,
+      "source": "openstreetmap",
+      "osm_ref": "way/329919877"
+    },
+    {
+      "id": "osm-way-341554380",
+      "name": "Millennium Residence",
+      "name_en": "Millennium Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7295314,
+      "lng": 100.5624641,
+      "source": "openstreetmap",
+      "osm_ref": "way/341554380"
+    },
+    {
+      "id": "osm-way-76510938",
+      "name": "Ming House",
+      "name_en": "Ming House",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7250951,
+      "lng": 100.573366,
+      "source": "openstreetmap",
+      "osm_ref": "way/76510938"
+    },
+    {
+      "id": "osm-way-331963814",
+      "name": "Montara",
+      "name_en": "Montara",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7402569,
+      "lng": 100.5807245,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963814"
+    },
+    {
+      "id": "osm-way-339089659",
+      "name": "Monterey Place Condominium",
+      "name_en": "Monterey Place Condominium",
+      "name_th": "คอนโดฯมอนเทอเร่ย์เพลส",
+      "aliases": [
+        "คอนโดฯมอนเทอเร่ย์เพลส"
+      ],
+      "type": "condo",
+      "lat": 13.7237395,
+      "lng": 100.5618042,
+      "source": "openstreetmap",
+      "osm_ref": "way/339089659"
+    },
+    {
+      "id": "osm-way-330243428",
+      "name": "Montira Apartment",
+      "name_en": "Montira Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7423148,
+      "lng": 100.5669378,
+      "source": "openstreetmap",
+      "osm_ref": "way/330243428"
+    },
+    {
+      "id": "osm-way-324275344",
+      "name": "Moon Tower",
+      "name_en": "Moon Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.725677,
+      "lng": 100.5817837,
+      "source": "openstreetmap",
+      "osm_ref": "way/324275344"
+    },
+    {
+      "id": "osm-way-1235501204",
+      "name": "Muniq Sukhumvit 23",
+      "name_en": "Muniq Sukhumvit 23",
+      "name_th": "มิวนีค สุขุมวิท 23",
+      "aliases": [
+        "มิวนีค สุขุมวิท 23"
+      ],
+      "type": "condo",
+      "lat": 13.737868,
+      "lng": 100.5624653,
+      "source": "openstreetmap",
+      "osm_ref": "way/1235501204"
+    },
+    {
+      "id": "osm-way-338364612",
+      "name": "New Land",
+      "name_en": "New Land",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7373702,
+      "lng": 100.567822,
+      "source": "openstreetmap",
+      "osm_ref": "way/338364612"
+    },
+    {
+      "id": "osm-way-331962417",
+      "name": "Nida Mansion",
+      "name_en": "Nida Mansion",
+      "name_th": "นิดา แมนชั่น",
+      "aliases": [
+        "นิดา แมนชั่น"
+      ],
+      "type": "condo",
+      "lat": 13.73794,
+      "lng": 100.5694207,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962417"
+    },
+    {
+      "id": "osm-way-1230362480",
+      "name": "Noble Around Sukhumvit 33",
+      "name_en": "Noble Around Sukhumvit 33",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7359194,
+      "lng": 100.5674351,
+      "source": "openstreetmap",
+      "osm_ref": "way/1230362480"
+    },
+    {
+      "id": "osm-way-1038970953",
+      "name": "Noble BE33",
+      "name_en": "Noble BE33",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7355091,
+      "lng": 100.5672724,
+      "source": "openstreetmap",
+      "osm_ref": "way/1038970953"
+    },
+    {
+      "id": "osm-way-726046520",
+      "name": "Noble Recole",
+      "name_en": "Noble Recole",
+      "name_th": "โนเบิล รีโคล",
+      "aliases": [
+        "โนเบิล รีโคล"
+      ],
+      "type": "condo",
+      "lat": 13.7421496,
+      "lng": 100.5598844,
+      "source": "openstreetmap",
+      "osm_ref": "way/726046520"
+    },
+    {
+      "id": "osm-way-208693095",
+      "name": "Noble Refine",
+      "name_en": "Noble Refine",
+      "name_th": "โนเบิล รีไฟน์",
+      "aliases": [
+        "โนเบิล รีไฟน์"
+      ],
+      "type": "condo",
+      "lat": 13.7281458,
+      "lng": 100.5710249,
+      "source": "openstreetmap",
+      "osm_ref": "way/208693095"
+    },
+    {
+      "id": "osm-way-303716620",
+      "name": "Noble Remix",
+      "name_en": "Noble Remix",
+      "name_th": "โนเบิล รีมิกซ์",
+      "aliases": [
+        "โนเบิล รีมิกซ์"
+      ],
+      "type": "condo",
+      "lat": 13.7241126,
+      "lng": 100.5771048,
+      "source": "openstreetmap",
+      "osm_ref": "way/303716620"
+    },
+    {
+      "id": "osm-way-1230362479",
+      "name": "Noble State 39",
+      "name_en": "Noble State 39",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7342956,
+      "lng": 100.5707176,
+      "source": "openstreetmap",
+      "osm_ref": "way/1230362479"
+    },
+    {
+      "id": "osm-way-324280465",
+      "name": "NT Tower",
+      "name_en": "NT Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7317885,
+      "lng": 100.5809955,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280465"
+    },
+    {
+      "id": "osm-way-25053990",
+      "name": "Oak Tower",
+      "name_en": "Oak Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7217641,
+      "lng": 100.5652538,
+      "source": "openstreetmap",
+      "osm_ref": "way/25053990"
+    },
+    {
+      "id": "osm-way-324060262",
+      "name": "Oakwood Residence",
+      "name_en": "Oakwood Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7347352,
+      "lng": 100.5807912,
+      "source": "openstreetmap",
+      "osm_ref": "way/324060262"
+    },
+    {
+      "id": "osm-way-324280521",
+      "name": "Orchid View",
+      "name_en": "Orchid View",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7372917,
+      "lng": 100.5710009,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280521"
+    },
+    {
+      "id": "osm-way-324275323",
+      "name": "Oscar Mansion",
+      "name_en": "Oscar Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7343515,
+      "lng": 100.5775158,
+      "source": "openstreetmap",
+      "osm_ref": "way/324275323"
+    },
+    {
+      "id": "osm-way-340391184",
+      "name": "P&P Court",
+      "name_en": "P&P Court",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7361171,
+      "lng": 100.56467,
+      "source": "openstreetmap",
+      "osm_ref": "way/340391184"
+    },
+    {
+      "id": "osm-way-331962408",
+      "name": "P.S. Residence",
+      "name_en": "P.S. Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7365306,
+      "lng": 100.568156,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962408"
+    },
+    {
+      "id": "osm-way-25053979",
+      "name": "Pine Tower",
+      "name_en": "Pine Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7220724,
+      "lng": 100.5650849,
+      "source": "openstreetmap",
+      "osm_ref": "way/25053979"
+    },
+    {
+      "id": "osm-way-331962469",
+      "name": "Prapasuk Apartment",
+      "name_en": "Prapasuk Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7428349,
+      "lng": 100.5688406,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962469"
+    },
+    {
+      "id": "osm-way-329745986",
+      "name": "Prasanmit Condominium",
+      "name_en": "Prasanmit Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7369986,
+      "lng": 100.5630753,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745986"
+    },
+    {
+      "id": "osm-way-329745992",
+      "name": "Prasanmitr Place",
+      "name_en": "Prasanmitr Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7402631,
+      "lng": 100.5648504,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745992"
+    },
+    {
+      "id": "osm-way-176200219",
+      "name": "Prasanmitr Thani Tower",
+      "name_en": "Prasanmitr Thani Tower",
+      "name_th": "อาคารประสานมิตรธานี",
+      "aliases": [
+        "อาคารประสานมิตรธานี"
+      ],
+      "type": "condo",
+      "lat": 13.7414553,
+      "lng": 100.5628876,
+      "source": "openstreetmap",
+      "osm_ref": "way/176200219"
+    },
+    {
+      "id": "osm-way-1193595249",
+      "name": "Premier Condominium",
+      "name_en": "Premier Condominium",
+      "name_th": "พรีเมียร์ คอนโดมิเนียม",
+      "aliases": [
+        "พรีเมียร์ คอนโดมิเนียม"
+      ],
+      "type": "condo",
+      "lat": 13.7273966,
+      "lng": 100.5688392,
+      "source": "openstreetmap",
+      "osm_ref": "way/1193595249"
+    },
+    {
+      "id": "osm-way-340729743",
+      "name": "Prestige Towers",
+      "name_en": "Prestige Towers",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7407618,
+      "lng": 100.5647512,
+      "source": "openstreetmap",
+      "osm_ref": "way/340729743"
+    },
+    {
+      "id": "osm-way-331962402",
+      "name": "Prime Mansion",
+      "name_en": "Prime Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7386212,
+      "lng": 100.5727324,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962402"
+    },
+    {
+      "id": "osm-way-324280461",
+      "name": "Prime Mansion Sukhumvit 31",
+      "name_en": "Prime Mansion Sukhumvit 31",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7393583,
+      "lng": 100.567546,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280461"
+    },
+    {
+      "id": "osm-way-449104808",
+      "name": "Prime Suites Condominium",
+      "name_en": "Prime Suites Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7326901,
+      "lng": 100.5630383,
+      "source": "openstreetmap",
+      "osm_ref": "way/449104808"
+    },
+    {
+      "id": "osm-way-450546040",
+      "name": "Prommitr Suites",
+      "name_en": "Prommitr Suites",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7333488,
+      "lng": 100.5748423,
+      "source": "openstreetmap",
+      "osm_ref": "way/450546040"
+    },
+    {
+      "id": "osm-way-324280477",
+      "name": "Prompong Mansion",
+      "name_en": "Prompong Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7357856,
+      "lng": 100.5720368,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280477"
+    },
+    {
+      "id": "osm-way-329428590",
+      "name": "Promsak Mansion",
+      "name_en": "Promsak Mansion",
+      "name_th": "พรหมสุข แมนชั่น",
+      "aliases": [
+        "พรหมสุข แมนชั่น"
+      ],
+      "type": "apartment",
+      "lat": 13.7375552,
+      "lng": 100.5727121,
+      "source": "openstreetmap",
+      "osm_ref": "way/329428590"
+    },
+    {
+      "id": "osm-way-208691131",
+      "name": "PSI Tower",
+      "name_en": "PSI Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7348446,
+      "lng": 100.5713894,
+      "source": "openstreetmap",
+      "osm_ref": "way/208691131"
+    },
+    {
+      "id": "osm-way-1184645985",
+      "name": "Quattro By Sansiri",
+      "name_en": "Quattro By Sansiri",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.727645,
+      "lng": 100.5815925,
+      "source": "openstreetmap",
+      "osm_ref": "way/1184645985"
+    },
+    {
+      "id": "osm-way-321915588",
+      "name": "Quattro Condominium",
+      "name_en": "Quattro Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7275277,
+      "lng": 100.5818139,
+      "source": "openstreetmap",
+      "osm_ref": "way/321915588"
+    },
+    {
+      "id": "osm-way-300817299",
+      "name": "Regent On The Park 1",
+      "name_en": "Regent On The Park 1",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.72623,
+      "lng": 100.5689707,
+      "source": "openstreetmap",
+      "osm_ref": "way/300817299"
+    },
+    {
+      "id": "osm-way-1230362482",
+      "name": "Rhythm Sukhumvit 36-38",
+      "name_en": "Rhythm Sukhumvit 36-38",
+      "name_th": "ริทึ่ม สุขุมวิท 36-38",
+      "aliases": [
+        "ริทึ่ม สุขุมวิท 36-38"
+      ],
+      "type": "condo",
+      "lat": 13.7219018,
+      "lng": 100.5769484,
+      "source": "openstreetmap",
+      "osm_ref": "way/1230362482"
+    },
+    {
+      "id": "osm-way-331963324",
+      "name": "Rich Apartment",
+      "name_en": "Rich Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7347053,
+      "lng": 100.5674789,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963324"
+    },
+    {
+      "id": "osm-way-249140598",
+      "name": "River Court",
+      "name_en": "River Court",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7303581,
+      "lng": 100.5723577,
+      "source": "openstreetmap",
+      "osm_ref": "way/249140598"
+    },
+    {
+      "id": "osm-way-249140774",
+      "name": "River Place",
+      "name_en": "River Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.73017,
+      "lng": 100.5723062,
+      "source": "openstreetmap",
+      "osm_ref": "way/249140774"
+    },
+    {
+      "id": "osm-way-324280550",
+      "name": "Royal Apartment",
+      "name_en": "Royal Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7367079,
+      "lng": 100.5704616,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280550"
+    },
+    {
+      "id": "osm-way-324280522",
+      "name": "Royal Castle",
+      "name_en": "Royal Castle",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7343459,
+      "lng": 100.5720055,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280522"
+    },
+    {
+      "id": "osm-way-329745976",
+      "name": "Royce Residence",
+      "name_en": "Royce Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7406711,
+      "lng": 100.5661469,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745976"
+    },
+    {
+      "id": "osm-way-325613819",
+      "name": "S. R. Place",
+      "name_en": "S. R. Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7331225,
+      "lng": 100.581046,
+      "source": "openstreetmap",
+      "osm_ref": "way/325613819"
+    },
+    {
+      "id": "osm-way-331962371",
+      "name": "S.C.C. Residence",
+      "name_en": "S.C.C. Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7402085,
+      "lng": 100.5676793,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962371"
+    },
+    {
+      "id": "osm-way-338009255",
+      "name": "S.S. Surindra Mansion",
+      "name_en": "S.S. Surindra Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7293318,
+      "lng": 100.5739464,
+      "source": "openstreetmap",
+      "osm_ref": "way/338009255"
+    },
+    {
+      "id": "osm-node-4460699214",
+      "name": "S16 Residences",
+      "name_en": "S16 Residences",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7277606,
+      "lng": 100.5611306,
+      "source": "openstreetmap",
+      "osm_ref": "node/4460699214"
+    },
+    {
+      "id": "osm-way-324275307",
+      "name": "S59 Executive Apartment",
+      "name_en": "S59 Executive Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7251042,
+      "lng": 100.5818033,
+      "source": "openstreetmap",
+      "osm_ref": "way/324275307"
+    },
+    {
+      "id": "osm-way-226278561",
+      "name": "Sachayan Mansion",
+      "name_en": "Sachayan Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7283291,
+      "lng": 100.5778141,
+      "source": "openstreetmap",
+      "osm_ref": "way/226278561"
+    },
+    {
+      "id": "osm-way-340074036",
+      "name": "Sahai Place",
+      "name_en": "Sahai Place",
+      "name_th": "สหาย เพลส",
+      "aliases": [
+        "สหาย เพลส"
+      ],
+      "type": "condo",
+      "lat": 13.7252627,
+      "lng": 100.5676851,
+      "source": "openstreetmap",
+      "osm_ref": "way/340074036"
+    },
+    {
+      "id": "osm-way-371218873",
+      "name": "SB Mansion",
+      "name_en": "SB Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7417739,
+      "lng": 100.5803562,
+      "source": "openstreetmap",
+      "osm_ref": "way/371218873"
+    },
+    {
+      "id": "osm-way-1203838358",
+      "name": "Serene 57 Residence",
+      "name_en": "Serene 57 Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7241166,
+      "lng": 100.580328,
+      "source": "openstreetmap",
+      "osm_ref": "way/1203838358"
+    },
+    {
+      "id": "osm-way-340091484",
+      "name": "Serene Place Sukhumvit 24",
+      "name_en": "Serene Place Sukhumvit 24",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7263551,
+      "lng": 100.567236,
+      "source": "openstreetmap",
+      "osm_ref": "way/340091484"
+    },
+    {
+      "id": "osm-way-340675721",
+      "name": "Seth Insaf Towers",
+      "name_en": "Seth Insaf Towers",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7434983,
+      "lng": 100.5581177,
+      "source": "openstreetmap",
+      "osm_ref": "way/340675721"
+    },
+    {
+      "id": "osm-way-324275310",
+      "name": "Shanti Sadan",
+      "name_en": "Shanti Sadan",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7239512,
+      "lng": 100.5818891,
+      "source": "openstreetmap",
+      "osm_ref": "way/324275310"
+    },
+    {
+      "id": "osm-way-25829318",
+      "name": "Sino-Thai Tower",
+      "name_en": "Sino-Thai Tower",
+      "name_th": "ซิโน-ไทย ทาวเวอร์",
+      "aliases": [
+        "ซิโน-ไทย ทาวเวอร์"
+      ],
+      "type": "condo",
+      "lat": 13.7401239,
+      "lng": 100.5623938,
+      "source": "openstreetmap",
+      "osm_ref": "way/25829318"
+    },
+    {
+      "id": "osm-way-208693099",
+      "name": "Siri at Sukhumvit",
+      "name_en": "Siri at Sukhumvit",
+      "name_th": "สิริ แอท สุขุมวิท",
+      "aliases": [
+        "สิริ แอท สุขุมวิท"
+      ],
+      "type": "condo",
+      "lat": 13.7224041,
+      "lng": 100.5799815,
+      "source": "openstreetmap",
+      "osm_ref": "way/208693099"
+    },
+    {
+      "id": "osm-way-330253778",
+      "name": "Siri Residence",
+      "name_en": "Siri Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7281976,
+      "lng": 100.5682696,
+      "source": "openstreetmap",
+      "osm_ref": "way/330253778"
+    },
+    {
+      "id": "osm-way-324275335",
+      "name": "Sobna Court",
+      "name_en": "Sobna Court",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7266324,
+      "lng": 100.5819895,
+      "source": "openstreetmap",
+      "osm_ref": "way/324275335"
+    },
+    {
+      "id": "osm-way-331966781",
+      "name": "Star Suites",
+      "name_en": "Star Suites",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7450322,
+      "lng": 100.5586265,
+      "source": "openstreetmap",
+      "osm_ref": "way/331966781"
+    },
+    {
+      "id": "osm-way-329745980",
+      "name": "Sukhumvit House",
+      "name_en": "Sukhumvit House",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7384827,
+      "lng": 100.564733,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745980"
+    },
+    {
+      "id": "osm-way-331962481",
+      "name": "Supalai Place",
+      "name_en": "Supalai Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7428638,
+      "lng": 100.5734264,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962481"
+    },
+    {
+      "id": "osm-way-208691135",
+      "name": "Supalai Place Condominium TOWER B",
+      "name_en": "Supalai Place Condominium TOWER B",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.743779,
+      "lng": 100.5734599,
+      "source": "openstreetmap",
+      "osm_ref": "way/208691135"
+    },
+    {
+      "id": "osm-way-329919861",
+      "name": "Supalai Premier Place Asoke",
+      "name_en": "Supalai Premier Place Asoke",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7444365,
+      "lng": 100.563042,
+      "source": "openstreetmap",
+      "osm_ref": "way/329919861"
+    },
+    {
+      "id": "osm-way-331962338",
+      "name": "Super Mansion",
+      "name_en": "Super Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7425875,
+      "lng": 100.5713449,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962338"
+    },
+    {
+      "id": "osm-way-450629005",
+      "name": "Suthon Place",
+      "name_en": "Suthon Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7248168,
+      "lng": 100.5727264,
+      "source": "openstreetmap",
+      "osm_ref": "way/450629005"
+    },
+    {
+      "id": "osm-way-340231901",
+      "name": "Swasdi Mansion",
+      "name_en": "Swasdi Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7417607,
+      "lng": 100.5679344,
+      "source": "openstreetmap",
+      "osm_ref": "way/340231901"
+    },
+    {
+      "id": "osm-way-324280518",
+      "name": "Taweewan Place",
+      "name_en": "Taweewan Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7358205,
+      "lng": 100.5680122,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280518"
+    },
+    {
+      "id": "osm-way-753671352",
+      "name": "Tela Thonglor",
+      "name_en": "Tela Thonglor",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7332056,
+      "lng": 100.5818663,
+      "source": "openstreetmap",
+      "osm_ref": "way/753671352"
+    },
+    {
+      "id": "osm-way-330488068",
+      "name": "The Address Sukhumvit 28",
+      "name_en": "The Address Sukhumvit 28",
+      "name_th": "ดิ แอดเดรส สุขุมวิท 28",
+      "aliases": [
+        "ดิ แอดเดรส สุขุมวิท 28"
+      ],
+      "type": "condo",
+      "lat": 13.7279411,
+      "lng": 100.5723285,
+      "source": "openstreetmap",
+      "osm_ref": "way/330488068"
+    },
+    {
+      "id": "osm-way-331962335",
+      "name": "The Alcove 49",
+      "name_en": "The Alcove 49",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7296916,
+      "lng": 100.5761648,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962335"
+    },
+    {
+      "id": "osm-way-332674489",
+      "name": "The Alcove 5 Thonglor",
+      "name_en": "The Alcove 5 Thonglor",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7288315,
+      "lng": 100.5786859,
+      "source": "openstreetmap",
+      "osm_ref": "way/332674489"
+    },
+    {
+      "id": "osm-way-331962415",
+      "name": "The Cadogan Private Residences",
+      "name_en": "The Cadogan Private Residences",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7408034,
+      "lng": 100.5724035,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962415"
+    },
+    {
+      "id": "osm-way-767746117",
+      "name": "The Capital Sukhumvit 30/1",
+      "name_en": "The Capital Sukhumvit 30/1",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7264761,
+      "lng": 100.5733948,
+      "source": "openstreetmap",
+      "osm_ref": "way/767746117"
+    },
+    {
+      "id": "osm-way-332192001",
+      "name": "The Centrium",
+      "name_en": "The Centrium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7408591,
+      "lng": 100.5612263,
+      "source": "openstreetmap",
+      "osm_ref": "way/332192001"
+    },
+    {
+      "id": "osm-way-330242728",
+      "name": "The Concord Harmony in Living",
+      "name_en": "The Concord Harmony in Living",
+      "name_th": "เดอะ คอนคอร์ด (สุขุมวิท 15)",
+      "aliases": [
+        "เดอะ คอนคอร์ด (สุขุมวิท 15)"
+      ],
+      "type": "condo",
+      "lat": 13.7439897,
+      "lng": 100.5584321,
+      "source": "openstreetmap",
+      "osm_ref": "way/330242728"
+    },
+    {
+      "id": "osm-way-523179199",
+      "name": "The Crest Sukhumvit 24",
+      "name_en": "The Crest Sukhumvit 24",
+      "name_th": "เดอะ เครสท์ สุขุมวิท 24",
+      "aliases": [
+        "เดอะ เครสท์ สุขุมวิท 24"
+      ],
+      "type": "condo",
+      "lat": 13.7291892,
+      "lng": 100.5661188,
+      "source": "openstreetmap",
+      "osm_ref": "way/523179199"
+    },
+    {
+      "id": "osm-way-450625699",
+      "name": "The Crest Sukhumvit 34",
+      "name_en": "The Crest Sukhumvit 34",
+      "name_th": "เดอะ เครสท์ สุขุมวิท 34",
+      "aliases": [
+        "เดอะ เครสท์ สุขุมวิท 34"
+      ],
+      "type": "other",
+      "lat": 13.7250951,
+      "lng": 100.5764846,
+      "source": "openstreetmap",
+      "osm_ref": "way/450625699"
+    },
+    {
+      "id": "osm-way-1195022786",
+      "name": "The Diplomat 39",
+      "name_en": "The Diplomat 39",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7314369,
+      "lng": 100.5703209,
+      "source": "openstreetmap",
+      "osm_ref": "way/1195022786"
+    },
+    {
+      "id": "osm-way-401358382",
+      "name": "The Esse Asoke",
+      "name_en": "The Esse Asoke",
+      "name_th": "ดิ เอส อโศก",
+      "aliases": [
+        "ดิ เอส อโศก"
+      ],
+      "type": "condo",
+      "lat": 13.7432049,
+      "lng": 100.5613568,
+      "source": "openstreetmap",
+      "osm_ref": "way/401358382"
+    },
+    {
+      "id": "osm-way-678266774",
+      "name": "The Esse Sukhumvit 36",
+      "name_en": "The Esse Sukhumvit 36",
+      "name_th": "ดิ เอส สุขุมวิท 36",
+      "aliases": [
+        "ดิ เอส สุขุมวิท 36"
+      ],
+      "type": "condo",
+      "lat": 13.723963,
+      "lng": 100.5776132,
+      "source": "openstreetmap",
+      "osm_ref": "way/678266774"
+    },
+    {
+      "id": "osm-way-1037863939",
+      "name": "The Estelle Phrom Phong",
+      "name_en": "The Estelle Phrom Phong",
+      "name_th": "ดิ เอสเทลล์ พร้อมพงษ์",
+      "aliases": [
+        "ดิ เอสเทลล์ พร้อมพงษ์"
+      ],
+      "type": "condo",
+      "lat": 13.7285618,
+      "lng": 100.5712293,
+      "source": "openstreetmap",
+      "osm_ref": "way/1037863939"
+    },
+    {
+      "id": "osm-way-341210908",
+      "name": "The Garden Place",
+      "name_en": "The Garden Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7317759,
+      "lng": 100.5804398,
+      "source": "openstreetmap",
+      "osm_ref": "way/341210908"
+    },
+    {
+      "id": "osm-way-450629006",
+      "name": "The Kaze 34",
+      "name_en": "The Kaze 34",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7235966,
+      "lng": 100.5724823,
+      "source": "openstreetmap",
+      "osm_ref": "way/450629006"
+    },
+    {
+      "id": "osm-way-324138303",
+      "name": "The Lakes",
+      "name_en": "The Lakes",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7334347,
+      "lng": 100.5604333,
+      "source": "openstreetmap",
+      "osm_ref": "way/324138303"
+    },
+    {
+      "id": "osm-way-526474706",
+      "name": "The Lumpini 24",
+      "name_en": "The Lumpini 24",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7227707,
+      "lng": 100.5660769,
+      "source": "openstreetmap",
+      "osm_ref": "way/526474706"
+    },
+    {
+      "id": "osm-way-253416405",
+      "name": "The Madison",
+      "name_en": "The Madison",
+      "name_th": "เดอะ เมดิสัน",
+      "aliases": [
+        "เดอะ เมดิสัน"
+      ],
+      "type": "condo",
+      "lat": 13.7298012,
+      "lng": 100.5716617,
+      "source": "openstreetmap",
+      "osm_ref": "way/253416405"
+    },
+    {
+      "id": "osm-way-329428591",
+      "name": "The Natural Park Apartment",
+      "name_en": "The Natural Park Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7329487,
+      "lng": 100.5772084,
+      "source": "openstreetmap",
+      "osm_ref": "way/329428591"
+    },
+    {
+      "id": "osm-way-525504895",
+      "name": "The Nest Sukhumvit 22",
+      "name_en": "The Nest Sukhumvit 22",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7249505,
+      "lng": 100.5634223,
+      "source": "openstreetmap",
+      "osm_ref": "way/525504895"
+    },
+    {
+      "id": "osm-way-176332764",
+      "name": "The Pavilion Place",
+      "name_en": "The Pavilion Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7250296,
+      "lng": 100.5751503,
+      "source": "openstreetmap",
+      "osm_ref": "way/176332764"
+    },
+    {
+      "id": "osm-way-329428601",
+      "name": "The Prestige 49",
+      "name_en": "The Prestige 49",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7310541,
+      "lng": 100.5761153,
+      "source": "openstreetmap",
+      "osm_ref": "way/329428601"
+    },
+    {
+      "id": "osm-way-340075706",
+      "name": "The Residence",
+      "name_en": "The Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7232875,
+      "lng": 100.5661359,
+      "source": "openstreetmap",
+      "osm_ref": "way/340075706"
+    },
+    {
+      "id": "osm-way-332218928",
+      "name": "The Room Sukhumvit 21",
+      "name_en": "The Room Sukhumvit 21",
+      "name_th": "เดอะรูม สุขุมวิท 21",
+      "aliases": [
+        "เดอะรูม สุขุมวิท 21"
+      ],
+      "type": "condo",
+      "lat": 13.7438055,
+      "lng": 100.5613178,
+      "source": "openstreetmap",
+      "osm_ref": "way/332218928"
+    },
+    {
+      "id": "osm-way-330253797",
+      "name": "The Seed Musee",
+      "name_en": "The Seed Musee",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7252881,
+      "lng": 100.571049,
+      "source": "openstreetmap",
+      "osm_ref": "way/330253797"
+    },
+    {
+      "id": "osm-way-1251724241",
+      "name": "The Strand Thonglor",
+      "name_en": "The Strand Thonglor",
+      "name_th": "เดอะ สแตรนด์ ทองหล่อ",
+      "aliases": [
+        "เดอะ สแตรนด์ ทองหล่อ"
+      ],
+      "type": "condo",
+      "lat": 13.7241843,
+      "lng": 100.5799317,
+      "source": "openstreetmap",
+      "osm_ref": "way/1251724241"
+    },
+    {
+      "id": "osm-way-324280501",
+      "name": "The XXXIX",
+      "name_en": "The XXXIX",
+      "name_th": "เดอะ เทอร์ทีไนน์",
+      "aliases": [
+        "เดอะ เทอร์ทีไนน์"
+      ],
+      "type": "condo",
+      "lat": 13.7323051,
+      "lng": 100.5705392,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280501"
+    },
+    {
+      "id": "osm-way-331962473",
+      "name": "Thonglor Home Soi 7",
+      "name_en": "Thonglor Home Soi 7",
+      "name_th": "ทองหล่อโฮมซอย 7",
+      "aliases": [
+        "ทองหล่อโฮมซอย 7"
+      ],
+      "type": "condo",
+      "lat": 13.7305914,
+      "lng": 100.5809902,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962473"
+    },
+    {
+      "id": "osm-way-340092402",
+      "name": "Tidy Deluxe Condominium",
+      "name_en": "Tidy Deluxe Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7251691,
+      "lng": 100.5747511,
+      "source": "openstreetmap",
+      "osm_ref": "way/340092402"
+    },
+    {
+      "id": "osm-way-331962413",
+      "name": "Tongtip Mansion",
+      "name_en": "Tongtip Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7279063,
+      "lng": 100.5746361,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962413"
+    },
+    {
+      "id": "osm-way-324275308",
+      "name": "Top View Tower",
+      "name_en": "Top View Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7247389,
+      "lng": 100.5817721,
+      "source": "openstreetmap",
+      "osm_ref": "way/324275308"
+    },
+    {
+      "id": "osm-way-449094843",
+      "name": "Trapezo",
+      "name_en": "Trapezo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7256357,
+      "lng": 100.5620523,
+      "source": "openstreetmap",
+      "osm_ref": "way/449094843"
+    },
+    {
+      "id": "osm-way-324280520",
+      "name": "Tristan Condominium",
+      "name_en": "Tristan Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7353361,
+      "lng": 100.5736033,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280520"
+    },
+    {
+      "id": "osm-way-331962430",
+      "name": "Tubtim Mansion",
+      "name_en": "Tubtim Mansion",
+      "name_th": "ทับทิม แมนชั่น",
+      "aliases": [
+        "ทับทิม แมนชั่น"
+      ],
+      "type": "apartment",
+      "lat": 13.7379344,
+      "lng": 100.5713422,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962430"
+    },
+    {
+      "id": "osm-way-384643704",
+      "name": "Ueam Suk",
+      "name_en": "Ueam Suk",
+      "name_th": "เอื้อมสุข",
+      "aliases": [
+        "เอื้อมสุข"
+      ],
+      "type": "condo",
+      "lat": 13.7216058,
+      "lng": 100.5632081,
+      "source": "openstreetmap",
+      "osm_ref": "way/384643704"
+    },
+    {
+      "id": "osm-way-1251934143",
+      "name": "URBITIA Thonglor",
+      "name_en": "URBITIA Thonglor",
+      "name_th": "เออร์บิเทีย ทองหล่อ",
+      "aliases": [
+        "เออร์บิเทีย ทองหล่อ"
+      ],
+      "type": "condo",
+      "lat": 13.7224869,
+      "lng": 100.5771316,
+      "source": "openstreetmap",
+      "osm_ref": "way/1251934143"
+    },
+    {
+      "id": "osm-way-321882293",
+      "name": "Vasu the Residence",
+      "name_en": "Vasu the Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7277301,
+      "lng": 100.5810166,
+      "source": "openstreetmap",
+      "osm_ref": "way/321882293"
+    },
+    {
+      "id": "osm-way-340231167",
+      "name": "Via 31",
+      "name_en": "Via 31",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7392229,
+      "lng": 100.5684107,
+      "source": "openstreetmap",
+      "osm_ref": "way/340231167"
+    },
+    {
+      "id": "osm-way-338087011",
+      "name": "Via 49",
+      "name_en": "Via 49",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7302824,
+      "lng": 100.5758747,
+      "source": "openstreetmap",
+      "osm_ref": "way/338087011"
+    },
+    {
+      "id": "osm-way-330242696",
+      "name": "Villa Insaf 24",
+      "name_en": "Villa Insaf 24",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7430191,
+      "lng": 100.557981,
+      "source": "openstreetmap",
+      "osm_ref": "way/330242696"
+    },
+    {
+      "id": "osm-way-340274128",
+      "name": "Viscaya Private Residences",
+      "name_en": "Viscaya Private Residences",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7428959,
+      "lng": 100.5713716,
+      "source": "openstreetmap",
+      "osm_ref": "way/340274128"
+    },
+    {
+      "id": "osm-way-521687097",
+      "name": "Vittorio",
+      "name_en": "Vittorio",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7307982,
+      "lng": 100.5712031,
+      "source": "openstreetmap",
+      "osm_ref": "way/521687097"
+    },
+    {
+      "id": "osm-way-539298483",
+      "name": "Voque",
+      "name_en": "Voque",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7279849,
+      "lng": 100.5607203,
+      "source": "openstreetmap",
+      "osm_ref": "way/539298483"
+    },
+    {
+      "id": "osm-way-76510915",
+      "name": "Waterford Diamond Tower",
+      "name_en": "Waterford Diamond Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7265013,
+      "lng": 100.5730871,
+      "source": "openstreetmap",
+      "osm_ref": "way/76510915"
+    },
+    {
+      "id": "osm-way-329745978",
+      "name": "Wattana Heights",
+      "name_en": "Wattana Heights",
+      "name_th": "วัฒนา ไฮทส์ คอนโดมิเนียม",
+      "aliases": [
+        "วัฒนา ไฮทส์ คอนโดมิเนียม"
+      ],
+      "type": "condo",
+      "lat": 13.7400528,
+      "lng": 100.5612153,
+      "source": "openstreetmap",
+      "osm_ref": "way/329745978"
+    },
+    {
+      "id": "osm-way-340675722",
+      "name": "Wattana Suite",
+      "name_en": "Wattana Suite",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7436483,
+      "lng": 100.5584374,
+      "source": "openstreetmap",
+      "osm_ref": "way/340675722"
+    },
+    {
+      "id": "osm-way-330253719",
+      "name": "Wewon Mansion",
+      "name_en": "Wewon Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7400556,
+      "lng": 100.5701985,
+      "source": "openstreetmap",
+      "osm_ref": "way/330253719"
+    },
+    {
+      "id": "osm-way-176332740",
+      "name": "Wilshire",
+      "name_en": "Wilshire",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.728188,
+      "lng": 100.5646239,
+      "source": "openstreetmap",
+      "osm_ref": "way/176332740"
+    },
+    {
+      "id": "osm-way-340735152",
+      "name": "Young Place",
+      "name_en": "Young Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7404772,
+      "lng": 100.5653822,
+      "source": "openstreetmap",
+      "osm_ref": "way/340735152"
+    }
+  ]
+}
