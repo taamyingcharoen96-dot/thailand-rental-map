@@ -53,8 +53,9 @@
       display: flex;
       align-items: baseline;
       gap: 4px;
+      flex: 1 0 100%;
+      max-width: 100%;
       min-width: 0;
-      flex: 1 1 16rem;
       margin: 0;
       color: var(--muted);
       font-size: 13px;
@@ -69,7 +70,9 @@
       display: flex;
       flex-wrap: wrap;
       align-items: baseline;
+      flex: 1 1 0;
       min-width: 0;
+      max-width: 100%;
     }
     .loc-areas span { white-space: nowrap; }
     .loc-areas span:not(:last-child)::after {
@@ -544,7 +547,7 @@
       body.view-map .map-pane { display: block; }
       .mobile-toggle { display: flex; }
       .card { grid-template-columns: 120px 1fr; }
-      .loc-label { flex: 1 1 100%; font-size: 12px; }
+      .loc-label { font-size: 12px; }
       .filters input[type="search"] { flex: 1 1 100%; }
       .search-wrap { flex: 1 1 100%; }
       .suggest { min-width: 0; }
