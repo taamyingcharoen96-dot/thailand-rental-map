@@ -38,8 +38,8 @@
     }
     .topbar-row1 {
       display: flex;
-      align-items: baseline;
-      gap: 12px;
+      align-items: center;
+      gap: 8px 12px;
       flex-wrap: wrap;
       margin-bottom: 10px;
     }
@@ -50,12 +50,34 @@
       letter-spacing: -0.02em;
     }
     .loc-label {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      flex: 1 0 100%;
+      max-width: 100%;
+      min-width: 0;
+      margin: 0;
       color: var(--muted);
       font-size: 13px;
+      line-height: 1.45;
     }
     .loc-label::before {
-      content: "📍 ";
+      content: "📍";
       font-size: 12px;
+      flex: 0 0 auto;
+    }
+    .loc-areas {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 100%;
+    }
+    .loc-areas span { white-space: nowrap; }
+    .loc-areas span:not(:last-child)::after {
+      content: " · ";
+      color: #9ca3af;
     }
     .filters {
       display: flex;
@@ -525,6 +547,7 @@
       body.view-map .map-pane { display: block; }
       .mobile-toggle { display: flex; }
       .card { grid-template-columns: 120px 1fr; }
+      .loc-label { font-size: 12px; }
       .filters input[type="search"] { flex: 1 1 100%; }
       .search-wrap { flex: 1 1 100%; }
       .suggest { min-width: 0; }
@@ -541,7 +564,16 @@
   <header class="topbar">
     <div class="topbar-row1">
       <h1>Thailand Rental Map</h1>
-      <span class="loc-label">Phrom Phong · Ekamai · On Nut</span>
+      <p class="loc-label">
+        <span class="loc-areas">
+          <span>Phrom Phong</span>
+          <span>Ekamai</span>
+          <span>On Nut</span>
+          <span>Silom–Sathorn</span>
+          <span>Asok–Nana</span>
+          <span>Ari</span>
+        </span>
+      </p>
       <p class="osm-note">Buildings © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, ODbL</p>
     </div>
     <div class="filters" id="filters">
@@ -660,7 +692,24 @@
     return n.length > 140 ? n.slice(0, 137) + "…" : n;
   };
 
-  const AREA_LABEL = { "phrom-phong": "Phrom Phong", ekamai: "Ekamai", "on-nut": "On Nut" };
+  const AREA_LABEL = {
+    "phrom-phong": "Phrom Phong",
+    ekamai: "Ekamai",
+    "on-nut": "On Nut",
+    "silom-sathorn": "Silom–Sathorn",
+    "asok-nana": "Asok–Nana",
+    ari: "Ari",
+  };
+
+  const foldedNames = new Map();
+  const foldedFor = (b) => {
+    let names = foldedNames.get(b.id);
+    if (!names) {
+      names = buildingNames(b).map(fold);
+      foldedNames.set(b.id, names);
+    }
+    return names;
+  };
 
   const buildingNames = (b) => b
     ? [b.name, b.name_en, b.name_th, ...(b.aliases || [])].filter(Boolean)
@@ -702,7 +751,7 @@
     btnMap: document.getElementById("btnMap"),
   };
 
-  const map = L.map("map", { zoomControl: true }).setView(BANGKOK, 12);
+  const map = L.map("map", { zoomControl: true, preferCanvas: true }).setView(BANGKOK, 12);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, ODbL",
@@ -736,7 +785,7 @@
 
   function buildingMatches(b, q) {
     if (!q) return false;
-    return buildingNames(b).some((name) => fold(name).includes(q));
+    return foldedFor(b).some((name) => name.includes(q));
   }
 
   function listingMatchesText(l, q) {
@@ -765,8 +814,9 @@
     if (q.length < 2) return [];
     const hits = [];
     allBuildings.forEach((b) => {
-      if (!buildingMatches(b, q)) return;
-      const starts = buildingNames(b).some((name) => fold(name).startsWith(q));
+      const names = foldedFor(b);
+      if (!names.some((name) => name.includes(q))) return;
+      const starts = names.some((name) => name.startsWith(q));
       hits.push({ building: b, starts, units: unitsFor(b.id).length });
     });
     hits.sort((a, b) => {
@@ -856,35 +906,49 @@
   }
 
   function buildingIcon(count, selected) {
-    if (count > 0) {
-      const size = selected ? 30 : 26;
-      return L.divIcon({
-        className: "pin-marker",
-        html: `<div class="pin-dot pin-count${selected ? " selected" : ""}">${count}</div>`,
-        iconSize: [size, size],
-        iconAnchor: [size / 2, size / 2],
-      });
-    }
-    const size = selected ? 16 : 12;
+    const size = selected ? 30 : 26;
     return L.divIcon({
       className: "pin-marker",
-      html: `<div class="pin-dot pin-empty${selected ? " selected" : ""}"></div>`,
+      html: `<div class="pin-dot pin-count${selected ? " selected" : ""}">${count}</div>`,
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2],
     });
   }
 
+  // Directory pins with no listing are drawn on the canvas. A zoomed-in slice of
+  // this directory can contain a few hundred buildings, and a DOM node per pin
+  // makes that view stutter.
+  function emptyPinStyle(selected) {
+    return {
+      radius: selected ? 8 : 5,
+      color: selected ? "#16a34a" : "#94a3b8",
+      weight: 2,
+      fillColor: "#ffffff",
+      fillOpacity: 1,
+      opacity: 1,
+    };
+  }
+
+  function inView(lat, lng) {
+    if (!Number.isFinite(Number(lat)) || !Number.isFinite(Number(lng))) return false;
+    return map.getBounds().contains([Number(lat), Number(lng)]);
+  }
+
   function pinsToShow() {
     const q = focusedBuildingId ? "" : textQuery();
     const pins = new Map();
-    allBuildings.forEach((b) => {
-      const units = unitsFor(b.id).filter((l) => listingMatchesText(l, q) && inMoveBounds(b.lat, b.lng));
-      if (units.length) pins.set(b.id, { building: b, count: units.length });
-    });
-    // Listings that are not tied to a directory building still get their own pin.
     allListings.forEach((l) => {
-      if (l.building_id && buildingById.has(l.building_id)) return;
-      if (!matchesStructural(l) || !listingMatchesText(l, q) || !inMoveBounds(l.lat, l.lng)) return;
+      if (!matchesStructural(l) || !listingMatchesText(l, q)) return;
+      if (l.building_id && buildingById.has(l.building_id)) {
+        const b = buildingById.get(l.building_id);
+        if (!inMoveBounds(b.lat, b.lng)) return;
+        const pin = pins.get(b.id) || { building: b, count: 0 };
+        pin.count += 1;
+        pins.set(b.id, pin);
+        return;
+      }
+      // Listings that are not tied to a directory building still get their own pin.
+      if (!inMoveBounds(l.lat, l.lng)) return;
       if (!Number.isFinite(Number(l.lat)) || !Number.isFinite(Number(l.lng))) return;
       pins.set("listing:" + l.id, {
         listing: l,
@@ -895,7 +959,7 @@
     });
     const showEmpty = map.getZoom() >= EMPTY_ZOOM && !q;
     const emptyCandidates = showEmpty
-      ? allBuildings.filter((b) => !pins.has(b.id) && inMoveBounds(b.lat, b.lng))
+      ? allBuildings.filter((b) => !pins.has(b.id) && inView(b.lat, b.lng))
       : suggestions().map((hit) => hit.building).filter((b) => !pins.has(b.id));
     emptyCandidates.forEach((b) => {
       if (!pins.has(b.id)) pins.set(b.id, { building: b, count: 0 });
@@ -919,11 +983,14 @@
       const lng = pin.building ? pin.building.lng : pin.lng;
       if (!Number.isFinite(Number(lat)) || !Number.isFinite(Number(lng))) return;
       const selected = id === focusedBuildingId || id === selectedBuilding || id === "listing:" + selectedId;
-      const marker = L.marker([Number(lat), Number(lng)], {
-        icon: buildingIcon(pin.count, selected),
-        title: pin.building ? pin.building.name : (pin.listing.title || ""),
-        zIndexOffset: selected ? 500 : (pin.count ? 200 : 0),
-      });
+      const title = pin.building ? pin.building.name : (pin.listing.title || "");
+      const marker = pin.count > 0
+        ? L.marker([Number(lat), Number(lng)], {
+            icon: buildingIcon(pin.count, selected),
+            title,
+            zIndexOffset: selected ? 500 : 200,
+          })
+        : L.circleMarker([Number(lat), Number(lng)], emptyPinStyle(selected));
       marker.on("click", () => {
         if (pin.building) focusBuilding(pin.building.id, { fromMap: true });
         else selectListing(pin.listing.id, { fromMap: true });
@@ -939,8 +1006,13 @@
       : null;
     markersById.forEach((entry, id) => {
       const selected = id === focusedBuildingId || id === selectedBuilding || id === "listing:" + selectedId;
-      entry.marker.setIcon(buildingIcon(entry.count, selected));
-      entry.marker.setZIndexOffset(selected ? 500 : (entry.count ? 200 : 0));
+      if (entry.count > 0) {
+        entry.marker.setIcon(buildingIcon(entry.count, selected));
+        entry.marker.setZIndexOffset(selected ? 500 : 200);
+      } else {
+        entry.marker.setStyle(emptyPinStyle(selected));
+        if (selected && entry.marker.bringToFront) entry.marker.bringToFront();
+      }
     });
   }
 
@@ -1181,6 +1253,7 @@
   map.on("moveend", () => {
     if (suppressMoveFilter) return;
     if (el.searchAsMove.checked) refresh();
+    else if (map.getZoom() >= EMPTY_ZOOM) syncMarkers();
   });
   map.on("zoomend", () => {
     if (suppressMoveFilter) return;
@@ -1200,7 +1273,19 @@
     const buildings = directory && Array.isArray(directory.buildings) ? directory.buildings : [];
     allBuildings = buildings;
     buildingById.clear();
-    buildings.forEach((b) => buildingById.set(b.id, b));
+    foldedNames.clear();
+    buildings.forEach((b) => {
+      buildingById.set(b.id, b);
+      foldedFor(b);
+    });
+    const areas = directory && Array.isArray(directory.areas) ? directory.areas : [];
+    areas.forEach((area) => {
+      if (area && area.id && area.name) AREA_LABEL[area.id] = area.name;
+    });
+    const locAreas = document.querySelector(".loc-areas");
+    if (locAreas && areas.length) {
+      locAreas.innerHTML = areas.map((area) => `<span>${esc(area.name)}</span>`).join("");
+    }
     areaBbox = directory && directory.area ? directory.area.bbox : null;
     fitAreaSoon();
   };

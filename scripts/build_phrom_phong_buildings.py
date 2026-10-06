@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Build data/buildings.json for Phrom Phong, Ekamai, and On Nut.
+"""Build data/buildings.json for six Bangkok areas.
 
-Phrom Phong stays the original Sukhumvit Soi 23–49 trial set. Ekamai and On Nut
-are every residential building whose center is within 2.5 km of the BTS station,
-using OpenStreetMap only. Buildings in more than one area are stored once.
-Unnamed buildings are included only when the address is specific enough to label
-them. Data is © OpenStreetMap contributors, ODbL.
+Phrom Phong stays the original Sukhumvit Soi 23–49 trial set. Ekamai, On Nut,
+Silom–Sathorn, Asok–Nana, and Ari are every residential building whose center
+is within 2.5 km of the BTS station, using OpenStreetMap only. Station
+coordinates are the OpenStreetMap railway=station nodes. Buildings in more
+than one area are stored once and list every area they fall in. Unnamed
+buildings are included only when the address is specific enough to label them.
+Data is © OpenStreetMap contributors, ODbL.
 """
 
 from __future__ import annotations
@@ -14,12 +16,15 @@ import argparse
 import json
 import math
 import re
+import time
+import urllib.error
 import urllib.request
 from datetime import date
 from pathlib import Path
 
 BBOX = {"south": 13.720, "west": 100.558, "north": 13.745, "east": 100.582}
 RADIUS_M = 2500
+# Order is the order stored on each building and shown in the page header.
 STATIONS = {
     "ekamai": {
         "id": "ekamai",
@@ -41,9 +46,55 @@ STATIONS = {
         "lat": 13.7056249,
         "lng": 100.601004,
     },
+    # BTS Sala Daeng, node/451697335 (S2). Interchange with MRT Si Lom.
+    "silom-sathorn": {
+        "id": "silom-sathorn",
+        "name": "Silom–Sathorn",
+        "osm_name": "Sala Daeng",
+        "name_th": "ศาลาแดง",
+        "ref": "S2",
+        "osm_id": "node/451697335",
+        "lat": 13.7285677,
+        "lng": 100.5343416,
+        "detail": "interchange with MRT Si Lom",
+    },
+    # BTS Asok, node/5391625873 (E4). Interchange with MRT Sukhumvit.
+    "asok-nana": {
+        "id": "asok-nana",
+        "name": "Asok–Nana",
+        "osm_name": "Asok",
+        "name_th": "อโศก",
+        "ref": "E4",
+        "osm_id": "node/5391625873",
+        "lat": 13.7370432,
+        "lng": 100.5603571,
+        "detail": "interchange with MRT Sukhumvit",
+    },
+    # BTS Ari, node/5388607091 (N5).
+    "ari": {
+        "id": "ari",
+        "name": "Ari",
+        "osm_name": "Ari",
+        "name_th": "อารีย์",
+        "ref": "N5",
+        "osm_id": "node/5388607091",
+        "lat": 13.7797077,
+        "lng": 100.5446201,
+    },
 }
+AREA_IDS = ["phrom-phong", *STATIONS]
 UA = "thailand-rental-map/1.0 (Sukhumvit building directory; ODbL)"
-OVERPASS = "https://overpass-api.de/api/interpreter"
+# The public Overpass servers time out on a dense 2.5 km named-building query.
+# Try the main instance, then the French mirror, then smaller tiles.
+OVERPASS_ENDPOINTS = (
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.openstreetmap.fr/api/interpreter",
+)
+SELECTOR_BASES = (
+    'nwr["building"~"^(apartments|residential|condominium|house|dormitory|terrace|detached|bungalow)$"]',
+    'nwr["building"]["name"]',
+    'nwr["landuse"="residential"]["name"]',
+)
 RES_BUILDING = {
     "apartments",
     "residential",
@@ -104,36 +155,99 @@ EXTRA_ALIASES = {
 
 
 def overpass(query: str) -> list[dict]:
-    req = urllib.request.Request(OVERPASS, data=query.encode(), headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=180) as response:
-        return json.load(response)["elements"]
+    last_error: Exception | None = None
+    for endpoint in OVERPASS_ENDPOINTS:
+        host = endpoint.split("/")[2]
+        try:
+            req = urllib.request.Request(endpoint, data=query.encode(), headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=180) as response:
+                elements = json.load(response)["elements"]
+            print(f"    ok {host} {len(elements)}", flush=True)
+            return elements
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, KeyError) as exc:
+            last_error = exc
+            print(f"    fail {host}: {exc}", flush=True)
+            time.sleep(2)
+    raise RuntimeError(last_error)
 
 
-def fetch_elements() -> list[dict]:
+def overpass_query(selector: str, timeout: int) -> str:
+    return f"[out:json][timeout:{timeout}];\n{selector};\nout center tags;\n"
+
+
+def quarter_boxes(south: float, west: float, north: float, east: float) -> list[tuple[float, float, float, float]]:
+    mid_lat = (south + north) / 2
+    mid_lng = (west + east) / 2
+    return [
+        (south, west, mid_lat, mid_lng),
+        (south, mid_lng, mid_lat, east),
+        (mid_lat, west, north, mid_lng),
+        (mid_lat, mid_lng, north, east),
+    ]
+
+
+def fetch_bbox(base: str, south: float, west: float, north: float, east: float, depth: int = 0) -> list[dict]:
+    selector = f"{base}({south:.7f},{west:.7f},{north:.7f},{east:.7f})"
+    try:
+        return overpass(overpass_query(selector, 80))
+    except RuntimeError:
+        if depth >= 3:
+            raise
+        print(f"    splitting bbox depth {depth + 1}", flush=True)
+        got: list[dict] = []
+        for box in quarter_boxes(south, west, north, east):
+            got += fetch_bbox(base, *box, depth + 1)
+        return got
+
+
+def center_in_radius(element: dict, lat: float, lng: float) -> bool:
+    point = center(element)
+    return point is not None and haversine_m(point, (lat, lng)) <= RADIUS_M
+
+
+def fetch_selector(base: str, lat: float, lng: float) -> list[dict]:
+    """Same three Overpass filters as before. Fall back to tiles if the circle times out."""
+    selector = f"{base}(around:{RADIUS_M},{lat},{lng})"
+    try:
+        return overpass(overpass_query(selector, 120))
+    except RuntimeError:
+        print("    circle timed out; fetching bbox tiles inside the same radius", flush=True)
+        box = circle_bbox(lat, lng)
+        got = fetch_bbox(base, box["south"], box["west"], box["north"], box["east"])
+        return [element for element in got if center_in_radius(element, lat, lng)]
+
+
+def fetch_elements(cache: Path | None = None) -> list[dict]:
+    if cache:
+        cache.mkdir(parents=True, exist_ok=True)
     elements: list[dict] = []
     for station in STATIONS.values():
+        cached = cache / f"osm-{station['id']}.json" if cache else None
+        if cached and cached.exists():
+            got = json.loads(cached.read_text())["elements"]
+            print(f"cached {station['id']}: {len(got)} elements", flush=True)
+            elements += got
+            continue
         lat, lng = station["lat"], station["lng"]
-        elements += overpass(
-            f"""
-            [out:json][timeout:120];
-            nwr["building"~"^(apartments|residential|condominium|house|dormitory|terrace|detached|bungalow)$"](around:{RADIUS_M},{lat},{lng});
-            out center tags;
-            """
-        )
-        elements += overpass(
-            f"""
-            [out:json][timeout:90];
-            nwr["building"]["name"](around:{RADIUS_M},{lat},{lng});
-            out center tags;
-            """
-        )
-        elements += overpass(
-            f"""
-            [out:json][timeout:50];
-            nwr["landuse"="residential"]["name"](around:{RADIUS_M},{lat},{lng});
-            out center tags;
-            """
-        )
+        got: list[dict] = []
+        print(f"fetch {station['id']} around {lat},{lng}", flush=True)
+        for index, base in enumerate(SELECTOR_BASES):
+            piece = cache / f"osm-{station['id']}-q{index}.json" if cache else None
+            if piece and piece.exists():
+                batch = json.loads(piece.read_text())["elements"]
+                print(f"  cached {station['id']} query {index + 1}: {len(batch)}", flush=True)
+            else:
+                try:
+                    batch = fetch_selector(base, lat, lng)
+                except RuntimeError as exc:
+                    raise SystemExit(f"Overpass failed for {station['id']} query {index + 1}: {exc}") from exc
+                print(f"  {station['id']} query {index + 1}: {len(batch)}", flush=True)
+                if piece:
+                    piece.write_text(json.dumps({"elements": batch}))
+            got += batch
+        if cached:
+            cached.write_text(json.dumps({"elements": got}))
+        elements += got
     return elements
 
 
@@ -368,8 +482,9 @@ def union_bbox(boxes: list[dict]) -> dict:
 
 
 def skipped_unnamed(elements: list[dict]) -> dict[str, int]:
+    """Unnamed residential buildings dropped for lack of a street + house number."""
     seen = set()
-    counts = {key: 0 for key in ("phrom-phong", *STATIONS)}
+    counts = {key: 0 for key in AREA_IDS}
     counts["unique"] = 0
     for element in elements:
         point = center(element)
@@ -382,7 +497,7 @@ def skipped_unnamed(elements: list[dict]) -> dict[str, int]:
         if blocked(tags) or has_name(tags) or address_label(tags):
             continue
         areas = areas_for(*point)
-        if not any(area in STATIONS for area in areas):
+        if not areas:
             continue
         key = (element["type"], element["id"])
         if key in seen:
@@ -395,21 +510,23 @@ def skipped_unnamed(elements: list[dict]) -> dict[str, int]:
     return counts
 
 
-def load_cached(cache: Path) -> list[dict]:
-    elements = []
-    for path in sorted(cache.glob("osm-*.json")):
-        elements += json.load(open(path))["elements"]
-    if not elements:
-        raise SystemExit(f"no Overpass cache in {cache}")
-    return elements
-
-
 def stamp_existing(building: dict) -> dict:
-    building = dict(building)
-    building["areas"] = areas_for(building["lat"], building["lng"]) or ["phrom-phong"]
-    building["named"] = True
-    building.setdefault("aliases", [])
-    return building
+    """Keep a directory building and refresh which areas its center falls in."""
+    areas = areas_for(building["lat"], building["lng"]) or list(building.get("areas") or ["phrom-phong"])
+    return {
+        "id": building["id"],
+        "name": building["name"],
+        "name_en": building.get("name_en"),
+        "name_th": building.get("name_th"),
+        "aliases": list(building.get("aliases") or []),
+        "type": building["type"],
+        "lat": building["lat"],
+        "lng": building["lng"],
+        "areas": areas,
+        "named": bool(building.get("named", True)),
+        "source": building.get("source") or "openstreetmap",
+        "osm_ref": building.get("osm_ref") or "",
+    }
 
 
 def build(existing: list[dict], elements: list[dict]) -> dict:
@@ -449,11 +566,13 @@ def build(existing: list[dict], elements: list[dict]) -> dict:
     boxes = [BBOX, *[circle_bbox(station["lat"], station["lng"]) for station in STATIONS.values()]]
     return {
         "area": {
-            "id": "sukhumvit",
-            "name": "Phrom Phong, Ekamai and On Nut",
+            "id": "bangkok",
+            "name": "Phrom Phong, Ekamai, On Nut, Silom–Sathorn, Asok–Nana and Ari",
             "description": (
                 "Phrom Phong along Sukhumvit Soi 23 to Soi 49, plus every residential "
-                "building within 2.5 km of BTS Ekamai and within 2.5 km of BTS On Nut."
+                "building within 2.5 km of BTS Ekamai, BTS On Nut, BTS Sala Daeng "
+                "(Silom–Sathorn), BTS Asok (Asok–Nana), and BTS Ari. A building in "
+                "more than one area is stored once."
             ),
             "bbox": union_bbox(boxes),
         },
@@ -471,7 +590,7 @@ def build(existing: list[dict], elements: list[dict]) -> dict:
                     "name": station["name"],
                     "kind": "radius",
                     "radius_m": RADIUS_M,
-                    "description": f"Residential buildings within {RADIUS_M} m of BTS {station['osm_name']} ({station['ref']}).",
+                    "description": station_description(station),
                     "station": {
                         "name": station["osm_name"],
                         "name_th": station["name_th"],
@@ -493,40 +612,57 @@ def build(existing: list[dict], elements: list[dict]) -> dict:
     }
 
 
+def station_description(station: dict) -> str:
+    text = f"Residential buildings within {RADIUS_M} m of BTS {station['osm_name']} ({station['ref']})"
+    if station.get("detail"):
+        text += f", {station['detail']}"
+    return text + "."
+
+
 def summarize(payload: dict, skipped: dict[str, int]) -> None:
     from collections import Counter
 
-    print(f"buildings {len(payload['buildings'])}")
-    print("skipped unnamed", json.dumps(skipped))
-    for area in ("phrom-phong", "ekamai", "on-nut"):
-        rows = [b for b in payload["buildings"] if area in b["areas"]]
+    buildings = payload["buildings"]
+    print(f"unique {len(buildings)}")
+    print("skipped unnamed", json.dumps(skipped, ensure_ascii=False))
+    for area in AREA_IDS:
+        rows = [b for b in buildings if area in b["areas"]]
         types = Counter(b["type"] for b in rows)
         named = sum(1 for b in rows if b["named"])
         address = sum(1 for b in rows if not b["named"])
-        print(f"{area}: {len(rows)} named={named} address={address} types={dict(types)} skipped_unnamed={skipped.get(area, 0)}")
-    both = sum(1 for b in payload["buildings"] if "ekamai" in b["areas"] and "phrom-phong" in b["areas"])
-    circles = sum(1 for b in payload["buildings"] if "ekamai" in b["areas"] and "on-nut" in b["areas"])
-    print(f"overlap phrom-phong∩ekamai {both}")
-    print(f"overlap ekamai∩on-nut {circles}")
+        print(
+            f"{area}: {len(rows)} named={named} address={address} "
+            f"condo={types['condo']} apartment={types['apartment']} other={types['other']} "
+            f"skipped_unnamed={skipped.get(area, 0)}"
+        )
+    pairs = (
+        ("phrom-phong", "ekamai"),
+        ("phrom-phong", "asok-nana"),
+        ("phrom-phong", "silom-sathorn"),
+        ("ekamai", "on-nut"),
+        ("ekamai", "asok-nana"),
+        ("silom-sathorn", "asok-nana"),
+    )
+    for left, right in pairs:
+        count = sum(1 for b in buildings if left in b["areas"] and right in b["areas"])
+        print(f"overlap {left}∩{right} {count}")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--cache", help="Directory of cached Overpass JSON files")
+    parser.add_argument("--cache", help="Directory of per-station Overpass JSON files. Missing stations are fetched and saved here.")
     parser.add_argument("--base", default="data/buildings.json", help="Existing directory to keep and dedupe against")
     parser.add_argument("-o", default="data/buildings.json")
     args = parser.parse_args()
     base_path = Path(args.base)
+    # Read before the output is replaced. Keep every building already in the
+    # directory (the Phrom Phong trial set and earlier station radii) and
+    # refresh area membership. Overpass adds buildings for the station radii.
     existing = []
-    if base_path.exists() and args.base == args.o:
-        # Read before the output file is replaced. A rebuilt file is not a Phrom Phong base.
-        current = json.loads(base_path.read_text())
-        if current.get("area", {}).get("id") == "phrom-phong":
-            existing = current["buildings"]
-    elif base_path.exists():
-        current = json.loads(base_path.read_text())
-        existing = current["buildings"] if current.get("area", {}).get("id") == "phrom-phong" else []
-    elements = load_cached(Path(args.cache)) if args.cache else fetch_elements()
+    if base_path.exists():
+        existing = json.loads(base_path.read_text()).get("buildings") or []
+    cache = Path(args.cache) if args.cache else None
+    elements = fetch_elements(cache)
     payload = build(existing, elements)
     skipped = skipped_unnamed(elements)
     Path(args.o).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
