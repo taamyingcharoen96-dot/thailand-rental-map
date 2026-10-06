@@ -4,9 +4,9 @@ A public rental map for Thailand, starting in Bangkok. The owner posts the first
 
 **Live site:** https://taamyingcharoen96-dot.github.io/thailand-rental-map/
 
-The page is a split list and map (Leaflet, OpenStreetMap). Listings in the same building share one pin with a unit count. The search box suggests building names in English and Thai, ignoring punctuation and spacing (`ds tower` finds D.S. Tower). You can also filter by monthly rent, bedrooms, and property type. Selecting a unit opens its photo card.
+The page is a split list and map (Leaflet, OpenStreetMap). Listings in the same building share one pin with a unit count. Other directory buildings show as small pins once you zoom in. The search box suggests building names in English and Thai, ignoring punctuation and spacing (`ds tower` finds D.S. Tower). You can also filter by monthly rent, bedrooms, and property type. Selecting a unit opens its photo card.
 
-The directory covers three Bangkok areas along Sukhumvit: Phrom Phong (Soi 23 to Soi 49), and every residential building within 2.5 km of BTS Ekamai and within 2.5 km of BTS On Nut. A building in more than one area is listed once. Names and coordinates are from OpenStreetMap under the [Open Database License](https://www.openstreetmap.org/copyright).
+The directory covers six Bangkok areas. Phrom Phong is Sukhumvit Soi 23 to Soi 49. Ekamai, On Nut, Silom–Sathorn (centred on BTS Sala Daeng), Asok–Nana (centred on BTS Asok), and Ari are every residential building within 2.5 km of that BTS station. A building in more than one area is listed once. Names and coordinates are from OpenStreetMap under the [Open Database License](https://www.openstreetmap.org/copyright).
 
 ## First listing
 
@@ -40,7 +40,7 @@ Open http://127.0.0.1:47231/
 
 ## Buildings
 
-`data/buildings.json` is the directory for those three areas (rebuilt 2026-10-06). Each record has a stable id, English and Thai names when OpenStreetMap has them, aliases, type (`condo`, `apartment`, or `other`), the areas it falls in, coordinates, and `source`. Unnamed buildings are included only when OpenStreetMap has a street and house number. Rebuild it with:
+`data/buildings.json` is the directory for those six areas (rebuilt 2026-10-06). Each record has a stable id, English and Thai names when OpenStreetMap has them, aliases, type (`condo`, `apartment`, or `other`), the areas it falls in, coordinates, and `source`. Unnamed buildings are included only when OpenStreetMap has a street and house number. Rebuild it with:
 
 ```bash
 python3 scripts/build_phrom_phong_buildings.py -o data/buildings.json

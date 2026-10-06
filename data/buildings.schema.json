@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.invalid/thailand-rental-map/buildings.schema.json",
   "title": "Thailand Rental Map building directory",
-  "description": "Residential buildings for Phrom Phong, Ekamai, and On Nut. Names and coordinates come from OpenStreetMap under the Open Database License.",
+  "description": "Residential buildings for Phrom Phong, Ekamai, On Nut, Silom–Sathorn, Asok–Nana, and Ari. Names and coordinates come from OpenStreetMap under the Open Database License.",
   "type": "object",
   "additionalProperties": false,
   "required": ["area", "areas", "attribution", "retrieved_at", "buildings"],
@@ -59,7 +59,7 @@
         "areas": {
           "type": "array",
           "minItems": 1,
-          "items": { "type": "string", "enum": ["phrom-phong", "ekamai", "on-nut"] }
+          "items": { "type": "string", "enum": ["phrom-phong", "ekamai", "on-nut", "silom-sathorn", "asok-nana", "ari"] }
         },
         "named": { "type": "boolean" },
         "source": { "type": "string", "minLength": 1 },
