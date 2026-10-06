@@ -1,17 +1,61 @@
 {
   "area": {
-    "id": "phrom-phong",
-    "name": "Phrom Phong",
-    "description": "Trial area along Sukhumvit from Soi 23 to Soi 49, covering the blocks around BTS Phrom Phong and the Asok and Thong Lo edges.",
+    "id": "sukhumvit",
+    "name": "Phrom Phong, Ekamai and On Nut",
+    "description": "Phrom Phong along Sukhumvit Soi 23 to Soi 49, plus every residential building within 2.5 km of BTS Ekamai and within 2.5 km of BTS On Nut.",
     "bbox": {
-      "south": 13.72,
+      "south": 13.683167120625225,
       "west": 100.558,
       "north": 13.745,
-      "east": 100.582
+      "east": 100.62411998713155
     }
   },
+  "areas": [
+    {
+      "id": "phrom-phong",
+      "name": "Phrom Phong",
+      "kind": "bbox",
+      "description": "Sukhumvit Soi 23 to Soi 49, around BTS Phrom Phong and the Asok and Thong Lo edges.",
+      "bbox": {
+        "south": 13.72,
+        "west": 100.558,
+        "north": 13.745,
+        "east": 100.582
+      }
+    },
+    {
+      "id": "ekamai",
+      "name": "Ekamai",
+      "kind": "radius",
+      "radius_m": 2500,
+      "description": "Residential buildings within 2500 m of BTS Ekkamai (E7).",
+      "station": {
+        "name": "Ekkamai",
+        "name_th": "เอกมัย",
+        "ref": "E7",
+        "osm_id": "node/5405616025",
+        "lat": 13.7195385,
+        "lng": 100.585111
+      }
+    },
+    {
+      "id": "on-nut",
+      "name": "On Nut",
+      "kind": "radius",
+      "radius_m": 2500,
+      "description": "Residential buildings within 2500 m of BTS On Nut (E9).",
+      "station": {
+        "name": "On Nut",
+        "name_th": "อ่อนนุช",
+        "ref": "E9",
+        "osm_id": "node/5391620400",
+        "lat": 13.7056249,
+        "lng": 100.601004
+      }
+    }
+  ],
   "attribution": "© OpenStreetMap contributors. Building names and locations are from OpenStreetMap, available under the Open Database License (ODbL).",
-  "retrieved_at": "2026-09-25",
+  "retrieved_at": "2026-10-06",
   "buildings": [
     {
       "id": "osm-way-532862534",
@@ -23,7 +67,12 @@
       "lat": 13.7376349,
       "lng": 100.572343,
       "source": "openstreetmap",
-      "osm_ref": "way/532862534"
+      "osm_ref": "way/532862534",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340670160",
@@ -35,7 +84,11 @@
       "lat": 13.7420568,
       "lng": 100.5581449,
       "source": "openstreetmap",
-      "osm_ref": "way/340670160"
+      "osm_ref": "way/340670160",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280509",
@@ -47,7 +100,11 @@
       "lat": 13.7388614,
       "lng": 100.5674599,
       "source": "openstreetmap",
-      "osm_ref": "way/324280509"
+      "osm_ref": "way/324280509",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340329155",
@@ -59,7 +116,11 @@
       "lat": 13.7370167,
       "lng": 100.5681414,
       "source": "openstreetmap",
-      "osm_ref": "way/340329155"
+      "osm_ref": "way/340329155",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280446",
@@ -71,7 +132,29 @@
       "lat": 13.7357875,
       "lng": 100.5684847,
       "source": "openstreetmap",
-      "osm_ref": "way/324280446"
+      "osm_ref": "way/324280446",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1421330653",
+      "name": "38 Mansion",
+      "name_en": "38 Mansion",
+      "name_th": null,
+      "aliases": [
+        "Soi Sangchai 25"
+      ],
+      "type": "condo",
+      "lat": 13.7183457,
+      "lng": 100.578094,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1421330653"
     },
     {
       "id": "osm-way-324280531",
@@ -83,7 +166,12 @@
       "lat": 13.7317664,
       "lng": 100.570231,
       "source": "openstreetmap",
-      "osm_ref": "way/324280531"
+      "osm_ref": "way/324280531",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280512",
@@ -95,7 +183,12 @@
       "lat": 13.7368081,
       "lng": 100.5743667,
       "source": "openstreetmap",
-      "osm_ref": "way/324280512"
+      "osm_ref": "way/324280512",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-76510923",
@@ -107,7 +200,12 @@
       "lat": 13.7297241,
       "lng": 100.5726523,
       "source": "openstreetmap",
-      "osm_ref": "way/76510923"
+      "osm_ref": "way/76510923",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329919854",
@@ -119,7 +217,12 @@
       "lat": 13.7275236,
       "lng": 100.5750891,
       "source": "openstreetmap",
-      "osm_ref": "way/329919854"
+      "osm_ref": "way/329919854",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-relation-7583649",
@@ -131,7 +234,30 @@
       "lat": 13.7251436,
       "lng": 100.5640555,
       "source": "openstreetmap",
-      "osm_ref": "relation/7583649"
+      "osm_ref": "relation/7583649",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-390895607",
+      "name": "AR Service Apartments",
+      "name_en": "AR Service Apartments",
+      "name_th": null,
+      "aliases": [
+        "Sukhumvit 93 135"
+      ],
+      "type": "apartment",
+      "lat": 13.6997295,
+      "lng": 100.6056547,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/390895607"
     },
     {
       "id": "osm-relation-15011617",
@@ -143,7 +269,28 @@
       "lat": 13.7244446,
       "lng": 100.5707379,
       "source": "openstreetmap",
-      "osm_ref": "relation/15011617"
+      "osm_ref": "relation/15011617",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-332038795",
+      "name": "Arin's Condo",
+      "name_en": "Arin's Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6906755,
+      "lng": 100.6095739,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/332038795"
     },
     {
       "id": "osm-way-371218879",
@@ -155,7 +302,29 @@
       "lat": 13.7401587,
       "lng": 100.5809665,
       "source": "openstreetmap",
-      "osm_ref": "way/371218879"
+      "osm_ref": "way/371218879",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-520437366",
+      "name": "Artemis Sukhumvit 77",
+      "name_en": "Artemis Sukhumvit 77",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7111403,
+      "lng": 100.6046122,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/520437366"
     },
     {
       "id": "osm-way-331962384",
@@ -167,7 +336,11 @@
       "lat": 13.7385971,
       "lng": 100.5662306,
       "source": "openstreetmap",
-      "osm_ref": "way/331962384"
+      "osm_ref": "way/331962384",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1230362492",
@@ -179,7 +352,29 @@
       "lat": 13.7272155,
       "lng": 100.5677089,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362492"
+      "osm_ref": "way/1230362492",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-317160316",
+      "name": "Asean Tower",
+      "name_en": "Asean Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7205152,
+      "lng": 100.5970096,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/317160316"
     },
     {
       "id": "osm-way-586770732",
@@ -191,7 +386,11 @@
       "lat": 13.7390667,
       "lng": 100.5608674,
       "source": "openstreetmap",
-      "osm_ref": "way/586770732"
+      "osm_ref": "way/586770732",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329745983",
@@ -203,7 +402,11 @@
       "lat": 13.7416903,
       "lng": 100.5623911,
       "source": "openstreetmap",
-      "osm_ref": "way/329745983"
+      "osm_ref": "way/329745983",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-332192002",
@@ -215,7 +418,113 @@
       "lat": 13.7387034,
       "lng": 100.5620642,
       "source": "openstreetmap",
-      "osm_ref": "way/332192002"
+      "osm_ref": "way/332192002",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-520436156",
+      "name": "aspire rama 4",
+      "name_en": "aspire rama 4",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7121044,
+      "lng": 100.5844012,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/520436156"
+    },
+    {
+      "id": "osm-relation-7485174",
+      "name": "Aspire Sukhumvit 48",
+      "name_en": "Aspire Sukhumvit 48",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7104906,
+      "lng": 100.5939585,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7485174"
+    },
+    {
+      "id": "osm-way-319264596",
+      "name": "Assign Residence",
+      "name_en": "Assign Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7349159,
+      "lng": 100.5838265,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319264596"
+    },
+    {
+      "id": "osm-way-319148797",
+      "name": "B.U. 2 House",
+      "name_en": "B.U. 2 House",
+      "name_th": null,
+      "aliases": [
+        "B.U. House 2"
+      ],
+      "type": "other",
+      "lat": 13.7060472,
+      "lng": 100.6042673,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319148797"
+    },
+    {
+      "id": "osm-way-319148798",
+      "name": "B.U. House",
+      "name_en": "B.U. House",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7063514,
+      "lng": 100.6049508,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319148798"
+    },
+    {
+      "id": "osm-way-229072479",
+      "name": "Baan Ananda",
+      "name_en": "Baan Ananda",
+      "name_th": "บ้านอานันดา",
+      "aliases": [
+        "บ้านอานันดา"
+      ],
+      "type": "other",
+      "lat": 13.7267672,
+      "lng": 100.5842105,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/229072479"
     },
     {
       "id": "osm-way-208691141",
@@ -229,7 +538,30 @@
       "lat": 13.7371242,
       "lng": 100.5722409,
       "source": "openstreetmap",
-      "osm_ref": "way/208691141"
+      "osm_ref": "way/208691141",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1453274136",
+      "name": "Baan Klang Muang Classe Sukhumvit 77",
+      "name_en": "Baan Klang Muang Classe Sukhumvit 77",
+      "name_th": "บ้านกลางเมือง คลาสเซ่ สุขุมวิท 77",
+      "aliases": [
+        "บ้านกลางเมือง คลาสเซ่ สุขุมวิท 77"
+      ],
+      "type": "other",
+      "lat": 13.7145371,
+      "lng": 100.616343,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1453274136"
     },
     {
       "id": "osm-way-332674480",
@@ -241,7 +573,28 @@
       "lat": 13.727522,
       "lng": 100.5783703,
       "source": "openstreetmap",
-      "osm_ref": "way/332674480"
+      "osm_ref": "way/332674480",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-332038876",
+      "name": "Baan Montida",
+      "name_en": "Baan Montida",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6917563,
+      "lng": 100.6083888,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/332038876"
     },
     {
       "id": "osm-node-4460604838",
@@ -255,7 +608,51 @@
       "lat": 13.7254366,
       "lng": 100.5625905,
       "source": "openstreetmap",
-      "osm_ref": "node/4460604838"
+      "osm_ref": "node/4460604838",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-612473637",
+      "name": "Baan Sansiri Sukhumvit 67",
+      "name_en": "Baan Sansiri Sukhumvit 67",
+      "name_th": "บ้านแสนสิริ สุขุมวิท 67",
+      "aliases": [
+        "บ้านแสนสิริ สุขุมวิท 67",
+        "MooBaan Sansiri (หมู่บ้านแสนสิริ)"
+      ],
+      "type": "other",
+      "lat": 13.7195509,
+      "lng": 100.5919843,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/612473637"
+    },
+    {
+      "id": "osm-way-113135429",
+      "name": "Baan Saran Nuch",
+      "name_en": "Baan Saran Nuch",
+      "name_th": "บ้านสราญนุช",
+      "aliases": [
+        "บ้านสราญนุช",
+        "Sukhumvit Soi 75/1 2"
+      ],
+      "type": "condo",
+      "lat": 13.7099395,
+      "lng": 100.5995588,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/113135429"
     },
     {
       "id": "osm-way-330253737",
@@ -270,7 +667,12 @@
       "lat": 13.7260184,
       "lng": 100.5682103,
       "source": "openstreetmap",
-      "osm_ref": "way/330253737"
+      "osm_ref": "way/330253737",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-208693782",
@@ -284,7 +686,12 @@
       "lat": 13.7317738,
       "lng": 100.5714215,
       "source": "openstreetmap",
-      "osm_ref": "way/208693782"
+      "osm_ref": "way/208693782",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340391178",
@@ -298,7 +705,45 @@
       "lat": 13.7357947,
       "lng": 100.5647106,
       "source": "openstreetmap",
-      "osm_ref": "way/340391178"
+      "osm_ref": "way/340391178",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-518484860",
+      "name": "Bamboo For Rest",
+      "name_en": "Bamboo For Rest",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7044535,
+      "lng": 100.5989841,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/518484860"
+    },
+    {
+      "id": "osm-way-320277879",
+      "name": "Bangkok Feliz",
+      "name_en": "Bangkok Feliz",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7159093,
+      "lng": 100.5918303,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/320277879"
     },
     {
       "id": "osm-way-324280450",
@@ -310,7 +755,11 @@
       "lat": 13.7348898,
       "lng": 100.5667662,
       "source": "openstreetmap",
-      "osm_ref": "way/324280450"
+      "osm_ref": "way/324280450",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-76510916",
@@ -324,7 +773,12 @@
       "lat": 13.7258705,
       "lng": 100.5754498,
       "source": "openstreetmap",
-      "osm_ref": "way/76510916"
+      "osm_ref": "way/76510916",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340724924",
@@ -336,7 +790,11 @@
       "lat": 13.7415422,
       "lng": 100.5637592,
       "source": "openstreetmap",
-      "osm_ref": "way/340724924"
+      "osm_ref": "way/340724924",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329919878",
@@ -348,7 +806,12 @@
       "lat": 13.7263902,
       "lng": 100.5737763,
       "source": "openstreetmap",
-      "osm_ref": "way/329919878"
+      "osm_ref": "way/329919878",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962381",
@@ -360,7 +823,11 @@
       "lat": 13.7388173,
       "lng": 100.5727185,
       "source": "openstreetmap",
-      "osm_ref": "way/331962381"
+      "osm_ref": "way/331962381",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280541",
@@ -374,7 +841,86 @@
       "lat": 13.7372411,
       "lng": 100.5713858,
       "source": "openstreetmap",
-      "osm_ref": "way/324280541"
+      "osm_ref": "way/324280541",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-relation-20441957",
+      "name": "Bless Town Sukhumvit 50",
+      "name_en": "Bless Town Sukhumvit 50",
+      "name_th": "หมู่บ้านเบลสทาวน์ สุขุมวิท 50",
+      "aliases": [
+        "หมู่บ้านเบลสทาวน์ สุขุมวิท 50"
+      ],
+      "type": "other",
+      "lat": 13.7082438,
+      "lng": 100.5942096,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/20441957"
+    },
+    {
+      "id": "osm-way-332038869",
+      "name": "Blocs 77",
+      "name_en": "Blocs 77",
+      "name_th": null,
+      "aliases": [
+        "ซอยอ่อนนุช 1/1 291"
+      ],
+      "type": "condo",
+      "lat": 13.7106601,
+      "lng": 100.601668,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/332038869"
+    },
+    {
+      "id": "osm-way-331963826",
+      "name": "Blossomville",
+      "name_en": "Blossomville",
+      "name_th": null,
+      "aliases": [
+        "เอกมัย ซอย 4 35/1-12"
+      ],
+      "type": "other",
+      "lat": 13.7243603,
+      "lng": 100.5878197,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963826"
+    },
+    {
+      "id": "osm-node-13789849018",
+      "name": "Blue Wana Place",
+      "name_en": "Blue Wana Place",
+      "name_th": null,
+      "aliases": [
+        "ซอยสุขุมวิท 89 243"
+      ],
+      "type": "condo",
+      "lat": 13.7027682,
+      "lng": 100.6065812,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "node/13789849018"
     },
     {
       "id": "osm-way-1251934131",
@@ -388,7 +934,97 @@
       "lat": 13.722662,
       "lng": 100.5763714,
       "source": "openstreetmap",
-      "osm_ref": "way/1251934131"
+      "osm_ref": "way/1251934131",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-333134178",
+      "name": "BRO Building",
+      "name_en": "BRO Building",
+      "name_th": null,
+      "aliases": [
+        "ถนนพระรามที่ 4 3241"
+      ],
+      "type": "condo",
+      "lat": 13.7167506,
+      "lng": 100.5739599,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/333134178"
+    },
+    {
+      "id": "osm-way-318942792",
+      "name": "Burgundy Place",
+      "name_en": "Burgundy Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7318894,
+      "lng": 100.584246,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318942792"
+    },
+    {
+      "id": "osm-way-323690972",
+      "name": "Capital Residence",
+      "name_en": "Capital Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7397333,
+      "lng": 100.5849634,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/323690972"
+    },
+    {
+      "id": "osm-way-514073454",
+      "name": "Casa Asara",
+      "name_en": "Casa Asara",
+      "name_th": null,
+      "aliases": [
+        "On Nut Soi 2 80"
+      ],
+      "type": "condo",
+      "lat": 13.7104564,
+      "lng": 100.602604,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/514073454"
+    },
+    {
+      "id": "osm-way-324280548",
+      "name": "Casa Viva Condominium",
+      "name_en": "Casa Viva Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7302165,
+      "lng": 100.5911354,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280548"
     },
     {
       "id": "osm-way-25053995",
@@ -400,7 +1036,28 @@
       "lat": 13.7215207,
       "lng": 100.5655789,
       "source": "openstreetmap",
-      "osm_ref": "way/25053995"
+      "osm_ref": "way/25053995",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1184645981",
+      "name": "Ceil By Sansiri",
+      "name_en": "Ceil By Sansiri",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7305572,
+      "lng": 100.5877951,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1184645981"
     },
     {
       "id": "osm-way-764336659",
@@ -412,7 +1069,11 @@
       "lat": 13.7383155,
       "lng": 100.5620862,
       "source": "openstreetmap",
-      "osm_ref": "way/764336659"
+      "osm_ref": "way/764336659",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340272802",
@@ -424,7 +1085,11 @@
       "lat": 13.7418791,
       "lng": 100.5725033,
       "source": "openstreetmap",
-      "osm_ref": "way/340272802"
+      "osm_ref": "way/340272802",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962331",
@@ -436,7 +1101,11 @@
       "lat": 13.740007,
       "lng": 100.5676336,
       "source": "openstreetmap",
-      "osm_ref": "way/331962331"
+      "osm_ref": "way/331962331",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962374",
@@ -448,7 +1117,11 @@
       "lat": 13.7363221,
       "lng": 100.5654187,
       "source": "openstreetmap",
-      "osm_ref": "way/331962374"
+      "osm_ref": "way/331962374",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280503",
@@ -460,7 +1133,46 @@
       "lat": 13.731474,
       "lng": 100.5732097,
       "source": "openstreetmap",
-      "osm_ref": "way/324280503"
+      "osm_ref": "way/324280503",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-526805994",
+      "name": "Charming Resident Ekkamai 6",
+      "name_en": "Charming Resident Ekkamai 6",
+      "name_th": null,
+      "aliases": [
+        "เอกมัย ซอย 6 28"
+      ],
+      "type": "condo",
+      "lat": 13.7262017,
+      "lng": 100.5872464,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/526805994"
+    },
+    {
+      "id": "osm-way-324280525",
+      "name": "Charoenjai Place",
+      "name_en": "Charoenjai Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7302068,
+      "lng": 100.5906677,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280525"
     },
     {
       "id": "osm-way-374417561",
@@ -472,7 +1184,11 @@
       "lat": 13.7408908,
       "lng": 100.5596024,
       "source": "openstreetmap",
-      "osm_ref": "way/374417561"
+      "osm_ref": "way/374417561",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-332208215",
@@ -484,7 +1200,11 @@
       "lat": 13.7392253,
       "lng": 100.5627356,
       "source": "openstreetmap",
-      "osm_ref": "way/332208215"
+      "osm_ref": "way/332208215",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329919883",
@@ -496,7 +1216,11 @@
       "lat": 13.7349469,
       "lng": 100.5621807,
       "source": "openstreetmap",
-      "osm_ref": "way/329919883"
+      "osm_ref": "way/329919883",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-162623020",
@@ -510,7 +1234,11 @@
       "lat": 13.7336754,
       "lng": 100.5612247,
       "source": "openstreetmap",
-      "osm_ref": "way/162623020"
+      "osm_ref": "way/162623020",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-374417562",
@@ -522,7 +1250,11 @@
       "lat": 13.7448112,
       "lng": 100.5581437,
       "source": "openstreetmap",
-      "osm_ref": "way/374417562"
+      "osm_ref": "way/374417562",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280545",
@@ -534,7 +1266,46 @@
       "lat": 13.7345432,
       "lng": 100.5684019,
       "source": "openstreetmap",
-      "osm_ref": "way/324280545"
+      "osm_ref": "way/324280545",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-457283674",
+      "name": "Condo One Sukhumvit 52",
+      "name_en": "Condo One Sukhumvit 52",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7040771,
+      "lng": 100.5995532,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/457283674"
+    },
+    {
+      "id": "osm-way-331963849",
+      "name": "Condo One Sukhumvit 67",
+      "name_en": "Condo One Sukhumvit 67",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7182017,
+      "lng": 100.5898763,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963849"
     },
     {
       "id": "osm-way-208693094",
@@ -546,7 +1317,12 @@
       "lat": 13.7251749,
       "lng": 100.5685413,
       "source": "openstreetmap",
-      "osm_ref": "way/208693094"
+      "osm_ref": "way/208693094",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-450634304",
@@ -558,7 +1334,64 @@
       "lat": 13.725878,
       "lng": 100.5706268,
       "source": "openstreetmap",
-      "osm_ref": "way/450634304"
+      "osm_ref": "way/450634304",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-551620736",
+      "name": "Copia Mansion",
+      "name_en": "Copia Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7036893,
+      "lng": 100.590892,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/551620736"
+    },
+    {
+      "id": "osm-way-454727257",
+      "name": "Court Capri",
+      "name_en": "Court Capri",
+      "name_th": null,
+      "aliases": [
+        "เอกมัย ซอย 21 69"
+      ],
+      "type": "condo",
+      "lat": 13.7393575,
+      "lng": 100.5872939,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/454727257"
+    },
+    {
+      "id": "osm-way-155414472",
+      "name": "CS Apartment",
+      "name_en": "CS Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7255939,
+      "lng": 100.597915,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/155414472"
     },
     {
       "id": "osm-way-450615854",
@@ -570,7 +1403,12 @@
       "lat": 13.7262091,
       "lng": 100.5776679,
       "source": "openstreetmap",
-      "osm_ref": "way/450615854"
+      "osm_ref": "way/450615854",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280507",
@@ -584,7 +1422,11 @@
       "lat": 13.7407065,
       "lng": 100.5706786,
       "source": "openstreetmap",
-      "osm_ref": "way/324280507"
+      "osm_ref": "way/324280507",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340330015",
@@ -602,7 +1444,11 @@
       "lat": 13.7370981,
       "lng": 100.568444,
       "source": "openstreetmap",
-      "osm_ref": "way/340330015"
+      "osm_ref": "way/340330015",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962421",
@@ -614,7 +1460,31 @@
       "lat": 13.7330191,
       "lng": 100.5748139,
       "source": "openstreetmap",
-      "osm_ref": "way/331962421"
+      "osm_ref": "way/331962421",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-328744113",
+      "name": "Diamond Sukhumvit",
+      "name_en": "Diamond Sukhumvit",
+      "name_th": "ไดมอนด์ สุขุมวิท",
+      "aliases": [
+        "ไดมอนด์ สุขุมวิท"
+      ],
+      "type": "condo",
+      "lat": 13.7081879,
+      "lng": 100.5990423,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/328744113"
     },
     {
       "id": "osm-way-162623025",
@@ -626,7 +1496,11 @@
       "lat": 13.7333371,
       "lng": 100.561555,
       "source": "openstreetmap",
-      "osm_ref": "way/162623025"
+      "osm_ref": "way/162623025",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-330253694",
@@ -638,7 +1512,11 @@
       "lat": 13.7333766,
       "lng": 100.5622588,
       "source": "openstreetmap",
-      "osm_ref": "way/330253694"
+      "osm_ref": "way/330253694",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-25053984",
@@ -650,7 +1528,12 @@
       "lat": 13.7224592,
       "lng": 100.5650509,
       "source": "openstreetmap",
-      "osm_ref": "way/25053984"
+      "osm_ref": "way/25053984",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-571076407",
@@ -664,7 +1547,11 @@
       "lat": 13.7363939,
       "lng": 100.5634065,
       "source": "openstreetmap",
-      "osm_ref": "way/571076407"
+      "osm_ref": "way/571076407",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-318181489",
@@ -679,7 +1566,95 @@
       "lat": 13.7306014,
       "lng": 100.5820612,
       "source": "openstreetmap",
-      "osm_ref": "way/318181489"
+      "osm_ref": "way/318181489",
+      "areas": [
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-331963829",
+      "name": "Ekamai Apartment",
+      "name_en": "Ekamai Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7354569,
+      "lng": 100.5886606,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963829"
+    },
+    {
+      "id": "osm-relation-7596710",
+      "name": "Ekamai Gardens",
+      "name_en": "Ekamai Gardens",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7270427,
+      "lng": 100.5867107,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7596710"
+    },
+    {
+      "id": "osm-way-1414449922",
+      "name": "Elio Del Ray Condo",
+      "name_en": "Elio Del Ray Condo",
+      "name_th": "เอลลิโอ เดล เรย์ คอนโด",
+      "aliases": [
+        "เอลลิโอ เดล เรย์ คอนโด"
+      ],
+      "type": "condo",
+      "lat": 13.6840234,
+      "lng": 100.6040147,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1414449922"
+    },
+    {
+      "id": "osm-way-1414449921",
+      "name": "Elio Sukhumvit 64",
+      "name_en": "Elio Sukhumvit 64",
+      "name_th": "เอลลิโอ สุขุมวิท 64",
+      "aliases": [
+        "เอลลิโอ สุขุมวิท 64"
+      ],
+      "type": "other",
+      "lat": 13.6850335,
+      "lng": 100.6035848,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1414449921"
+    },
+    {
+      "id": "osm-way-324280467",
+      "name": "Empire House",
+      "name_en": "Empire House",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7295512,
+      "lng": 100.5911128,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280467"
     },
     {
       "id": "osm-way-340232736",
@@ -691,7 +1666,29 @@
       "lat": 13.7379902,
       "lng": 100.5720653,
       "source": "openstreetmap",
-      "osm_ref": "way/340232736"
+      "osm_ref": "way/340232736",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-387351098",
+      "name": "Fair Tower",
+      "name_en": "Fair Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7055225,
+      "lng": 100.5969189,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/387351098"
     },
     {
       "id": "osm-way-176332751",
@@ -703,7 +1700,11 @@
       "lat": 13.73186,
       "lng": 100.5623396,
       "source": "openstreetmap",
-      "osm_ref": "way/176332751"
+      "osm_ref": "way/176332751",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-321882288",
@@ -715,7 +1716,30 @@
       "lat": 13.7257856,
       "lng": 100.5804491,
       "source": "openstreetmap",
-      "osm_ref": "way/321882288"
+      "osm_ref": "way/321882288",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-324275318",
+      "name": "Fullerton",
+      "name_en": "Fullerton",
+      "name_th": null,
+      "aliases": [
+        "ถนนสุขุมวิท 1219/2"
+      ],
+      "type": "condo",
+      "lat": 13.7223255,
+      "lng": 100.5822154,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/324275318"
     },
     {
       "id": "osm-way-331962492",
@@ -729,7 +1753,12 @@
       "lat": 13.7265185,
       "lng": 100.5726837,
       "source": "openstreetmap",
-      "osm_ref": "way/331962492"
+      "osm_ref": "way/331962492",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329919860",
@@ -741,7 +1770,11 @@
       "lat": 13.7324547,
       "lng": 100.5647061,
       "source": "openstreetmap",
-      "osm_ref": "way/329919860"
+      "osm_ref": "way/329919860",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-330253761",
@@ -753,7 +1786,12 @@
       "lat": 13.7290734,
       "lng": 100.564267,
       "source": "openstreetmap",
-      "osm_ref": "way/330253761"
+      "osm_ref": "way/330253761",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-330253735",
@@ -765,7 +1803,12 @@
       "lat": 13.7293066,
       "lng": 100.5643381,
       "source": "openstreetmap",
-      "osm_ref": "way/330253735"
+      "osm_ref": "way/330253735",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329745940",
@@ -777,7 +1820,28 @@
       "lat": 13.743488,
       "lng": 100.5626608,
       "source": "openstreetmap",
-      "osm_ref": "way/329745940"
+      "osm_ref": "way/329745940",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-387351103",
+      "name": "Golden House",
+      "name_en": "Golden House",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7041427,
+      "lng": 100.5967852,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/387351103"
     },
     {
       "id": "osm-way-329745960",
@@ -791,7 +1855,11 @@
       "lat": 13.7402167,
       "lng": 100.5608205,
       "source": "openstreetmap",
-      "osm_ref": "way/329745960"
+      "osm_ref": "way/329745960",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329919862",
@@ -803,7 +1871,11 @@
       "lat": 13.7425744,
       "lng": 100.5631651,
       "source": "openstreetmap",
-      "osm_ref": "way/329919862"
+      "osm_ref": "way/329919862",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280511",
@@ -815,7 +1887,31 @@
       "lat": 13.7328118,
       "lng": 100.5715575,
       "source": "openstreetmap",
-      "osm_ref": "way/324280511"
+      "osm_ref": "way/324280511",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1193595251",
+      "name": "Grandville House",
+      "name_en": "Grandville House",
+      "name_th": "แกรนด์วิล เฮ้าส์",
+      "aliases": [
+        "แกรนด์วิล เฮ้าส์"
+      ],
+      "type": "other",
+      "lat": 13.7276418,
+      "lng": 100.5680191,
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1193595251"
     },
     {
       "id": "osm-way-329745932",
@@ -829,7 +1925,29 @@
       "lat": 13.7401261,
       "lng": 100.559061,
       "source": "openstreetmap",
-      "osm_ref": "way/329745932"
+      "osm_ref": "way/329745932",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-476861789",
+      "name": "Greenery Place",
+      "name_en": "Greenery Place",
+      "name_th": null,
+      "aliases": [
+        "สุขุมวิท 61 19/1"
+      ],
+      "type": "condo",
+      "lat": 13.7241005,
+      "lng": 100.5828166,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/476861789"
     },
     {
       "id": "osm-way-450623009",
@@ -843,7 +1961,12 @@
       "lat": 13.7247807,
       "lng": 100.5788173,
       "source": "openstreetmap",
-      "osm_ref": "way/450623009"
+      "osm_ref": "way/450623009",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-450546039",
@@ -855,7 +1978,29 @@
       "lat": 13.7329791,
       "lng": 100.5739882,
       "source": "openstreetmap",
-      "osm_ref": "way/450546039"
+      "osm_ref": "way/450546039",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-318706307",
+      "name": "Happy Place Tower",
+      "name_en": "Happy Place Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7149698,
+      "lng": 100.5969226,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318706307"
     },
     {
       "id": "osm-way-340724923",
@@ -867,7 +2012,47 @@
       "lat": 13.7411835,
       "lng": 100.5641328,
       "source": "openstreetmap",
-      "osm_ref": "way/340724923"
+      "osm_ref": "way/340724923",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-331963854",
+      "name": "Hive Sukhumvit 65",
+      "name_en": "Hive Sukhumvit 65",
+      "name_th": null,
+      "aliases": [
+        "ซอยสุขุมวิท 65 9/125"
+      ],
+      "type": "condo",
+      "lat": 13.7207361,
+      "lng": 100.5881738,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963854"
+    },
+    {
+      "id": "osm-way-1184424293",
+      "name": "Home Place Sukhumvit 71",
+      "name_en": "Home Place Sukhumvit 71",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7220394,
+      "lng": 100.5988976,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1184424293"
     },
     {
       "id": "osm-way-337351095",
@@ -879,7 +2064,12 @@
       "lat": 13.7297474,
       "lng": 100.5817139,
       "source": "openstreetmap",
-      "osm_ref": "way/337351095"
+      "osm_ref": "way/337351095",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1067654886",
@@ -891,7 +2081,12 @@
       "lat": 13.7227596,
       "lng": 100.5814892,
       "source": "openstreetmap",
-      "osm_ref": "way/1067654886"
+      "osm_ref": "way/1067654886",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-176332733",
@@ -903,7 +2098,30 @@
       "lat": 13.7236049,
       "lng": 100.5671149,
       "source": "openstreetmap",
-      "osm_ref": "way/176332733"
+      "osm_ref": "way/176332733",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-relation-7342575",
+      "name": "Ideo Mobi Sukhumvit",
+      "name_en": "Ideo Mobi Sukhumvit",
+      "name_th": null,
+      "aliases": [
+        "ถนนสุขุมวิท 2098-2099"
+      ],
+      "type": "condo",
+      "lat": 13.7043473,
+      "lng": 100.6022592,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7342575"
     },
     {
       "id": "osm-way-331962362",
@@ -915,7 +2133,47 @@
       "lat": 13.720922,
       "lng": 100.578835,
       "source": "openstreetmap",
-      "osm_ref": "way/331962362"
+      "osm_ref": "way/331962362",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-156496247",
+      "name": "Ideo Verve Sukhumvit",
+      "name_en": "Ideo Verve Sukhumvit",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.706243,
+      "lng": 100.6016413,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/156496247"
+    },
+    {
+      "id": "osm-way-331963824",
+      "name": "Index Creative Village",
+      "name_en": "Index Creative Village",
+      "name_th": null,
+      "aliases": [
+        "Pridi Bhanomyong 42 545"
+      ],
+      "type": "other",
+      "lat": 13.7329618,
+      "lng": 100.6021892,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963824"
     },
     {
       "id": "osm-way-449104805",
@@ -927,7 +2185,61 @@
       "lat": 13.7272444,
       "lng": 100.5608837,
       "source": "openstreetmap",
-      "osm_ref": "way/449104805"
+      "osm_ref": "way/449104805",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-442881344",
+      "name": "iPremium",
+      "name_en": "iPremium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7076882,
+      "lng": 100.6080658,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/442881344"
+    },
+    {
+      "id": "osm-way-331962400",
+      "name": "Issara@42",
+      "name_en": "Issara@42",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7162606,
+      "lng": 100.5857912,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962400"
+    },
+    {
+      "id": "osm-relation-20441958",
+      "name": "J residence",
+      "name_en": "J residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7081558,
+      "lng": 100.5928447,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/20441958"
     },
     {
       "id": "osm-way-341154442",
@@ -939,7 +2251,11 @@
       "lat": 13.7428508,
       "lng": 100.5682611,
       "source": "openstreetmap",
-      "osm_ref": "way/341154442"
+      "osm_ref": "way/341154442",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340724921",
@@ -953,7 +2269,11 @@
       "lat": 13.7409485,
       "lng": 100.5636738,
       "source": "openstreetmap",
-      "osm_ref": "way/340724921"
+      "osm_ref": "way/340724921",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329745970",
@@ -967,7 +2287,11 @@
       "lat": 13.740637,
       "lng": 100.5640496,
       "source": "openstreetmap",
-      "osm_ref": "way/329745970"
+      "osm_ref": "way/329745970",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331967743",
@@ -979,7 +2303,11 @@
       "lat": 13.7438218,
       "lng": 100.5816354,
       "source": "openstreetmap",
-      "osm_ref": "way/331967743"
+      "osm_ref": "way/331967743",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-371218875",
@@ -991,7 +2319,61 @@
       "lat": 13.7415486,
       "lng": 100.5802522,
       "source": "openstreetmap",
-      "osm_ref": "way/371218875"
+      "osm_ref": "way/371218875",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-318706308",
+      "name": "K-House 71",
+      "name_en": "K-House 71",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7176562,
+      "lng": 100.5992696,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318706308"
+    },
+    {
+      "id": "osm-way-318750017",
+      "name": "K.V. Mansion",
+      "name_en": "K.V. Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7055188,
+      "lng": 100.6042599,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318750017"
+    },
+    {
+      "id": "osm-way-718153401",
+      "name": "Kawa Haus",
+      "name_en": "Kawa Haus",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7151947,
+      "lng": 100.6051494,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/718153401"
     },
     {
       "id": "osm-way-323691177",
@@ -1003,7 +2385,12 @@
       "lat": 13.7339471,
       "lng": 100.5791272,
       "source": "openstreetmap",
-      "osm_ref": "way/323691177"
+      "osm_ref": "way/323691177",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-303716619",
@@ -1017,7 +2404,28 @@
       "lat": 13.7248134,
       "lng": 100.576869,
       "source": "openstreetmap",
-      "osm_ref": "way/303716619"
+      "osm_ref": "way/303716619",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-746346462",
+      "name": "Khun by Yoo",
+      "name_en": "Khun by Yoo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7327573,
+      "lng": 100.5826965,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/746346462"
     },
     {
       "id": "osm-way-341151257",
@@ -1029,7 +2437,11 @@
       "lat": 13.7447296,
       "lng": 100.5678242,
       "source": "openstreetmap",
-      "osm_ref": "way/341151257"
+      "osm_ref": "way/341151257",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1230362481",
@@ -1043,7 +2455,28 @@
       "lat": 13.72605,
       "lng": 100.570059,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362481"
+      "osm_ref": "way/1230362481",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-318745817",
+      "name": "Krongthong Mansion",
+      "name_en": "Krongthong Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7104979,
+      "lng": 100.6131275,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318745817"
     },
     {
       "id": "osm-way-25054016",
@@ -1057,7 +2490,12 @@
       "lat": 13.7254962,
       "lng": 100.5670683,
       "source": "openstreetmap",
-      "osm_ref": "way/25054016"
+      "osm_ref": "way/25054016",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962329",
@@ -1069,7 +2507,12 @@
       "lat": 13.7219086,
       "lng": 100.5757583,
       "source": "openstreetmap",
-      "osm_ref": "way/331962329"
+      "osm_ref": "way/331962329",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-27276233",
@@ -1081,7 +2524,11 @@
       "lat": 13.7316659,
       "lng": 100.5615827,
       "source": "openstreetmap",
-      "osm_ref": "way/27276233"
+      "osm_ref": "way/27276233",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329745923",
@@ -1093,7 +2540,47 @@
       "lat": 13.7374415,
       "lng": 100.5619829,
       "source": "openstreetmap",
-      "osm_ref": "way/329745923"
+      "osm_ref": "way/329745923",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-506792945",
+      "name": "Le Luk Condominium",
+      "name_en": "Le Luk Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7149634,
+      "lng": 100.5933781,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/506792945"
+    },
+    {
+      "id": "osm-way-333134912",
+      "name": "Le Premier II",
+      "name_en": "Le Premier II",
+      "name_th": null,
+      "aliases": [
+        "Le Premier 2",
+        "สุขุมวิท 59 40"
+      ],
+      "type": "condo",
+      "lat": 13.725025,
+      "lng": 100.5822543,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/333134912"
     },
     {
       "id": "osm-way-25054025",
@@ -1105,7 +2592,12 @@
       "lat": 13.7259072,
       "lng": 100.5670956,
       "source": "openstreetmap",
-      "osm_ref": "way/25054025"
+      "osm_ref": "way/25054025",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-338483736",
@@ -1117,7 +2609,30 @@
       "lat": 13.7340204,
       "lng": 100.5659275,
       "source": "openstreetmap",
-      "osm_ref": "way/338483736"
+      "osm_ref": "way/338483736",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-318728682",
+      "name": "Life @ Sukhumvit",
+      "name_en": "Life @ Sukhumvit",
+      "name_th": null,
+      "aliases": [
+        "ถนนสุขุมวิท 1441/7"
+      ],
+      "type": "condo",
+      "lat": 13.7173323,
+      "lng": 100.5892537,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318728682"
     },
     {
       "id": "osm-way-1249861556",
@@ -1131,7 +2646,28 @@
       "lat": 13.7200912,
       "lng": 100.5616937,
       "source": "openstreetmap",
-      "osm_ref": "way/1249861556"
+      "osm_ref": "way/1249861556",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-relation-7485175",
+      "name": "Life Sukhumvit 48",
+      "name_en": "Life Sukhumvit 48",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7111081,
+      "lng": 100.5945553,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7485175"
     },
     {
       "id": "osm-way-330243447",
@@ -1143,7 +2679,132 @@
       "lat": 13.7445243,
       "lng": 100.5667777,
       "source": "openstreetmap",
-      "osm_ref": "way/330243447"
+      "osm_ref": "way/330243447",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-113135431",
+      "name": "Link 1",
+      "name_en": "Link 1",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7061814,
+      "lng": 100.5981845,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/113135431"
+    },
+    {
+      "id": "osm-way-113135436",
+      "name": "Link 2",
+      "name_en": "Link 2",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7064704,
+      "lng": 100.5980383,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/113135436"
+    },
+    {
+      "id": "osm-way-113135392",
+      "name": "Link 3",
+      "name_en": "Link 3",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7067624,
+      "lng": 100.5978726,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/113135392"
+    },
+    {
+      "id": "osm-way-113135432",
+      "name": "Link 4",
+      "name_en": "Link 4",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7070344,
+      "lng": 100.597731,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/113135432"
+    },
+    {
+      "id": "osm-way-113135469",
+      "name": "Link Advance",
+      "name_en": "Link Advance",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7059337,
+      "lng": 100.5983294,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/113135469"
+    },
+    {
+      "id": "osm-way-113107224",
+      "name": "Lumpini Center On Nut",
+      "name_en": "Lumpini Center On Nut",
+      "name_th": "ลุมพินี วิลล์ สุขุมวิท 77",
+      "aliases": [
+        "ลุมพินี วิลล์ สุขุมวิท 77"
+      ],
+      "type": "other",
+      "lat": 13.712975,
+      "lng": 100.6046523,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/113107224"
+    },
+    {
+      "id": "osm-way-331962340",
+      "name": "Lumpini Place",
+      "name_en": "Lumpini Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7123708,
+      "lng": 100.5828081,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962340"
     },
     {
       "id": "osm-way-338004246",
@@ -1155,7 +2816,28 @@
       "lat": 13.7299247,
       "lng": 100.5721319,
       "source": "openstreetmap",
-      "osm_ref": "way/338004246"
+      "osm_ref": "way/338004246",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1055308561",
+      "name": "M Tower",
+      "name_en": "M Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6943728,
+      "lng": 100.6057855,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1055308561"
     },
     {
       "id": "osm-way-331963319",
@@ -1167,7 +2849,11 @@
       "lat": 13.735241,
       "lng": 100.5668476,
       "source": "openstreetmap",
-      "osm_ref": "way/331963319"
+      "osm_ref": "way/331963319",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-node-3778175296",
@@ -1179,7 +2865,11 @@
       "lat": 13.7398559,
       "lng": 100.5726212,
       "source": "openstreetmap",
-      "osm_ref": "node/3778175296"
+      "osm_ref": "node/3778175296",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-176191026",
@@ -1191,7 +2881,48 @@
       "lat": 13.7225607,
       "lng": 100.56662,
       "source": "openstreetmap",
-      "osm_ref": "way/176191026"
+      "osm_ref": "way/176191026",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-318619028",
+      "name": "Major Cineplex Sukhumvit",
+      "name_en": "Major Cineplex Sukhumvit",
+      "name_th": "เมเจอร์ ซีนีเพล็กซ์ สุขุมวิท",
+      "aliases": [
+        "เมเจอร์ ซีนีเพล็กซ์ สุขุมวิท"
+      ],
+      "type": "other",
+      "lat": 13.7213942,
+      "lng": 100.5832689,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318619028"
+    },
+    {
+      "id": "osm-way-333134184",
+      "name": "Maleenont Tower",
+      "name_en": "Maleenont Tower",
+      "name_th": "มาลีนนท์ ทาวเวอร์",
+      "aliases": [
+        "มาลีนนท์ ทาวเวอร์"
+      ],
+      "type": "condo",
+      "lat": 13.717724,
+      "lng": 100.5725203,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/333134184"
     },
     {
       "id": "osm-way-333134166",
@@ -1203,7 +2934,12 @@
       "lat": 13.7241097,
       "lng": 100.5707414,
       "source": "openstreetmap",
-      "osm_ref": "way/333134166"
+      "osm_ref": "way/333134166",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962398",
@@ -1215,7 +2951,11 @@
       "lat": 13.7440276,
       "lng": 100.5723898,
       "source": "openstreetmap",
-      "osm_ref": "way/331962398"
+      "osm_ref": "way/331962398",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962373",
@@ -1227,7 +2967,12 @@
       "lat": 13.7268393,
       "lng": 100.5763522,
       "source": "openstreetmap",
-      "osm_ref": "way/331962373"
+      "osm_ref": "way/331962373",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-521687098",
@@ -1241,7 +2986,28 @@
       "lat": 13.7303713,
       "lng": 100.5711166,
       "source": "openstreetmap",
-      "osm_ref": "way/521687098"
+      "osm_ref": "way/521687098",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-569443865",
+      "name": "Mattani Suites",
+      "name_en": "Mattani Suites",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7344815,
+      "lng": 100.5899506,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/569443865"
     },
     {
       "id": "osm-way-329919877",
@@ -1253,7 +3019,64 @@
       "lat": 13.7285674,
       "lng": 100.5615614,
       "source": "openstreetmap",
-      "osm_ref": "way/329919877"
+      "osm_ref": "way/329919877",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-439475472",
+      "name": "Mayfair Place",
+      "name_en": "Mayfair Place",
+      "name_th": "คอนโดเมย์แฟร์เพลส",
+      "aliases": [
+        "คอนโดเมย์แฟร์เพลส",
+        "Soi Sukhumvit 64 48"
+      ],
+      "type": "condo",
+      "lat": 13.6871716,
+      "lng": 100.6059092,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/439475472"
+    },
+    {
+      "id": "osm-way-518462471",
+      "name": "Mayfair Place Sukhumvit 50",
+      "name_en": "Mayfair Place Sukhumvit 50",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7051201,
+      "lng": 100.5949389,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/518462471"
+    },
+    {
+      "id": "osm-way-317160317",
+      "name": "Mee Suwan Tower",
+      "name_en": "Mee Suwan Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7204241,
+      "lng": 100.5978123,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/317160317"
     },
     {
       "id": "osm-way-341554380",
@@ -1265,7 +3088,11 @@
       "lat": 13.7295314,
       "lng": 100.5624641,
       "source": "openstreetmap",
-      "osm_ref": "way/341554380"
+      "osm_ref": "way/341554380",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-76510938",
@@ -1277,7 +3104,44 @@
       "lat": 13.7250951,
       "lng": 100.573366,
       "source": "openstreetmap",
-      "osm_ref": "way/76510938"
+      "osm_ref": "way/76510938",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-353882591",
+      "name": "Mint Residence",
+      "name_en": "Mint Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6986988,
+      "lng": 100.6128246,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/353882591"
+    },
+    {
+      "id": "osm-relation-7172337",
+      "name": "Mode Sukhumvit 61",
+      "name_en": "Mode Sukhumvit 61",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7226104,
+      "lng": 100.5828183,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7172337"
     },
     {
       "id": "osm-way-331963814",
@@ -1289,7 +3153,12 @@
       "lat": 13.7402569,
       "lng": 100.5807245,
       "source": "openstreetmap",
-      "osm_ref": "way/331963814"
+      "osm_ref": "way/331963814",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-339089659",
@@ -1303,7 +3172,11 @@
       "lat": 13.7237395,
       "lng": 100.5618042,
       "source": "openstreetmap",
-      "osm_ref": "way/339089659"
+      "osm_ref": "way/339089659",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-330243428",
@@ -1315,7 +3188,11 @@
       "lat": 13.7423148,
       "lng": 100.5669378,
       "source": "openstreetmap",
-      "osm_ref": "way/330243428"
+      "osm_ref": "way/330243428",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324275344",
@@ -1327,7 +3204,31 @@
       "lat": 13.725677,
       "lng": 100.5817837,
       "source": "openstreetmap",
-      "osm_ref": "way/324275344"
+      "osm_ref": "way/324275344",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-relation-7478461",
+      "name": "Mori Haus Condominium",
+      "name_en": "Mori Haus Condominium",
+      "name_th": null,
+      "aliases": [
+        "ซอย อ่อนนุช 1/1 55"
+      ],
+      "type": "condo",
+      "lat": 13.715129,
+      "lng": 100.6028386,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7478461"
     },
     {
       "id": "osm-way-1235501204",
@@ -1341,7 +3242,44 @@
       "lat": 13.737868,
       "lng": 100.5624653,
       "source": "openstreetmap",
-      "osm_ref": "way/1235501204"
+      "osm_ref": "way/1235501204",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-319148799",
+      "name": "My Condo",
+      "name_en": "My Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7052143,
+      "lng": 100.6039481,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319148799"
+    },
+    {
+      "id": "osm-way-332038865",
+      "name": "My Condo Sukhumvit 52",
+      "name_en": "My Condo Sukhumvit 52",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7037389,
+      "lng": 100.6000877,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/332038865"
     },
     {
       "id": "osm-way-338364612",
@@ -1353,7 +3291,11 @@
       "lat": 13.7373702,
       "lng": 100.567822,
       "source": "openstreetmap",
-      "osm_ref": "way/338364612"
+      "osm_ref": "way/338364612",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962417",
@@ -1367,7 +3309,11 @@
       "lat": 13.73794,
       "lng": 100.5694207,
       "source": "openstreetmap",
-      "osm_ref": "way/331962417"
+      "osm_ref": "way/331962417",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1230362480",
@@ -1379,7 +3325,11 @@
       "lat": 13.7359194,
       "lng": 100.5674351,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362480"
+      "osm_ref": "way/1230362480",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1038970953",
@@ -1391,7 +3341,11 @@
       "lat": 13.7355091,
       "lng": 100.5672724,
       "source": "openstreetmap",
-      "osm_ref": "way/1038970953"
+      "osm_ref": "way/1038970953",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-726046520",
@@ -1405,7 +3359,11 @@
       "lat": 13.7421496,
       "lng": 100.5598844,
       "source": "openstreetmap",
-      "osm_ref": "way/726046520"
+      "osm_ref": "way/726046520",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-208693095",
@@ -1419,7 +3377,12 @@
       "lat": 13.7281458,
       "lng": 100.5710249,
       "source": "openstreetmap",
-      "osm_ref": "way/208693095"
+      "osm_ref": "way/208693095",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-303716620",
@@ -1433,7 +3396,28 @@
       "lat": 13.7241126,
       "lng": 100.5771048,
       "source": "openstreetmap",
-      "osm_ref": "way/303716620"
+      "osm_ref": "way/303716620",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-323347383",
+      "name": "Noble Reveal Condominium",
+      "name_en": "Noble Reveal Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7218895,
+      "lng": 100.5849012,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/323347383"
     },
     {
       "id": "osm-way-1230362479",
@@ -1445,7 +3429,28 @@
       "lat": 13.7342956,
       "lng": 100.5707176,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362479"
+      "osm_ref": "way/1230362479",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-155414478",
+      "name": "NT Place",
+      "name_en": "NT Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7321389,
+      "lng": 100.6019263,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/155414478"
     },
     {
       "id": "osm-way-324280465",
@@ -1457,7 +3462,12 @@
       "lat": 13.7317885,
       "lng": 100.5809955,
       "source": "openstreetmap",
-      "osm_ref": "way/324280465"
+      "osm_ref": "way/324280465",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-25053990",
@@ -1469,7 +3479,12 @@
       "lat": 13.7217641,
       "lng": 100.5652538,
       "source": "openstreetmap",
-      "osm_ref": "way/25053990"
+      "osm_ref": "way/25053990",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324060262",
@@ -1481,7 +3496,12 @@
       "lat": 13.7347352,
       "lng": 100.5807912,
       "source": "openstreetmap",
-      "osm_ref": "way/324060262"
+      "osm_ref": "way/324060262",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280521",
@@ -1493,7 +3513,28 @@
       "lat": 13.7372917,
       "lng": 100.5710009,
       "source": "openstreetmap",
-      "osm_ref": "way/324280521"
+      "osm_ref": "way/324280521",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-333303947",
+      "name": "Oriental Towers",
+      "name_en": "Oriental Towers",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7303711,
+      "lng": 100.5889923,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/333303947"
     },
     {
       "id": "osm-way-324275323",
@@ -1505,7 +3546,12 @@
       "lat": 13.7343515,
       "lng": 100.5775158,
       "source": "openstreetmap",
-      "osm_ref": "way/324275323"
+      "osm_ref": "way/324275323",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340391184",
@@ -1517,7 +3563,27 @@
       "lat": 13.7361171,
       "lng": 100.56467,
       "source": "openstreetmap",
-      "osm_ref": "way/340391184"
+      "osm_ref": "way/340391184",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-319148800",
+      "name": "P.R. Mansion",
+      "name_en": "P.R. Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7060806,
+      "lng": 100.6054352,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319148800"
     },
     {
       "id": "osm-way-331962408",
@@ -1529,7 +3595,112 @@
       "lat": 13.7365306,
       "lng": 100.568156,
       "source": "openstreetmap",
-      "osm_ref": "way/331962408"
+      "osm_ref": "way/331962408",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1453265738",
+      "name": "Pakamas Village",
+      "name_en": "Pakamas Village",
+      "name_th": "หมู่บ้านผกามาศ",
+      "aliases": [
+        "หมู่บ้านผกามาศ"
+      ],
+      "type": "other",
+      "lat": 13.7231935,
+      "lng": 100.6083137,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1453265738"
+    },
+    {
+      "id": "osm-way-710621317",
+      "name": "Park Court Sukhumvit 77",
+      "name_en": "Park Court Sukhumvit 77",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7142864,
+      "lng": 100.6033135,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/710621317"
+    },
+    {
+      "id": "osm-way-323690983",
+      "name": "Park Thonglor Tower",
+      "name_en": "Park Thonglor Tower",
+      "name_th": null,
+      "aliases": [
+        "ซอยสุขุมวิท 55 555"
+      ],
+      "type": "condo",
+      "lat": 13.7363658,
+      "lng": 100.5828604,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/323690983"
+    },
+    {
+      "id": "osm-way-1113000880",
+      "name": "Pattanakarn 30, Pannya Village 147/63",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7121468,
+      "lng": 100.6168551,
+      "areas": [
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1113000880"
+    },
+    {
+      "id": "osm-way-152991237",
+      "name": "PB Tower",
+      "name_en": "PB Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7335785,
+      "lng": 100.5977087,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/152991237"
+    },
+    {
+      "id": "osm-way-526805993",
+      "name": "Phatsana Garden",
+      "name_en": "Phatsana Garden",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7270202,
+      "lng": 100.5883472,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/526805993"
     },
     {
       "id": "osm-way-25053979",
@@ -1541,7 +3712,95 @@
       "lat": 13.7220724,
       "lng": 100.5650849,
       "source": "openstreetmap",
-      "osm_ref": "way/25053979"
+      "osm_ref": "way/25053979",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-329428589",
+      "name": "Piyathip Place",
+      "name_en": "Piyathip Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7339164,
+      "lng": 100.5748884,
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/329428589"
+    },
+    {
+      "id": "osm-way-1411748823",
+      "name": "Plum Condo Sukhumvit 62",
+      "name_en": "Plum Condo Sukhumvit 62",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6935267,
+      "lng": 100.6036184,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1411748823"
+    },
+    {
+      "id": "osm-way-331963800",
+      "name": "Plus 67",
+      "name_en": "Plus 67",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7186858,
+      "lng": 100.5903946,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963800"
+    },
+    {
+      "id": "osm-way-318755198",
+      "name": "Pornpanasap Residence",
+      "name_en": "Pornpanasap Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7059863,
+      "lng": 100.6052184,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318755198"
+    },
+    {
+      "id": "osm-way-318953428",
+      "name": "Pornphirun Place",
+      "name_en": "Pornphirun Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7255983,
+      "lng": 100.5946165,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318953428"
     },
     {
       "id": "osm-way-331962469",
@@ -1553,7 +3812,11 @@
       "lat": 13.7428349,
       "lng": 100.5688406,
       "source": "openstreetmap",
-      "osm_ref": "way/331962469"
+      "osm_ref": "way/331962469",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329745986",
@@ -1565,7 +3828,11 @@
       "lat": 13.7369986,
       "lng": 100.5630753,
       "source": "openstreetmap",
-      "osm_ref": "way/329745986"
+      "osm_ref": "way/329745986",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329745992",
@@ -1577,7 +3844,11 @@
       "lat": 13.7402631,
       "lng": 100.5648504,
       "source": "openstreetmap",
-      "osm_ref": "way/329745992"
+      "osm_ref": "way/329745992",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-176200219",
@@ -1591,7 +3862,11 @@
       "lat": 13.7414553,
       "lng": 100.5628876,
       "source": "openstreetmap",
-      "osm_ref": "way/176200219"
+      "osm_ref": "way/176200219",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1193595249",
@@ -1605,7 +3880,12 @@
       "lat": 13.7273966,
       "lng": 100.5688392,
       "source": "openstreetmap",
-      "osm_ref": "way/1193595249"
+      "osm_ref": "way/1193595249",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340729743",
@@ -1617,7 +3897,11 @@
       "lat": 13.7407618,
       "lng": 100.5647512,
       "source": "openstreetmap",
-      "osm_ref": "way/340729743"
+      "osm_ref": "way/340729743",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962402",
@@ -1629,7 +3913,11 @@
       "lat": 13.7386212,
       "lng": 100.5727324,
       "source": "openstreetmap",
-      "osm_ref": "way/331962402"
+      "osm_ref": "way/331962402",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280461",
@@ -1641,7 +3929,11 @@
       "lat": 13.7393583,
       "lng": 100.567546,
       "source": "openstreetmap",
-      "osm_ref": "way/324280461"
+      "osm_ref": "way/324280461",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-449104808",
@@ -1653,7 +3945,11 @@
       "lat": 13.7326901,
       "lng": 100.5630383,
       "source": "openstreetmap",
-      "osm_ref": "way/449104808"
+      "osm_ref": "way/449104808",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-450546040",
@@ -1665,7 +3961,12 @@
       "lat": 13.7333488,
       "lng": 100.5748423,
       "source": "openstreetmap",
-      "osm_ref": "way/450546040"
+      "osm_ref": "way/450546040",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280477",
@@ -1677,7 +3978,12 @@
       "lat": 13.7357856,
       "lng": 100.5720368,
       "source": "openstreetmap",
-      "osm_ref": "way/324280477"
+      "osm_ref": "way/324280477",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329428590",
@@ -1691,7 +3997,12 @@
       "lat": 13.7375552,
       "lng": 100.5727121,
       "source": "openstreetmap",
-      "osm_ref": "way/329428590"
+      "osm_ref": "way/329428590",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-208691131",
@@ -1703,7 +4014,49 @@
       "lat": 13.7348446,
       "lng": 100.5713894,
       "source": "openstreetmap",
-      "osm_ref": "way/208691131"
+      "osm_ref": "way/208691131",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-387795228",
+      "name": "Q House Condo Sukhumvit 79",
+      "name_en": "Q House Condo Sukhumvit 79",
+      "name_th": "คิวเฮ้าส์ สุขุมวิท 79",
+      "aliases": [
+        "คิวเฮ้าส์ สุขุมวิท 79",
+        "ซอยสุขุมวิท 79 2059"
+      ],
+      "type": "condo",
+      "lat": 13.7076297,
+      "lng": 100.6007764,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/387795228"
+    },
+    {
+      "id": "osm-way-1040752920",
+      "name": "Q House Sukhumvit 79",
+      "name_en": "Q House Sukhumvit 79",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7075932,
+      "lng": 100.6007546,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1040752920"
     },
     {
       "id": "osm-way-1184645985",
@@ -1715,7 +4068,12 @@
       "lat": 13.727645,
       "lng": 100.5815925,
       "source": "openstreetmap",
-      "osm_ref": "way/1184645985"
+      "osm_ref": "way/1184645985",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-321915588",
@@ -1727,7 +4085,97 @@
       "lat": 13.7275277,
       "lng": 100.5818139,
       "source": "openstreetmap",
-      "osm_ref": "way/321915588"
+      "osm_ref": "way/321915588",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-521160551",
+      "name": "Qube Sukhumvit Soi 46",
+      "name_en": "Qube Sukhumvit Soi 46",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7136319,
+      "lng": 100.59059,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/521160551"
+    },
+    {
+      "id": "osm-way-341212101",
+      "name": "Raintree Villa",
+      "name_en": "Raintree Villa",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7311794,
+      "lng": 100.5785291,
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/341212101"
+    },
+    {
+      "id": "osm-way-318748791",
+      "name": "Regent 71 Place",
+      "name_en": "Regent 71 Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7158992,
+      "lng": 100.5931408,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318748791"
+    },
+    {
+      "id": "osm-node-10917049011",
+      "name": "Regent Home 19",
+      "name_en": "Regent Home 19",
+      "name_th": null,
+      "aliases": [
+        "ซอยสุขุมวิท 93 274"
+      ],
+      "type": "other",
+      "lat": 13.7003498,
+      "lng": 100.608779,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "node/10917049011"
+    },
+    {
+      "id": "osm-way-551601400",
+      "name": "Regent Home 4",
+      "name_en": "Regent Home 4",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7051844,
+      "lng": 100.6090872,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/551601400"
     },
     {
       "id": "osm-way-300817299",
@@ -1739,7 +4187,62 @@
       "lat": 13.72623,
       "lng": 100.5689707,
       "source": "openstreetmap",
-      "osm_ref": "way/300817299"
+      "osm_ref": "way/300817299",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-605771434",
+      "name": "Regent Orchid Condo Sukhumvit 101",
+      "name_en": "Regent Orchid Condo Sukhumvit 101",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6909161,
+      "lng": 100.6110153,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/605771434"
+    },
+    {
+      "id": "osm-way-331963802",
+      "name": "Residence Sukhumvit 65",
+      "name_en": "Residence Sukhumvit 65",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7221782,
+      "lng": 100.5877397,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963802"
+    },
+    {
+      "id": "osm-way-332038862",
+      "name": "Rhythm Condo",
+      "name_en": "Rhythm Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7064455,
+      "lng": 100.5993613,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/332038862"
     },
     {
       "id": "osm-way-1230362482",
@@ -1753,7 +4256,46 @@
       "lat": 13.7219018,
       "lng": 100.5769484,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362482"
+      "osm_ref": "way/1230362482",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-520436158",
+      "name": "Rhythm Sukhumvit 42",
+      "name_en": "Rhythm Sukhumvit 42",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7178028,
+      "lng": 100.5854758,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/520436158"
+    },
+    {
+      "id": "osm-way-484458028",
+      "name": "Rhythm Sukhumvit 44/1",
+      "name_en": "Rhythm Sukhumvit 44/1",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7152024,
+      "lng": 100.5904171,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/484458028"
     },
     {
       "id": "osm-way-331963324",
@@ -1765,7 +4307,11 @@
       "lat": 13.7347053,
       "lng": 100.5674789,
       "source": "openstreetmap",
-      "osm_ref": "way/331963324"
+      "osm_ref": "way/331963324",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-249140598",
@@ -1777,7 +4323,12 @@
       "lat": 13.7303581,
       "lng": 100.5723577,
       "source": "openstreetmap",
-      "osm_ref": "way/249140598"
+      "osm_ref": "way/249140598",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-249140774",
@@ -1789,7 +4340,12 @@
       "lat": 13.73017,
       "lng": 100.5723062,
       "source": "openstreetmap",
-      "osm_ref": "way/249140774"
+      "osm_ref": "way/249140774",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280550",
@@ -1801,7 +4357,12 @@
       "lat": 13.7367079,
       "lng": 100.5704616,
       "source": "openstreetmap",
-      "osm_ref": "way/324280550"
+      "osm_ref": "way/324280550",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280522",
@@ -1813,7 +4374,28 @@
       "lat": 13.7343459,
       "lng": 100.5720055,
       "source": "openstreetmap",
-      "osm_ref": "way/324280522"
+      "osm_ref": "way/324280522",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-324275324",
+      "name": "Royal Kensington Mansion",
+      "name_en": "Royal Kensington Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7287229,
+      "lng": 100.5869665,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/324275324"
     },
     {
       "id": "osm-way-329745976",
@@ -1825,7 +4407,27 @@
       "lat": 13.7406711,
       "lng": 100.5661469,
       "source": "openstreetmap",
-      "osm_ref": "way/329745976"
+      "osm_ref": "way/329745976",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-319148801",
+      "name": "S House",
+      "name_en": "S House",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7062732,
+      "lng": 100.6047866,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319148801"
     },
     {
       "id": "osm-way-325613819",
@@ -1837,7 +4439,12 @@
       "lat": 13.7331225,
       "lng": 100.581046,
       "source": "openstreetmap",
-      "osm_ref": "way/325613819"
+      "osm_ref": "way/325613819",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962371",
@@ -1849,7 +4456,11 @@
       "lat": 13.7402085,
       "lng": 100.5676793,
       "source": "openstreetmap",
-      "osm_ref": "way/331962371"
+      "osm_ref": "way/331962371",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-338009255",
@@ -1861,7 +4472,12 @@
       "lat": 13.7293318,
       "lng": 100.5739464,
       "source": "openstreetmap",
-      "osm_ref": "way/338009255"
+      "osm_ref": "way/338009255",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-node-4460699214",
@@ -1873,7 +4489,11 @@
       "lat": 13.7277606,
       "lng": 100.5611306,
       "source": "openstreetmap",
-      "osm_ref": "node/4460699214"
+      "osm_ref": "node/4460699214",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324275307",
@@ -1885,7 +4505,12 @@
       "lat": 13.7251042,
       "lng": 100.5818033,
       "source": "openstreetmap",
-      "osm_ref": "way/324275307"
+      "osm_ref": "way/324275307",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-226278561",
@@ -1897,7 +4522,29 @@
       "lat": 13.7283291,
       "lng": 100.5778141,
       "source": "openstreetmap",
-      "osm_ref": "way/226278561"
+      "osm_ref": "way/226278561",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-387351099",
+      "name": "SAF Residence",
+      "name_en": "SAF Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7052761,
+      "lng": 100.5966555,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/387351099"
     },
     {
       "id": "osm-way-340074036",
@@ -1911,7 +4558,45 @@
       "lat": 13.7252627,
       "lng": 100.5676851,
       "source": "openstreetmap",
-      "osm_ref": "way/340074036"
+      "osm_ref": "way/340074036",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1184645980",
+      "name": "Sari By Sansiri",
+      "name_en": "Sari By Sansiri",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6875564,
+      "lng": 100.6065067,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1184645980"
+    },
+    {
+      "id": "osm-way-332011424",
+      "name": "Sarin Suites",
+      "name_en": "Sarin Suites",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.723289,
+      "lng": 100.5969732,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/332011424"
     },
     {
       "id": "osm-way-371218873",
@@ -1923,7 +4608,11 @@
       "lat": 13.7417739,
       "lng": 100.5803562,
       "source": "openstreetmap",
-      "osm_ref": "way/371218873"
+      "osm_ref": "way/371218873",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1203838358",
@@ -1935,7 +4624,12 @@
       "lat": 13.7241166,
       "lng": 100.580328,
       "source": "openstreetmap",
-      "osm_ref": "way/1203838358"
+      "osm_ref": "way/1203838358",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340091484",
@@ -1947,7 +4641,29 @@
       "lat": 13.7263551,
       "lng": 100.567236,
       "source": "openstreetmap",
-      "osm_ref": "way/340091484"
+      "osm_ref": "way/340091484",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-622812961",
+      "name": "Serio Condo",
+      "name_en": "Serio Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7056687,
+      "lng": 100.5972955,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/622812961"
     },
     {
       "id": "osm-way-340675721",
@@ -1959,7 +4675,28 @@
       "lat": 13.7434983,
       "lng": 100.5581177,
       "source": "openstreetmap",
-      "osm_ref": "way/340675721"
+      "osm_ref": "way/340675721",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-331963818",
+      "name": "Shanti Court",
+      "name_en": "Shanti Court",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7247159,
+      "lng": 100.5950981,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331963818"
     },
     {
       "id": "osm-way-324275310",
@@ -1971,7 +4708,48 @@
       "lat": 13.7239512,
       "lng": 100.5818891,
       "source": "openstreetmap",
-      "osm_ref": "way/324275310"
+      "osm_ref": "way/324275310",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-331962475",
+      "name": "Siamese Exclusive 42",
+      "name_en": "Siamese Exclusive 42",
+      "name_th": null,
+      "aliases": [
+        "Soi Barbot 1 39"
+      ],
+      "type": "condo",
+      "lat": 13.7168188,
+      "lng": 100.5854028,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962475"
+    },
+    {
+      "id": "osm-way-610210255",
+      "name": "Siamese Sukhumvit",
+      "name_en": "Siamese Sukhumvit",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7089251,
+      "lng": 100.5985211,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/610210255"
     },
     {
       "id": "osm-way-25829318",
@@ -1985,7 +4763,11 @@
       "lat": 13.7401239,
       "lng": 100.5623938,
       "source": "openstreetmap",
-      "osm_ref": "way/25829318"
+      "osm_ref": "way/25829318",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-208693099",
@@ -1999,7 +4781,12 @@
       "lat": 13.7224041,
       "lng": 100.5799815,
       "source": "openstreetmap",
-      "osm_ref": "way/208693099"
+      "osm_ref": "way/208693099",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-330253778",
@@ -2011,7 +4798,46 @@
       "lat": 13.7281976,
       "lng": 100.5682696,
       "source": "openstreetmap",
-      "osm_ref": "way/330253778"
+      "osm_ref": "way/330253778",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-321666079",
+      "name": "Sirisuk Apartment",
+      "name_en": "Sirisuk Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7176848,
+      "lng": 100.5962409,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/321666079"
+    },
+    {
+      "id": "osm-way-506791058",
+      "name": "Skywalk Condominium",
+      "name_en": "Skywalk Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7142925,
+      "lng": 100.5934633,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/506791058"
     },
     {
       "id": "osm-way-324275335",
@@ -2023,7 +4849,60 @@
       "lat": 13.7266324,
       "lng": 100.5819895,
       "source": "openstreetmap",
-      "osm_ref": "way/324275335"
+      "osm_ref": "way/324275335",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-904921035",
+      "name": "soi ekamai 22 98/6",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7377885,
+      "lng": 100.5929484,
+      "areas": [
+        "ekamai"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/904921035"
+    },
+    {
+      "id": "osm-way-904993688",
+      "name": "soi ekamai 22 98/7",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7376863,
+      "lng": 100.5930938,
+      "areas": [
+        "ekamai"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/904993688"
+    },
+    {
+      "id": "osm-way-326606557",
+      "name": "SSP Tower 1",
+      "name_en": "SSP Tower 1",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7389815,
+      "lng": 100.5887345,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/326606557"
     },
     {
       "id": "osm-way-331966781",
@@ -2035,7 +4914,47 @@
       "lat": 13.7450322,
       "lng": 100.5586265,
       "source": "openstreetmap",
-      "osm_ref": "way/331966781"
+      "osm_ref": "way/331966781",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-322161824",
+      "name": "Sukhumvit 71 7/7",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7157318,
+      "lng": 100.5949236,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/322161824"
+    },
+    {
+      "id": "osm-way-1450201942",
+      "name": "Sukhumvit Garden City 2",
+      "name_en": "Sukhumvit Garden City 2",
+      "name_th": "สุขุมวิทการ์เด้นซิตี้ 2",
+      "aliases": [
+        "สุขุมวิทการ์เด้นซิตี้ 2"
+      ],
+      "type": "other",
+      "lat": 13.6995116,
+      "lng": 100.5925751,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1450201942"
     },
     {
       "id": "osm-way-329745980",
@@ -2047,7 +4966,66 @@
       "lat": 13.7384827,
       "lng": 100.564733,
       "source": "openstreetmap",
-      "osm_ref": "way/329745980"
+      "osm_ref": "way/329745980",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-176788687",
+      "name": "Sukhumvit Mansion No. 2",
+      "name_en": "Sukhumvit Mansion No. 2",
+      "name_th": null,
+      "aliases": [
+        "Preedibanomyoung 5 11"
+      ],
+      "type": "apartment",
+      "lat": 13.7157469,
+      "lng": 100.5938659,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/176788687"
+    },
+    {
+      "id": "osm-way-176788685",
+      "name": "Sukhumvit Mansion No. 3",
+      "name_en": "Sukhumvit Mansion No. 3",
+      "name_th": null,
+      "aliases": [
+        "Pridi Banomyong Soi 5 11"
+      ],
+      "type": "apartment",
+      "lat": 13.715921,
+      "lng": 100.5939021,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/176788685"
+    },
+    {
+      "id": "osm-relation-7172332",
+      "name": "Sukhumvit Plus Condominium",
+      "name_en": "Sukhumvit Plus Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7129262,
+      "lng": 100.5923897,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7172332"
     },
     {
       "id": "osm-way-331962481",
@@ -2059,7 +5037,11 @@
       "lat": 13.7428638,
       "lng": 100.5734264,
       "source": "openstreetmap",
-      "osm_ref": "way/331962481"
+      "osm_ref": "way/331962481",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-208691135",
@@ -2071,7 +5053,11 @@
       "lat": 13.743779,
       "lng": 100.5734599,
       "source": "openstreetmap",
-      "osm_ref": "way/208691135"
+      "osm_ref": "way/208691135",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329919861",
@@ -2083,7 +5069,11 @@
       "lat": 13.7444365,
       "lng": 100.563042,
       "source": "openstreetmap",
-      "osm_ref": "way/329919861"
+      "osm_ref": "way/329919861",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962338",
@@ -2095,7 +5085,11 @@
       "lat": 13.7425875,
       "lng": 100.5713449,
       "source": "openstreetmap",
-      "osm_ref": "way/331962338"
+      "osm_ref": "way/331962338",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-450629005",
@@ -2107,7 +5101,28 @@
       "lat": 13.7248168,
       "lng": 100.5727264,
       "source": "openstreetmap",
-      "osm_ref": "way/450629005"
+      "osm_ref": "way/450629005",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1448551501",
+      "name": "SW38 Place",
+      "name_en": "SW38 Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7185966,
+      "lng": 100.5778359,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1448551501"
     },
     {
       "id": "osm-way-340231901",
@@ -2119,7 +5134,27 @@
       "lat": 13.7417607,
       "lng": 100.5679344,
       "source": "openstreetmap",
-      "osm_ref": "way/340231901"
+      "osm_ref": "way/340231901",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-321978225",
+      "name": "Tai Ping Tower",
+      "name_en": "Tai Ping Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7372038,
+      "lng": 100.5902245,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/321978225"
     },
     {
       "id": "osm-way-324280518",
@@ -2131,7 +5166,11 @@
       "lat": 13.7358205,
       "lng": 100.5680122,
       "source": "openstreetmap",
-      "osm_ref": "way/324280518"
+      "osm_ref": "way/324280518",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-753671352",
@@ -2143,7 +5182,65 @@
       "lat": 13.7332056,
       "lng": 100.5818663,
       "source": "openstreetmap",
-      "osm_ref": "way/753671352"
+      "osm_ref": "way/753671352",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-570405967",
+      "name": "Ten Ekamai Suites",
+      "name_en": "Ten Ekamai Suites",
+      "name_th": null,
+      "aliases": [
+        "เอกมัย ซอย 10 33/39"
+      ],
+      "type": "condo",
+      "lat": 13.7291498,
+      "lng": 100.5904211,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/570405967"
+    },
+    {
+      "id": "osm-way-326606568",
+      "name": "ThaiSri Tower",
+      "name_en": "ThaiSri Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7387642,
+      "lng": 100.5894124,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/326606568"
+    },
+    {
+      "id": "osm-way-331962436",
+      "name": "The Address 42 Building A",
+      "name_en": "The Address 42 Building A",
+      "name_th": null,
+      "aliases": [
+        "Soi Barbot 1 35"
+      ],
+      "type": "condo",
+      "lat": 13.7167986,
+      "lng": 100.5857749,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331962436"
     },
     {
       "id": "osm-way-330488068",
@@ -2157,7 +5254,12 @@
       "lat": 13.7279411,
       "lng": 100.5723285,
       "source": "openstreetmap",
-      "osm_ref": "way/330488068"
+      "osm_ref": "way/330488068",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-331962335",
@@ -2169,7 +5271,12 @@
       "lat": 13.7296916,
       "lng": 100.5761648,
       "source": "openstreetmap",
-      "osm_ref": "way/331962335"
+      "osm_ref": "way/331962335",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-332674489",
@@ -2181,7 +5288,63 @@
       "lat": 13.7288315,
       "lng": 100.5786859,
       "source": "openstreetmap",
-      "osm_ref": "way/332674489"
+      "osm_ref": "way/332674489",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-relation-7172329",
+      "name": "The Base Park West",
+      "name_en": "The Base Park West",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7127909,
+      "lng": 100.6001397,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7172329"
+    },
+    {
+      "id": "osm-relation-7172328",
+      "name": "The Base Sukhumvit 77",
+      "name_en": "The Base Sukhumvit 77",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7112821,
+      "lng": 100.6024074,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7172328"
+    },
+    {
+      "id": "osm-way-318728687",
+      "name": "The Bloom",
+      "name_en": "The Bloom",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7139139,
+      "lng": 100.5949496,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318728687"
     },
     {
       "id": "osm-way-331962415",
@@ -2193,7 +5356,11 @@
       "lat": 13.7408034,
       "lng": 100.5724035,
       "source": "openstreetmap",
-      "osm_ref": "way/331962415"
+      "osm_ref": "way/331962415",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-767746117",
@@ -2205,7 +5372,12 @@
       "lat": 13.7264761,
       "lng": 100.5733948,
       "source": "openstreetmap",
-      "osm_ref": "way/767746117"
+      "osm_ref": "way/767746117",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-332192001",
@@ -2217,7 +5389,11 @@
       "lat": 13.7408591,
       "lng": 100.5612263,
       "source": "openstreetmap",
-      "osm_ref": "way/332192001"
+      "osm_ref": "way/332192001",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-330242728",
@@ -2231,7 +5407,11 @@
       "lat": 13.7439897,
       "lng": 100.5584321,
       "source": "openstreetmap",
-      "osm_ref": "way/330242728"
+      "osm_ref": "way/330242728",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-523179199",
@@ -2245,7 +5425,12 @@
       "lat": 13.7291892,
       "lng": 100.5661188,
       "source": "openstreetmap",
-      "osm_ref": "way/523179199"
+      "osm_ref": "way/523179199",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-450625699",
@@ -2259,7 +5444,12 @@
       "lat": 13.7250951,
       "lng": 100.5764846,
       "source": "openstreetmap",
-      "osm_ref": "way/450625699"
+      "osm_ref": "way/450625699",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1195022786",
@@ -2271,7 +5461,32 @@
       "lat": 13.7314369,
       "lng": 100.5703209,
       "source": "openstreetmap",
-      "osm_ref": "way/1195022786"
+      "osm_ref": "way/1195022786",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1221375791",
+      "name": "The Emporio Place",
+      "name_en": "The Emporio Place",
+      "name_th": "ดิ เอ็มโพริโอ เพลส",
+      "aliases": [
+        "ดิ เอ็มโพริโอ เพลส",
+        "ซอยสุขุมวิท 24 93"
+      ],
+      "type": "condo",
+      "lat": 13.7231076,
+      "lng": 100.5671394,
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1221375791"
     },
     {
       "id": "osm-way-401358382",
@@ -2285,7 +5500,11 @@
       "lat": 13.7432049,
       "lng": 100.5613568,
       "source": "openstreetmap",
-      "osm_ref": "way/401358382"
+      "osm_ref": "way/401358382",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-678266774",
@@ -2299,7 +5518,12 @@
       "lat": 13.723963,
       "lng": 100.5776132,
       "source": "openstreetmap",
-      "osm_ref": "way/678266774"
+      "osm_ref": "way/678266774",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1037863939",
@@ -2313,7 +5537,12 @@
       "lat": 13.7285618,
       "lng": 100.5712293,
       "source": "openstreetmap",
-      "osm_ref": "way/1037863939"
+      "osm_ref": "way/1037863939",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-341210908",
@@ -2325,7 +5554,12 @@
       "lat": 13.7317759,
       "lng": 100.5804398,
       "source": "openstreetmap",
-      "osm_ref": "way/341210908"
+      "osm_ref": "way/341210908",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-450629006",
@@ -2337,7 +5571,12 @@
       "lat": 13.7235966,
       "lng": 100.5724823,
       "source": "openstreetmap",
-      "osm_ref": "way/450629006"
+      "osm_ref": "way/450629006",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324138303",
@@ -2349,7 +5588,84 @@
       "lat": 13.7334347,
       "lng": 100.5604333,
       "source": "openstreetmap",
-      "osm_ref": "way/324138303"
+      "osm_ref": "way/324138303",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-335811247",
+      "name": "The Line Sukhumvit 71",
+      "name_en": "The Line Sukhumvit 71",
+      "name_th": null,
+      "aliases": [
+        "Sukhumvit Soi 71 15"
+      ],
+      "type": "condo",
+      "lat": 13.7153567,
+      "lng": 100.5942712,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/335811247"
+    },
+    {
+      "id": "osm-way-332038792",
+      "name": "The Link Sukhumvit 64",
+      "name_en": "The Link Sukhumvit 64",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.686625,
+      "lng": 100.605383,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/332038792"
+    },
+    {
+      "id": "osm-way-544312080",
+      "name": "The Link Vano 64",
+      "name_en": "The Link Vano 64",
+      "name_th": null,
+      "aliases": [
+        "ซอยสุขุมวิท 64 69"
+      ],
+      "type": "condo",
+      "lat": 13.6865882,
+      "lng": 100.606369,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/544312080"
+    },
+    {
+      "id": "osm-way-194447054",
+      "name": "The Lofts Ekkamai",
+      "name_en": "The Lofts Ekkamai",
+      "name_th": "เดอะ ล็อฟท์ เอกมัย",
+      "aliases": [
+        "เดอะ ล็อฟท์ เอกมัย",
+        "ถนนสุขุมวิท 1413"
+      ],
+      "type": "condo",
+      "lat": 13.7183773,
+      "lng": 100.5876547,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/194447054"
     },
     {
       "id": "osm-way-526474706",
@@ -2361,7 +5677,12 @@
       "lat": 13.7227707,
       "lng": 100.5660769,
       "source": "openstreetmap",
-      "osm_ref": "way/526474706"
+      "osm_ref": "way/526474706",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-253416405",
@@ -2375,7 +5696,12 @@
       "lat": 13.7298012,
       "lng": 100.5716617,
       "source": "openstreetmap",
-      "osm_ref": "way/253416405"
+      "osm_ref": "way/253416405",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329428591",
@@ -2387,7 +5713,12 @@
       "lat": 13.7329487,
       "lng": 100.5772084,
       "source": "openstreetmap",
-      "osm_ref": "way/329428591"
+      "osm_ref": "way/329428591",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-525504895",
@@ -2399,7 +5730,114 @@
       "lat": 13.7249505,
       "lng": 100.5634223,
       "source": "openstreetmap",
-      "osm_ref": "way/525504895"
+      "osm_ref": "way/525504895",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-1185933418",
+      "name": "The Nest Sukhumvit 71 Building A",
+      "name_en": "The Nest Sukhumvit 71 Building A",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7136616,
+      "lng": 100.5982189,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1185933418"
+    },
+    {
+      "id": "osm-way-1185933417",
+      "name": "The Nest Sukhumvit 71 Building B",
+      "name_en": "The Nest Sukhumvit 71 Building B",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7135787,
+      "lng": 100.5977816,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1185933417"
+    },
+    {
+      "id": "osm-way-1185933421",
+      "name": "The Nest Sukhumvit 71 Building C",
+      "name_en": "The Nest Sukhumvit 71 Building C",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7133503,
+      "lng": 100.5979974,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1185933421"
+    },
+    {
+      "id": "osm-way-1185933420",
+      "name": "The Nest Sukhumvit 71 Building D",
+      "name_en": "The Nest Sukhumvit 71 Building D",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7131767,
+      "lng": 100.598411,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1185933420"
+    },
+    {
+      "id": "osm-way-1185933419",
+      "name": "The Nest Sukhumvit 71 Building E",
+      "name_en": "The Nest Sukhumvit 71 Building E",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7134622,
+      "lng": 100.5985661,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1185933419"
+    },
+    {
+      "id": "osm-relation-7198362",
+      "name": "The Next Garden Suites",
+      "name_en": "The Next Garden Suites",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7034405,
+      "lng": 100.5994356,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7198362"
     },
     {
       "id": "osm-way-176332764",
@@ -2411,7 +5849,29 @@
       "lat": 13.7250296,
       "lng": 100.5751503,
       "source": "openstreetmap",
-      "osm_ref": "way/176332764"
+      "osm_ref": "way/176332764",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-328740942",
+      "name": "The President Sukhumvit",
+      "name_en": "The President Sukhumvit",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7050167,
+      "lng": 100.6018203,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/328740942"
     },
     {
       "id": "osm-way-329428601",
@@ -2423,7 +5883,12 @@
       "lat": 13.7310541,
       "lng": 100.5761153,
       "source": "openstreetmap",
-      "osm_ref": "way/329428601"
+      "osm_ref": "way/329428601",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340075706",
@@ -2435,7 +5900,29 @@
       "lat": 13.7232875,
       "lng": 100.5661359,
       "source": "openstreetmap",
-      "osm_ref": "way/340075706"
+      "osm_ref": "way/340075706",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-513093587",
+      "name": "The Residence Sukhumvit 52",
+      "name_en": "The Residence Sukhumvit 52",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7021782,
+      "lng": 100.5989279,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/513093587"
     },
     {
       "id": "osm-way-332218928",
@@ -2449,7 +5936,47 @@
       "lat": 13.7438055,
       "lng": 100.5613178,
       "source": "openstreetmap",
-      "osm_ref": "way/332218928"
+      "osm_ref": "way/332218928",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-589575863",
+      "name": "The Room Sukhumvit 40",
+      "name_en": "The Room Sukhumvit 40",
+      "name_th": null,
+      "aliases": [
+        "สุขุมวิท 42 9"
+      ],
+      "type": "condo",
+      "lat": 13.7163194,
+      "lng": 100.5827779,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/589575863"
+    },
+    {
+      "id": "osm-relation-7334556",
+      "name": "The Room Sukhumvit 79",
+      "name_en": "The Room Sukhumvit 79",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7080885,
+      "lng": 100.601771,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7334556"
     },
     {
       "id": "osm-way-330253797",
@@ -2461,7 +5988,12 @@
       "lat": 13.7252881,
       "lng": 100.571049,
       "source": "openstreetmap",
-      "osm_ref": "way/330253797"
+      "osm_ref": "way/330253797",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-1251724241",
@@ -2475,7 +6007,12 @@
       "lat": 13.7241843,
       "lng": 100.5799317,
       "source": "openstreetmap",
-      "osm_ref": "way/1251724241"
+      "osm_ref": "way/1251724241",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324280501",
@@ -2489,7 +6026,65 @@
       "lat": 13.7323051,
       "lng": 100.5705392,
       "source": "openstreetmap",
-      "osm_ref": "way/324280501"
+      "osm_ref": "way/324280501",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-324280529",
+      "name": "THEA Serviced Apartments",
+      "name_en": "THEA Serviced Apartments",
+      "name_th": null,
+      "aliases": [
+        "เอกมัย ซอย 10 37"
+      ],
+      "type": "condo",
+      "lat": 13.729189,
+      "lng": 100.5914245,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/324280529"
+    },
+    {
+      "id": "osm-way-323691175",
+      "name": "Thong Lor Soi 13 275",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7341407,
+      "lng": 100.5806324,
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/323691175"
+    },
+    {
+      "id": "osm-way-331529639",
+      "name": "Thonglor Apartment",
+      "name_en": "Thonglor Apartment",
+      "name_th": null,
+      "aliases": [
+        "Thong Lor Soi 18 542"
+      ],
+      "type": "condo",
+      "lat": 13.7349991,
+      "lng": 100.5835582,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/331529639"
     },
     {
       "id": "osm-way-331962473",
@@ -2503,7 +6098,28 @@
       "lat": 13.7305914,
       "lng": 100.5809902,
       "source": "openstreetmap",
-      "osm_ref": "way/331962473"
+      "osm_ref": "way/331962473",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-319264599",
+      "name": "Thonglor Tower",
+      "name_en": "Thonglor Tower",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7350497,
+      "lng": 100.5852294,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319264599"
     },
     {
       "id": "osm-way-340092402",
@@ -2515,7 +6131,48 @@
       "lat": 13.7251691,
       "lng": 100.5747511,
       "source": "openstreetmap",
-      "osm_ref": "way/340092402"
+      "osm_ref": "way/340092402",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-387351107",
+      "name": "TKF Condo",
+      "name_en": "TKF Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7025656,
+      "lng": 100.5996303,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/387351107"
+    },
+    {
+      "id": "osm-way-1237989789",
+      "name": "Toby & Zen's Place",
+      "name_en": "Toby & Zen's Place",
+      "name_th": null,
+      "aliases": [
+        "มีสุวรรณ 3 แยก 8 ปรีดี พนมยงค์ 14 68/31"
+      ],
+      "type": "condo",
+      "lat": 13.7182237,
+      "lng": 100.6007525,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1237989789"
     },
     {
       "id": "osm-way-331962413",
@@ -2527,7 +6184,12 @@
       "lat": 13.7279063,
       "lng": 100.5746361,
       "source": "openstreetmap",
-      "osm_ref": "way/331962413"
+      "osm_ref": "way/331962413",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-324275308",
@@ -2539,7 +6201,12 @@
       "lat": 13.7247389,
       "lng": 100.5817721,
       "source": "openstreetmap",
-      "osm_ref": "way/324275308"
+      "osm_ref": "way/324275308",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-449094843",
@@ -2551,7 +6218,85 @@
       "lat": 13.7256357,
       "lng": 100.5620523,
       "source": "openstreetmap",
-      "osm_ref": "way/449094843"
+      "osm_ref": "way/449094843",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-332038807",
+      "name": "Tree Condo",
+      "name_en": "Tree Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7027729,
+      "lng": 100.600403,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/332038807"
+    },
+    {
+      "id": "osm-way-387351101",
+      "name": "Tree Condo Luxe",
+      "name_en": "Tree Condo Luxe",
+      "name_th": null,
+      "aliases": [
+        "Soi Sukhumvit 52 23"
+      ],
+      "type": "condo",
+      "lat": 13.7025384,
+      "lng": 100.6000416,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/387351101"
+    },
+    {
+      "id": "osm-way-513093591",
+      "name": "Tree Condo Sukhumvit 50",
+      "name_en": "Tree Condo Sukhumvit 50",
+      "name_th": null,
+      "aliases": [
+        "ซอยสุขุมวิท 50 66/1"
+      ],
+      "type": "condo",
+      "lat": 13.7044286,
+      "lng": 100.5994405,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/513093591"
+    },
+    {
+      "id": "osm-way-589575862",
+      "name": "TreeCondo Ekamai",
+      "name_en": "TreeCondo Ekamai",
+      "name_th": null,
+      "aliases": [
+        "Soi Soman I 33"
+      ],
+      "type": "condo",
+      "lat": 13.7163075,
+      "lng": 100.5831199,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/589575862"
     },
     {
       "id": "osm-way-324280520",
@@ -2563,7 +6308,28 @@
       "lat": 13.7353361,
       "lng": 100.5736033,
       "source": "openstreetmap",
-      "osm_ref": "way/324280520"
+      "osm_ref": "way/324280520",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-544312078",
+      "name": "TT Building",
+      "name_en": "TT Building",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7052035,
+      "lng": 100.6043567,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/544312078"
     },
     {
       "id": "osm-way-331962430",
@@ -2577,7 +6343,28 @@
       "lat": 13.7379344,
       "lng": 100.5713422,
       "source": "openstreetmap",
-      "osm_ref": "way/331962430"
+      "osm_ref": "way/331962430",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-264249245",
+      "name": "U-Delight Condos",
+      "name_en": "U-Delight Condos",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7107651,
+      "lng": 100.6039784,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/264249245"
     },
     {
       "id": "osm-way-384643704",
@@ -2591,7 +6378,30 @@
       "lat": 13.7216058,
       "lng": 100.5632081,
       "source": "openstreetmap",
-      "osm_ref": "way/384643704"
+      "osm_ref": "way/384643704",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-323690984",
+      "name": "United Tower",
+      "name_en": "United Tower",
+      "name_th": null,
+      "aliases": [
+        "Thong Lor Soi 17 333"
+      ],
+      "type": "condo",
+      "lat": 13.7348253,
+      "lng": 100.5825151,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/323690984"
     },
     {
       "id": "osm-way-1251934143",
@@ -2605,7 +6415,12 @@
       "lat": 13.7224869,
       "lng": 100.5771316,
       "source": "openstreetmap",
-      "osm_ref": "way/1251934143"
+      "osm_ref": "way/1251934143",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-321882293",
@@ -2617,7 +6432,12 @@
       "lat": 13.7277301,
       "lng": 100.5810166,
       "source": "openstreetmap",
-      "osm_ref": "way/321882293"
+      "osm_ref": "way/321882293",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340231167",
@@ -2629,7 +6449,11 @@
       "lat": 13.7392229,
       "lng": 100.5684107,
       "source": "openstreetmap",
-      "osm_ref": "way/340231167"
+      "osm_ref": "way/340231167",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-338087011",
@@ -2641,7 +6465,12 @@
       "lat": 13.7302824,
       "lng": 100.5758747,
       "source": "openstreetmap",
-      "osm_ref": "way/338087011"
+      "osm_ref": "way/338087011",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-330242696",
@@ -2653,7 +6482,28 @@
       "lat": 13.7430191,
       "lng": 100.557981,
       "source": "openstreetmap",
-      "osm_ref": "way/330242696"
+      "osm_ref": "way/330242696",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-318953432",
+      "name": "VIP Mansion",
+      "name_en": "VIP Mansion",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7260446,
+      "lng": 100.5939796,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/318953432"
     },
     {
       "id": "osm-way-340274128",
@@ -2665,7 +6515,28 @@
       "lat": 13.7428959,
       "lng": 100.5713716,
       "source": "openstreetmap",
-      "osm_ref": "way/340274128"
+      "osm_ref": "way/340274128",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-319130517",
+      "name": "Vista Garden",
+      "name_en": "Vista Garden",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7141079,
+      "lng": 100.5993598,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319130517"
     },
     {
       "id": "osm-way-521687097",
@@ -2677,7 +6548,44 @@
       "lat": 13.7307982,
       "lng": 100.5712031,
       "source": "openstreetmap",
-      "osm_ref": "way/521687097"
+      "osm_ref": "way/521687097",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-333303949",
+      "name": "Vivarium Residence",
+      "name_en": "Vivarium Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7297692,
+      "lng": 100.5935477,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/333303949"
+    },
+    {
+      "id": "osm-way-1510233556",
+      "name": "Vivarium Residence",
+      "name_en": "Vivarium Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7294087,
+      "lng": 100.5944057,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1510233556"
     },
     {
       "id": "osm-way-539298483",
@@ -2689,7 +6597,11 @@
       "lat": 13.7279849,
       "lng": 100.5607203,
       "source": "openstreetmap",
-      "osm_ref": "way/539298483"
+      "osm_ref": "way/539298483",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-76510915",
@@ -2701,7 +6613,12 @@
       "lat": 13.7265013,
       "lng": 100.5730871,
       "source": "openstreetmap",
-      "osm_ref": "way/76510915"
+      "osm_ref": "way/76510915",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-329745978",
@@ -2715,7 +6632,11 @@
       "lat": 13.7400528,
       "lng": 100.5612153,
       "source": "openstreetmap",
-      "osm_ref": "way/329745978"
+      "osm_ref": "way/329745978",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340675722",
@@ -2727,7 +6648,11 @@
       "lat": 13.7436483,
       "lng": 100.5584374,
       "source": "openstreetmap",
-      "osm_ref": "way/340675722"
+      "osm_ref": "way/340675722",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-330253719",
@@ -2739,7 +6664,27 @@
       "lat": 13.7400556,
       "lng": 100.5701985,
       "source": "openstreetmap",
-      "osm_ref": "way/330253719"
+      "osm_ref": "way/330253719",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-712650471",
+      "name": "Whizdom Connect Sukhumvit",
+      "name_en": "Whizdom Connect Sukhumvit",
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.6864488,
+      "lng": 100.6128268,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/712650471"
     },
     {
       "id": "osm-way-176332740",
@@ -2751,7 +6696,12 @@
       "lat": 13.728188,
       "lng": 100.5646239,
       "source": "openstreetmap",
-      "osm_ref": "way/176332740"
+      "osm_ref": "way/176332740",
+      "areas": [
+        "phrom-phong",
+        "ekamai"
+      ],
+      "named": true
     },
     {
       "id": "osm-way-340735152",
@@ -2763,7 +6713,1211 @@
       "lat": 13.7404772,
       "lng": 100.5653822,
       "source": "openstreetmap",
-      "osm_ref": "way/340735152"
+      "osm_ref": "way/340735152",
+      "areas": [
+        "phrom-phong"
+      ],
+      "named": true
+    },
+    {
+      "id": "osm-way-319148802",
+      "name": "Your Space Apartment",
+      "name_en": "Your Space Apartment",
+      "name_th": null,
+      "aliases": [],
+      "type": "apartment",
+      "lat": 13.7054748,
+      "lng": 100.6039766,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/319148802"
+    },
+    {
+      "id": "osm-way-575459610",
+      "name": "Zenith Place",
+      "name_en": "Zenith Place",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7162002,
+      "lng": 100.5861336,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/575459610"
+    },
+    {
+      "id": "osm-relation-7172331",
+      "name": "ซอย อ่อนนุช 1/1 111",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7140378,
+      "lng": 100.6021049,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7172331"
+    },
+    {
+      "id": "osm-relation-7478462",
+      "name": "ซอย อ่อนนุช 1/1 79/12",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7142828,
+      "lng": 100.6032977,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "relation/7478462"
+    },
+    {
+      "id": "osm-way-1367261563",
+      "name": "ซอยสวัสดี 4 605/2",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7026076,
+      "lng": 100.5948397,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1367261563"
+    },
+    {
+      "id": "osm-way-1059444987",
+      "name": "ซอยสุขุมวิท 50 662/1",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7077176,
+      "lng": 100.5941365,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444987"
+    },
+    {
+      "id": "osm-way-1059444999",
+      "name": "ซอยสุขุมวิท 50 662/10",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7079405,
+      "lng": 100.5942818,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444999"
+    },
+    {
+      "id": "osm-way-1059444998",
+      "name": "ซอยสุขุมวิท 50 662/11",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.707924,
+      "lng": 100.594242,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444998"
+    },
+    {
+      "id": "osm-way-1059444997",
+      "name": "ซอยสุขุมวิท 50 662/12",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7079073,
+      "lng": 100.5942021,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444997"
+    },
+    {
+      "id": "osm-way-1059444996",
+      "name": "ซอยสุขุมวิท 50 662/13",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7078907,
+      "lng": 100.5941623,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444996"
+    },
+    {
+      "id": "osm-way-1059444995",
+      "name": "ซอยสุขุมวิท 50 662/14",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7078741,
+      "lng": 100.5941226,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444995"
+    },
+    {
+      "id": "osm-way-1059444994",
+      "name": "ซอยสุขุมวิท 50 662/15",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7078574,
+      "lng": 100.5940829,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444994"
+    },
+    {
+      "id": "osm-way-1059445002",
+      "name": "ซอยสุขุมวิท 50 662/16",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7080902,
+      "lng": 100.5940682,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445002"
+    },
+    {
+      "id": "osm-way-1059445003",
+      "name": "ซอยสุขุมวิท 50 662/17",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7081069,
+      "lng": 100.5941079,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445003"
+    },
+    {
+      "id": "osm-way-1059445004",
+      "name": "ซอยสุขุมวิท 50 662/18",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7081236,
+      "lng": 100.5941477,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445004"
+    },
+    {
+      "id": "osm-way-1059445005",
+      "name": "ซอยสุขุมวิท 50 662/19",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7081401,
+      "lng": 100.5941875,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445005"
+    },
+    {
+      "id": "osm-way-1059444988",
+      "name": "ซอยสุขุมวิท 50 662/2",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7077343,
+      "lng": 100.5941763,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444988"
+    },
+    {
+      "id": "osm-way-1059445006",
+      "name": "ซอยสุขุมวิท 50 662/20",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7081568,
+      "lng": 100.5942274,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445006"
+    },
+    {
+      "id": "osm-way-1059445007",
+      "name": "ซอยสุขุมวิท 50 662/21",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7081734,
+      "lng": 100.5942672,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445007"
+    },
+    {
+      "id": "osm-way-1059445008",
+      "name": "ซอยสุขุมวิท 50 662/22",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.70819,
+      "lng": 100.594307,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445008"
+    },
+    {
+      "id": "osm-way-1059445009",
+      "name": "ซอยสุขุมวิท 50 662/23",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7082068,
+      "lng": 100.594347,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445009"
+    },
+    {
+      "id": "osm-way-1059445010",
+      "name": "ซอยสุขุมวิท 50 662/24",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7083643,
+      "lng": 100.5943268,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445010"
+    },
+    {
+      "id": "osm-way-1059445011",
+      "name": "ซอยสุขุมวิท 50 662/25",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7083477,
+      "lng": 100.5942869,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445011"
+    },
+    {
+      "id": "osm-way-1059445012",
+      "name": "ซอยสุขุมวิท 50 662/26",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7083311,
+      "lng": 100.5942471,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445012"
+    },
+    {
+      "id": "osm-way-1059445013",
+      "name": "ซอยสุขุมวิท 50 662/27",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7083145,
+      "lng": 100.5942073,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445013"
+    },
+    {
+      "id": "osm-way-1059445014",
+      "name": "ซอยสุขุมวิท 50 662/28",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7082977,
+      "lng": 100.5941673,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445014"
+    },
+    {
+      "id": "osm-way-1059445015",
+      "name": "ซอยสุขุมวิท 50 662/29",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7082811,
+      "lng": 100.5941275,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445015"
+    },
+    {
+      "id": "osm-way-1059444989",
+      "name": "ซอยสุขุมวิท 50 662/3",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7077509,
+      "lng": 100.594216,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444989"
+    },
+    {
+      "id": "osm-way-1059445016",
+      "name": "ซอยสุขุมวิท 50 662/30",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7082645,
+      "lng": 100.5940878,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445016"
+    },
+    {
+      "id": "osm-way-1059445017",
+      "name": "ซอยสุขุมวิท 50 662/31",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.708248,
+      "lng": 100.594048,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445017"
+    },
+    {
+      "id": "osm-way-1059445024",
+      "name": "ซอยสุขุมวิท 50 662/32",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7084425,
+      "lng": 100.593931,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445024"
+    },
+    {
+      "id": "osm-way-1059445025",
+      "name": "ซอยสุขุมวิท 50 662/33",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7084591,
+      "lng": 100.5939708,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445025"
+    },
+    {
+      "id": "osm-way-1059445026",
+      "name": "ซอยสุขุมวิท 50 662/34",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7084757,
+      "lng": 100.5940105,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445026"
+    },
+    {
+      "id": "osm-way-1059445018",
+      "name": "ซอยสุขุมวิท 50 662/35",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085084,
+      "lng": 100.5940943,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445018"
+    },
+    {
+      "id": "osm-way-1059445019",
+      "name": "ซอยสุขุมวิท 50 662/36",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085249,
+      "lng": 100.5941341,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445019"
+    },
+    {
+      "id": "osm-way-1059445020",
+      "name": "ซอยสุขุมวิท 50 662/37",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085415,
+      "lng": 100.5941738,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445020"
+    },
+    {
+      "id": "osm-way-1059445021",
+      "name": "ซอยสุขุมวิท 50 662/38",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085582,
+      "lng": 100.5942136,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445021"
+    },
+    {
+      "id": "osm-way-1059445022",
+      "name": "ซอยสุขุมวิท 50 662/39",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085749,
+      "lng": 100.5942535,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445022"
+    },
+    {
+      "id": "osm-way-1059444990",
+      "name": "ซอยสุขุมวิท 50 662/4",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7077675,
+      "lng": 100.5942558,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444990"
+    },
+    {
+      "id": "osm-way-1059445023",
+      "name": "ซอยสุขุมวิท 50 662/40",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085915,
+      "lng": 100.5942933,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445023"
+    },
+    {
+      "id": "osm-way-1059445031",
+      "name": "ซอยสุขุมวิท 50 662/41",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7087247,
+      "lng": 100.5941904,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445031"
+    },
+    {
+      "id": "osm-way-1059445030",
+      "name": "ซอยสุขุมวิท 50 662/42",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.708708,
+      "lng": 100.5941505,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445030"
+    },
+    {
+      "id": "osm-way-1059445029",
+      "name": "ซอยสุขุมวิท 50 662/43",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7086914,
+      "lng": 100.5941107,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445029"
+    },
+    {
+      "id": "osm-way-1059445028",
+      "name": "ซอยสุขุมวิท 50 662/44",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7086748,
+      "lng": 100.594071,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445028"
+    },
+    {
+      "id": "osm-way-1059445027",
+      "name": "ซอยสุขุมวิท 50 662/45",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7086582,
+      "lng": 100.5940313,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445027"
+    },
+    {
+      "id": "osm-way-1059445037",
+      "name": "ซอยสุขุมวิท 50 662/46",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7086255,
+      "lng": 100.5939454,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445037"
+    },
+    {
+      "id": "osm-way-1059445036",
+      "name": "ซอยสุขุมวิท 50 662/47",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7086089,
+      "lng": 100.5939056,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445036"
+    },
+    {
+      "id": "osm-way-1059445035",
+      "name": "ซอยสุขุมวิท 50 662/48",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085922,
+      "lng": 100.5938656,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445035"
+    },
+    {
+      "id": "osm-way-1059445034",
+      "name": "ซอยสุขุมวิท 50 662/49",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085757,
+      "lng": 100.5938259,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445034"
+    },
+    {
+      "id": "osm-way-1059444991",
+      "name": "ซอยสุขุมวิท 50 662/5",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7077842,
+      "lng": 100.5942957,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444991"
+    },
+    {
+      "id": "osm-way-1059445033",
+      "name": "ซอยสุขุมวิท 50 662/50",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085589,
+      "lng": 100.5937861,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445033"
+    },
+    {
+      "id": "osm-way-1059445032",
+      "name": "ซอยสุขุมวิท 50 662/51",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7085424,
+      "lng": 100.5937464,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445032"
+    },
+    {
+      "id": "osm-way-1059445042",
+      "name": "ซอยสุขุมวิท 50 662/52",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7087442,
+      "lng": 100.5936635,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445042"
+    },
+    {
+      "id": "osm-way-1059445041",
+      "name": "ซอยสุขุมวิท 50 662/53",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7087609,
+      "lng": 100.5937033,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445041"
+    },
+    {
+      "id": "osm-way-1059445040",
+      "name": "ซอยสุขุมวิท 50 662/54",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7087776,
+      "lng": 100.593743,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445040"
+    },
+    {
+      "id": "osm-way-1059445039",
+      "name": "ซอยสุขุมวิท 50 662/55",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7087941,
+      "lng": 100.5937828,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445039"
+    },
+    {
+      "id": "osm-way-1059445038",
+      "name": "ซอยสุขุมวิท 50 662/56",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7088108,
+      "lng": 100.5938227,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445038"
+    },
+    {
+      "id": "osm-way-1059444992",
+      "name": "ซอยสุขุมวิท 50 662/6",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7078008,
+      "lng": 100.5943355,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444992"
+    },
+    {
+      "id": "osm-way-1059444993",
+      "name": "ซอยสุขุมวิท 50 662/7",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7078174,
+      "lng": 100.5943752,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059444993"
+    },
+    {
+      "id": "osm-way-1059445001",
+      "name": "ซอยสุขุมวิท 50 662/8",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7079739,
+      "lng": 100.5943616,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445001"
+    },
+    {
+      "id": "osm-way-1059445000",
+      "name": "ซอยสุขุมวิท 50 662/9",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7079571,
+      "lng": 100.5943216,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1059445000"
+    },
+    {
+      "id": "osm-way-1194107549",
+      "name": "ซอยอรรถกระวี 16",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7185486,
+      "lng": 100.5710421,
+      "areas": [
+        "ekamai"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1194107549"
+    },
+    {
+      "id": "osm-way-1395680357",
+      "name": "ซอยเอกมัย 14 192",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7317331,
+      "lng": 100.5888192,
+      "areas": [
+        "ekamai"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1395680357"
+    },
+    {
+      "id": "osm-way-1299176282",
+      "name": "ซอยแสนสุข 397",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7038173,
+      "lng": 100.5945723,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1299176282"
+    },
+    {
+      "id": "osm-way-1472142293",
+      "name": "ถนนทางรถไฟสายเก่าปากน้ำ 2999",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7127794,
+      "lng": 100.5791342,
+      "areas": [
+        "ekamai",
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1472142293"
+    },
+    {
+      "id": "osm-way-1388983141",
+      "name": "ถนนสุขุมวิท 2331",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6988955,
+      "lng": 100.6055487,
+      "areas": [
+        "on-nut"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/1388983141"
+    },
+    {
+      "id": "osm-way-1057952401",
+      "name": "บ้านเลขที่ 100",
+      "name_en": null,
+      "name_th": "บ้านเลขที่ 100",
+      "aliases": [
+        "สุขุมวิท 93 ซอยพึ่งมี 50 100"
+      ],
+      "type": "other",
+      "lat": 13.6996853,
+      "lng": 100.6231703,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1057952401"
+    },
+    {
+      "id": "osm-way-1355311832",
+      "name": "สุขุมวิทวิลล่า",
+      "name_en": null,
+      "name_th": "สุขุมวิทวิลล่า",
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7199255,
+      "lng": 100.5756368,
+      "areas": [
+        "ekamai"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1355311832"
+    },
+    {
+      "id": "osm-way-1395652096",
+      "name": "หมู่บ้านปัญญา",
+      "name_en": null,
+      "name_th": "หมู่บ้านปัญญา",
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7172932,
+      "lng": 100.6191465,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1395652096"
+    },
+    {
+      "id": "osm-way-1458150814",
+      "name": "หมู่บ้านฮอลลีวู้ด",
+      "name_en": null,
+      "name_th": "หมู่บ้านฮอลลีวู้ด",
+      "aliases": [],
+      "type": "other",
+      "lat": 13.7230125,
+      "lng": 100.6116823,
+      "areas": [
+        "on-nut"
+      ],
+      "named": true,
+      "source": "openstreetmap",
+      "osm_ref": "way/1458150814"
+    },
+    {
+      "id": "osm-way-569709333",
+      "name": "เอกมัย ซอย 22 50",
+      "name_en": null,
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7349989,
+      "lng": 100.58992,
+      "areas": [
+        "ekamai"
+      ],
+      "named": false,
+      "source": "openstreetmap",
+      "osm_ref": "way/569709333"
     }
   ]
 }

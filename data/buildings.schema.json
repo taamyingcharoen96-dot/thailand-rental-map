@@ -2,10 +2,10 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.invalid/thailand-rental-map/buildings.schema.json",
   "title": "Thailand Rental Map building directory",
-  "description": "Named residential buildings for one trial area. Names and coordinates come from OpenStreetMap under the Open Database License.",
+  "description": "Residential buildings for Phrom Phong, Ekamai, and On Nut. Names and coordinates come from OpenStreetMap under the Open Database License.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["area", "attribution", "retrieved_at", "buildings"],
+  "required": ["area", "areas", "attribution", "retrieved_at", "buildings"],
   "properties": {
     "area": {
       "type": "object",
@@ -28,6 +28,10 @@
         }
       }
     },
+    "areas": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
     "attribution": { "type": "string" },
     "retrieved_at": { "type": "string" },
     "buildings": {
@@ -39,7 +43,7 @@
     "building": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name", "name_en", "name_th", "aliases", "type", "lat", "lng", "source", "osm_ref"],
+      "required": ["id", "name", "name_en", "name_th", "aliases", "type", "lat", "lng", "areas", "named", "source", "osm_ref"],
       "properties": {
         "id": { "type": "string", "minLength": 1 },
         "name": { "type": "string", "minLength": 1 },
@@ -52,6 +56,12 @@
         "type": { "type": "string", "enum": ["condo", "apartment", "other"] },
         "lat": { "type": "number", "minimum": -90, "maximum": 90 },
         "lng": { "type": "number", "minimum": -180, "maximum": 180 },
+        "areas": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "enum": ["phrom-phong", "ekamai", "on-nut"] }
+        },
+        "named": { "type": "boolean" },
         "source": { "type": "string", "minLength": 1 },
         "osm_ref": { "type": "string" }
       }
