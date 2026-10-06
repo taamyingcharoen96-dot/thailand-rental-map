@@ -541,7 +541,7 @@
   <header class="topbar">
     <div class="topbar-row1">
       <h1>Thailand Rental Map</h1>
-      <span class="loc-label">Phrom Phong, Bangkok</span>
+      <span class="loc-label">Phrom Phong · Ekamai · On Nut</span>
       <p class="osm-note">Buildings © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, ODbL</p>
     </div>
     <div class="filters" id="filters">
@@ -660,9 +660,13 @@
     return n.length > 140 ? n.slice(0, 137) + "…" : n;
   };
 
+  const AREA_LABEL = { "phrom-phong": "Phrom Phong", ekamai: "Ekamai", "on-nut": "On Nut" };
+
   const buildingNames = (b) => b
     ? [b.name, b.name_en, b.name_th, ...(b.aliases || [])].filter(Boolean)
     : [];
+
+  const areaText = (b) => (b.areas || []).map((id) => AREA_LABEL[id] || id).join(" / ");
 
   let allListings = [];
   let allBuildings = [];
@@ -807,7 +811,7 @@
       <button type="button" class="btn" id="backAll">All listings</button>
       <div class="banner-copy">
         <strong>${esc(b.name)}</strong>
-        <span>${esc([kind, thai, status].filter(Boolean).join(" · "))}</span>
+        <span>${esc([areaText(b), kind, thai, status].filter(Boolean).join(" · "))}</span>
       </div>
     </div>`;
   }
@@ -826,7 +830,7 @@
       const message = focused
         ? (unitsFor(focused.id).length
           ? "No listings in this building match your filters."
-          : `<strong>No units listed yet</strong><br>${esc(focused.name)} is in the Phrom Phong directory. A home will show up here when the owner posts it.`)
+          : `<strong>No units listed yet</strong><br>${esc(focused.name)} is in the directory. A home will show up here when the owner posts it.`)
         : "No listings match your filters.";
       el.list.innerHTML = `${bannerHtml()}<div class="empty-state">${message}</div>`;
       return;
@@ -991,7 +995,7 @@
     el.q.setAttribute("aria-expanded", "true");
     el.suggest.innerHTML = hits.map((hit, i) => {
       const b = hit.building;
-      const sub = [b.name_th && b.name_th !== b.name ? b.name_th : "", b.type === "condo" ? "Condo" : b.type === "apartment" ? "Apartment" : "Building"]
+      const sub = [areaText(b), b.name_th && b.name_th !== b.name ? b.name_th : "", b.type === "condo" ? "Condo" : b.type === "apartment" ? "Apartment" : "Building"]
         .filter(Boolean).join(" · ");
       const units = hit.units
         ? `${hit.units} unit${hit.units === 1 ? "" : "s"}`
