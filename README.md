@@ -1,6 +1,6 @@
 # Thailand Rental Map
 
-A public rental map for Thailand, starting in Bangkok. The owner posts the first home; later listings are added by hand. Nothing here is scraped.
+A public rental map for Thailand, starting in Bangkok. The owner posted the first home. Later listings are added by hand. Do not scrape listing portals, and do not scrape sites that require a login.
 
 **Live site:** https://taamyingcharoen96-dot.github.io/thailand-rental-map/
 
@@ -20,6 +20,21 @@ D.S. Tower 1 Sukhumvit 33 — 3 bedrooms, 3 bathrooms, 236 sqm condominium in Kh
 | Building | `osm-way-340330015` (OpenStreetMap: D.S. Towers) |
 
 Rent and contact are not set yet.
+
+## Marque Sukhumvit
+
+Six condominium ads at Marque Sukhumvit (`osm-way-521687098`, Sukhumvit 39 / Phrom Phong) were copied by hand from public PropertyHub and DDproperty pages on 2026-10-28. They are agent listings, not owner-verified, and availability was not confirmed with the owner. No phone or Line contact was copied (`contact` is null). Each `source_url` points at the public ad or project page. Photos were not saved; an empty `photo_urls` list shows the existing “No photo” placeholder. Do not scrape those portals further.
+
+| Unit | Rent (THB/mo) | Beds | Size |
+| --- | --- | --- | --- |
+| 2BR, floor 20 | 185,000 | 2 | 135 sqm |
+| 2BR, floor 19 | 130,000 | 2 | 133 sqm |
+| 3BR with jacuzzi, floor 25+ | 290,000 | 3 | 191.5 sqm |
+| 3BR pet-friendly, floor 20 | 219,000 | 3 | 197 sqm |
+| 3BR (BR15903CD) | 230,000 | 3 | 192 sqm |
+| 2BR, floor 28 (DDproperty) | 159,000 | 2 | 126 sqm |
+
+Searching “Marque” focuses that building. The six units share one map pin with a unit count. D.S. Tower 1 stays as its own pin.
 
 ## Run locally
 
@@ -48,8 +63,8 @@ python3 scripts/build_phrom_phong_buildings.py -o data/buildings.json
 
 That reads the public Overpass API. Do not copy names from listing portals.
 
-Do not invent listings. Do not scrape Facebook or other sites that require a login.
+Do not invent listings. Do not scrape Facebook or other sites that require a login. Do not scrape PropertyHub, DDproperty, or other listing portals further; the Marque rows above are a one-time hand copy of public ads.
 
 ## Sources
 
-`sources.md` and `data/sources.json` list places future listings might come from. The only active source today is a manual post from the owner.
+`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and the one-time hand copy of public Marque Sukhumvit ads.
