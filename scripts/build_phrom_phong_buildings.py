@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Build data/buildings.json for six Bangkok areas.
+"""Build data/buildings.json for the Sukhumvit corridor, Ari, and Silom–Sathorn.
 
-Phrom Phong stays the original Sukhumvit Soi 23–49 trial set. Ekamai, On Nut,
-Silom–Sathorn, Asok–Nana, and Ari are every residential building whose center
-is within 2.5 km of the BTS station, using OpenStreetMap only. Station
-coordinates are the OpenStreetMap railway=station nodes. Buildings in more
-than one area are stored once and list every area they fall in. Unnamed
-buildings are included only when the address is specific enough to label them.
+Sukhumvit is every residential building whose center is within 2.5 km of a
+BTS station from Nana (E3) through Bearing (E14). Ari and Silom–Sathorn stay
+2.5 km radii around BTS Ari and BTS Sala Daeng. Station coordinates are the
+OpenStreetMap railway=station nodes. Buildings in more than one station area
+are stored once and list every area they fall in. Unnamed buildings are
+included only when the address is specific enough to label them.
 Data is © OpenStreetMap contributors, ODbL.
 """
 
@@ -22,73 +22,52 @@ import urllib.request
 from datetime import date
 from pathlib import Path
 
-BBOX = {"south": 13.720, "west": 100.558, "north": 13.745, "east": 100.582}
 RADIUS_M = 2500
-# Order is the order stored on each building and shown in the page header.
+
+
+def station(id, name, osm_name, name_th, ref, osm_id, lat, lng, corridor, detail=None):
+    row = {
+        "id": id,
+        "name": name,
+        "osm_name": osm_name,
+        "name_th": name_th,
+        "ref": ref,
+        "osm_id": osm_id,
+        "lat": lat,
+        "lng": lng,
+        "corridor": corridor,
+    }
+    if detail:
+        row["detail"] = detail
+    return row
+
+
+# Sukhumvit line order, Nana (E3) through Bearing (E14), then Ari and Silom–Sathorn.
+# Coordinates are OpenStreetMap railway=station nodes.
 STATIONS = {
-    "ekamai": {
-        "id": "ekamai",
-        "name": "Ekamai",
-        "osm_name": "Ekkamai",
-        "name_th": "เอกมัย",
-        "ref": "E7",
-        "osm_id": "node/5405616025",
-        "lat": 13.7195385,
-        "lng": 100.585111,
-    },
-    "on-nut": {
-        "id": "on-nut",
-        "name": "On Nut",
-        "osm_name": "On Nut",
-        "name_th": "อ่อนนุช",
-        "ref": "E9",
-        "osm_id": "node/5391620400",
-        "lat": 13.7056249,
-        "lng": 100.601004,
-    },
-    # BTS Sala Daeng, node/451697335 (S2). Interchange with MRT Si Lom.
-    "silom-sathorn": {
-        "id": "silom-sathorn",
-        "name": "Silom–Sathorn",
-        "osm_name": "Sala Daeng",
-        "name_th": "ศาลาแดง",
-        "ref": "S2",
-        "osm_id": "node/451697335",
-        "lat": 13.7285677,
-        "lng": 100.5343416,
-        "detail": "interchange with MRT Si Lom",
-    },
-    # BTS Asok, node/5391625873 (E4). Interchange with MRT Sukhumvit.
-    "asok-nana": {
-        "id": "asok-nana",
-        "name": "Asok–Nana",
-        "osm_name": "Asok",
-        "name_th": "อโศก",
-        "ref": "E4",
-        "osm_id": "node/5391625873",
-        "lat": 13.7370432,
-        "lng": 100.5603571,
-        "detail": "interchange with MRT Sukhumvit",
-    },
-    # BTS Ari, node/5388607091 (N5).
-    "ari": {
-        "id": "ari",
-        "name": "Ari",
-        "osm_name": "Ari",
-        "name_th": "อารีย์",
-        "ref": "N5",
-        "osm_id": "node/5388607091",
-        "lat": 13.7797077,
-        "lng": 100.5446201,
-    },
+    "nana": station("nana", "Nana", "Nana", "นานา", "E3", "node/5391628766", 13.7405358, 100.5554291, "sukhumvit"),
+    "asok": station("asok", "Asok", "Asok", "อโศก", "E4", "node/5391625873", 13.7370432, 100.5603571, "sukhumvit", "interchange with MRT Sukhumvit"),
+    "phrom-phong": station("phrom-phong", "Phrom Phong", "Phrom Phong", "พร้อมพงษ์", "E5", "node/5391626093", 13.7304345, 100.5697129, "sukhumvit"),
+    "thong-lo": station("thong-lo", "Thong Lo", "Thong Lo", "ทองหล่อ", "E6", "node/5391626092", 13.7242264, 100.5785054, "sukhumvit"),
+    "ekamai": station("ekamai", "Ekamai", "Ekkamai", "เอกมัย", "E7", "node/5405616025", 13.7195385, 100.585111, "sukhumvit", "Ekamai zone, Sukhumvit Soi 63"),
+    "phra-khanong": station("phra-khanong", "Phra Khanong", "Phra Khanong", "พระโขนง", "E8", "node/5391610985", 13.7151693, 100.5912365, "sukhumvit"),
+    "on-nut": station("on-nut", "On Nut", "On Nut", "อ่อนนุช", "E9", "node/5391620400", 13.7056249, 100.601004, "sukhumvit"),
+    "bang-chak": station("bang-chak", "Bang Chak", "Bang Chak", "บางจาก", "E10", "node/5391618414", 13.6967594, 100.6053402, "sukhumvit"),
+    "punnawithi": station("punnawithi", "Punnawithi", "Punnawithi", "ปุณณวิถี", "E11", "node/5391616767", 13.689279, 100.6089963, "sukhumvit"),
+    "udom-suk": station("udom-suk", "Udom Suk", "Udom Suk", "อุดมสุข", "E12", "node/5391613497", 13.6798746, 100.6094698, "sukhumvit"),
+    "bang-na": station("bang-na", "Bang Na", "Bang Na", "บางนา", "E13", "node/5391610964", 13.668138, 100.6046633, "sukhumvit"),
+    "bearing": station("bearing", "Bearing", "Bearing", "แบริ่ง", "E14", "node/5391599348", 13.6611846, 100.6018056, "sukhumvit"),
+    "ari": station("ari", "Ari", "Ari", "อารีย์", "N5", "node/5388607091", 13.7797077, 100.5446201, "ari"),
+    "silom-sathorn": station("silom-sathorn", "Silom–Sathorn", "Sala Daeng", "ศาลาแดง", "S2", "node/451697335", 13.7285677, 100.5343416, "silom-sathorn", "interchange with MRT Si Lom"),
 }
-AREA_IDS = ["phrom-phong", *STATIONS]
+AREA_IDS = list(STATIONS)
+SUKHUMVIT_IDS = [key for key, row in STATIONS.items() if row["corridor"] == "sukhumvit"]
 UA = "thailand-rental-map/1.0 (Sukhumvit building directory; ODbL)"
-# The public Overpass servers time out on a dense 2.5 km named-building query.
-# Try the main instance, then the French mirror, then smaller tiles.
+# The German public instance often returns 504 on a dense 2.5 km query.
+# Try the French mirror first, then the main instance, then smaller tiles.
 OVERPASS_ENDPOINTS = (
-    "https://overpass-api.de/api/interpreter",
     "https://overpass.openstreetmap.fr/api/interpreter",
+    "https://overpass-api.de/api/interpreter",
 )
 SELECTOR_BASES = (
     'nwr["building"~"^(apartments|residential|condominium|house|dormitory|terrace|detached|bungalow)$"]',
@@ -310,19 +289,13 @@ def address_label(tags: dict) -> str | None:
     return label
 
 
-def in_phrom_phong(lat: float, lng: float) -> bool:
-    return BBOX["south"] <= lat <= BBOX["north"] and BBOX["west"] <= lng <= BBOX["east"]
-
-
 def areas_for(lat: float, lng: float) -> list[str]:
-    found = []
-    if in_phrom_phong(lat, lng):
-        found.append("phrom-phong")
     point = (lat, lng)
-    for key, station in STATIONS.items():
-        if haversine_m(point, (station["lat"], station["lng"])) <= RADIUS_M:
-            found.append(key)
-    return found
+    return [
+        key
+        for key, row in STATIONS.items()
+        if haversine_m(point, (row["lat"], row["lng"])) <= RADIUS_M
+    ]
 
 
 def building_type(tags: dict, name: str) -> str:
@@ -504,6 +477,8 @@ def skipped_unnamed(elements: list[dict]) -> dict[str, int]:
             continue
         seen.add(key)
         counts["unique"] += 1
+        if any(area in SUKHUMVIT_IDS for area in areas):
+            counts["sukhumvit"] = counts.get("sukhumvit", 0) + 1
         for area in areas:
             if area in counts:
                 counts[area] += 1
@@ -511,8 +486,8 @@ def skipped_unnamed(elements: list[dict]) -> dict[str, int]:
 
 
 def stamp_existing(building: dict) -> dict:
-    """Keep a directory building and refresh which areas its center falls in."""
-    areas = areas_for(building["lat"], building["lng"]) or list(building.get("areas") or ["phrom-phong"])
+    """Keep a directory building and refresh which station areas its center falls in."""
+    areas = areas_for(building["lat"], building["lng"])
     return {
         "id": building["id"],
         "name": building["name"],
@@ -563,45 +538,37 @@ def build(existing: list[dict], elements: list[dict]) -> dict:
         accept(record(element))
 
     accepted.sort(key=lambda item: (item["name"] or "").casefold())
-    boxes = [BBOX, *[circle_bbox(station["lat"], station["lng"]) for station in STATIONS.values()]]
+    boxes = [circle_bbox(row["lat"], row["lng"]) for row in STATIONS.values()]
     return {
         "area": {
             "id": "bangkok",
-            "name": "Phrom Phong, Ekamai, On Nut, Silom–Sathorn, Asok–Nana and Ari",
+            "name": "Sukhumvit (Nana–Bearing), Ari and Silom–Sathorn",
             "description": (
-                "Phrom Phong along Sukhumvit Soi 23 to Soi 49, plus every residential "
-                "building within 2.5 km of BTS Ekamai, BTS On Nut, BTS Sala Daeng "
-                "(Silom–Sathorn), BTS Asok (Asok–Nana), and BTS Ari. A building in "
-                "more than one area is stored once."
+                "Every residential building within 2.5 km of a BTS Sukhumvit station "
+                "from Nana (E3) through Bearing (E14), within 2.5 km of BTS Ari, and "
+                "within 2.5 km of BTS Sala Daeng (Silom–Sathorn). A building in more "
+                "than one station area is stored once."
             ),
             "bbox": union_bbox(boxes),
         },
         "areas": [
             {
-                "id": "phrom-phong",
-                "name": "Phrom Phong",
-                "kind": "bbox",
-                "description": "Sukhumvit Soi 23 to Soi 49, around BTS Phrom Phong and the Asok and Thong Lo edges.",
-                "bbox": BBOX,
-            },
-            *[
-                {
-                    "id": station["id"],
-                    "name": station["name"],
-                    "kind": "radius",
-                    "radius_m": RADIUS_M,
-                    "description": station_description(station),
-                    "station": {
-                        "name": station["osm_name"],
-                        "name_th": station["name_th"],
-                        "ref": station["ref"],
-                        "osm_id": station["osm_id"],
-                        "lat": station["lat"],
-                        "lng": station["lng"],
-                    },
-                }
-                for station in STATIONS.values()
-            ],
+                "id": row["id"],
+                "name": row["name"],
+                "kind": "radius",
+                "corridor": row["corridor"],
+                "radius_m": RADIUS_M,
+                "description": station_description(row),
+                "station": {
+                    "name": row["osm_name"],
+                    "name_th": row["name_th"],
+                    "ref": row["ref"],
+                    "osm_id": row["osm_id"],
+                    "lat": row["lat"],
+                    "lng": row["lng"],
+                },
+            }
+            for row in STATIONS.values()
         ],
         "attribution": (
             "© OpenStreetMap contributors. Building names and locations are from "
@@ -619,33 +586,29 @@ def station_description(station: dict) -> str:
     return text + "."
 
 
-def summarize(payload: dict, skipped: dict[str, int]) -> None:
+def count_rows(rows: list[dict], skipped_n: int) -> str:
     from collections import Counter
 
+    types = Counter(b["type"] for b in rows)
+    named = sum(1 for b in rows if b["named"])
+    address = sum(1 for b in rows if not b["named"])
+    return (
+        f"{len(rows)} named={named} address={address} "
+        f"condo={types['condo']} apartment={types['apartment']} other={types['other']} "
+        f"skipped_unnamed={skipped_n}"
+    )
+
+
+def summarize(payload: dict, skipped: dict[str, int]) -> None:
     buildings = payload["buildings"]
     print(f"unique {len(buildings)}")
     print("skipped unnamed", json.dumps(skipped, ensure_ascii=False))
     for area in AREA_IDS:
         rows = [b for b in buildings if area in b["areas"]]
-        types = Counter(b["type"] for b in rows)
-        named = sum(1 for b in rows if b["named"])
-        address = sum(1 for b in rows if not b["named"])
-        print(
-            f"{area}: {len(rows)} named={named} address={address} "
-            f"condo={types['condo']} apartment={types['apartment']} other={types['other']} "
-            f"skipped_unnamed={skipped.get(area, 0)}"
-        )
-    pairs = (
-        ("phrom-phong", "ekamai"),
-        ("phrom-phong", "asok-nana"),
-        ("phrom-phong", "silom-sathorn"),
-        ("ekamai", "on-nut"),
-        ("ekamai", "asok-nana"),
-        ("silom-sathorn", "asok-nana"),
-    )
-    for left, right in pairs:
-        count = sum(1 for b in buildings if left in b["areas"] and right in b["areas"])
-        print(f"overlap {left}∩{right} {count}")
+        print(f"{area}: {count_rows(rows, skipped.get(area, 0))}")
+    suk = [b for b in buildings if any(area in SUKHUMVIT_IDS for area in b["areas"])]
+    print(f"sukhumvit-corridor: {count_rows(suk, skipped.get('sukhumvit', 0))}")
+    print(f"multi-station {sum(1 for b in buildings if len(b['areas']) > 1)}")
 
 
 def main() -> None:

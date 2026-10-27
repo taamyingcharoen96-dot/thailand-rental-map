@@ -566,12 +566,10 @@
       <h1>Thailand Rental Map</h1>
       <p class="loc-label">
         <span class="loc-areas">
-          <span>Phrom Phong</span>
+          <span>Sukhumvit (Nana–Bearing)</span>
           <span>Ekamai</span>
-          <span>On Nut</span>
-          <span>Silom–Sathorn</span>
-          <span>Asok–Nana</span>
           <span>Ari</span>
+          <span>Silom–Sathorn</span>
         </span>
       </p>
       <p class="osm-note">Buildings © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, ODbL</p>
@@ -693,13 +691,25 @@
   };
 
   const AREA_LABEL = {
+    nana: "Nana",
+    asok: "Asok",
     "phrom-phong": "Phrom Phong",
+    "thong-lo": "Thong Lo",
     ekamai: "Ekamai",
+    "phra-khanong": "Phra Khanong",
     "on-nut": "On Nut",
-    "silom-sathorn": "Silom–Sathorn",
-    "asok-nana": "Asok–Nana",
+    "bang-chak": "Bang Chak",
+    punnawithi: "Punnawithi",
+    "udom-suk": "Udom Suk",
+    "bang-na": "Bang Na",
+    bearing: "Bearing",
     ari: "Ari",
+    "silom-sathorn": "Silom–Sathorn",
   };
+  let SUKHUMVIT_IDS = [
+    "nana", "asok", "phrom-phong", "thong-lo", "ekamai", "phra-khanong",
+    "on-nut", "bang-chak", "punnawithi", "udom-suk", "bang-na", "bearing",
+  ];
 
   const foldedNames = new Map();
   const foldedFor = (b) => {
@@ -715,7 +725,35 @@
     ? [b.name, b.name_en, b.name_th, ...(b.aliases || [])].filter(Boolean)
     : [];
 
-  const areaText = (b) => (b.areas || []).map((id) => AREA_LABEL[id] || id).join(" / ");
+  const areaText = (b) => {
+    const ids = b.areas || [];
+    const suk = SUKHUMVIT_IDS.filter((id) => ids.includes(id));
+    const rest = ids.filter((id) => !SUKHUMVIT_IDS.includes(id));
+    const parts = [];
+    if (ids.includes("ekamai")) parts.push(AREA_LABEL.ekamai || "Ekamai");
+    if (suk.length > 1) {
+      const from = AREA_LABEL[suk[0]] || suk[0];
+      const to = AREA_LABEL[suk[suk.length - 1]] || suk[suk.length - 1];
+      parts.push(`Sukhumvit (${from}–${to})`);
+    } else if (suk.length === 1 && suk[0] !== "ekamai") {
+      parts.push(AREA_LABEL[suk[0]] || suk[0]);
+    }
+    rest.forEach((id) => parts.push(AREA_LABEL[id] || id));
+    return parts.join(" · ");
+  };
+
+  function renderHeader(areas) {
+    const locAreas = document.querySelector(".loc-areas");
+    if (!locAreas) return;
+    const suk = areas.filter((area) => area && area.corridor === "sukhumvit");
+    if (!suk.length) return;
+    const labels = [`Sukhumvit (${suk[0].name}–${suk[suk.length - 1].name})`];
+    if (areas.some((area) => area && area.id === "ekamai")) labels.push(AREA_LABEL.ekamai || "Ekamai");
+    areas.filter((area) => area && area.corridor && area.corridor !== "sukhumvit").forEach((area) => {
+      labels.push(area.name);
+    });
+    locAreas.innerHTML = labels.map((name) => `<span>${esc(name)}</span>`).join("");
+  }
 
   let allListings = [];
   let allBuildings = [];
@@ -1282,10 +1320,10 @@
     areas.forEach((area) => {
       if (area && area.id && area.name) AREA_LABEL[area.id] = area.name;
     });
-    const locAreas = document.querySelector(".loc-areas");
-    if (locAreas && areas.length) {
-      locAreas.innerHTML = areas.map((area) => `<span>${esc(area.name)}</span>`).join("");
-    }
+    const sukIds = areas.filter((area) => area && area.corridor === "sukhumvit").map((area) => area.id);
+    if (sukIds.length) SUKHUMVIT_IDS = sukIds;
+    AREA_LABEL.ekamai = "Ekamai";
+    renderHeader(areas);
     areaBbox = directory && directory.area ? directory.area.bbox : null;
     fitAreaSoon();
   };
