@@ -4,7 +4,7 @@ A public rental map for Thailand, starting in Bangkok. The owner posted the firs
 
 **Live site:** https://taamyingcharoen96-dot.github.io/thailand-rental-map/
 
-The page is a split list and map (Leaflet, OpenStreetMap). Listings in the same building share one pin with a unit count. Other directory buildings show as small pins once you zoom in. The search box suggests building names in English and Thai, ignoring punctuation and spacing (`ds tower` finds D.S. Tower). You can also filter by monthly rent, bedrooms, and property type. Selecting a unit opens its photo card.
+The page is a split list and map (Leaflet, OpenStreetMap). Listings in the same building share one pin with a unit count. Other directory buildings show as small pins once you zoom in. Named buildings within 1 km of The EmQuartier (Phrom Phong, 13.731225, 100.569476) show a hover card with the building name, the street address when OpenStreetMap has one, and a photo. The photo is the first usable public Google Maps place image, saved under `photos/buildings/`. If Maps has no usable photo, the card says “No photo”. A phone tap opens the same card. Buildings outside that sample do not open it. The search box suggests building names in English and Thai, ignoring punctuation and spacing (`ds tower` finds D.S. Tower). You can also filter by monthly rent, bedrooms, and property type. Selecting a unit opens its photo card.
 
 The directory covers the Sukhumvit BTS corridor from Nana (E3) through Bearing (E14): every residential building within 2.5 km of Nana, Asok, Phrom Phong, Thong Lo, Ekkamai, Phra Khanong, On Nut, Bang Chak, Punnawithi, Udom Suk, Bang Na, or Bearing. Buildings inside 2.5 km of BTS Ekkamai are also labeled Ekamai, so that zone stays visible along the corridor. Ari (2.5 km around BTS Ari) and Silom–Sathorn (2.5 km around BTS Sala Daeng) are included too. A building in more than one station area is listed once. The rebuilt directory has 7,072 buildings (876 named, 6,196 labeled by street and house number). Names and coordinates are from OpenStreetMap under the [Open Database License](https://www.openstreetmap.org/copyright).
 
@@ -64,6 +64,18 @@ python3 scripts/build_phrom_phong_buildings.py -o data/buildings.json
 That reads the public Overpass API. Do not copy names from listing portals.
 
 Do not invent listings. Do not scrape Facebook or other sites that require a login. Do not scrape PropertyHub, DDproperty, or other listing portals further; the Marque rows above are a one-time hand copy of public ads.
+
+## EmQuartier hover photos
+
+The hover card is only for named buildings within 1 km of The EmQuartier. Photos for that sample are files in `photos/buildings/<building id>.jpg`, linked from each building’s `photo_url`. They come from the first usable public Google Maps place photo (not a map pin, logo, or profile picture). There is no Google login. A building with no nearby Maps place, or no usable photo, keeps the “No photo” placeholder.
+
+This run does not download the rest of the directory. To repeat this sample, or to try another center later:
+
+```bash
+python3 scripts/fetch_building_photos.py --lat 13.731225 --lng 100.569476 --radius-m 1000
+```
+
+The page still only opens the card for the EmQuartier center in `index.html` (`EMQUARTIER`). Point that constant at the same center if a later run should show cards somewhere else. The script writes `data/building-photo-report.json` with what it saved and what it skipped. It resumes from photos already on disk.
 
 ## Sources
 
