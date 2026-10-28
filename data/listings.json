@@ -21,7 +21,7 @@
     "listed_at": null,
     "scraped_at": "2026-09-23T15:35:09+07:00",
     "status": "available",
-    "raw_notes": "Building: D.S. Tower 1. Owner-channel manual entry. Building: D.S. Tower 1, Sukhumvit 33 (Soi 33), Khlong Tan Nuea, Watthana. Coords from Google Maps place pin for D.S. Towers 1. Missing: rent price, contact (phone/Line). 6 photos saved under photos/ds-tower-1-sukhumvit-33/.",
+    "raw_notes": "Building: D.S. Tower 1. Owner-channel manual entry. Building: D.S. Tower 1, Sukhumvit 33 (Soi 33), Khlong Tan Nuea, Watthana. Coords from Google Maps place pin for D.S. Towers 1. Missing: rent price. No phone or Line was supplied with this manual entry. 6 photos saved under photos/ds-tower-1-sukhumvit-33/.",
     "photo_urls": [
       "photos/ds-tower-1-sukhumvit-33/01.jpg",
       "photos/ds-tower-1-sukhumvit-33/02.jpg",
@@ -30,7 +30,7 @@
       "photos/ds-tower-1-sukhumvit-33/05.jpg",
       "photos/ds-tower-1-sukhumvit-33/06.jpg"
     ],
-    "contact": null
+    "contact": "Ask Taam (manual owner listing)"
   },
   {
     "id": "portal-marque-2br-135-185k-1292215",
@@ -54,14 +54,14 @@
     "listed_at": "2026-10-27",
     "scraped_at": "2026-10-28T00:24:53+07:00",
     "status": "available",
-    "raw_notes": "Public portal ad updated 27 Oct 2026 on PropertyHub (listing 4661109, unit ID 1292215). Also shown on PropertyScout as confirmed available today. Agent listing, not owner-verified. Availability not confirmed by us. No contact copied. 4 interior photos saved from the public gallery.",
+    "raw_notes": "Public portal ad updated 27 Oct 2026 on PropertyHub (listing 4661109, unit ID 1292215). Also shown on PropertyScout as confirmed available today. Agent listing, not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery.",
     "photo_urls": [
       "photos/marque-2br-135-185k-1292215/01.jpg",
       "photos/marque-2br-135-185k-1292215/02.jpg",
       "photos/marque-2br-135-185k-1292215/03.jpg",
       "photos/marque-2br-135-185k-1292215/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @513eqepl · 02 460 7070"
   },
   {
     "id": "portal-marque-2br-133-130k-2991798",
@@ -92,7 +92,7 @@
       "photos/marque-2br-133-130k-2991798/03.jpg",
       "photos/marque-2br-133-130k-2991798/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @513eqepl · 02 460 7070"
   },
   {
     "id": "portal-marque-3br-191-290k-27oct",
@@ -123,7 +123,7 @@
       "photos/marque-3br-191-290k-27oct/03.jpg",
       "photos/marque-3br-191-290k-27oct/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @servepm · 087 696 8665"
   },
   {
     "id": "portal-marque-3br-197-219k-pet",
@@ -147,14 +147,14 @@
     "listed_at": "2026-10-27",
     "scraped_at": "2026-10-28T00:24:53+07:00",
     "status": "available",
-    "raw_notes": "Public portal ad updated 27 Oct 2026 on PropertyHub (listing 5966201, LTHC14979). Advertised as pet-friendly. Agent listing, not owner-verified. 4 unit photos saved from the public gallery.",
+    "raw_notes": "Public portal ad updated 27 Oct 2026 on PropertyHub (listing 5966201, LTHC14979). Advertised as pet-friendly. Agent listing, not owner-verified. 4 unit photos saved from the public gallery. On 28 Oct 2026 the source URL redirected to the Marque Sukhumvit rentals index and did not show a contact for this unit.",
     "photo_urls": [
       "photos/marque-3br-197-219k-pet/01.jpg",
       "photos/marque-3br-197-219k-pet/02.jpg",
       "photos/marque-3br-197-219k-pet/03.jpg",
       "photos/marque-3br-197-219k-pet/04.jpg"
     ],
-    "contact": null
+    "contact": "See source listing (no contact shown)"
   },
   {
     "id": "portal-marque-3br-192-230k-br15903cd",
@@ -185,7 +185,7 @@
       "photos/marque-3br-192-230k-br15903cd/03.jpg",
       "photos/marque-3br-192-230k-br15903cd/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @bangkokresidential · 063 443 6327"
   },
   {
     "id": "portal-marque-2br-126-159k-ddproperty",
@@ -209,14 +209,14 @@
     "listed_at": "2026-10-05",
     "scraped_at": "2026-10-28T00:24:53+07:00",
     "status": "available",
-    "raw_notes": "DDproperty listing 500390377, listed 5 Oct 2026. Body text says ~127 sqm / ฿160,000; card shows 126 sqm / ฿159,000. Agent (Simon Decalf / MCLL Asia). Not owner-verified. No contact copied. 4 interior photos saved from the public gallery; the opening balcony city view was skipped.",
+    "raw_notes": "DDproperty listing 500390377, listed 5 Oct 2026. Body text says ~127 sqm / ฿160,000; card shows 126 sqm / ฿159,000. Agent (Simon Decalf / MCLL Asia). Not owner-verified. 4 interior photos saved from the public gallery; the opening balcony city view was skipped. The public ad shows the agent name; the phone and email are masked.",
     "photo_urls": [
       "photos/marque-2br-126-159k-ddproperty/01.jpg",
       "photos/marque-2br-126-159k-ddproperty/02.jpg",
       "photos/marque-2br-126-159k-ddproperty/03.jpg",
       "photos/marque-2br-126-159k-ddproperty/04.jpg"
     ],
-    "contact": null
+    "contact": "Simon Decalf · MCLL Asia Co., Ltd."
   },
   {
     "id": "portal-estelle-1br-59-78k-3302373",
@@ -240,14 +240,14 @@
     "listed_at": "2026-09-04",
     "scraped_at": "2026-10-28T14:19:13+07:00",
     "status": "available",
-    "raw_notes": "Public portal ad on PropertyScout (listing 3302373). Page label: confirmed available a month ago (availability check 4 Sep 2026); not marked rented. Agent listing, not owner-verified. Availability not confirmed by us. No contact copied. 4 interior photos saved from the public gallery.",
+    "raw_notes": "Public portal ad on PropertyScout (listing 3302373). Page label: confirmed available a month ago (availability check 4 Sep 2026); not marked rented. Agent listing, not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery.",
     "photo_urls": [
       "photos/estelle-1br-59-78k-3302373/01.jpg",
       "photos/estelle-1br-59-78k-3302373/02.jpg",
       "photos/estelle-1br-59-78k-3302373/03.jpg",
       "photos/estelle-1br-59-78k-3302373/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @propertyscout · +66 92 264 3444"
   },
   {
     "id": "portal-estelle-2br-144-175k-2559552",
@@ -271,14 +271,14 @@
     "listed_at": "2026-10-25",
     "scraped_at": "2026-10-28T14:19:13+07:00",
     "status": "available",
-    "raw_notes": "Public portal ad on PropertyScout (listing 2559552). Page label: confirmed available 2 days ago (25 Oct 2026); not marked rented. Floor was not stated on the page. Agent listing, not owner-verified. Availability not confirmed by us. No contact copied. 4 interior photos saved from the public gallery.",
+    "raw_notes": "Public portal ad on PropertyScout (listing 2559552). Page label: confirmed available 2 days ago (25 Oct 2026); not marked rented. Floor was not stated on the page. Agent listing, not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery.",
     "photo_urls": [
       "photos/estelle-2br-144-175k-2559552/01.jpg",
       "photos/estelle-2br-144-175k-2559552/02.jpg",
       "photos/estelle-2br-144-175k-2559552/03.jpg",
       "photos/estelle-2br-144-175k-2559552/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @propertyscout · +66 92 264 3444"
   },
   {
     "id": "portal-estelle-1br-59-84k-2799975",
@@ -302,14 +302,14 @@
     "listed_at": "2026-10-25",
     "scraped_at": "2026-10-28T14:19:13+07:00",
     "status": "available",
-    "raw_notes": "Public portal ad on PropertyScout (listing 2799975). Page label: confirmed available 2 days ago (25 Oct 2026); not marked rented. Agent listing, not owner-verified. Availability not confirmed by us. No contact copied. 4 interior photos saved from the public gallery.",
+    "raw_notes": "Public portal ad on PropertyScout (listing 2799975). Page label: confirmed available 2 days ago (25 Oct 2026); not marked rented. Agent listing, not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery.",
     "photo_urls": [
       "photos/estelle-1br-59-84k-2799975/01.jpg",
       "photos/estelle-1br-59-84k-2799975/02.jpg",
       "photos/estelle-1br-59-84k-2799975/03.jpg",
       "photos/estelle-1br-59-84k-2799975/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @propertyscout · +66 92 264 3444"
   },
   {
     "id": "portal-estelle-2br-93-125k-6084369",
@@ -333,14 +333,14 @@
     "listed_at": "2026-10-26",
     "scraped_at": "2026-10-28T14:19:13+07:00",
     "status": "available",
-    "raw_notes": "Public portal ad on PropertyHub (listing 6084369), updated 26 Oct 2026, shown online for rent and not marked rented. Soi Sukhumvit 26, Khlong Toei. Agent listing, not owner-verified. Availability not confirmed by us. No contact copied. 4 interior photos saved from the public gallery (living room, bedroom, kitchen, bathroom).",
+    "raw_notes": "Public portal ad on PropertyHub (listing 6084369), updated 26 Oct 2026, shown online for rent and not marked rented. Soi Sukhumvit 26, Khlong Toei. Agent listing, not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery (living room, bedroom, kitchen, bathroom).",
     "photo_urls": [
       "photos/estelle-2br-93-125k-6084369/01.jpg",
       "photos/estelle-2br-93-125k-6084369/02.jpg",
       "photos/estelle-2br-93-125k-6084369/03.jpg",
       "photos/estelle-2br-93-125k-6084369/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @innerproperty · 098 979 6491"
   },
   {
     "id": "portal-estelle-2br-99-160k-3441781",
@@ -364,14 +364,14 @@
     "listed_at": "2026-10-21",
     "scraped_at": "2026-10-28T14:19:13+07:00",
     "status": "available",
-    "raw_notes": "Public portal ad on PropertyScout (listing 3441781), created 21 Oct 2026. Page label: confirmed available a month ago (availability check 21 Sep 2026); not marked rented. Floor was not stated on the page. Agent listing, not owner-verified. Availability not confirmed by us. No contact copied. 4 interior photos saved from the public gallery.",
+    "raw_notes": "Public portal ad on PropertyScout (listing 3441781), created 21 Oct 2026. Page label: confirmed available a month ago (availability check 21 Sep 2026); not marked rented. Floor was not stated on the page. Agent listing, not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery.",
     "photo_urls": [
       "photos/estelle-2br-99-160k-3441781/01.jpg",
       "photos/estelle-2br-99-160k-3441781/02.jpg",
       "photos/estelle-2br-99-160k-3441781/03.jpg",
       "photos/estelle-2br-99-160k-3441781/04.jpg"
     ],
-    "contact": null
+    "contact": "LINE @propertyscout · +66 92 264 3444"
   },
   {
     "id": "portal-estelle-3br-162-210k-u6844923",
@@ -395,13 +395,323 @@
     "listed_at": "2026-10-09",
     "scraped_at": "2026-10-28T14:19:13+07:00",
     "status": "available",
-    "raw_notes": "Public portal ad on Dot Property (listing U6844923R), listed and updated 9 Oct 2026. Not marked rented. Advertised as a pet-friendly high-floor unit with a private lift. Khlong Tan, Khlong Toei. Agent listing, not owner-verified. Availability not confirmed by us. No contact copied. 4 interior photos saved from the public gallery (living room, kitchen, bedroom, bathroom).",
+    "raw_notes": "Public portal ad on Dot Property (listing U6844923R), listed and updated 9 Oct 2026. Not marked rented. Advertised as a pet-friendly high-floor unit with a private lift. Khlong Tan, Khlong Toei. Agent listing, not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery (living room, kitchen, bedroom, bathroom). Phone, Line, email, and WhatsApp on the Dot Property page are hidden.",
     "photo_urls": [
       "photos/estelle-3br-162-210k-u6844923/01.jpg",
       "photos/estelle-3br-162-210k-u6844923/02.jpg",
       "photos/estelle-3br-162-210k-u6844923/03.jpg",
       "photos/estelle-3br-162-210k-u6844923/04.jpg"
     ],
-    "contact": null
+    "contact": "See source listing (no contact shown)"
+  },
+  {
+    "id": "portal-marque-3br-197-250k-2823962",
+    "building_id": "osm-way-521687098",
+    "source": "PropertyScout (public ad, agent)",
+    "source_url": "https://propertyscout.co.th/en/3-br-condo-marque-sukhumvit-near-bts-phrom-phong-2823962/",
+    "title": "Marque Sukhumvit — 3BR, 197 sqm",
+    "price_thb": 250000,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 4,
+    "size_sqm": 197,
+    "property_type": "condominium",
+    "district": "Watthana",
+    "neighborhood": "Sukhumvit 39 / Phrom Phong",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7303713,
+    "lng": 100.5711166,
+    "available_from": null,
+    "listed_at": "2026-04-24",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad on PropertyScout (listing 2823962), created 24 Apr 2026. Page label: confirmed available a month ago; not marked rented. 3 bedrooms, 4 bathrooms, 197 sqm. Different from the existing pet-friendly 197 sqm unit (3 bathrooms, floor 20, ฿219,000). Agent listing, not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are the Marque Sukhumvit building pin.",
+    "photo_urls": [
+      "photos/marque-3br-197-250k-2823962/01.jpg",
+      "photos/marque-3br-197-250k-2823962/02.jpg",
+      "photos/marque-3br-197-250k-2823962/03.jpg",
+      "photos/marque-3br-197-250k-2823962/04.jpg"
+    ],
+    "contact": "LINE @propertyscout · +66 92 264 3444"
+  },
+  {
+    "id": "portal-diplomat39-3br-237-250k-br12424cd",
+    "building_id": "osm-way-1195022786",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/the-diplomat-39-luxury-3-bedroom-condo-for-rent-br12424cd---5143283",
+    "title": "The Diplomat 39 — 3BR, 237 sqm",
+    "price_thb": 250000,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 4,
+    "size_sqm": 237,
+    "property_type": "condominium",
+    "district": "Watthana",
+    "neighborhood": "Sukhumvit 39 / Phrom Phong",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7314369,
+    "lng": 100.5703209,
+    "available_from": null,
+    "listed_at": "2026-10-17",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad BR12424CD on PropertyHub (listing 5143283), refreshed 17 Oct 2026, status online for rent. Listing card: 3 bedrooms, 4 bathrooms, 237 sqm, ฿250,000/month. Floor not stated. Body text says 3 bathrooms; the listing fields say 4. Agent listing (Bangkok Residential), not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are The Diplomat 39 building pin.",
+    "photo_urls": [
+      "photos/diplomat39-3br-237-250k/01.jpg",
+      "photos/diplomat39-3br-237-250k/02.jpg",
+      "photos/diplomat39-3br-237-250k/03.jpg",
+      "photos/diplomat39-3br-237-250k/04.jpg"
+    ],
+    "contact": "LINE @bangkokresidential · 063 443 6327"
+  },
+  {
+    "id": "portal-estelle-4br-229-350k-lthc15749",
+    "building_id": "osm-way-1037863939",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/lthc15749-ultra-luxury-condo-for-rent-phrom-phong-4-bedrooms-private-lift-the-estelle-phrom-phong-near-bts-phrom-phong-350-000-thb---6152523",
+    "title": "The Estelle Phrom Phong — 4BR, 229 sqm, floor 13",
+    "price_thb": 350000,
+    "currency": "THB",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "size_sqm": 229,
+    "property_type": "condominium",
+    "district": "Khlong Toei",
+    "neighborhood": "Sukhumvit 26 / Phrom Phong",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7285618,
+    "lng": 100.5712293,
+    "available_from": null,
+    "listed_at": "2026-10-27",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad LTHC15749 on PropertyHub (listing 6152523), refreshed 27 Oct 2026, status online for rent. 4 bedrooms, 4 bathrooms, 229 sqm, floor 13, private lift, ฿350,000/month. Not the same unit as the existing 3BR 162 sqm floor 24 ad. Agent listing (Liberal Estate TH), not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are The Estelle Phrom Phong building pin.",
+    "photo_urls": [
+      "photos/estelle-4br-229-350k/01.jpg",
+      "photos/estelle-4br-229-350k/02.jpg",
+      "photos/estelle-4br-229-350k/03.jpg",
+      "photos/estelle-4br-229-350k/04.jpg"
+    ],
+    "contact": "LINE @leth · 096 945 8392"
+  },
+  {
+    "id": "portal-raffine24-3br-371-300k-br61154cd",
+    "building_id": "osm-way-25054025",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/le-raffine-24-superb-3-bedroom-duplex-condo-with-pool-br61154cd---5922017",
+    "title": "Le Raffiné Sukhumvit 24 — 3BR duplex, 371 sqm",
+    "price_thb": 300000,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size_sqm": 371,
+    "property_type": "condominium",
+    "district": "Khlong Toei",
+    "neighborhood": "Sukhumvit 24 / Phrom Phong",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7259072,
+    "lng": 100.5670956,
+    "available_from": null,
+    "listed_at": "2026-10-17",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad BR61154CD on PropertyHub (listing 5922017), refreshed 17 Oct 2026, status online for rent. Duplex, 3 bedrooms, 3 bathrooms, 371 sqm, private pool, ฿300,000/month. Floor not stated. Le Raffiné Sukhumvit 39 was not used because that project is not in the building directory. Agent listing (Bangkok Residential), not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are the Le Raffiné Sukhumvit 24 building pin.",
+    "photo_urls": [
+      "photos/raffine24-3br-371-300k/01.jpg",
+      "photos/raffine24-3br-371-300k/02.jpg",
+      "photos/raffine24-3br-371-300k/03.jpg",
+      "photos/raffine24-3br-371-300k/04.jpg"
+    ],
+    "contact": "LINE @bangkokresidential · 063 443 6327"
+  },
+  {
+    "id": "portal-crest24-3br-248-200k-2991871",
+    "building_id": "osm-way-523179199",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/3-br-condo-at-the-crest-sukhumvit-24-near-bts-phrom-phong-id-2991871---6140737",
+    "title": "The Crest Sukhumvit 24 — 3BR, 248.37 sqm, floors 7-8",
+    "price_thb": 200000,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size_sqm": 248.37,
+    "property_type": "condominium",
+    "district": "Khlong Toei",
+    "neighborhood": "Sukhumvit 24 / Phrom Phong",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7291892,
+    "lng": 100.5661188,
+    "available_from": null,
+    "listed_at": "2026-10-27",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad on PropertyHub (listing 6140737, unit ID 2991871), refreshed 27 Oct 2026, status online for rent. 3 bedrooms, 3 bathrooms, 248.37 sqm, floors 7-8, ฿200,000/month. The seeded Crest URL for VR0446 redirected to the project index, so this live ad was used. Agent listing (PropertyScout), not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are The Crest Sukhumvit 24 building pin.",
+    "photo_urls": [
+      "photos/crest24-3br-248-200k/01.jpg",
+      "photos/crest24-3br-248-200k/02.jpg",
+      "photos/crest24-3br-248-200k/03.jpg",
+      "photos/crest24-3br-248-200k/04.jpg"
+    ],
+    "contact": "LINE @837jruwp · 02 430 4496"
+  },
+  {
+    "id": "portal-belgravia-4br-295-200k-lthc15974",
+    "building_id": "osm-way-329919878",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/lthc15974-luxury-condo-for-rent-phrom-phong-belgravia-residences-sukhumvit-30-1-200k-month---6239901",
+    "title": "Belgravia Residences — 4BR, 295 sqm, floor 3",
+    "price_thb": 200000,
+    "currency": "THB",
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "size_sqm": 295,
+    "property_type": "condominium",
+    "district": "Khlong Toei",
+    "neighborhood": "Sukhumvit 30 / Phrom Phong",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7263902,
+    "lng": 100.5737763,
+    "available_from": null,
+    "listed_at": "2026-10-27",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad LTHC15974 on PropertyHub (listing 6239901), refreshed 27 Oct 2026, status online for rent. 4 bedrooms, 5 bathrooms, 295 sqm, floor 3, Sukhumvit 30/1, ฿200,000/month. Agent listing (Liberal Estate TH), not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are the Belgravia Residences building pin.",
+    "photo_urls": [
+      "photos/belgravia-4br-295-200k/01.jpg",
+      "photos/belgravia-4br-295-200k/02.jpg",
+      "photos/belgravia-4br-295-200k/03.jpg",
+      "photos/belgravia-4br-295-200k/04.jpg"
+    ],
+    "contact": "LINE @leth · 096 945 8392"
+  },
+  {
+    "id": "portal-millennium-3br-260-250k-3194046",
+    "building_id": "osm-way-341554380",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/260-sqm-3-br-40th-floor-millennium-residence-bts-asoke-id-3194046---6302581",
+    "title": "Millennium Residence — 3BR, 260 sqm, floors 40-41",
+    "price_thb": 250000,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size_sqm": 260,
+    "property_type": "condominium",
+    "district": "Khlong Toei",
+    "neighborhood": "Sukhumvit / Asoke",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7295314,
+    "lng": 100.5624641,
+    "available_from": null,
+    "listed_at": "2026-10-28",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad on PropertyHub (listing 6302581, unit ID 3194046), refreshed 28 Oct 2026, status online for rent. 3 bedrooms, 3 bathrooms, 260 sqm, floors 40-41, near BTS Asok, ฿250,000/month. The seeded Millennium penthouse URL (listing 5899779, ฿280,000) redirected to the project index, so this live ad was used. Agent listing (PropertyScout), not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are the Millennium Residence building pin.",
+    "photo_urls": [
+      "photos/millennium-3br-260-250k/01.jpg",
+      "photos/millennium-3br-260-250k/02.jpg",
+      "photos/millennium-3br-260-250k/03.jpg",
+      "photos/millennium-3br-260-250k/04.jpg"
+    ],
+    "contact": "LINE @513eqepl · 02 460 7070"
+  },
+  {
+    "id": "portal-khun-3br-149-275k-cx81221",
+    "building_id": "osm-way-746346462",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/for-rent-condo-khun-by-yoo-bts-thong-lo-khlong-tan-nuea-watthana-bangkok-cx-81221-live-chat-add-line-connexproperty---3933099",
+    "title": "Khun by Yoo — 3BR, 149.5 sqm, floor 23",
+    "price_thb": 275000,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size_sqm": 149.5,
+    "property_type": "condominium",
+    "district": "Watthana",
+    "neighborhood": "Thonglor",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7327573,
+    "lng": 100.5826965,
+    "available_from": null,
+    "listed_at": "2026-10-28",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad CX-81221 on PropertyHub (listing 3933099), refreshed 28 Oct 2026, status online for rent. 3 bedrooms, 3 bathrooms, 149.5 sqm, floor 23, ฿275,000/month, Thonglor. Seed URLs AA30529 (5029925) and LTHC13221 (5420365) both redirected to the project index. The public gallery for this ad is furnished interior renders, not photographs. Agent listing (Connex Property), not owner-verified. Availability not confirmed by us. 4 gallery images saved. Coordinates are the Khun by Yoo building pin.",
+    "photo_urls": [
+      "photos/khun-3br-149-275k/01.jpg",
+      "photos/khun-3br-149-275k/02.jpg",
+      "photos/khun-3br-149-275k/03.jpg",
+      "photos/khun-3br-149-275k/04.jpg"
+    ],
+    "contact": "LINE @connexproperty · 099 019 9900"
+  },
+  {
+    "id": "portal-tela-3br-200-300k-br61765cd",
+    "building_id": "osm-way-753671352",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/tela-thonglor-stunning-3-bedroom-luxury-condo-for-rent-br61765cd---6167758",
+    "title": "Tela Thonglor — 3BR, 200 sqm",
+    "price_thb": 300000,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size_sqm": 200,
+    "property_type": "condominium",
+    "district": "Watthana",
+    "neighborhood": "Thonglor",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7332056,
+    "lng": 100.5818663,
+    "available_from": null,
+    "listed_at": "2026-10-17",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad BR61765CD on PropertyHub (listing 6167758), refreshed 17 Oct 2026, status online for rent. 3 bedrooms, 3 bathrooms, 200 sqm, high floor, ฿300,000/month. Floor number not stated. FazWaz U1387992 (penthouse, ฿250,000, floor 28) was skipped because that page says available from 15 Mar 2027. Agent listing (Bangkok Residential), not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are the Tela Thonglor building pin.",
+    "photo_urls": [
+      "photos/tela-3br-200-300k/01.jpg",
+      "photos/tela-3br-200-300k/02.jpg",
+      "photos/tela-3br-200-300k/03.jpg",
+      "photos/tela-3br-200-300k/04.jpg"
+    ],
+    "contact": "LINE @bangkokresidential · 063 443 6327"
+  },
+  {
+    "id": "portal-hyde-3br-142-220k-n246",
+    "building_id": "osm-way-1067654886",
+    "source": "PropertyHub (public ad, agent)",
+    "source_url": "https://propertyhub.in.th/en/listings/n246-for-rent-hyde-heritage-thonglor---4581394",
+    "title": "Hyde Heritage Thonglor — 3BR, 142.42 sqm",
+    "price_thb": 220000,
+    "currency": "THB",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "size_sqm": 142.42,
+    "property_type": "condominium",
+    "district": "Watthana",
+    "neighborhood": "Thonglor / Ekamai",
+    "city": "Bangkok",
+    "province": "Bangkok",
+    "lat": 13.7227596,
+    "lng": 100.5814892,
+    "available_from": null,
+    "listed_at": "2026-10-27",
+    "scraped_at": "2026-10-28T17:45:09+07:00",
+    "status": "available",
+    "raw_notes": "Public portal ad #N246 on PropertyHub (listing 4581394), refreshed 27 Oct 2026, status online for rent. 3 bedrooms, 3 bathrooms, 142.42 sqm, fully furnished, ฿220,000/month, 1-year contract. Floor not stated. The opening gallery image is a promotional poster and was skipped. Agent listing (Holtop Property), not owner-verified. Availability not confirmed by us. 4 interior photos saved from the public gallery. Coordinates are the Hyde Heritage Thonglor building pin.",
+    "photo_urls": [
+      "photos/hyde-3br-142-220k/01.jpg",
+      "photos/hyde-3br-142-220k/02.jpg",
+      "photos/hyde-3br-142-220k/03.jpg",
+      "photos/hyde-3br-142-220k/04.jpg"
+    ],
+    "contact": "LINE @holtop · 063 213 3317"
   }
 ]
