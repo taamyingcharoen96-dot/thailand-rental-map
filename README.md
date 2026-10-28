@@ -4,7 +4,7 @@ A public rental map for Thailand, starting in Bangkok. The owner posted the firs
 
 **Live site:** https://taamyingcharoen96-dot.github.io/thailand-rental-map/
 
-The page is a split list and map (Leaflet, OpenStreetMap). Listings in the same building share one pin with a unit count. Other directory buildings show as small pins once you zoom in. The search box suggests building names in English and Thai, ignoring punctuation and spacing (`ds tower` finds D.S. Tower). You can also filter by monthly rent, bedrooms, and property type. Selecting a unit opens its photo card.
+The page is a split list and map (Leaflet, OpenStreetMap). Listings in the same building share one pin with a unit count. Other directory buildings show as small pins once you zoom in. The search box suggests building names in English and Thai, ignoring punctuation and spacing (`ds tower` finds D.S. Tower). You can also filter by monthly rent, bedrooms, and property type. Selecting a unit opens a detail view over the list: a large photo gallery (swipe, arrows, and a fullscreen lightbox) plus the fields stored for that listing. Close it to return to the same list. A compact photo card stays on the map.
 
 The directory covers the Sukhumvit BTS corridor from Nana (E3) through Bearing (E14): every residential building within 2.5 km of Nana, Asok, Phrom Phong, Thong Lo, Ekkamai, Phra Khanong, On Nut, Bang Chak, Punnawithi, Udom Suk, Bang Na, or Bearing. Buildings inside 2.5 km of BTS Ekkamai are also labeled Ekamai, so that zone stays visible along the corridor. Ari (2.5 km around BTS Ari) and Silom–Sathorn (2.5 km around BTS Sala Daeng) are included too. A building in more than one station area is listed once. The rebuilt directory has 7,072 buildings (876 named, 6,196 labeled by street and house number). Names and coordinates are from OpenStreetMap under the [Open Database License](https://www.openstreetmap.org/copyright).
 
@@ -23,7 +23,7 @@ Rent and contact are not set yet.
 
 ## Marque Sukhumvit
 
-Six condominium ads at Marque Sukhumvit (`osm-way-521687098`, Sukhumvit 39 / Phrom Phong) were copied by hand from public PropertyHub and DDproperty pages on 2026-10-28. They are agent listings, not owner-verified, and availability was not confirmed with the owner. No phone or Line contact was copied (`contact` is null). Each `source_url` points at the public ad or project page. Photos were not saved; an empty `photo_urls` list shows the existing “No photo” placeholder. Do not scrape those portals further.
+Six condominium ads at Marque Sukhumvit (`osm-way-521687098`, Sukhumvit 39 / Phrom Phong) were copied by hand from public PropertyHub and DDproperty pages on 2026-10-28. They are agent listings, not owner-verified, and availability was not confirmed with the owner. No phone or Line contact was copied (`contact` is null). Each `source_url` points at the public ad or project page. Four public-gallery photos were saved per unit (`photo_urls`). Do not scrape those portals further.
 
 | Unit | Rent (THB/mo) | Beds | Size |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ Six condominium ads at Marque Sukhumvit (`osm-way-521687098`, Sukhumvit 39 / Phr
 | 3BR (BR15903CD) | 230,000 | 3 | 192 sqm |
 | 2BR, floor 28 (DDproperty) | 159,000 | 2 | 126 sqm |
 
-Searching “Marque” focuses that building. The six units share one map pin with a unit count. D.S. Tower 1 stays as its own pin.
+Each Marque unit has four photos under `photos/marque-*/`. Searching “Marque” focuses that building. The six units share one map pin with a unit count. Open a unit for the large gallery. D.S. Tower 1 stays as its own pin and uses the same detail view (six photos under `photos/ds-tower-1-sukhumvit-33/`).
 
 ## Run locally
 
