@@ -236,7 +236,7 @@
       }
     }
   ],
-  "attribution": "© OpenStreetMap contributors. Building names and locations are from OpenStreetMap, available under the Open Database License (ODbL).",
+  "attribution": "© OpenStreetMap contributors. Building names, addresses, and locations are from OpenStreetMap, available under the Open Database License (ODbL).",
   "retrieved_at": "2026-10-27",
   "buildings": [
     {
@@ -257,7 +257,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/532862534"
+      "osm_ref": "way/532862534",
+      "address": "ถนนสุขุมวิท ซอย39 59/1",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-532862534.jpg"
     },
     {
       "id": "osm-way-340670160",
@@ -313,7 +316,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280509"
+      "osm_ref": "way/324280509",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280509.jpg"
     },
     {
       "id": "osm-way-340329155",
@@ -332,7 +337,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340329155"
+      "osm_ref": "way/340329155",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-340329155.jpg"
     },
     {
       "id": "osm-way-324280446",
@@ -351,7 +358,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280446"
+      "osm_ref": "way/324280446",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-1427629161",
@@ -409,7 +417,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280531"
+      "osm_ref": "way/324280531",
+      "address": "ถนนสุขุมวิท ซอย 39 11",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280531.jpg"
     },
     {
       "id": "osm-way-324280512",
@@ -429,7 +440,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280512"
+      "osm_ref": "way/324280512",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280512.jpg"
     },
     {
       "id": "osm-way-1223403122",
@@ -504,7 +517,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/76510923"
+      "osm_ref": "way/76510923",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-76510923.jpg"
     },
     {
       "id": "osm-way-680334340",
@@ -559,7 +574,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329919854"
+      "osm_ref": "way/329919854",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-329919854.jpg"
     },
     {
       "id": "osm-relation-7583649",
@@ -579,7 +596,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "relation/7583649"
+      "osm_ref": "relation/7583649",
+      "address": "ถนนสุขุมวิท ซอย22 143",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-relation-7583649.jpg"
     },
     {
       "id": "osm-way-157851461",
@@ -716,7 +736,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "relation/15011617"
+      "osm_ref": "relation/15011617",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-relation-15011617.jpg"
     },
     {
       "id": "osm-way-676057193",
@@ -827,7 +849,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962384"
+      "osm_ref": "way/331962384",
+      "locality": "คลองเตยเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-331962384.jpg"
     },
     {
       "id": "osm-way-1230362492",
@@ -847,7 +871,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362492"
+      "osm_ref": "way/1230362492",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-1230362492.jpg"
     },
     {
       "id": "osm-way-317160316",
@@ -1231,7 +1257,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/208691141"
+      "osm_ref": "way/208691141",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-208691141.jpg"
     },
     {
       "id": "osm-way-1453274136",
@@ -1624,7 +1652,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/330253737"
+      "osm_ref": "way/330253737",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-330253737.jpg"
     },
     {
       "id": "osm-way-1223411778",
@@ -1683,7 +1713,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/208693782"
+      "osm_ref": "way/208693782",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-208693782.jpg"
     },
     {
       "id": "osm-way-340391178",
@@ -1704,7 +1736,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340391178"
+      "osm_ref": "way/340391178",
+      "locality": "คลองเตยเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-1213780925",
@@ -1968,7 +2001,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280450"
+      "osm_ref": "way/324280450",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280450.jpg"
     },
     {
       "id": "osm-way-586478902",
@@ -2009,7 +2044,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/76510916"
+      "osm_ref": "way/76510916",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-76510916.jpg"
     },
     {
       "id": "osm-way-340724924",
@@ -2048,7 +2085,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329919878"
+      "osm_ref": "way/329919878",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-329919878.jpg"
     },
     {
       "id": "osm-way-331962381",
@@ -2067,7 +2106,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962381"
+      "osm_ref": "way/331962381",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-324280541",
@@ -2089,7 +2129,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280541"
+      "osm_ref": "way/324280541",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280541.jpg"
     },
     {
       "id": "osm-relation-16052383",
@@ -2654,7 +2696,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962331"
+      "osm_ref": "way/331962331",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-1236622470",
@@ -2691,7 +2734,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962374"
+      "osm_ref": "way/331962374",
+      "locality": "คลองเตยเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-324280503",
@@ -2711,7 +2755,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280503"
+      "osm_ref": "way/324280503",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280503.jpg"
     },
     {
       "id": "osm-way-526805994",
@@ -2963,7 +3009,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329919883"
+      "osm_ref": "way/329919883",
+      "address": "ซอยสุขุมวิท 18 390/35-36",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-329919883.jpg"
     },
     {
       "id": "osm-way-318038982",
@@ -3023,7 +3072,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/162623020"
+      "osm_ref": "way/162623020",
+      "address": "ซอยสุขุมวิท 16",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-162623020.jpg"
     },
     {
       "id": "osm-way-374417562",
@@ -3061,7 +3113,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280545"
+      "osm_ref": "way/324280545",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280545.jpg"
     },
     {
       "id": "osm-node-8344761230",
@@ -3136,7 +3190,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/208693094"
+      "osm_ref": "way/208693094",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-208693094.jpg"
     },
     {
       "id": "osm-way-450634304",
@@ -3156,7 +3212,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/450634304"
+      "osm_ref": "way/450634304",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-450634304.jpg"
     },
     {
       "id": "osm-way-532749608",
@@ -3367,7 +3425,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340330015"
+      "osm_ref": "way/340330015",
+      "photo_url": "photos/buildings/osm-way-340330015.jpg"
     },
     {
       "id": "osm-way-1217841955",
@@ -3405,7 +3464,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962421"
+      "osm_ref": "way/331962421",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-331962421.jpg"
     },
     {
       "id": "osm-way-1223410499",
@@ -3462,7 +3523,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/162623025"
+      "osm_ref": "way/162623025",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-330253694",
@@ -3481,7 +3543,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/330253694"
+      "osm_ref": "way/330253694",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-330253694.jpg"
     },
     {
       "id": "osm-way-1220099109",
@@ -3540,7 +3604,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/571076407"
+      "osm_ref": "way/571076407",
+      "locality": "คลองเตยเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-571076407.jpg"
     },
     {
       "id": "osm-way-318181489",
@@ -3739,7 +3805,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340232736"
+      "osm_ref": "way/340232736",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-340232736.jpg"
     },
     {
       "id": "osm-way-387351098",
@@ -3778,7 +3846,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/176332751"
+      "osm_ref": "way/176332751",
+      "address": "Sukhumvit Soi 18 40",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-176332751.jpg"
     },
     {
       "id": "osm-way-749739790",
@@ -3910,7 +3981,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962492"
+      "osm_ref": "way/331962492",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-331962492.jpg"
     },
     {
       "id": "osm-way-318042417",
@@ -3950,7 +4023,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329919860"
+      "osm_ref": "way/329919860",
+      "address": "ถนนสุขุมวิท ซอย22",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-330253761",
@@ -3970,7 +4045,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/330253761"
+      "osm_ref": "way/330253761",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-330253735",
@@ -3990,7 +4066,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/330253735"
+      "osm_ref": "way/330253735",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-329745940",
@@ -4178,7 +4255,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280511"
+      "osm_ref": "way/324280511",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280511.jpg"
     },
     {
       "id": "osm-way-676057194",
@@ -4239,7 +4318,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1193595251"
+      "osm_ref": "way/1193595251",
+      "photo_url": "photos/buildings/osm-way-1193595251.jpg"
     },
     {
       "id": "osm-way-329745932",
@@ -4356,7 +4436,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/450546039"
+      "osm_ref": "way/450546039",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-450546039.jpg"
     },
     {
       "id": "osm-way-318706307",
@@ -4619,7 +4701,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/176332733"
+      "osm_ref": "way/176332733",
+      "address": "ซอยสุขุมวิท 24",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-176332733.jpg"
     },
     {
       "id": "osm-way-322651075",
@@ -5524,7 +5609,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362481"
+      "osm_ref": "way/1230362481",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-234375368",
@@ -5581,7 +5667,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/25054016"
+      "osm_ref": "way/25054016",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-25054016.jpg"
     },
     {
       "id": "osm-way-331962329",
@@ -5620,7 +5708,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/27276233"
+      "osm_ref": "way/27276233",
+      "address": "ซอยสุขุมวิท 16",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-27276233.jpg"
     },
     {
       "id": "osm-way-320709860",
@@ -5719,7 +5810,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/25054025"
+      "osm_ref": "way/25054025",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-338483736",
@@ -5738,7 +5830,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/338483736"
+      "osm_ref": "way/338483736",
+      "locality": "คลองเตยเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-1208343853",
@@ -5773,7 +5866,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340389362"
+      "osm_ref": "way/340389362",
+      "photo_url": "photos/buildings/osm-way-340389362.jpg"
     },
     {
       "id": "osm-way-369464887",
@@ -6125,7 +6219,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/338004246"
+      "osm_ref": "way/338004246",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-338004246.jpg"
     },
     {
       "id": "osm-way-163726555",
@@ -6270,7 +6366,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331963319"
+      "osm_ref": "way/331963319",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-331963319.jpg"
     },
     {
       "id": "osm-node-3778175296",
@@ -6372,7 +6470,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/333134166"
+      "osm_ref": "way/333134166",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-333134166.jpg"
     },
     {
       "id": "osm-way-435996901",
@@ -6448,7 +6548,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962373"
+      "osm_ref": "way/331962373",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-521687098",
@@ -6470,7 +6571,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/521687098"
+      "osm_ref": "way/521687098",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-521687098.jpg"
     },
     {
       "id": "osm-way-569443865",
@@ -6508,7 +6611,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329919877"
+      "osm_ref": "way/329919877",
+      "address": "Sukhumvit Soi 16 59",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-329919877.jpg"
     },
     {
       "id": "osm-way-439475472",
@@ -6605,7 +6711,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/341554380"
+      "osm_ref": "way/341554380",
+      "photo_url": "photos/buildings/osm-way-341554380.jpg"
     },
     {
       "id": "osm-way-76510938",
@@ -6625,7 +6732,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/76510938"
+      "osm_ref": "way/76510938",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-76510938.jpg"
     },
     {
       "id": "osm-way-1225848246",
@@ -7065,7 +7174,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/338364612"
+      "osm_ref": "way/338364612",
+      "address": "Sukhumvit 33 25",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-338364612.jpg"
     },
     {
       "id": "osm-way-331962417",
@@ -7086,7 +7198,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962417"
+      "osm_ref": "way/331962417",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-331962417.jpg"
     },
     {
       "id": "osm-way-1223410448",
@@ -7124,7 +7238,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362480"
+      "osm_ref": "way/1230362480",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-1038970953",
@@ -7143,7 +7258,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1038970953"
+      "osm_ref": "way/1038970953",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-1038970953.jpg"
     },
     {
       "id": "osm-way-341248936",
@@ -7204,7 +7321,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/208693095"
+      "osm_ref": "way/208693095",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-208693095.jpg"
     },
     {
       "id": "osm-way-164625816",
@@ -7300,7 +7419,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1230362479"
+      "osm_ref": "way/1230362479",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-1230362479.jpg"
     },
     {
       "id": "osm-way-1223410442",
@@ -7509,7 +7630,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280521"
+      "osm_ref": "way/324280521",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-333303947",
@@ -7548,7 +7670,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324275323"
+      "osm_ref": "way/324275323",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-340391184",
@@ -7567,7 +7690,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340391184"
+      "osm_ref": "way/340391184",
+      "locality": "คลองเตยเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-319148800",
@@ -7605,7 +7729,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962408"
+      "osm_ref": "way/331962408",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-261529366",
@@ -8165,7 +8290,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329745986"
+      "osm_ref": "way/329745986",
+      "locality": "คลองเตยเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-329745992",
@@ -8226,7 +8352,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1193595249"
+      "osm_ref": "way/1193595249",
+      "photo_url": "photos/buildings/osm-way-1193595249.jpg"
     },
     {
       "id": "osm-way-340729743",
@@ -8264,7 +8391,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962402"
+      "osm_ref": "way/331962402",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-324280461",
@@ -8283,7 +8411,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280461"
+      "osm_ref": "way/324280461",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-449104808",
@@ -8302,7 +8431,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/449104808"
+      "osm_ref": "way/449104808",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-449104808.jpg"
     },
     {
       "id": "osm-way-1225042045",
@@ -8342,7 +8473,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/450546040"
+      "osm_ref": "way/450546040",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-450546040.jpg"
     },
     {
       "id": "osm-way-324280477",
@@ -8362,7 +8495,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280477"
+      "osm_ref": "way/324280477",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280477.jpg"
     },
     {
       "id": "osm-way-329428590",
@@ -8384,7 +8519,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329428590"
+      "osm_ref": "way/329428590",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-329428590.jpg"
     },
     {
       "id": "osm-way-900816709",
@@ -8460,7 +8597,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/208691131"
+      "osm_ref": "way/208691131",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-816397732",
@@ -8656,7 +8794,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/341212101"
+      "osm_ref": "way/341212101",
+      "locality": "Khlong Tan Nuea, Watthana"
     },
     {
       "id": "osm-way-676062726",
@@ -8809,7 +8948,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/300817299"
+      "osm_ref": "way/300817299",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-300817299.jpg"
     },
     {
       "id": "osm-way-605771434",
@@ -8967,7 +9108,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331963324"
+      "osm_ref": "way/331963324",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-249140598",
@@ -8987,7 +9129,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/249140598"
+      "osm_ref": "way/249140598",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-249140598.jpg"
     },
     {
       "id": "osm-way-249140774",
@@ -9007,7 +9151,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/249140774"
+      "osm_ref": "way/249140774",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-249140774.jpg"
     },
     {
       "id": "osm-way-1222187029",
@@ -9047,7 +9193,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280550"
+      "osm_ref": "way/324280550",
+      "address": "ถนนสุขุมวิท ซอย39 116",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-324280522",
@@ -9067,7 +9215,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280522"
+      "osm_ref": "way/324280522",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280522.jpg"
     },
     {
       "id": "osm-way-324275324",
@@ -9294,7 +9444,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/338009255"
+      "osm_ref": "way/338009255",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-node-4460699214",
@@ -9313,7 +9464,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "node/4460699214"
+      "osm_ref": "node/4460699214",
+      "photo_url": "photos/buildings/osm-node-4460699214.jpg"
     },
     {
       "id": "osm-way-324275307",
@@ -9352,7 +9504,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/226278561"
+      "osm_ref": "way/226278561",
+      "address": "สุขุมวิท 53 sachayan mansion 43/2",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-226278561.jpg"
     },
     {
       "id": "osm-way-387351099",
@@ -9394,7 +9549,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340074036"
+      "osm_ref": "way/340074036",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-340074036.jpg"
     },
     {
       "id": "osm-way-39878518",
@@ -9759,7 +9916,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340091484"
+      "osm_ref": "way/340091484",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-340091484.jpg"
     },
     {
       "id": "osm-way-622812961",
@@ -10084,7 +10243,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/330253778"
+      "osm_ref": "way/330253778",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-330253778.jpg"
     },
     {
       "id": "osm-way-340281982",
@@ -10708,7 +10869,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329745980"
+      "osm_ref": "way/329745980",
+      "locality": "คลองเตยเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-329745980.jpg"
     },
     {
       "id": "osm-way-329745927",
@@ -11032,7 +11195,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/450629005"
+      "osm_ref": "way/450629005",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-1448551501",
@@ -11166,7 +11330,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280518"
+      "osm_ref": "way/324280518",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280518.jpg"
     },
     {
       "id": "osm-way-1270574837",
@@ -11399,7 +11565,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/330488068"
+      "osm_ref": "way/330488068",
+      "address": "ซอยสุขุมวิท 28 1",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-330488068.jpg"
     },
     {
       "id": "osm-way-331962335",
@@ -11419,7 +11588,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962335"
+      "osm_ref": "way/331962335",
+      "address": "สุขุมวิท 49 28",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-331962335.jpg"
     },
     {
       "id": "osm-way-332674489",
@@ -11588,7 +11760,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/767746117"
+      "osm_ref": "way/767746117",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-767746117.jpg"
     },
     {
       "id": "osm-way-332192001",
@@ -11684,7 +11858,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/523179199"
+      "osm_ref": "way/523179199",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-523179199.jpg"
     },
     {
       "id": "osm-way-450625699",
@@ -11726,7 +11902,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1195022786"
+      "osm_ref": "way/1195022786",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-1195022786.jpg"
     },
     {
       "id": "osm-way-539353974",
@@ -11783,7 +11961,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1221375791"
+      "osm_ref": "way/1221375791",
+      "address": "ซอยสุขุมวิท 24 93",
+      "locality": "10110",
+      "photo_url": "photos/buildings/osm-way-1221375791.jpg"
     },
     {
       "id": "osm-way-401358382",
@@ -11847,7 +12028,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/1037863939"
+      "osm_ref": "way/1037863939",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-1037863939.jpg"
     },
     {
       "id": "osm-way-341210908",
@@ -11907,7 +12090,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/450629006"
+      "osm_ref": "way/450629006",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-324138303",
@@ -12055,7 +12239,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/253416405"
+      "osm_ref": "way/253416405",
+      "address": "ถนนสุขุมวิท",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-253416405.jpg"
     },
     {
       "id": "osm-way-282432468",
@@ -12110,7 +12297,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329428591"
+      "osm_ref": "way/329428591",
+      "locality": "กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-329428591.jpg"
     },
     {
       "id": "osm-way-525504895",
@@ -12130,7 +12319,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/525504895"
+      "osm_ref": "way/525504895",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-525504895.jpg"
     },
     {
       "id": "osm-way-1185933418",
@@ -12270,7 +12461,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/176332764"
+      "osm_ref": "way/176332764",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-328740942",
@@ -12311,7 +12503,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/329428601"
+      "osm_ref": "way/329428601",
+      "address": "สุขุมวิท 49 36-38",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-329428601.jpg"
     },
     {
       "id": "osm-way-263470880",
@@ -12561,7 +12756,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/330253797"
+      "osm_ref": "way/330253797",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-330253797.jpg"
     },
     {
       "id": "osm-relation-7508677",
@@ -12677,7 +12874,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280501"
+      "osm_ref": "way/324280501",
+      "address": "ซอยสุขุมวิท 39",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280501.jpg"
     },
     {
       "id": "osm-way-324280529",
@@ -12835,7 +13035,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340092402"
+      "osm_ref": "way/340092402",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-340092402.jpg"
     },
     {
       "id": "osm-way-387351107",
@@ -12897,7 +13099,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962413"
+      "osm_ref": "way/331962413",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-324275308",
@@ -13082,7 +13285,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/324280520"
+      "osm_ref": "way/324280520",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-324280520.jpg"
     },
     {
       "id": "osm-way-1220317400",
@@ -13141,7 +13346,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/331962430"
+      "osm_ref": "way/331962430",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-331962430.jpg"
     },
     {
       "id": "osm-way-264249245",
@@ -13363,7 +13570,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/340231167"
+      "osm_ref": "way/340231167",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-340231167.jpg"
     },
     {
       "id": "osm-way-338087011",
@@ -13384,7 +13593,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/338087011"
+      "osm_ref": "way/338087011",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-338087011.jpg"
     },
     {
       "id": "osm-way-331967749",
@@ -13533,7 +13744,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/521687097"
+      "osm_ref": "way/521687097",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-333303949",
@@ -13646,7 +13858,9 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/76510915"
+      "osm_ref": "way/76510915",
+      "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-76510915.jpg"
     },
     {
       "id": "osm-way-329745978",
@@ -13703,7 +13917,8 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/330253719"
+      "osm_ref": "way/330253719",
+      "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
       "id": "osm-way-712650471",
@@ -13781,7 +13996,10 @@
       ],
       "named": true,
       "source": "openstreetmap",
-      "osm_ref": "way/176332740"
+      "osm_ref": "way/176332740",
+      "address": "ถนนสุขุมวิท ซอย22",
+      "locality": "คลองเตย, กรุงเทพมหานคร 10110",
+      "photo_url": "photos/buildings/osm-way-176332740.jpg"
     },
     {
       "id": "osm-way-168665046",

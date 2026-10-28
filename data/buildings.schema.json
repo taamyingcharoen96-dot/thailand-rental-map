@@ -70,7 +70,22 @@
         },
         "named": { "type": "boolean" },
         "source": { "type": "string", "minLength": 1 },
-        "osm_ref": { "type": "string" }
+        "osm_ref": { "type": "string" },
+        "address": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Street line from OSM addr:street, addr:housenumber, addr:place, or addr:full. Omitted when OpenStreetMap has no street address. Unnamed buildings already use that label as name."
+        },
+        "locality": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Subdistrict, district, city, province, and postcode from OSM addr tags, when those tags exist."
+        },
+        "photo_url": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Public building image from the OSM image tag or Wikimedia Commons. Omitted when OpenStreetMap has no image."
+        }
       }
     }
   }
