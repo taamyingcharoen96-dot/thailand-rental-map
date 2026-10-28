@@ -234,6 +234,7 @@
       width: 48%;
       position: relative;
       min-height: 0;
+      z-index: 1;
     }
     #map {
       position: absolute;
@@ -441,6 +442,297 @@
     .map-overlay .ov-meta {
       font-size: 11px;
       color: var(--muted);
+    }
+    .ov-details {
+      margin-top: 6px;
+      padding: 0;
+      border: none;
+      background: none;
+      color: var(--green-dark);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .ov-details:hover { text-decoration: underline; }
+
+    /* —— Listing detail (covers the list; map stays put) —— */
+    .detail-pane {
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 52%;
+      background: var(--bg);
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .detail-pane[hidden] { display: none !important; }
+    .detail-bar {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: rgba(248, 250, 252, .96);
+      border-bottom: 1px solid var(--border);
+    }
+    .detail-map { display: none; }
+    .detail-inner { padding: 12px 14px 32px; }
+    .detail-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .gallery-frame {
+      position: relative;
+      background: #111827;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      max-height: 72vh;
+      overflow: hidden;
+    }
+    .gallery-track {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      height: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      overscroll-behavior-x: contain;
+      touch-action: pan-x;
+    }
+    .gallery-track::-webkit-scrollbar { display: none; }
+    .gallery-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-in;
+    }
+    .gallery-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      cursor: zoom-in;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .gallery-frame .placeholder {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+    .gal-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 1px 4px rgba(0,0,0,.28);
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 1;
+      color: #111827;
+      padding: 0;
+    }
+    .gal-nav.prev { left: 10px; }
+    .gal-nav.next { right: 10px; }
+    .gal-nav:hover { background: #fff; }
+    .gallery-frame .photo-count {
+      font-size: 13px;
+      padding: 4px 10px;
+    }
+    .thumbs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 12px 0;
+      scrollbar-width: thin;
+    }
+    .thumb {
+      flex: 0 0 auto;
+      width: 84px;
+      height: 64px;
+      padding: 0;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #e5e7eb;
+      cursor: zoom-in;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .thumb[aria-current="true"] { border-color: var(--green); }
+    .gallery-hint {
+      margin: 6px 12px 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .detail-copy { padding: 14px 16px 18px; }
+    .detail-title {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+    .detail-loc {
+      margin-top: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .detail-price-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .detail-price {
+      font-size: 22px;
+      font-weight: 750;
+      color: var(--green-dark);
+    }
+    .detail-price.unset {
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 650;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      height: 24px;
+      padding: 0 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #f3f4f6;
+      color: #374151;
+    }
+    .status-pill.status-available { background: #dcfce7; color: #166534; }
+    .status-pill.status-unknown { background: #fef3c7; color: #92400e; }
+    .status-pill.status-gone { background: #fee2e2; color: #991b1b; }
+    .detail-specs {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #374151;
+    }
+    .facts { margin: 14px 0 0; }
+    .fact {
+      display: grid;
+      grid-template-columns: 8.25rem 1fr;
+      gap: 8px;
+      padding: 8px 0;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .fact dt { margin: 0; color: var(--muted); }
+    .fact dd { margin: 0; overflow-wrap: anywhere; }
+    .fact-muted dd { color: var(--muted); }
+    .fact a {
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-left: 8px;
+    }
+    .detail-notes {
+      margin: 14px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.5;
+      color: #374151;
+      white-space: pre-wrap;
+    }
+    .detail-notes h3 {
+      margin: 0 0 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* —— Fullscreen photo lightbox —— */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      background: rgba(17, 24, 39, .94);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      touch-action: none;
+    }
+    .lightbox[hidden] { display: none !important; }
+    .lightbox img {
+      max-width: min(1100px, 92vw);
+      max-height: 82vh;
+      object-fit: contain;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .lb-close,
+    .lb-nav {
+      position: absolute;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      color: #111827;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+    }
+    .lb-close {
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+    }
+    .lb-nav {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      font-size: 28px;
+    }
+    .lb-nav.prev { left: 16px; }
+    .lb-nav.next { right: 16px; }
+    .lb-close:hover, .lb-nav:hover { background: #fff; }
+    .lb-counter {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      background: rgba(0,0,0,.5);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 650;
+      font-size: 14px;
     }
 
     /* —— Search as I move —— */
@@ -653,6 +945,9 @@
       .suggest { min-width: 0; }
       .result-count { margin-left: 0; width: 100%; }
       .map-overlay { max-width: none; }
+      .detail-pane { width: 100%; border-right: none; }
+      body.view-map .detail-pane { display: none !important; }
+      .detail-map { display: inline-flex; align-items: center; }
       .building-hover .bh-photo { height: 120px; }
     }
     @media (max-width: 480px) {
@@ -704,6 +999,7 @@
 
   <div class="main">
     <aside class="list-pane" id="listPane" aria-label="Rental listings"></aside>
+    <section id="detailPane" class="detail-pane" hidden aria-labelledby="detailTitle"></section>
     <section class="map-pane" aria-label="Map">
       <div id="map"></div>
       <label class="map-controls">
@@ -730,6 +1026,7 @@
           <div class="ov-title" id="ovTitle"></div>
           <div class="ov-loc" id="ovLoc"></div>
           <div class="ov-meta" id="ovMeta"></div>
+          <button type="button" class="ov-details" id="ovDetails">View details</button>
         </div>
       </div>
     </section>
@@ -739,6 +1036,14 @@
     <button type="button" class="btn active" id="btnList" data-view="list">List</button>
     <button type="button" class="btn" id="btnMap" data-view="map">Map</button>
   </nav>
+
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo gallery">
+    <button type="button" class="lb-close" id="lbClose" aria-label="Close photos">×</button>
+    <button type="button" class="lb-nav prev" id="lbPrev" aria-label="Previous photo">‹</button>
+    <button type="button" class="lb-nav next" id="lbNext" aria-label="Next photo">›</button>
+    <img id="lbImg" alt="">
+    <div class="lb-counter" id="lbCounter" aria-live="polite"></div>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script>
@@ -787,15 +1092,47 @@
     return null;
   };
 
-  const photoCount = (l) => {
+  const photoCount = (l) => photoList(l).length;
+
+  const photoList = (l) => {
+    if (!l) return [];
     const n = Math.max(
       Array.isArray(l.photo_urls) ? l.photo_urls.length : 0,
       Array.isArray(l.photo_data) ? l.photo_data.length : 0
     );
-    let c = 0;
-    for (let i = 0; i < n; i++) if (photoSrc(l, i)) c++;
-    return c;
+    const out = [];
+    for (let i = 0; i < n; i++) {
+      const src = photoSrc(l, i);
+      if (src) out.push(src);
+    }
+    return out;
   };
+
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const formatWhen = (v) => {
+    if (v == null || String(v).trim() === "") return "";
+    const s = String(v).trim();
+    const day = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (!day) return s;
+    const month = MONTHS[Number(day[2]) - 1] || day[2];
+    const date = `${Number(day[3])} ${month} ${day[1]}`;
+    const time = s.match(/T(\d{2}):(\d{2})/);
+    return time && s.length > 10 ? `${date}, ${time[1]}:${time[2]}` : date;
+  };
+
+  const STATUS_LABEL = {
+    available: "Available",
+    unknown: "Unknown",
+    gone: "No longer listed",
+  };
+
+  const detailPrice = (l) => {
+    if (l.price_thb == null) return "Rent not set";
+    const cur = l.currency || "THB";
+    return `${Number(l.price_thb).toLocaleString("en-US")} ${cur}/month`;
+  };
+
+  const httpUrl = (v) => /^https?:\/\//i.test(v || "") ? v : "";
 
   const shortNotes = (l) => {
     const n = (l.raw_notes || "").trim();
@@ -898,8 +1235,16 @@
     ovLoc: document.getElementById("ovLoc"),
     ovMeta: document.getElementById("ovMeta"),
     ovClose: document.getElementById("ovClose"),
+    ovDetails: document.getElementById("ovDetails"),
     btnList: document.getElementById("btnList"),
     btnMap: document.getElementById("btnMap"),
+    detail: document.getElementById("detailPane"),
+    lightbox: document.getElementById("lightbox"),
+    lbImg: document.getElementById("lbImg"),
+    lbCounter: document.getElementById("lbCounter"),
+    lbClose: document.getElementById("lbClose"),
+    lbPrev: document.getElementById("lbPrev"),
+    lbNext: document.getElementById("lbNext"),
     bhover: document.getElementById("buildingHover"),
     bhPhoto: document.getElementById("bhPhoto"),
     bhKicker: document.getElementById("bhKicker"),
@@ -1416,6 +1761,218 @@
     overlayPhotoIndex = 0;
   }
 
+  let detailListing = null;
+  let galleryIndex = 0;
+  let galleryPointerX = 0;
+  let galleryDragged = false;
+  let gallerySettle = 0;
+
+  function factRow(label, text, opts = {}) {
+    if (text == null || text === "") return "";
+    const body = opts.html || esc(text);
+    return `<div class="fact${opts.muted ? " fact-muted" : ""}"><dt>${esc(label)}</dt><dd>${body}</dd></div>`;
+  }
+
+  function detailFacts(l) {
+    const b = buildingOf(l);
+    const rows = [];
+    if (b && b.name) {
+      const thai = b.name_th && b.name_th !== b.name ? ` (${b.name_th})` : "";
+      rows.push(factRow("Building", b.name + thai));
+    }
+    rows.push(factRow("Neighborhood", l.neighborhood));
+    rows.push(factRow("District", l.district));
+    rows.push(factRow("City", l.city));
+    if (l.province && l.province !== l.city) rows.push(factRow("Province", l.province));
+    if (l.bedrooms != null) rows.push(factRow("Bedrooms", String(l.bedrooms)));
+    if (l.bathrooms != null) rows.push(factRow("Bathrooms", String(l.bathrooms)));
+    if (l.size_sqm != null) rows.push(factRow("Size", `${l.size_sqm} sqm`));
+    rows.push(factRow("Type", typeLabel(l.property_type)));
+    if (l.status) rows.push(factRow("Status", STATUS_LABEL[l.status] || l.status));
+    if (l.available_from) rows.push(factRow("Available from", formatWhen(l.available_from)));
+    if (l.listed_at) rows.push(factRow("Listed", formatWhen(l.listed_at)));
+    if (l.scraped_at) rows.push(factRow("Recorded", formatWhen(l.scraped_at)));
+    if (l.contact) rows.push(factRow("Contact", l.contact));
+    else rows.push(factRow("Contact", "Contact not listed", { muted: true }));
+    const sourceUrl = httpUrl(l.source_url);
+    if (l.source || sourceUrl) {
+      const name = l.source || "Listing source";
+      const link = sourceUrl
+        ? ` <a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">View source</a>`
+        : "";
+      rows.push(factRow("Source", name, { html: `${esc(name)}${link}` }));
+    }
+    return rows.join("");
+  }
+
+  function galleryChrome() {
+    const counter = el.detail.querySelector(".photo-count");
+    const photos = detailListing ? photoList(detailListing) : [];
+    if (counter) counter.textContent = photos.length ? `${galleryIndex + 1} / ${photos.length}` : "";
+    el.detail.querySelectorAll(".thumb").forEach((thumb) => {
+      const on = Number(thumb.dataset.index) === galleryIndex;
+      thumb.setAttribute("aria-current", on ? "true" : "false");
+    });
+  }
+
+  function scrollBehavior(preferred) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return "auto";
+    return preferred || "smooth";
+  }
+
+  function scrollGalleryTo(index, behavior) {
+    const track = el.detail.querySelector(".gallery-track");
+    const photos = detailListing ? photoList(detailListing) : [];
+    if (!photos.length) return;
+    galleryIndex = (index + photos.length) % photos.length;
+    const motion = scrollBehavior(behavior);
+    gallerySettle = Date.now() + (motion === "auto" ? 60 : 420);
+    if (track && track.clientWidth) {
+      track.scrollTo({ left: galleryIndex * track.clientWidth, behavior: motion });
+    }
+    galleryChrome();
+    if (!el.lightbox.hidden) renderLightbox();
+  }
+
+  function onGalleryScroll() {
+    const track = el.detail.querySelector(".gallery-track");
+    if (!track || !track.clientWidth) return;
+    const raw = track.scrollLeft / track.clientWidth;
+    const i = Math.round(raw);
+    if (Math.abs(raw - i) > 0.2) return;
+    if (i < 0) return;
+    if (Date.now() < gallerySettle && i !== galleryIndex) return;
+    if (i === galleryIndex) return;
+    galleryIndex = i;
+    galleryChrome();
+  }
+
+  function renderDetail() {
+    const l = detailListing;
+    if (!l) return;
+    const photos = photoList(l);
+    const b = buildingOf(l);
+    const place = [b && b.name, l.neighborhood, l.district, l.city].filter(Boolean).join(" · ");
+    const backLabel = focusedBuildingId ? "Back to units" : "Back to listings";
+    const specs = metaParts(l).join(" · ");
+    const statusClass = l.status ? ` status-${l.status}` : "";
+    const statusText = l.status ? (STATUS_LABEL[l.status] || l.status) : "";
+    const slides = photos.length
+      ? photos.map((src, i) => `<div class="gallery-slide"><img src="${esc(src)}" alt="Photo ${i + 1} of ${photos.length}" draggable="false" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'No photo'}))"></div>`).join("")
+      : `<div class="gallery-slide">${PLACEHOLDER}</div>`;
+    const nav = photos.length > 1
+      ? `<button type="button" class="gal-nav prev" data-dir="-1" aria-label="Previous photo">‹</button><button type="button" class="gal-nav next" data-dir="1" aria-label="Next photo">›</button><span class="photo-count" aria-live="polite">1 / ${photos.length}</span>`
+      : "";
+    const thumbs = photos.length
+      ? `<div class="thumbs">${photos.map((src, i) => `<button type="button" class="thumb" data-index="${i}" aria-label="Photo ${i + 1} of ${photos.length}" aria-current="${i === 0 ? "true" : "false"}"><img src="${esc(src)}" alt="" draggable="false"></button>`).join("")}</div><p class="gallery-hint">Swipe or use the arrows. Click a photo to enlarge.</p>`
+      : "";
+    const notes = (l.raw_notes || "").trim();
+    el.detail.innerHTML = `<div class="detail-bar">
+        <button type="button" class="btn detail-back">‹ ${esc(backLabel)}</button>
+        <button type="button" class="btn detail-map">Show on map</button>
+      </div>
+      <div class="detail-inner">
+        <article class="detail-card">
+          <div class="gallery-frame">
+            <div class="gallery-track" tabindex="0" aria-label="Listing photos">${slides}</div>
+            ${nav}
+          </div>
+          ${thumbs}
+          <div class="detail-copy">
+            <h2 class="detail-title" id="detailTitle">${esc(l.title || "Untitled")}</h2>
+            ${place ? `<div class="detail-loc">${esc(place)}</div>` : ""}
+            <div class="detail-price-row">
+              <div class="detail-price${l.price_thb == null ? " unset" : ""}">${esc(detailPrice(l))}</div>
+              ${statusText ? `<span class="status-pill${statusClass}">${esc(statusText)}</span>` : ""}
+            </div>
+            ${specs ? `<div class="detail-specs">${esc(specs)}</div>` : ""}
+            <div class="facts">${detailFacts(l)}</div>
+            ${notes ? `<div class="detail-notes"><h3>Notes</h3>${esc(notes)}</div>` : ""}
+          </div>
+        </article>
+      </div>`;
+    const track = el.detail.querySelector(".gallery-track");
+    if (track) track.addEventListener("scroll", onGalleryScroll, { passive: true });
+  }
+
+  function openDetail(l) {
+    if (!l) return;
+    const same = detailListing && detailListing.id === l.id && !el.detail.hidden;
+    detailListing = l;
+    if (!same) {
+      galleryIndex = 0;
+      renderDetail();
+      el.detail.scrollTop = 0;
+    }
+    el.detail.hidden = false;
+    if (window.matchMedia("(max-width: 820px)").matches) setMobileView("list");
+    if (!same) {
+      const back = el.detail.querySelector(".detail-back");
+      if (back) back.focus();
+    }
+  }
+
+  function detailIsVisible() {
+    if (el.detail.hidden) return false;
+    if (window.matchMedia("(max-width: 820px)").matches && document.body.classList.contains("view-map")) return false;
+    return true;
+  }
+
+  function closeDetail(opts = {}) {
+    const wasOpen = !el.detail.hidden;
+    if (!el.lightbox.hidden) closeLightbox();
+    el.detail.hidden = true;
+    el.detail.innerHTML = "";
+    detailListing = null;
+    galleryIndex = 0;
+    if (opts.focusCard && wasOpen && selectedId) {
+      const card = el.list.querySelector(`.card[data-id="${CSS.escape(selectedId)}"]`);
+      if (card) card.focus();
+    }
+  }
+
+  function renderLightbox() {
+    const photos = detailListing ? photoList(detailListing) : [];
+    if (!photos.length) return;
+    if (galleryIndex >= photos.length) galleryIndex = 0;
+    const src = photos[galleryIndex];
+    el.lbImg.src = src;
+    el.lbImg.alt = `Photo ${galleryIndex + 1} of ${photos.length}`;
+    el.lbCounter.textContent = `${galleryIndex + 1} / ${photos.length}`;
+    const multi = photos.length > 1;
+    el.lbPrev.hidden = !multi;
+    el.lbNext.hidden = !multi;
+  }
+
+  function openLightbox(index) {
+    const photos = detailListing ? photoList(detailListing) : [];
+    if (!photos.length) return;
+    const opening = el.lightbox.hidden;
+    galleryIndex = (index + photos.length) % photos.length;
+    gallerySettle = Date.now() + 60;
+    const track = el.detail.querySelector(".gallery-track");
+    if (track && track.clientWidth) {
+      track.scrollTo({ left: galleryIndex * track.clientWidth, behavior: "auto" });
+    }
+    galleryChrome();
+    renderLightbox();
+    el.lightbox.hidden = false;
+    if (opening) el.lbClose.focus();
+  }
+
+  function closeLightbox() {
+    el.lightbox.hidden = true;
+    el.lbImg.removeAttribute("src");
+    const track = el.detail.querySelector(".gallery-track");
+    if (track) track.focus();
+  }
+
+  function stepLightbox(dir) {
+    const photos = detailListing ? photoList(detailListing) : [];
+    if (photos.length < 2) return;
+    openLightbox(galleryIndex + dir);
+  }
+
   function hideSuggest() {
     el.suggest.hidden = true;
     el.suggest.innerHTML = "";
@@ -1463,7 +2020,7 @@
       setTimeout(() => { suppressMoveFilter = false; }, 400);
     }
     openOverlay(l);
-    if (opts.fromList && window.matchMedia("(max-width: 820px)").matches) setMobileView("map");
+    openDetail(l);
   }
 
   function focusBuilding(id, opts = {}) {
@@ -1476,6 +2033,7 @@
     hideSuggest();
     selectedId = null;
     closeOverlay();
+    closeDetail();
     refresh();
     suppressMoveFilter = true;
     map.setView([Number(b.lat), Number(b.lng)], Math.max(map.getZoom(), 17), { animate: true });
@@ -1493,6 +2051,7 @@
     suppressSearch = false;
     hideSuggest();
     closeOverlay();
+    closeDetail();
     refresh({ fit: true });
   }
 
@@ -1503,6 +2062,7 @@
     if (selectedId && !items.some((x) => x.id === selectedId)) {
       selectedId = null;
       closeOverlay();
+      closeDetail();
       paintMarkerSelection();
     }
     if (fit) {
@@ -1556,9 +2116,120 @@
   });
   el.ovClose.addEventListener("click", () => {
     closeOverlay();
+    if (detailIsVisible()) return;
+    closeDetail();
     selectedId = null;
     paintMarkerSelection();
     el.list.querySelectorAll(".card.selected").forEach((c) => c.classList.remove("selected"));
+  });
+  el.ovDetails.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (overlayListing) openDetail(overlayListing);
+  });
+  el.overlay.addEventListener("click", (e) => {
+    if (e.target.closest(".ov-close, .ov-nav, .ov-details")) return;
+    if (overlayListing) openDetail(overlayListing);
+  });
+
+  el.detail.addEventListener("keydown", (e) => {
+    if ((e.key === "Enter" || e.key === " ") && e.target.closest(".gallery-track")) {
+      e.preventDefault();
+      openLightbox(galleryIndex);
+    }
+  });
+  el.detail.addEventListener("click", (e) => {
+    if (e.target.closest(".detail-back")) {
+      closeDetail({ focusCard: true });
+      return;
+    }
+    if (e.target.closest(".detail-map")) {
+      setMobileView("map");
+      return;
+    }
+    const nav = e.target.closest(".gal-nav");
+    if (nav) {
+      const photos = detailListing ? photoList(detailListing) : [];
+      if (photos.length < 2) return;
+      const dir = Number(nav.dataset.dir);
+      scrollGalleryTo(galleryIndex + dir, "smooth");
+      return;
+    }
+    const thumb = e.target.closest(".thumb");
+    if (thumb) {
+      openLightbox(Number(thumb.dataset.index));
+      return;
+    }
+    if (e.target.closest(".gallery-slide") && !galleryDragged) openLightbox(galleryIndex);
+  });
+  el.detail.addEventListener("pointerdown", (e) => {
+    if (!e.target.closest(".gallery-track")) return;
+    gallerySettle = 0;
+    galleryPointerX = e.clientX;
+    galleryDragged = false;
+  });
+  el.detail.addEventListener("pointermove", (e) => {
+    if (Math.abs(e.clientX - galleryPointerX) > 10) galleryDragged = true;
+  });
+
+  el.lbClose.addEventListener("click", closeLightbox);
+  el.lbPrev.addEventListener("click", () => stepLightbox(-1));
+  el.lbNext.addEventListener("click", () => stepLightbox(1));
+  el.lightbox.addEventListener("click", (e) => {
+    if (e.target === el.lightbox) closeLightbox();
+  });
+  let lbStartX = null;
+  let lbStartY = null;
+  el.lightbox.addEventListener("pointerdown", (e) => {
+    if (e.target.closest("button")) { lbStartX = null; return; }
+    lbStartX = e.clientX;
+    lbStartY = e.clientY;
+  });
+  el.lightbox.addEventListener("pointerup", (e) => {
+    if (lbStartX == null) return;
+    const dx = e.clientX - lbStartX;
+    const dy = e.clientY - lbStartY;
+    lbStartX = null;
+    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
+    stepLightbox(dx < 0 ? 1 : -1);
+  });
+  el.lightbox.addEventListener("keydown", (e) => {
+    if (e.key !== "Tab") return;
+    const nodes = [...el.lightbox.querySelectorAll("button")].filter((b) => !b.hidden);
+    if (!nodes.length) return;
+    const first = nodes[0];
+    const last = nodes[nodes.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!el.lightbox.hidden) {
+      if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); closeLightbox(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); stepLightbox(-1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); stepLightbox(1); }
+      return;
+    }
+    const typing = e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName);
+    if (!el.detail.hidden && !typing && (e.key === "ArrowLeft" || e.key === "ArrowRight")) {
+      const photos = detailListing ? photoList(detailListing) : [];
+      if (photos.length < 2) return;
+      e.preventDefault();
+      scrollGalleryTo(galleryIndex + (e.key === "ArrowLeft" ? -1 : 1), "smooth");
+      return;
+    }
+    if (!el.detail.hidden && !typing && e.key === "Escape") closeDetail({ focusCard: true });
+  }, true);
+
+  window.addEventListener("resize", () => {
+    if (el.detail.hidden) return;
+    const track = el.detail.querySelector(".gallery-track");
+    if (!track || !track.clientWidth) return;
+    track.scrollTo({ left: galleryIndex * track.clientWidth, behavior: "auto" });
   });
 
   el.q.addEventListener("input", () => {
@@ -1569,6 +2240,7 @@
         focusedBuildingId = null;
         selectedId = null;
         closeOverlay();
+        closeDetail();
       }
     }
     suggestIndex = -1;
