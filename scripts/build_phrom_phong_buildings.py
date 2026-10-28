@@ -18,6 +18,7 @@ import math
 import re
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
@@ -274,19 +275,96 @@ def has_name(tags: dict) -> bool:
 
 
 def address_label(tags: dict) -> str | None:
-    number = re.sub(r"\s+", " ", (tags.get("addr:housenumber") or "").strip())
-    street = re.sub(r"\s+", " ", (tags.get("addr:street") or tags.get("addr:place") or "").strip())
-    if number and street:
-        label = street if number in street else f"{street} {number}"
-    else:
-        label = re.sub(r"\s+", " ", (tags.get("addr:full") or "").strip())
-        if not re.search(r"\d", label):
-            return None
+    label = format_street(tags)
+    if not label:
+        return None
+    if not re.search(r"\d", label):
+        return None
     if len(label) < 4 or len(re.sub(r"[\d/\-]+", "", label).strip()) < 3:
         return None
     if EXCLUDE_RE.search(label) or GENERIC_RE.match(label):
         return None
     return label
+
+
+def _tag_text(tags: dict, key: str) -> str:
+    return re.sub(r"\s+", " ", (tags.get(key) or "").strip())
+
+
+def format_street(tags: dict) -> str | None:
+    """Street line from OSM addr tags. None when those tags are absent."""
+    number = _tag_text(tags, "addr:housenumber")
+    street = (
+        _tag_text(tags, "addr:street:en")
+        or _tag_text(tags, "addr:street")
+        or _tag_text(tags, "addr:place")
+    )
+    if number and street:
+        label = street if number in street else f"{street} {number}"
+    else:
+        label = _tag_text(tags, "addr:full") or street
+    if len(label) < 3:
+        return None
+    return label
+
+
+def format_locality(tags: dict, street: str | None) -> str | None:
+    """Admin locality from OSM addr tags, without inventing a street."""
+    parts: list[str] = []
+    for key in ("addr:subdistrict", "addr:district", "addr:city", "addr:province"):
+        value = _tag_text(tags, key)
+        if not value:
+            continue
+        if street and value in street:
+            continue
+        if any(value in part or part in value for part in parts):
+            continue
+        parts.append(value)
+    postcode = _tag_text(tags, "addr:postcode")
+    if postcode and postcode not in parts and not (street and postcode in street):
+        if parts:
+            return ", ".join(parts) + " " + postcode
+        return postcode
+    return ", ".join(parts) or None
+
+
+def public_photo(tags: dict) -> str | None:
+    """Public building image already tagged on the OSM object, if any."""
+    image = (tags.get("image") or "").strip()
+    if image.startswith("http://"):
+        image = "https://" + image[len("http://"):]
+    if image.startswith("https://"):
+        lowered = image.lower()
+        if any(host in lowered for host in ("facebook.com", "fbcdn.net", "instagram.com")):
+            return None
+        return image
+    commons = (tags.get("wikimedia_commons") or "").strip()
+    if commons.lower().startswith("file:"):
+        filename = commons.split(":", 1)[1].strip().replace(" ", "_")
+        if filename:
+            return (
+                "https://commons.wikimedia.org/wiki/Special:FilePath/"
+                + urllib.parse.quote(filename)
+                + "?width=640"
+            )
+    return None
+
+
+def attach_place_fields(row: dict, tags: dict) -> dict:
+    """Add address, locality, and photo_url only when OSM tags actually have them."""
+    street = format_street(tags)
+    locality = format_locality(tags, street)
+    photo = public_photo(tags)
+    # Unnamed buildings already use the street label as their name.
+    if street and (row.get("named") or street != row.get("name")):
+        row["address"] = street
+    if locality:
+        row["locality"] = locality
+    # A hosted file (photos/...) is a saved place photo. Do not replace it
+    # with an OSM image URL on a later directory refresh.
+    if photo and not str(row.get("photo_url") or "").startswith("photos/"):
+        row["photo_url"] = photo
+    return row
 
 
 def areas_for(lat: float, lng: float) -> list[str]:
@@ -423,7 +501,7 @@ def record(element: dict) -> dict:
         if alias.casefold() not in existing:
             aliases.append(alias)
             existing.add(alias.casefold())
-    return {
+    row = {
         "id": f"osm-{element['type']}-{element['id']}",
         "name": display,
         "name_en": name_en,
@@ -437,6 +515,7 @@ def record(element: dict) -> dict:
         "source": "openstreetmap",
         "osm_ref": ref,
     }
+    return attach_place_fields(row, tags)
 
 
 def circle_bbox(lat: float, lng: float) -> dict:
@@ -488,7 +567,7 @@ def skipped_unnamed(elements: list[dict]) -> dict[str, int]:
 def stamp_existing(building: dict) -> dict:
     """Keep a directory building and refresh which station areas its center falls in."""
     areas = areas_for(building["lat"], building["lng"])
-    return {
+    row = {
         "id": building["id"],
         "name": building["name"],
         "name_en": building.get("name_en"),
@@ -502,6 +581,10 @@ def stamp_existing(building: dict) -> dict:
         "source": building.get("source") or "openstreetmap",
         "osm_ref": building.get("osm_ref") or "",
     }
+    for key in ("address", "locality", "photo_url"):
+        if building.get(key):
+            row[key] = building[key]
+    return row
 
 
 def build(existing: list[dict], elements: list[dict]) -> dict:
@@ -571,8 +654,8 @@ def build(existing: list[dict], elements: list[dict]) -> dict:
             for row in STATIONS.values()
         ],
         "attribution": (
-            "© OpenStreetMap contributors. Building names and locations are from "
-            "OpenStreetMap, available under the Open Database License (ODbL)."
+            "© OpenStreetMap contributors. Building names, addresses, and locations "
+            "are from OpenStreetMap, available under the Open Database License (ODbL)."
         ),
         "retrieved_at": date.today().isoformat(),
         "buildings": accepted,
@@ -611,12 +694,106 @@ def summarize(payload: dict, skipped: dict[str, int]) -> None:
     print(f"multi-station {sum(1 for b in buildings if len(b['areas']) > 1)}")
 
 
+def fetch_tags(refs: list[tuple[str, int]]) -> dict[tuple[str, int], dict]:
+    """OSM tags for directory ids. Splits the batch if Overpass times out."""
+    if not refs:
+        return {}
+    query_parts = []
+    grouped: dict[str, list[str]] = {"node": [], "way": [], "relation": []}
+    for kind, ident in refs:
+        grouped[kind].append(str(ident))
+    for kind, ids in grouped.items():
+        if ids:
+            query_parts.append(f"  {kind}(id:{','.join(ids)});")
+    query = "[out:json][timeout:90];\n(\n" + "\n".join(query_parts) + "\n);\nout tags;\n"
+    try:
+        elements = overpass(query)
+    except RuntimeError:
+        if len(refs) == 1:
+            print(f"    skip {refs[0][0]}/{refs[0][1]}", flush=True)
+            return {}
+        mid = len(refs) // 2
+        print(f"    splitting tag batch {len(refs)}", flush=True)
+        found = fetch_tags(refs[:mid])
+        found.update(fetch_tags(refs[mid:]))
+        return found
+    found = {}
+    for element in elements:
+        found[(element["type"], int(element["id"]))] = element.get("tags") or {}
+    return found
+
+
+def enrich_directory(payload: dict) -> None:
+    """Fill address, locality, and photo_url from current OSM tags.
+
+    Street text is copied only from addr:* tags. Buildings with no street tag
+    are left without an address field. Unnamed buildings already use that
+    street label as their name, so it is not duplicated.
+    """
+    buildings = payload.get("buildings") or []
+    refs: list[tuple[str, int]] = []
+    for building in buildings:
+        kind, _, ident = str(building.get("osm_ref") or "").partition("/")
+        if kind in {"node", "way", "relation"} and ident.isdigit():
+            refs.append((kind, int(ident)))
+    cache_path = Path("/tmp/osm-address-tags.json")
+    tags_by_ref: dict[tuple[str, int], dict] = {}
+    if cache_path.exists():
+        cached = json.loads(cache_path.read_text(encoding="utf-8"))
+        for key, tags in cached.items():
+            kind, _, ident = key.partition("/")
+            if ident.isdigit():
+                tags_by_ref[(kind, int(ident))] = tags
+        print(f"cached tags {len(tags_by_ref)}", flush=True)
+    batch = 250
+    for start in range(0, len(refs), batch):
+        chunk = [ref for ref in refs[start:start + batch] if ref not in tags_by_ref]
+        if not chunk:
+            continue
+        print(f"tags {start + 1}-{start + len(refs[start:start + batch])} of {len(refs)}", flush=True)
+        tags_by_ref.update(fetch_tags(chunk))
+        cache_path.write_text(
+            json.dumps({f"{kind}/{ident}": tags for (kind, ident), tags in tags_by_ref.items()}, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        time.sleep(1)
+    stats = {"address": 0, "locality": 0, "photo_url": 0, "missing": 0}
+    for building in buildings:
+        kind, _, ident = str(building.get("osm_ref") or "").partition("/")
+        tags = tags_by_ref.get((kind, int(ident))) if ident.isdigit() else None
+        if tags is None:
+            stats["missing"] += 1
+            continue
+        before = set(building)
+        attach_place_fields(building, tags)
+        for key in ("address", "locality", "photo_url"):
+            if key not in before and building.get(key):
+                stats[key] += 1
+    payload["attribution"] = (
+        "© OpenStreetMap contributors. Building names, addresses, and locations "
+        "are from OpenStreetMap, available under the Open Database License (ODbL)."
+    )
+    print("enrich", json.dumps(stats), flush=True)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--cache", help="Directory of per-station Overpass JSON files. Missing stations are fetched and saved here.")
     parser.add_argument("--base", default="data/buildings.json", help="Existing directory to keep and dedupe against")
     parser.add_argument("-o", default="data/buildings.json")
+    parser.add_argument(
+        "--enrich-addresses",
+        action="store_true",
+        help="Add OSM street, locality, and photo URL fields to an existing directory",
+    )
     args = parser.parse_args()
+    if args.enrich_addresses:
+        path = Path(args.o)
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        enrich_directory(payload)
+        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"wrote {path}")
+        return
     base_path = Path(args.base)
     # Read before the output is replaced. Keep every building already in the
     # directory (the Phrom Phong trial set and earlier station radii) and

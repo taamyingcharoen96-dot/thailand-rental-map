@@ -516,6 +516,106 @@
       box-shadow: 0 0 0 3px rgba(34,197,94,.35);
     }
 
+    /* One shared card for building hover. Not one DOM node per marker. */
+    .building-hover {
+      position: absolute;
+      z-index: 620;
+      top: 0;
+      left: 0;
+      width: 280px;
+      max-width: calc(100% - 16px);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, .22);
+      overflow: hidden;
+      pointer-events: none;
+      display: none;
+    }
+    .building-hover.open { display: block; }
+    .building-hover .bh-photo {
+      height: 148px;
+      background: #e5e7eb;
+      position: relative;
+    }
+    .building-hover.compact .bh-photo { display: none; }
+    .building-hover .bh-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .building-hover .bh-photo .placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-size: 12px;
+      background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+    }
+    .building-hover .bh-body { padding: 10px 12px 12px; }
+    .building-hover .bh-kicker {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--green-dark);
+    }
+    .building-hover .bh-name {
+      margin-top: 2px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .building-hover .bh-thai,
+    .building-hover .bh-addr,
+    .building-hover .bh-meta {
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .building-hover .bh-thai {
+      color: var(--muted);
+      margin-top: 1px;
+    }
+    .building-hover .bh-addr {
+      color: #374151;
+      margin-top: 6px;
+    }
+    .building-hover .bh-addr.missing { color: var(--muted); }
+    .building-hover .bh-locality {
+      color: var(--muted);
+      margin-top: 2px;
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .building-hover .bh-meta {
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .building-hover .bh-close {
+      display: none;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+      width: 28px;
+      height: 28px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 1px 3px rgba(0,0,0,.25);
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+      color: #111827;
+      pointer-events: auto;
+    }
+    .building-hover.pinned .bh-close { display: block; }
+
     /* —— Mobile toggle —— */
     .mobile-toggle {
       display: none;
@@ -553,6 +653,7 @@
       .suggest { min-width: 0; }
       .result-count { margin-left: 0; width: 100%; }
       .map-overlay { max-width: none; }
+      .building-hover .bh-photo { height: 120px; }
     }
     @media (max-width: 480px) {
       .card { grid-template-columns: 1fr; }
@@ -609,6 +710,18 @@
         <input type="checkbox" id="searchAsMove">
         Search as I move the map
       </label>
+      <div class="building-hover" id="buildingHover" role="tooltip">
+        <button type="button" class="bh-close" id="bhClose" aria-label="Close building info">×</button>
+        <div class="bh-photo" id="bhPhoto"></div>
+        <div class="bh-body">
+          <div class="bh-kicker" id="bhKicker"></div>
+          <div class="bh-name" id="bhName"></div>
+          <div class="bh-thai" id="bhThai" hidden></div>
+          <div class="bh-addr" id="bhAddr"></div>
+          <div class="bh-locality" id="bhLocality" hidden></div>
+          <div class="bh-meta" id="bhMeta"></div>
+        </div>
+      </div>
       <div class="map-overlay" id="mapOverlay" role="dialog" aria-live="polite">
         <div class="ov-photo" id="ovPhoto"></div>
         <div class="ov-body">
@@ -787,6 +900,15 @@
     ovClose: document.getElementById("ovClose"),
     btnList: document.getElementById("btnList"),
     btnMap: document.getElementById("btnMap"),
+    bhover: document.getElementById("buildingHover"),
+    bhPhoto: document.getElementById("bhPhoto"),
+    bhKicker: document.getElementById("bhKicker"),
+    bhName: document.getElementById("bhName"),
+    bhThai: document.getElementById("bhThai"),
+    bhAddr: document.getElementById("bhAddr"),
+    bhLocality: document.getElementById("bhLocality"),
+    bhMeta: document.getElementById("bhMeta"),
+    bhClose: document.getElementById("bhClose"),
   };
 
   const map = L.map("map", { zoomControl: true, preferCanvas: true }).setView(BANGKOK, 12);
@@ -1009,6 +1131,181 @@
     return pins;
   }
 
+  // One card, positioned from the cursor. Visible markers only (a few hundred
+  // at street zoom), so this stays cheap at 7k directory buildings.
+  let hoverState = { id: null, pinned: false, lat: null, lng: null };
+  let hoverHideTimer = null;
+  let hoverShowTimer = null;
+  let latestHoverPt = null;
+  let mapDragging = false;
+  let suppressMapClick = false;
+
+  function cleanLine(v) {
+    return String(v ?? "").replace(/\s+/g, " ").trim();
+  }
+
+  // Demo sample: named buildings within 1 km of The EmQuartier, Phrom Phong.
+  // Other markers stay clickable and do not open this card.
+  const EMQUARTIER = { lat: 13.731225, lng: 100.569476, radiusM: 1000 };
+
+  function haversineM(lat1, lng1, lat2, lng2) {
+    const toRad = (d) => d * Math.PI / 180;
+    const dlat = toRad(lat2 - lat1);
+    const dlng = toRad(lng2 - lng1);
+    const h = Math.sin(dlat / 2) ** 2
+      + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dlng / 2) ** 2;
+    return 2 * 6371000 * Math.asin(Math.sqrt(h));
+  }
+
+  function inHoverSample(b) {
+    if (!b || !b.named) return false;
+    return haversineM(Number(b.lat), Number(b.lng), EMQUARTIER.lat, EMQUARTIER.lng) <= EMQUARTIER.radiusM;
+  }
+
+  function buildingPhotoUrl(b) {
+    const direct = cleanLine(b.photo_url);
+    if (direct && /^(https?:|data:|blob:|photos\/)/i.test(direct)) return direct;
+    return "";
+  }
+
+  function addressParts(b) {
+    let street = cleanLine(b.address);
+    if (!street && !b.named) street = cleanLine(b.name);
+    if (b.named && street && fold(street) === fold(b.name)) street = "";
+    let locality = cleanLine(b.locality);
+    if (locality && street && street.includes(locality)) locality = "";
+    return { street, locality, missing: !street };
+  }
+
+  function kindLabel(b) {
+    if (!b.named) return "Residential";
+    if (b.type === "condo") return "Condo";
+    if (b.type === "apartment") return "Apartment";
+    return "Residential";
+  }
+
+  function renderBuildingHover(b, count) {
+    const src = buildingPhotoUrl(b);
+    const showPhoto = !!b.named || !!src;
+    el.bhover.classList.toggle("compact", !showPhoto);
+    const token = showPhoto ? (src || "none") : "";
+    if (!showPhoto) {
+      el.bhPhoto.dataset.src = "";
+      el.bhPhoto.innerHTML = "";
+    } else if (el.bhPhoto.dataset.src !== token) {
+      el.bhPhoto.dataset.src = token;
+      el.bhPhoto.innerHTML = src
+        ? `<img src="${esc(src)}" alt="${esc(b.named ? b.name : "Residential building")}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'No photo'}))">`
+        : PLACEHOLDER;
+    }
+    el.bhKicker.hidden = !b.named;
+    el.bhKicker.textContent = kindLabel(b);
+    el.bhName.textContent = b.named ? (b.name || "Residential building") : "Residential building";
+    const thai = b.named && b.name_th && b.name_th !== b.name ? b.name_th : "";
+    el.bhThai.hidden = !thai;
+    el.bhThai.textContent = thai;
+    const addr = addressParts(b);
+    el.bhAddr.textContent = addr.missing ? "Address not listed" : addr.street;
+    el.bhAddr.classList.toggle("missing", addr.missing);
+    el.bhLocality.hidden = !addr.locality;
+    el.bhLocality.textContent = addr.locality;
+    const units = count > 0 ? `${count} unit${count === 1 ? "" : "s"}` : "No units listed yet";
+    el.bhMeta.textContent = [areaText(b), units].filter(Boolean).join(" · ");
+  }
+
+  function placeBuildingHover(lat, lng) {
+    const card = el.bhover;
+    const pt = map.latLngToContainerPoint([lat, lng]);
+    const host = map.getContainer();
+    const w = card.offsetWidth || 280;
+    const h = card.offsetHeight || 160;
+    const gap = 14;
+    let left = pt.x - w / 2;
+    let top = pt.y - h - gap;
+    if (top < 8) top = pt.y + gap + 8;
+    left = Math.max(8, Math.min(left, Math.max(8, host.clientWidth - w - 8)));
+    top = Math.max(8, Math.min(top, Math.max(8, host.clientHeight - h - 8)));
+    card.style.transform = `translate3d(${Math.round(left)}px, ${Math.round(top)}px, 0)`;
+  }
+
+  function openBuildingHover(building, entry, opts) {
+    if (!building) return;
+    clearTimeout(hoverHideTimer);
+    const pinned = !!(opts && opts.pinned);
+    hoverState = { id: building.id, pinned, lat: entry.lat, lng: entry.lng };
+    el.bhover.classList.toggle("pinned", pinned);
+    renderBuildingHover(building, entry.count || 0);
+    el.bhover.classList.add("open");
+    placeBuildingHover(entry.lat, entry.lng);
+  }
+
+  function closeBuildingHover() {
+    clearTimeout(hoverHideTimer);
+    clearTimeout(hoverShowTimer);
+    hoverShowTimer = null;
+    hoverState = { id: null, pinned: false, lat: null, lng: null };
+    el.bhover.classList.remove("open", "pinned");
+    map.getContainer().style.cursor = "";
+  }
+
+  function scheduleHoverHide() {
+    if (hoverState.pinned) return;
+    clearTimeout(hoverHideTimer);
+    hoverHideTimer = setTimeout(() => {
+      if (!hoverState.pinned) closeBuildingHover();
+    }, 90);
+  }
+
+  function hitBuilding(pt) {
+    if (!pt) return null;
+    let best = null;
+    let bestD = Infinity;
+    markersById.forEach((entry) => {
+      if (!entry.building) return;
+      const p = map.latLngToContainerPoint([entry.lat, entry.lng]);
+      const dx = p.x - pt.x;
+      const dy = p.y - pt.y;
+      const d = dx * dx + dy * dy;
+      const radius = entry.count > 0 ? 18 : 12;
+      if (d <= radius * radius && d < bestD) {
+        best = entry;
+        bestD = d;
+      }
+    });
+    return best;
+  }
+
+  function considerHover(pt) {
+    if (hoverState.pinned || mapDragging) return;
+    latestHoverPt = pt;
+    const hit = hitBuilding(pt);
+    const sampleHit = hit && inHoverSample(hit.building) ? hit : null;
+    map.getContainer().style.cursor = hit ? "pointer" : "";
+    if (!sampleHit) {
+      clearTimeout(hoverShowTimer);
+      hoverShowTimer = null;
+      scheduleHoverHide();
+      return;
+    }
+    clearTimeout(hoverHideTimer);
+    if (el.bhover.classList.contains("open") && hoverState.id === sampleHit.building.id) return;
+    if (el.bhover.classList.contains("open")) {
+      openBuildingHover(sampleHit.building, sampleHit, { pinned: false });
+      return;
+    }
+    if (hoverShowTimer) return;
+    hoverShowTimer = setTimeout(() => {
+      hoverShowTimer = null;
+      if (hoverState.pinned || mapDragging) return;
+      const current = hitBuilding(latestHoverPt);
+      if (!current || !inHoverSample(current.building)) {
+        scheduleHoverHide();
+        return;
+      }
+      openBuildingHover(current.building, current, { pinned: false });
+    }, 40);
+  }
+
   function syncMarkers() {
     const pins = pinsToShow();
     const selectedBuilding = selectedId
@@ -1021,21 +1318,53 @@
       const lng = pin.building ? pin.building.lng : pin.lng;
       if (!Number.isFinite(Number(lat)) || !Number.isFinite(Number(lng))) return;
       const selected = id === focusedBuildingId || id === selectedBuilding || id === "listing:" + selectedId;
-      const title = pin.building ? pin.building.name : (pin.listing.title || "");
       const marker = pin.count > 0
         ? L.marker([Number(lat), Number(lng)], {
             icon: buildingIcon(pin.count, selected),
-            title,
             zIndexOffset: selected ? 500 : 200,
           })
         : L.circleMarker([Number(lat), Number(lng)], emptyPinStyle(selected));
-      marker.on("click", () => {
-        if (pin.building) focusBuilding(pin.building.id, { fromMap: true });
-        else selectListing(pin.listing.id, { fromMap: true });
+      marker.on("click", (ev) => {
+        const oe = ev && ev.originalEvent;
+        const touch = !!(oe && (oe.pointerType === "touch" || oe.pointerType === "pen"));
+        suppressMapClick = true;
+        setTimeout(() => { suppressMapClick = false; }, 0);
+        if (pin.building) {
+          focusBuilding(pin.building.id, { fromMap: true });
+          if (touch && inHoverSample(pin.building)) {
+            openBuildingHover(pin.building, {
+              id: pin.building.id,
+              building: pin.building,
+              count: pin.count,
+              lat: Number(lat),
+              lng: Number(lng),
+            }, { pinned: true });
+          }
+        } else {
+          selectListing(pin.listing.id, { fromMap: true });
+          if (!hoverState.pinned) closeBuildingHover();
+        }
       });
       marker.addTo(markerLayer);
-      markersById.set(id, { marker, count: pin.count });
+      markersById.set(id, {
+        marker,
+        count: pin.count,
+        building: pin.building || null,
+        lat: Number(lat),
+        lng: Number(lng),
+      });
     });
+    if (hoverState.id) {
+      const entry = markersById.get(hoverState.id);
+      if (entry && entry.building && el.bhover.classList.contains("open")) {
+        hoverState.lat = entry.lat;
+        hoverState.lng = entry.lng;
+        renderBuildingHover(entry.building, entry.count);
+        placeBuildingHover(entry.lat, entry.lng);
+      } else if (!hoverState.pinned) {
+        closeBuildingHover();
+      }
+    }
   }
 
   function paintMarkerSelection() {
@@ -1296,6 +1625,47 @@
   map.on("zoomend", () => {
     if (suppressMoveFilter) return;
     syncMarkers();
+  });
+  map.on("move", () => {
+    if (hoverState.id != null && hoverState.lat != null && el.bhover.classList.contains("open")) {
+      placeBuildingHover(hoverState.lat, hoverState.lng);
+    }
+  });
+  map.on("dragstart", () => {
+    mapDragging = true;
+    map.getContainer().style.cursor = "";
+    if (!hoverState.pinned) closeBuildingHover();
+  });
+  map.on("dragend", () => { mapDragging = false; });
+  map.on("click", () => {
+    if (suppressMapClick) {
+      suppressMapClick = false;
+      return;
+    }
+    if (hoverState.pinned) closeBuildingHover();
+  });
+  let hoverRaf = 0;
+  let queuedHoverPt = null;
+  map.getContainer().addEventListener("mousemove", (ev) => {
+    if (ev.target.closest && ev.target.closest("input, button, a, .leaflet-control, .map-controls")) {
+      map.getContainer().style.cursor = "";
+      queuedHoverPt = null;
+      if (!hoverState.pinned) scheduleHoverHide();
+      return;
+    }
+    queuedHoverPt = map.mouseEventToContainerPoint(ev);
+    if (hoverRaf) return;
+    hoverRaf = requestAnimationFrame(() => {
+      hoverRaf = 0;
+      if (queuedHoverPt) considerHover(queuedHoverPt);
+    });
+  }, true);
+  map.getContainer().addEventListener("mouseleave", () => {
+    if (!hoverState.pinned) closeBuildingHover();
+  });
+  el.bhClose.addEventListener("click", (ev) => {
+    ev.stopPropagation();
+    closeBuildingHover();
   });
 
   el.btnList.addEventListener("click", () => setMobileView("list"));
