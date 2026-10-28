@@ -36,6 +36,21 @@ Six condominium ads at Marque Sukhumvit (`osm-way-521687098`, Sukhumvit 39 / Phr
 
 Each Marque unit has four photos under `photos/marque-*/`. Searching “Marque” focuses that building. The six units share one map pin with a unit count. Open a unit for the large gallery. D.S. Tower 1 stays as its own pin and uses the same detail view (six photos under `photos/ds-tower-1-sukhumvit-33/`).
 
+## The Estelle Phrom Phong
+
+Six condominium ads at The Estelle Phrom Phong (`osm-way-1037863939`, Sukhumvit 26 / Phrom Phong, Khlong Toei) were copied by hand from public PropertyScout, PropertyHub, and Dot Property pages on 2026-10-28. They are agent listings, not owner-verified, and availability was not confirmed with the owner. No phone or Line contact was copied (`contact` is null). Each `source_url` points at the public ad. Four public-gallery interior photos were saved per unit (`photo_urls`). Coordinates are the building pin from OpenStreetMap.
+
+| Unit | Rent (THB/mo) | Beds | Size |
+| --- | --- | --- | --- |
+| 1BR, floor 30 (PropertyScout 3302373) | 78,000 | 1 | 59.31 sqm |
+| 2BR (PropertyScout 2559552; floor not stated) | 175,000 | 2 | 144 sqm |
+| 1BR, floor 31 (PropertyScout 2799975) | 84,000 | 1 | 59.31 sqm |
+| 2BR, floor 9 (PropertyHub 6084369) | 125,000 | 2 | 93 sqm |
+| 2BR (PropertyScout 3441781; floor not stated) | 160,000 | 2 | 99.6 sqm |
+| 3BR, floor 24 (Dot Property U6844923R) | 210,000 | 3 | 162 sqm |
+
+PropertyScout 2807259 (rented until May 2027) and 2954830 (rented until Jun 2027) were left off. PropertyHub 6196688 redirected to the project index and was absent from the live project page. The 99.6 sqm row is PropertyScout listing 3441781, which the page marks confirmed available a month ago and does not give a floor. Searching “Estelle” focuses the building. The six units share one map pin with the unit count.
+
 ## Run locally
 
 GitHub Pages serves the repository root on `main` (`index.html`, `data/`, `photos/`). The same layout works locally:
@@ -63,7 +78,7 @@ python3 scripts/build_phrom_phong_buildings.py -o data/buildings.json
 
 That reads the public Overpass API. Do not copy names from listing portals.
 
-Do not invent listings. Do not scrape Facebook or other sites that require a login. Do not scrape PropertyHub, DDproperty, or other listing portals further; the Marque rows above are a one-time hand copy of public ads.
+Do not invent listings. Do not scrape Facebook or other sites that require a login. Do not scrape PropertyHub, DDproperty, Dot Property, PropertyScout, or other listing portals further; the Marque and Estelle rows above are one-time hand copies of public ads.
 
 ## EmQuartier hover photos
 
@@ -79,4 +94,4 @@ The page still only opens the card for the EmQuartier center in `index.html` (`E
 
 ## Sources
 
-`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and the one-time hand copy of public Marque Sukhumvit ads.
+`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and the one-time hand copies of public Marque Sukhumvit and The Estelle Phrom Phong ads.
