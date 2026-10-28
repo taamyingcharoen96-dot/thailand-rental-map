@@ -493,12 +493,16 @@
     .gallery-frame {
       position: relative;
       background: #111827;
-      height: clamp(220px, 36vh, 420px);
-      min-height: 220px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      max-height: 72vh;
+      overflow: hidden;
     }
     .gallery-track {
+      position: absolute;
+      inset: 0;
       display: flex;
-      height: 100%;
+      height: auto;
       overflow-x: auto;
       overflow-y: hidden;
       scroll-snap-type: x mandatory;
@@ -844,7 +848,6 @@
       .detail-pane { width: 100%; border-right: none; }
       body.view-map .detail-pane { display: none !important; }
       .detail-map { display: inline-flex; align-items: center; }
-      .gallery-frame { height: clamp(220px, 46vw, 420px); }
     }
     @media (max-width: 480px) {
       .card { grid-template-columns: 1fr; }
