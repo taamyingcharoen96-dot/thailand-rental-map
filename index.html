@@ -205,6 +205,40 @@
     }
     .btn:hover { background: #f3f4f6; }
     .btn-reset { color: var(--muted); }
+    .btn-more.active {
+      border-color: var(--green);
+      color: var(--green-dark);
+      background: #f0fdf4;
+    }
+    .more-filters {
+      display: none;
+      flex: 1 0 100%;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .more-filters.open { display: flex; }
+    .chip-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      height: 36px;
+      padding: 0 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .chip-check input { accent-color: var(--green); }
+    .filter-note {
+      flex: 1 0 100%;
+      margin: 0;
+      font-size: 11px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
     .result-count {
       font-size: 13px;
       color: var(--muted);
@@ -983,9 +1017,11 @@
       </div>
       <select id="beds" aria-label="Bedrooms">
         <option value="">Any beds</option>
+        <option value="studio">Studio</option>
         <option value="1">1 bed</option>
         <option value="2">2 beds</option>
-        <option value="3">3+ beds</option>
+        <option value="3">3 beds</option>
+        <option value="4">4+ beds</option>
       </select>
       <select id="ptype" aria-label="Property type">
         <option value="">Any type</option>
@@ -993,8 +1029,22 @@
         <option value="apartment">Apartment</option>
         <option value="house">House</option>
       </select>
+      <button type="button" class="btn btn-more" id="moreBtn" aria-expanded="false" aria-controls="moreFilters">More filters</button>
       <button type="button" class="btn btn-reset" id="resetBtn">Reset</button>
       <div class="result-count" id="resultCount" role="status">—</div>
+      <div class="more-filters" id="moreFilters">
+        <label class="chip-check">
+          <input type="checkbox" id="pets">
+          Pet friendly
+        </label>
+        <select id="furnish" aria-label="Furnishing">
+          <option value="">Any furnishing</option>
+          <option value="fully">Fully furnished</option>
+          <option value="partly">Partly furnished</option>
+          <option value="unfurnished">Unfurnished</option>
+        </select>
+        <p class="filter-note">Pet friendly and furnishing match only when the listing text states that fact. Listings with no statement stay in the results until that filter is set.</p>
+      </div>
     </div>
   </header>
 
@@ -1227,6 +1277,10 @@
     priceMax: document.getElementById("priceMax"),
     beds: document.getElementById("beds"),
     ptype: document.getElementById("ptype"),
+    moreBtn: document.getElementById("moreBtn"),
+    more: document.getElementById("moreFilters"),
+    pets: document.getElementById("pets"),
+    furnish: document.getElementById("furnish"),
     reset: document.getElementById("resetBtn"),
     count: document.getElementById("resultCount"),
     searchAsMove: document.getElementById("searchAsMove"),
@@ -1269,6 +1323,28 @@
     return listing && listing.building_id ? buildingById.get(listing.building_id) : null;
   }
 
+  function matchesBeds(l) {
+    const beds = el.beds.value;
+    if (!beds) return true;
+    if (l.bedrooms == null) return false;
+    const n = Number(l.bedrooms);
+    if (!Number.isFinite(n)) return false;
+    if (beds === "studio") return n === 0;
+    if (beds === "4") return n >= 4;
+    return n === Number(beds);
+  }
+
+  function matchesPet(l) {
+    if (!el.pets.checked) return true;
+    return l.pet_friendly === true;
+  }
+
+  function matchesFurnish(l) {
+    const want = el.furnish.value;
+    if (!want) return true;
+    return l.furnishing === want;
+  }
+
   function matchesStructural(l) {
     const min = el.priceMin.value !== "" ? Number(el.priceMin.value) : null;
     const max = el.priceMax.value !== "" ? Number(el.priceMax.value) : null;
@@ -1277,12 +1353,10 @@
       if (min != null && Number(l.price_thb) < min) return false;
       if (max != null && Number(l.price_thb) > max) return false;
     }
-    const beds = el.beds.value;
-    if (beds === "1" && !(l.bedrooms === 1)) return false;
-    if (beds === "2" && !(l.bedrooms === 2)) return false;
-    if (beds === "3" && !(Number(l.bedrooms) >= 3)) return false;
+    if (!matchesBeds(l)) return false;
     const pt = el.ptype.value;
     if (pt && normType(l.property_type) !== pt) return false;
+    if (!matchesPet(l) || !matchesFurnish(l)) return false;
     return l.status !== "gone";
   }
 
@@ -1346,11 +1420,16 @@
 
   function metaParts(l) {
     const parts = [];
-    if (l.bedrooms != null) parts.push(`${l.bedrooms} bed${l.bedrooms === 1 ? "" : "s"}`);
+    if (l.bedrooms === 0) parts.push("Studio");
+    else if (l.bedrooms != null) parts.push(`${l.bedrooms} bed${l.bedrooms === 1 ? "" : "s"}`);
     if (l.bathrooms != null) parts.push(`${l.bathrooms} bath${l.bathrooms === 1 ? "" : "s"}`);
     if (l.size_sqm != null) parts.push(`${l.size_sqm} sqm`);
     const tl = typeLabel(l.property_type);
     if (tl) parts.push(tl);
+    if (l.pet_friendly === true) parts.push("Pet friendly");
+    if (l.furnishing === "fully") parts.push("Fully furnished");
+    else if (l.furnishing === "partly") parts.push("Partly furnished");
+    else if (l.furnishing === "unfurnished") parts.push("Unfurnished");
     return parts;
   }
 
@@ -1786,9 +1865,14 @@
     rows.push(factRow("District", l.district));
     rows.push(factRow("City", l.city));
     if (l.province && l.province !== l.city) rows.push(factRow("Province", l.province));
-    if (l.bedrooms != null) rows.push(factRow("Bedrooms", String(l.bedrooms)));
+    if (l.bedrooms === 0) rows.push(factRow("Bedrooms", "Studio"));
+    else if (l.bedrooms != null) rows.push(factRow("Bedrooms", String(l.bedrooms)));
     if (l.bathrooms != null) rows.push(factRow("Bathrooms", String(l.bathrooms)));
     if (l.size_sqm != null) rows.push(factRow("Size", `${l.size_sqm} sqm`));
+    if (l.pet_friendly === true) rows.push(factRow("Pets", "Pet friendly"));
+    else if (l.pet_friendly === false) rows.push(factRow("Pets", "Not pet friendly"));
+    const furnishLabel = { fully: "Fully furnished", partly: "Partly furnished", unfurnished: "Unfurnished" };
+    if (furnishLabel[l.furnishing]) rows.push(factRow("Furnishing", furnishLabel[l.furnishing]));
     rows.push(factRow("Type", typeLabel(l.property_type)));
     if (l.status) rows.push(factRow("Status", STATUS_LABEL[l.status] || l.status));
     if (l.available_from) rows.push(factRow("Available from", formatWhen(l.available_from)));
@@ -2084,6 +2168,60 @@
       }
       setTimeout(() => { suppressMoveFilter = false; syncMarkers(); }, 400);
     }
+    syncMoreLabel();
+    if (urlReady) writeFiltersToUrl();
+  }
+
+  let urlReady = false;
+
+  function setMoreOpen(open) {
+    el.more.classList.toggle("open", open);
+    syncMoreLabel();
+  }
+
+  function syncMoreLabel() {
+    const open = el.more.classList.contains("open");
+    const n = (el.pets.checked ? 1 : 0) + (el.furnish.value ? 1 : 0);
+    el.moreBtn.classList.toggle("active", open || n > 0);
+    el.moreBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    el.moreBtn.textContent = n ? `More filters (${n})` : "More filters";
+  }
+
+  function applyUrlFilters() {
+    const p = new URLSearchParams(location.search);
+    const q = p.get("q");
+    if (q) {
+      suppressSearch = true;
+      el.q.value = q;
+      suppressSearch = false;
+    }
+    const min = p.get("min");
+    const max = p.get("max");
+    if (min != null && min !== "" && Number(min) >= 0) el.priceMin.value = String(Number(min));
+    if (max != null && max !== "" && Number(max) >= 0) el.priceMax.value = String(Number(max));
+    const beds = p.get("beds");
+    if (["studio", "1", "2", "3", "4"].includes(beds)) el.beds.value = beds;
+    const pt = p.get("type");
+    if (pt && [...el.ptype.options].some((o) => o.value === pt)) el.ptype.value = pt;
+    if (p.get("pets") === "1") el.pets.checked = true;
+    const furnish = p.get("furnish");
+    if (["fully", "partly", "unfurnished"].includes(furnish)) el.furnish.value = furnish;
+    if (el.pets.checked || el.furnish.value) setMoreOpen(true);
+  }
+
+  function writeFiltersToUrl() {
+    const p = new URLSearchParams();
+    const q = el.q.value.trim();
+    if (q) p.set("q", q);
+    if (el.priceMin.value !== "") p.set("min", el.priceMin.value);
+    if (el.priceMax.value !== "") p.set("max", el.priceMax.value);
+    if (el.beds.value) p.set("beds", el.beds.value);
+    if (el.ptype.value) p.set("type", el.ptype.value);
+    if (el.pets.checked) p.set("pets", "1");
+    if (el.furnish.value) p.set("furnish", el.furnish.value);
+    const qs = p.toString();
+    const next = qs ? `${location.pathname}?${qs}` : location.pathname;
+    if (location.pathname + location.search !== next) history.replaceState(null, "", next);
   }
 
   function setMobileView(view) {
@@ -2277,17 +2415,22 @@
   });
 
   ["input", "change"].forEach((ev) => {
-    [el.priceMin, el.priceMax, el.beds, el.ptype].forEach((node) => {
+    [el.priceMin, el.priceMax, el.beds, el.ptype, el.furnish].forEach((node) => {
       node.addEventListener(ev, () => refresh());
     });
   });
+  el.pets.addEventListener("change", () => refresh());
+  el.moreBtn.addEventListener("click", () => setMoreOpen(!el.more.classList.contains("open")));
   el.searchAsMove.addEventListener("change", () => refresh());
   el.reset.addEventListener("click", () => {
     el.priceMin.value = "";
     el.priceMax.value = "";
     el.beds.value = "";
     el.ptype.value = "";
+    el.pets.checked = false;
+    el.furnish.value = "";
     el.searchAsMove.checked = false;
+    setMoreOpen(false);
     showAll();
   });
 
@@ -2351,6 +2494,7 @@
   }
 
   const boot = (listings, directory) => {
+    applyUrlFilters();
     allListings = Array.isArray(listings) ? listings : [];
     const buildings = directory && Array.isArray(directory.buildings) ? directory.buildings : [];
     allBuildings = buildings;
@@ -2370,6 +2514,7 @@
     renderHeader(areas);
     areaBbox = directory && directory.area ? directory.area.bbox : null;
     fitAreaSoon();
+    urlReady = true;
   };
 
   const loadJson = (url) => fetch(url).then((r) => {

@@ -154,7 +154,8 @@
       "photos/marque-3br-197-219k-pet/03.jpg",
       "photos/marque-3br-197-219k-pet/04.jpg"
     ],
-    "contact": "See source listing (no contact shown)"
+    "contact": "See source listing (no contact shown)",
+    "pet_friendly": true
   },
   {
     "id": "portal-marque-3br-192-230k-br15903cd",
@@ -402,7 +403,8 @@
       "photos/estelle-3br-162-210k-u6844923/03.jpg",
       "photos/estelle-3br-162-210k-u6844923/04.jpg"
     ],
-    "contact": "See source listing (no contact shown)"
+    "contact": "See source listing (no contact shown)",
+    "pet_friendly": true
   },
   {
     "id": "portal-marque-3br-197-250k-2823962",
@@ -712,7 +714,8 @@
       "photos/hyde-3br-142-220k/03.jpg",
       "photos/hyde-3br-142-220k/04.jpg"
     ],
-    "contact": "LINE @holtop · 063 213 3317"
+    "contact": "LINE @holtop · 063 213 3317",
+    "furnishing": "fully"
   },
   {
     "id": "portal-rhythm-sukhumvit-36-38-studio-24-14k-5444914",
@@ -743,7 +746,8 @@
       "photos/rhythm-sukhumvit-36-38-studio-24-14k-5444914/03.jpg",
       "photos/rhythm-sukhumvit-36-38-studio-24-14k-5444914/04.jpg"
     ],
-    "contact": "LINE @bangkokagency · 0649361416"
+    "contact": "LINE @bangkokagency · 0649361416",
+    "furnishing": "fully"
   },
   {
     "id": "portal-hive-sukhumvit-65-1br-40-18k-6388845",
@@ -774,7 +778,8 @@
       "photos/hive-sukhumvit-65-1br-40-18k-6388845/03.jpg",
       "photos/hive-sukhumvit-65-1br-40-18k-6388845/04.jpg"
     ],
-    "contact": "LINE @092gbvbz · 0944132653"
+    "contact": "LINE @092gbvbz · 0944132653",
+    "furnishing": "fully"
   },
   {
     "id": "portal-the-seed-musee-2br-79-35k-6534245",
@@ -805,7 +810,8 @@
       "photos/the-seed-musee-2br-79-35k-6534245/03.jpg",
       "photos/the-seed-musee-2br-79-35k-6534245/04.jpg"
     ],
-    "contact": "LINE @cutecondo · 0820044299"
+    "contact": "LINE @cutecondo · 0820044299",
+    "furnishing": "fully"
   },
   {
     "id": "portal-royal-kensington-mansion-3br-200-65k-5784429",
@@ -836,7 +842,8 @@
       "photos/royal-kensington-mansion-3br-200-65k-5784429/03.jpg",
       "photos/royal-kensington-mansion-3br-200-65k-5784429/04.jpg"
     ],
-    "contact": "LINE @bangkokresidential · 0634436327"
+    "contact": "LINE @bangkokresidential · 0634436327",
+    "furnishing": "fully"
   },
   {
     "id": "portal-phatsana-garden-4br-345-160k-5001441",
@@ -867,7 +874,9 @@
       "photos/phatsana-garden-4br-345-160k-5001441/03.jpg",
       "photos/phatsana-garden-4br-345-160k-5001441/04.jpg"
     ],
-    "contact": "LINE @bangkokresidential · 0634436327"
+    "contact": "LINE @bangkokresidential · 0634436327",
+    "furnishing": "fully",
+    "pet_friendly": true
   },
   {
     "id": "portal-condolette-dwell-1br-32-20k-4479357",
@@ -991,7 +1000,8 @@
       "photos/siamese-exclusive-42-1br-35-20k-2985078/03.jpg",
       "photos/siamese-exclusive-42-1br-35-20k-2985078/04.jpg"
     ],
-    "contact": "LINE fryethai · 0897491117"
+    "contact": "LINE fryethai · 0897491117",
+    "furnishing": "fully"
   },
   {
     "id": "portal-acadamia-grand-tower-2br-91-45k-4112272",
@@ -1053,7 +1063,8 @@
       "photos/tongtip-mansion-3br-245-85k-6272277/03.jpg",
       "photos/tongtip-mansion-3br-245-85k-6272277/04.jpg"
     ],
-    "contact": "LINE @bangkokresidential · 0634436327"
+    "contact": "LINE @bangkokresidential · 0634436327",
+    "furnishing": "fully"
   },
   {
     "id": "portal-zenith-place-1br-4057-20k-6502612",
@@ -1177,7 +1188,8 @@
       "photos/the-room-sukhumvit-40-1br-42-22k-6525661/03.jpg",
       "photos/the-room-sukhumvit-40-1br-42-22k-6525661/04.jpg"
     ],
-    "contact": "LINE @375pabiv · 0943905219"
+    "contact": "LINE @375pabiv · 0943905219",
+    "furnishing": "fully"
   },
   {
     "id": "portal-the-madison-2br-115-70k-6286747",
@@ -1239,7 +1251,8 @@
       "photos/noble-remix-1br-44-23k-5681924/03.jpg",
       "photos/noble-remix-1br-44-23k-5681924/04.jpg"
     ],
-    "contact": "LINE @839owdml · 0630795665"
+    "contact": "LINE @839owdml · 0630795665",
+    "furnishing": "fully"
   },
   {
     "id": "portal-the-alcove-49-2br-110-72k-6182458",
@@ -1301,7 +1314,8 @@
       "photos/the-prestige-49-3br-210-86k-4981215/03.jpg",
       "photos/the-prestige-49-3br-210-86k-4981215/04.jpg"
     ],
-    "contact": "LINE @bangkokresidential · 0634436327"
+    "contact": "LINE @bangkokresidential · 0634436327",
+    "furnishing": "fully"
   },
   {
     "id": "portal-noble-refine-1br-335-24k-5949081",
@@ -1425,7 +1439,8 @@
       "photos/38-mansion-1br-57-25k-6404018/03.jpg",
       "photos/38-mansion-1br-57-25k-6404018/04.jpg"
     ],
-    "contact": "LINE @235dkbrm · 0654731049"
+    "contact": "LINE @235dkbrm · 0654731049",
+    "pet_friendly": true
   },
   {
     "id": "portal-vittorio-2br-12743-140k-5621420",
@@ -1487,6 +1502,7 @@
       "photos/the-strand-thonglor-1br-53-72k-6372527/03.jpg",
       "photos/the-strand-thonglor-1br-53-72k-6372527/04.jpg"
     ],
-    "contact": "LINE @connexproperty · 0990199900"
+    "contact": "LINE @connexproperty · 0990199900",
+    "furnishing": "fully"
   }
 ]

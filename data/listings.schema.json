@@ -43,6 +43,15 @@
     "contact": {
       "type": ["string", "null"],
       "description": "Phone, Line, or other contact string. Null when the owner has not provided one."
+    },
+    "pet_friendly": {
+      "type": ["boolean", "null"],
+      "description": "Optional. True only when the listing text says pets are allowed. False only when it says they are not. Null or omitted means unknown. Unknown listings stay visible until the pet-friendly filter is set."
+    },
+    "furnishing": {
+      "type": ["string", "null"],
+      "enum": ["fully", "partly", "unfurnished", null],
+      "description": "Optional. fully, partly, or unfurnished, and only when the listing text states it. Null or omitted means unknown. Unknown listings stay visible until a furnishing filter is set."
     }
   },
   "required": [
