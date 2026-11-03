@@ -70,6 +70,40 @@ Eight more condominium ads in that rent band were copied by hand on 2026-10-28 f
 
 No public ฿200,000–฿400,000 ad was found for a named building in the Ari area. Ritz-Carlton Residences, The Monument Thonglo, GM Height, and Le Raffiné Sukhumvit 39 are not in the building directory, so those seed ads were not added. FazWaz Tela Thonglor U1387992 says available from 15 Mar 2027 and was left off.
 
+## Thonglor rentals
+
+Twenty-five more condominium and apartment ads within about 1.5 km of BTS Thong Lo were copied on 2026-11-04 from public PropertyHub pages. One unit per project. Each `building_id` is an existing directory pin, and the coordinates are that pin. They are agent listings, not owner-verified. Each `contact` is the Line id and phone on the ad. Four public-gallery photos were saved per unit.
+
+| Project | Rent (THB/mo) | Beds | Size | Contact |
+| --- | --- | --- | --- | --- |
+| Rhythm Sukhumvit 36-38 | 13,999 | Studio | 24 sqm | LINE @bangkokagency · 0649361416 |
+| Hive Sukhumvit 65 | 18,000 | 1 | 40 sqm | LINE @092gbvbz · 0944132653 |
+| Condolette Dwell | 20,000 | 1 | 32 sqm | LINE @connexproperty · 0990199900 |
+| Siamese Exclusive 42 | 20,000 | 1 | 35 sqm | LINE fryethai · 0897491117 |
+| Zenith Place | 20,000 | 1 | 40.57 sqm | LINE @connexproperty · 0990199900 |
+| The Room Sukhumvit 40 | 22,000 | 1 | 42 sqm | LINE @375pabiv · 0943905219 |
+| Noble Remix | 23,000 | 1 | 44 sqm | LINE @839owdml · 0630795665 |
+| Noble Refine | 24,000 | 1 | 33.5 sqm | LINE @connexproperty · 0990199900 |
+| 38 Mansion | 25,000 | 1 | 57 sqm | LINE @235dkbrm · 0654731049 |
+| The Seed Musee | 35,000 | 2 | 79 sqm | LINE @cutecondo · 0820044299 |
+| La Vie En Rose | 45,000 | 2 | 85 sqm | LINE @connexproperty · 0990199900 |
+| Acadamia Grand Tower | 45,000 | 2 | 91 sqm | LINE @connexproperty · 0990199900 |
+| Baan Suanpetch | 55,000 | 2 | 130 sqm | LINE @connexproperty · 0990199900 |
+| Royal Kensington Mansion | 65,000 | 3 | 200 sqm | LINE @bangkokresidential · 0634436327 |
+| The Madison | 70,000 | 2 | 115 sqm | LINE @connexproperty · 0990199900 |
+| The Alcove 49 | 72,000 | 2 | 110 sqm | LINE @connexproperty · 0990199900 |
+| The Strand Thonglor | 72,000 | 1 | 53 sqm | LINE @connexproperty · 0990199900 |
+| Premier Condominium | 75,000 | 3 | 228 sqm | LINE @513eqepl · 024607070 |
+| Tongtip Mansion | 85,000 | 3 | 245 sqm | LINE @bangkokresidential · 0634436327 |
+| Siri Residence | 85,000 | 3 | 141 sqm | LINE @connexproperty · 0990199900 |
+| The Prestige 49 | 86,000 | 3 | 210 sqm | LINE @bangkokresidential · 0634436327 |
+| Fullerton | 95,000 | 3 | 172 sqm | LINE @eastblue · 0642748883 |
+| Kraam Sukhumvit 26 | 110,000 | 2 | 110 sqm | LINE @connexproperty · 0990199900 |
+| Vittorio | 140,000 | 2 | 127.43 sqm | LINE @connexproperty · 0990199900 |
+| Phatsana Garden | 160,000 | 4 | 345 sqm | LINE @bangkokresidential · 0634436327 |
+
+Ads whose portal pin did not match the directory building were left off, including Greenery Place, Aree Place, Lumpini Suite, and River Place. A PropertyHub ad filed under Grand 39 Tower whose title names D.H. Grand Tower was left off. Khun by Yoo, Tela Thonglor, and Hyde Heritage Thonglor already had ads and were not repeated.
+
 ## Run locally
 
 GitHub Pages serves the repository root on `main` (`index.html`, `data/`, `photos/`). The same layout works locally:
@@ -113,4 +147,4 @@ The page still only opens the card for the EmQuartier center in `index.html` (`E
 
 ## Sources
 
-`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and hand copies of public ads at Marque Sukhumvit, The Estelle Phrom Phong, and the other ฿200,000–฿400,000 projects listed above.
+`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and hand copies of public ads at Marque Sukhumvit, The Estelle Phrom Phong, the other ฿200,000–฿400,000 projects, and the Thonglor rentals listed above.
