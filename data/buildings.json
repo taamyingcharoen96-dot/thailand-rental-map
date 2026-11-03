@@ -1,8 +1,8 @@
 {
   "area": {
     "id": "bangkok",
-    "name": "Sukhumvit (Nana–Bearing), Ari and Silom–Sathorn",
-    "description": "Every residential building within 2.5 km of a BTS Sukhumvit station from Nana (E3) through Bearing (E14), within 2.5 km of BTS Ari, and within 2.5 km of BTS Sala Daeng (Silom–Sathorn). A building in more than one station area is stored once.",
+    "name": "Sukhumvit (Nana–Bearing), Ari, Silom–Sathorn and Bang Na (BITEC)",
+    "description": "Every residential building within 2.5 km of a BTS Sukhumvit station from Nana (E3) through Bearing (E14), within 2.5 km of BTS Ari, within 2.5 km of BTS Sala Daeng (Silom–Sathorn), and within 2.5 km of BITEC in Bang Na. A building in more than one station area is stored once. Condominium projects inside the BITEC circle that were not already in OpenStreetMap were added from public FazWaz project pages, with that page's coordinates.",
     "bbox": {
       "south": 13.638726820625225,
       "west": 100.5112233533952,
@@ -234,10 +234,26 @@
         "lat": 13.7285677,
         "lng": 100.5343416
       }
+    },
+    {
+      "id": "bang-na-bitec",
+      "name": "Bang Na (BITEC)",
+      "kind": "radius",
+      "corridor": "bang-na-bitec",
+      "radius_m": 2500,
+      "description": "Residential buildings within 2500 m of BITEC (Bangkok International Trade & Exhibition Centre, OpenStreetMap way/25621160). BTS Bang Na (E13, node/5391610964) is 455 m west.",
+      "station": {
+        "name": "BITEC",
+        "name_th": "ไบเทค",
+        "ref": null,
+        "osm_id": "way/25621160",
+        "lat": 13.6697339,
+        "lng": 100.608542
+      }
     }
   ],
   "attribution": "© OpenStreetMap contributors. Building names, addresses, and locations are from OpenStreetMap, available under the Open Database License (ODbL).",
-  "retrieved_at": "2026-10-27",
+  "retrieved_at": "2026-11-03",
   "buildings": [
     {
       "id": "osm-way-532862534",
@@ -498,6 +514,29 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/1231343547"
+    },
+    {
+      "id": "fazwaz-315",
+      "name": "Abstracts Sukhumvit 66/1",
+      "name_en": "Abstracts Sukhumvit 66/1",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6800793,
+      "lng": 100.6072818,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/abstracts-sukhumvit-661",
+      "address": "895 ซอย สุขุมวิท 66/1 Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
     },
     {
       "id": "osm-way-76510923",
@@ -787,11 +826,32 @@
         "on-nut",
         "bang-chak",
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/332038795"
+    },
+    {
+      "id": "fazwaz-155717",
+      "name": "ARLO Sukhumvit 105 - Lasalle",
+      "name_en": "ARLO Sukhumvit 105 - Lasalle",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6622756,
+      "lng": 100.609503,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/arlo-sukhumvit-105-lasalle"
     },
     {
       "id": "osm-way-371218879",
@@ -1065,6 +1125,45 @@
       "osm_ref": "way/332658494"
     },
     {
+      "id": "fazwaz-107840",
+      "name": "B - Loft Lite Sukhumvit 107",
+      "name_en": "B - Loft Lite Sukhumvit 107",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6575743,
+      "lng": 100.6065236,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/b-loft-lite-sukhumvit-107"
+    },
+    {
+      "id": "fazwaz-b-loft-sukhumvit-107",
+      "name": "B Loft Sukhumvit 107",
+      "name_en": "B Loft Sukhumvit 107",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.658649,
+      "lng": 100.606083,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/b-loft-sukhumvit-107"
+    },
+    {
       "id": "osm-way-794455181",
       "name": "B Republic Condominium",
       "name_en": "B Republic Condominium",
@@ -1077,7 +1176,8 @@
       "lng": 100.6247662,
       "areas": [
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -1368,7 +1468,8 @@
         "on-nut",
         "bang-chak",
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -2018,11 +2119,53 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/586478902"
+    },
+    {
+      "id": "fazwaz-1369",
+      "name": "Bangna Residence",
+      "name_en": "Bangna Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6749591,
+      "lng": 100.5990302,
+      "areas": [
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/bangna-residence"
+    },
+    {
+      "id": "fazwaz-139862",
+      "name": "Bearing Residence",
+      "name_en": "Bearing Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6578702,
+      "lng": 100.6089816,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/bearing-residence"
     },
     {
       "id": "osm-way-76510916",
@@ -2108,6 +2251,28 @@
       "source": "openstreetmap",
       "osm_ref": "way/331962381",
       "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
+    },
+    {
+      "id": "fazwaz-1422",
+      "name": "Beyond Sukhumvit",
+      "name_en": "Beyond Sukhumvit",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6765667,
+      "lng": 100.6009597,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/beyond-sukhumvit"
     },
     {
       "id": "osm-way-324280541",
@@ -2343,6 +2508,26 @@
       "osm_ref": "way/1251934131"
     },
     {
+      "id": "fazwaz-109382",
+      "name": "BRIXTON Pet and Play Sukhumvit 107",
+      "name_en": "BRIXTON Pet and Play Sukhumvit 107",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6567421,
+      "lng": 100.6021707,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/brixton-pet-and-play-sukhumvit-107",
+      "address": "3/107 Sukhumvit 107 Rd, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
+    },
+    {
       "id": "osm-way-333134178",
       "name": "BRO Building",
       "name_en": "BRO Building",
@@ -2362,6 +2547,26 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/333134178"
+    },
+    {
+      "id": "fazwaz-155807",
+      "name": "Brompton Pet Friendly Sukhumvit 107",
+      "name_en": "Brompton Pet Friendly Sukhumvit 107",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6566028,
+      "lng": 100.6021795,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/brompton-pet-friendly-sukhumvit-107",
+      "address": "4 Sukhumvit 109, Tambon Sam Rong Nua, Amphoe Mueang Samut Prakan, Chang Wat Samut Prakan 10270, Thailand"
     },
     {
       "id": "osm-way-318942792",
@@ -2480,6 +2685,26 @@
       "osm_ref": "way/1151095320"
     },
     {
+      "id": "fazwaz-1449",
+      "name": "Cassia",
+      "name_en": "Cassia",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.657984,
+      "lng": 100.606231,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/cassia"
+    },
+    {
       "id": "osm-way-25053995",
       "name": "Cedar Tower",
       "name_en": "Cedar Tower",
@@ -2589,6 +2814,28 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/164623309"
+    },
+    {
+      "id": "fazwaz-1171",
+      "name": "Centric Scene Sukhumvit 64",
+      "name_en": "Centric Scene Sukhumvit 64",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6837393,
+      "lng": 100.6098515,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/centric-scene-sukhumvit-64",
+      "address": "3058/7 Sukhumvit Rd, Khwaeng Bang Chak, Khet Phra Khanong, Krung Thep Maha Nakhon 10260, Thailand"
     },
     {
       "id": "osm-way-1067048599",
@@ -2886,6 +3133,28 @@
       "osm_ref": "way/458203272"
     },
     {
+      "id": "fazwaz-119232",
+      "name": "Chateau In Town Sukhumvit 64/1",
+      "name_en": "Chateau In Town Sukhumvit 64/1",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.686019,
+      "lng": 100.6089475,
+      "areas": [
+        "on-nut",
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/phra-khanong/bang-chak/chateau-in-town-sukhumvit-641"
+    },
+    {
       "id": "osm-way-374417561",
       "name": "Chatra Court",
       "name_en": "Chatra Court",
@@ -3027,7 +3296,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3047,7 +3317,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3429,6 +3700,27 @@
       "photo_url": "photos/buildings/osm-way-340330015.jpg"
     },
     {
+      "id": "fazwaz-93624",
+      "name": "Deco Condominium",
+      "name_en": "Deco Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6605045,
+      "lng": 100.5985448,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/deco-condominium",
+      "address": "28/68 Sukhumvit 70/4 Alley, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
+    },
+    {
       "id": "osm-way-1217841955",
       "name": "Department of Civil Aviation officials' Residences",
       "name_en": "Department of Civil Aviation officials' Residences",
@@ -3505,6 +3797,49 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/328744113"
+    },
+    {
+      "id": "fazwaz-37072",
+      "name": "Dolce Lasalle",
+      "name_en": "Dolce Lasalle",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.66442,
+      "lng": 100.606704,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/dolce-lasalle"
+    },
+    {
+      "id": "fazwaz-41314",
+      "name": "Dolce Udomsuk",
+      "name_en": "Dolce Udomsuk",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6759131,
+      "lng": 100.6123713,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/dolce-udomsuk",
+      "address": "136 Sukhumvit 103 Rd, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
     },
     {
       "id": "osm-way-162623025",
@@ -3670,6 +4005,29 @@
       "osm_ref": "relation/7596710"
     },
     {
+      "id": "fazwaz-40061",
+      "name": "Elio Del Nest",
+      "name_en": "Elio Del Nest",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6787738,
+      "lng": 100.6157243,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/elio-del-nest",
+      "address": "ซอย อุดมสุข ซอย สุขุมวิท 103 Bang Na, Bangkok 10260, Thailand"
+    },
+    {
       "id": "osm-way-1414449922",
       "name": "Elio Del Ray Condo",
       "name_en": "Elio Del Ray Condo",
@@ -3685,7 +4043,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3707,7 +4066,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3862,7 +4222,8 @@
       "lng": 100.6051454,
       "areas": [
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3879,7 +4240,8 @@
       "lng": 100.607747,
       "areas": [
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4000,7 +4362,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4292,7 +4655,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4546,7 +4910,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4707,6 +5072,28 @@
       "photo_url": "photos/buildings/osm-way-176332733.jpg"
     },
     {
+      "id": "fazwaz-1745",
+      "name": "Ideo Blucove Sukhumvit",
+      "name_en": "Ideo Blucove Sukhumvit",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6786012,
+      "lng": 100.6083641,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/ideo-blucove-sukhumvit"
+    },
+    {
       "id": "osm-way-322651075",
       "name": "Ideo Mix Phaholyothin",
       "name_en": "Ideo Mix Phaholyothin",
@@ -4721,6 +5108,28 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/322651075"
+    },
+    {
+      "id": "fazwaz-1792",
+      "name": "Ideo Mix Sukhumvit 103",
+      "name_en": "Ideo Mix Sukhumvit 103",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6788716,
+      "lng": 100.6112361,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/ideo-mix-sukhumvit-103"
     },
     {
       "id": "osm-way-783792728",
@@ -4798,7 +5207,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4816,7 +5226,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4834,7 +5245,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4858,6 +5270,28 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/331962362"
+    },
+    {
+      "id": "fazwaz-37118",
+      "name": "Ideo O2",
+      "name_en": "Ideo O2",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.673233,
+      "lng": 100.604486,
+      "areas": [
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/ideo-o2",
+      "address": "195 Sanphawut Rd, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
     },
     {
       "id": "osm-way-1251790988",
@@ -5570,6 +6004,44 @@
       "osm_ref": "way/1104891322"
     },
     {
+      "id": "fazwaz-3243",
+      "name": "Knightsbridge Bearing",
+      "name_en": "Knightsbridge Bearing",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.657509,
+      "lng": 100.603326,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/knightsbridge-bearing"
+    },
+    {
+      "id": "fazwaz-106478",
+      "name": "KnightsBridge Collage Sukhumvit 107",
+      "name_en": "KnightsBridge Collage Sukhumvit 107",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6578449,
+      "lng": 100.6028713,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/knightsbridge-collage-sukhumvit-107"
+    },
+    {
       "id": "osm-way-1055622521",
       "name": "KnightsBridge Space Rama 9",
       "name_en": "KnightsBridge Space Rama 9",
@@ -5749,6 +6221,28 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/329745923"
+    },
+    {
+      "id": "fazwaz-52189",
+      "name": "Le Crique Condo",
+      "name_en": "Le Crique Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.685435,
+      "lng": 100.609502,
+      "areas": [
+        "on-nut",
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/phra-khanong/bang-chak/le-crique-condo"
     },
     {
       "id": "osm-way-506792945",
@@ -6489,11 +6983,33 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/435996901"
+    },
+    {
+      "id": "fazwaz-108444",
+      "name": "Manhattan Park Residence",
+      "name_en": "Manhattan Park Residence",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6577959,
+      "lng": 100.6096442,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/manhattan-park-residence",
+      "address": "150 Lasalle 8 Alley, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10270, Thailand"
     },
     {
       "id": "osm-way-331962398",
@@ -6513,6 +7029,25 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/331962398"
+    },
+    {
+      "id": "fazwaz-176529",
+      "name": "Mansion 107",
+      "name_en": "Mansion 107",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6560403,
+      "lng": 100.6066323,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/mansion-107"
     },
     {
       "id": "osm-way-389356046",
@@ -6633,7 +7168,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -7180,6 +7716,25 @@
       "photo_url": "photos/buildings/osm-way-338364612.jpg"
     },
     {
+      "id": "fazwaz-4501",
+      "name": "Niche Mono Sukhumvit - Bearing",
+      "name_en": "Niche Mono Sukhumvit - Bearing",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6583438,
+      "lng": 100.599935,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/niche-mono-sukhumvit-bearing"
+    },
+    {
       "id": "osm-way-331962417",
       "name": "Nida Mansion",
       "name_en": "Nida Mansion",
@@ -7443,6 +7998,27 @@
       "osm_ref": "way/1223410442"
     },
     {
+      "id": "fazwaz-144008",
+      "name": "Notting Hill Bearing",
+      "name_en": "Notting Hill Bearing",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6648088,
+      "lng": 100.6056316,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/notting-hill-bearing",
+      "address": "15/33 Sukhumvit Rd, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
+    },
+    {
       "id": "osm-way-1251549821",
       "name": "Notting Hill Jatujak Interchange",
       "name_en": "Notting Hill Jatujak Interchange",
@@ -7459,6 +8035,46 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/1251549821"
+    },
+    {
+      "id": "fazwaz-39861",
+      "name": "Notting Hill Sukhumvit 105",
+      "name_en": "Notting Hill Sukhumvit 105",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6623121,
+      "lng": 100.6071531,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/notting-hill-sukhumvit-105"
+    },
+    {
+      "id": "fazwaz-39541",
+      "name": "Notting Hill Sukhumvit 107",
+      "name_en": "Notting Hill Sukhumvit 107",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6589217,
+      "lng": 100.6058506,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/notting-hill-sukhumvit-107"
     },
     {
       "id": "osm-way-155414478",
@@ -7948,7 +8564,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -8210,7 +8827,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -8536,7 +9154,8 @@
       "lng": 100.6205801,
       "areas": [
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -8931,6 +9550,50 @@
       "osm_ref": "way/551601400"
     },
     {
+      "id": "fazwaz-556",
+      "name": "Regent Home 7 Sukhumvit",
+      "name_en": "Regent Home 7 Sukhumvit",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6756634,
+      "lng": 100.602868,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/regent-home-7-sukhumvit"
+    },
+    {
+      "id": "fazwaz-114938",
+      "name": "Regent Home Bangna",
+      "name_en": "Regent Home Bangna",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6736977,
+      "lng": 100.6024241,
+      "areas": [
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/regent-home-bangna",
+      "address": "67 Sanphawut Rd, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
+    },
+    {
       "id": "osm-way-300817299",
       "name": "Regent On The Park 1",
       "name_en": "Regent On The Park 1",
@@ -8965,7 +9628,8 @@
         "on-nut",
         "bang-chak",
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -9276,6 +9940,27 @@
       "osm_ref": "way/330244560"
     },
     {
+      "id": "fazwaz-115012",
+      "name": "Rye Sukhumvit 101/1",
+      "name_en": "Rye Sukhumvit 101/1",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6852885,
+      "lng": 100.6247721,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/phra-khanong/bang-chak/rye-sukhumvit-1011",
+      "address": "386 Sukhumvit 101/1 Rd, Khwaeng Bang Chak, Khet Phra Khanong, Krung Thep Maha Nakhon 10260, Thailand"
+    },
+    {
       "id": "osm-way-318025271",
       "name": "S & S Sukhumivit Condo",
       "name_en": "S & S Sukhumivit Condo",
@@ -9290,7 +9975,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -9346,7 +10032,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -9680,7 +10367,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10337,7 +11025,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10356,7 +11045,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10375,7 +11065,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10394,7 +11085,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10413,7 +11105,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10614,7 +11307,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10633,7 +11327,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10652,7 +11347,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10974,6 +11670,27 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/340680512"
+    },
+    {
+      "id": "fazwaz-3188",
+      "name": "Supalai City Resort Bearing Station Sukumvit 105",
+      "name_en": "Supalai City Resort Bearing Station Sukumvit 105",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6614109,
+      "lng": 100.6059336,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/supalai-city-resort-bearing-station-sukumvit-105",
+      "address": "23/12 สุขุมวิท Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
     },
     {
       "id": "osm-way-1020471361",
@@ -11500,7 +12217,8 @@
       "areas": [
         "bang-chak",
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -11796,11 +12514,33 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/1392707707"
+    },
+    {
+      "id": "fazwaz-459",
+      "name": "The Coast Bangkok",
+      "name_en": "The Coast Bangkok",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6713857,
+      "lng": 100.603411,
+      "areas": [
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/the-coast-bangkok"
     },
     {
       "id": "osm-way-330242728",
@@ -12033,6 +12773,106 @@
       "photo_url": "photos/buildings/osm-way-1037863939.jpg"
     },
     {
+      "id": "fazwaz-3212",
+      "name": "The Excel Bearing",
+      "name_en": "The Excel Bearing",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6625847,
+      "lng": 100.6087579,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/the-excel-bearing"
+    },
+    {
+      "id": "fazwaz-3230",
+      "name": "The Excel Hybrid",
+      "name_en": "The Excel Hybrid",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6605031,
+      "lng": 100.6038905,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/the-excel-hybrid"
+    },
+    {
+      "id": "fazwaz-114888",
+      "name": "The Excel Parc",
+      "name_en": "The Excel Parc",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6616174,
+      "lng": 100.611347,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/the-excel-parc"
+    },
+    {
+      "id": "fazwaz-116426",
+      "name": "The Gallery Bearing",
+      "name_en": "The Gallery Bearing",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.657403,
+      "lng": 100.6041143,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/the-gallery-bearing",
+      "address": "2094 Bearing 4 Aly, Tambon Sam Rong Nua, Amphoe Mueang Samut Prakan, Chang Wat Samut Prakan 10270, Thailand"
+    },
+    {
+      "id": "fazwaz-1399",
+      "name": "The Gallery Condominium",
+      "name_en": "The Gallery Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6573713,
+      "lng": 100.6038914,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/the-gallery-condominium",
+      "address": "1748 Sukhumvit 78 Alley, Tambon Sam Rong Nua, Amphoe Mueang Samut Prakan, Chang Wat Samut Prakan 10270, Thailand"
+    },
+    {
       "id": "osm-way-341210908",
       "name": "The Garden Place",
       "name_en": "The Garden Place",
@@ -12094,6 +12934,45 @@
       "locality": "คลองตัน, คลองเตย, กรุงเทพมหานคร 10110"
     },
     {
+      "id": "fazwaz-5829",
+      "name": "The Knight I",
+      "name_en": "The Knight I",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.657487,
+      "lng": 100.606155,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/the-knight-i"
+    },
+    {
+      "id": "fazwaz-9313",
+      "name": "The Knight II",
+      "name_en": "The Knight II",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6578529,
+      "lng": 100.6058133,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/the-knight-ii"
+    },
+    {
       "id": "osm-way-324138303",
       "name": "The Lakes",
       "name_en": "The Lakes",
@@ -12148,7 +13027,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -12170,11 +13050,34 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/544312080"
+    },
+    {
+      "id": "fazwaz-1206",
+      "name": "The Living Tower Sukhumvit 64",
+      "name_en": "The Living Tower Sukhumvit 64",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6851492,
+      "lng": 100.6062088,
+      "areas": [
+        "on-nut",
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/phra-khanong/bang-chak/the-living-tower-sukhumvit-64"
     },
     {
       "id": "osm-way-194447054",
@@ -12277,6 +13180,28 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/40057213"
+    },
+    {
+      "id": "fazwaz-1210",
+      "name": "The Muse Sukhumvit 64/2",
+      "name_en": "The Muse Sukhumvit 64/2",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.685132,
+      "lng": 100.609395,
+      "areas": [
+        "on-nut",
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/phra-khanong/bang-chak/the-muse-sukhumvit-642"
     },
     {
       "id": "osm-way-329428591",
@@ -12442,6 +13367,27 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "relation/7198362"
+    },
+    {
+      "id": "fazwaz-106436",
+      "name": "The Origin Sukhumvit 105",
+      "name_en": "The Origin Sukhumvit 105",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.662757,
+      "lng": 100.6166704,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/the-origin-sukhumvit-105",
+      "address": "652 Lasalle 30 Alley, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
     },
     {
       "id": "osm-way-176332764",
@@ -12761,6 +13707,28 @@
       "photo_url": "photos/buildings/osm-way-330253797.jpg"
     },
     {
+      "id": "fazwaz-2004",
+      "name": "The Sense Sukhumvit",
+      "name_en": "The Sense Sukhumvit",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.677986,
+      "lng": 100.6067234,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/the-sense-sukhumvit"
+    },
+    {
       "id": "osm-relation-7508677",
       "name": "The Sky Sukhumvit",
       "name_en": "The Sky Sukhumvit",
@@ -12773,7 +13741,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -12853,6 +13822,27 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/900663725"
+    },
+    {
+      "id": "fazwaz-562",
+      "name": "The Village Condominium",
+      "name_en": "The Village Condominium",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.667743,
+      "lng": 100.616116,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/the-village-condominium",
+      "address": "1016/10 ถนนบางนา-ตราด Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
     },
     {
       "id": "osm-way-324280501",
@@ -13405,7 +14395,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13511,7 +14502,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13552,6 +14544,83 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/321882293"
+    },
+    {
+      "id": "fazwaz-very-condo",
+      "name": "Very Condo",
+      "name_en": "Very Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6584581,
+      "lng": 100.5984985,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/very-condo"
+    },
+    {
+      "id": "fazwaz-91770",
+      "name": "Very II Sukhumvit 72",
+      "name_en": "Very II Sukhumvit 72",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.659185,
+      "lng": 100.5987997,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/very-ii-sukhumvit-72"
+    },
+    {
+      "id": "fazwaz-113948",
+      "name": "Very III Sukhumvit 72",
+      "name_en": "Very III Sukhumvit 72",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6592485,
+      "lng": 100.598707,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/very-iii-sukhumvit-72"
+    },
+    {
+      "id": "fazwaz-10137",
+      "name": "Very Lasalle",
+      "name_en": "Very Lasalle",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6583751,
+      "lng": 100.6131797,
+      "areas": [
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/very-lasalle"
     },
     {
       "id": "osm-way-340231167",
@@ -13647,7 +14716,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13784,6 +14854,25 @@
       "osm_ref": "way/1510233556"
     },
     {
+      "id": "fazwaz-134632",
+      "name": "Vivere By Very Condo",
+      "name_en": "Vivere By Very Condo",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6586562,
+      "lng": 100.596423,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/samut-prakan/mueang-samut-prakan/samrong-nuea/vivere-by-very-condo"
+    },
+    {
       "id": "osm-way-539298483",
       "name": "Voque",
       "name_en": "Voque",
@@ -13801,6 +14890,25 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/539298483"
+    },
+    {
+      "id": "fazwaz-600",
+      "name": "Voque Place Sukhumvit 107",
+      "name_en": "Voque Place Sukhumvit 107",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6578404,
+      "lng": 100.6017346,
+      "areas": [
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/voque-place-sukhumvit-107"
     },
     {
       "id": "osm-way-1103566240",
@@ -13838,6 +14946,29 @@
       "named": true,
       "source": "openstreetmap",
       "osm_ref": "way/1362796905"
+    },
+    {
+      "id": "fazwaz-118304",
+      "name": "Wander Wonder",
+      "name_en": "Wander Wonder",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6809562,
+      "lng": 100.6113825,
+      "areas": [
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bearing",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/bang-na/bang-na/wander-wonder",
+      "address": "80/20 Udom Suk 7, Khwaeng Bang Na, Khet Bang Na, Krung Thep Maha Nakhon 10260, Thailand"
     },
     {
       "id": "osm-way-76510915",
@@ -13921,6 +15052,29 @@
       "locality": "คลองตันเหนือ, วัฒนา, กรุงเทพมหานคร 10110"
     },
     {
+      "id": "fazwaz-162",
+      "name": "Whizdom 101",
+      "name_en": "Whizdom 101",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.6856974,
+      "lng": 100.6107152,
+      "areas": [
+        "on-nut",
+        "bang-chak",
+        "punnawithi",
+        "udom-suk",
+        "bang-na",
+        "bang-na-bitec"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/phra-khanong/bang-chak/whizdom-101",
+      "address": "3079/23 Piyabutr 1 Alley, Khwaeng Bang Chak, Khet Phra Khanong, Krung Thep Maha Nakhon 10260, Thailand"
+    },
+    {
       "id": "osm-way-712650471",
       "name": "Whizdom Connect Sukhumvit",
       "name_en": "Whizdom Connect Sukhumvit",
@@ -13934,7 +15088,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13953,7 +15108,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13972,7 +15128,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -115850,7 +117007,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -115950,7 +117108,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116172,7 +117331,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116276,7 +117436,8 @@
       "lng": 100.6178109,
       "areas": [
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116735,7 +117896,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116769,7 +117931,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116820,7 +117983,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116889,7 +118053,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",

@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Build data/buildings.json for the Sukhumvit corridor, Ari, and Silom–Sathorn.
+"""Build data/buildings.json for the Sukhumvit corridor, Ari, Silom–Sathorn, and Bang Na (BITEC).
 
 Sukhumvit is every residential building whose center is within 2.5 km of a
 BTS station from Nana (E3) through Bearing (E14). Ari and Silom–Sathorn stay
-2.5 km radii around BTS Ari and BTS Sala Daeng. Station coordinates are the
-OpenStreetMap railway=station nodes. Buildings in more than one station area
-are stored once and list every area they fall in. Unnamed buildings are
-included only when the address is specific enough to label them.
+2.5 km radii around BTS Ari and BTS Sala Daeng. Bang Na (BITEC) is a 2.5 km
+radius around the OpenStreetMap centroid of BITEC (way/25621160), not the
+BTS Bang Na station. Station coordinates are OpenStreetMap railway=station
+nodes, except BITEC. Buildings in more than one station area are stored once
+and list every area they fall in. Unnamed buildings are included only when
+the address is specific enough to label them.
 Data is © OpenStreetMap contributors, ODbL.
 """
 
@@ -26,7 +28,7 @@ from pathlib import Path
 RADIUS_M = 2500
 
 
-def station(id, name, osm_name, name_th, ref, osm_id, lat, lng, corridor, detail=None):
+def station(id, name, osm_name, name_th, ref, osm_id, lat, lng, corridor, detail=None, description=None):
     row = {
         "id": id,
         "name": name,
@@ -40,11 +42,15 @@ def station(id, name, osm_name, name_th, ref, osm_id, lat, lng, corridor, detail
     }
     if detail:
         row["detail"] = detail
+    if description:
+        row["description"] = description
     return row
 
 
-# Sukhumvit line order, Nana (E3) through Bearing (E14), then Ari and Silom–Sathorn.
-# Coordinates are OpenStreetMap railway=station nodes.
+# Sukhumvit line order, Nana (E3) through Bearing (E14), then Ari, Silom–Sathorn,
+# and Bang Na (BITEC). BTS coordinates are OpenStreetMap railway=station nodes.
+# BITEC is the out-center centroid of way/25621160 (13.6697339, 100.608542),
+# 455 m east of BTS Bang Na (node/5391610964, 13.668138, 100.6046633).
 STATIONS = {
     "nana": station("nana", "Nana", "Nana", "นานา", "E3", "node/5391628766", 13.7405358, 100.5554291, "sukhumvit"),
     "asok": station("asok", "Asok", "Asok", "อโศก", "E4", "node/5391625873", 13.7370432, 100.5603571, "sukhumvit", "interchange with MRT Sukhumvit"),
@@ -60,6 +66,22 @@ STATIONS = {
     "bearing": station("bearing", "Bearing", "Bearing", "แบริ่ง", "E14", "node/5391599348", 13.6611846, 100.6018056, "sukhumvit"),
     "ari": station("ari", "Ari", "Ari", "อารีย์", "N5", "node/5388607091", 13.7797077, 100.5446201, "ari"),
     "silom-sathorn": station("silom-sathorn", "Silom–Sathorn", "Sala Daeng", "ศาลาแดง", "S2", "node/451697335", 13.7285677, 100.5343416, "silom-sathorn", "interchange with MRT Si Lom"),
+    "bang-na-bitec": station(
+        "bang-na-bitec",
+        "Bang Na (BITEC)",
+        "BITEC",
+        "ไบเทค",
+        None,
+        "way/25621160",
+        13.6697339,
+        100.608542,
+        "bang-na-bitec",
+        description=(
+            "Residential buildings within 2500 m of BITEC "
+            "(Bangkok International Trade & Exhibition Centre, OpenStreetMap way/25621160). "
+            "BTS Bang Na (E13, node/5391610964) is 455 m west."
+        ),
+    ),
 }
 AREA_IDS = list(STATIONS)
 SUKHUMVIT_IDS = [key for key, row in STATIONS.items() if row["corridor"] == "sukhumvit"]
@@ -197,11 +219,13 @@ def fetch_selector(base: str, lat: float, lng: float) -> list[dict]:
         return [element for element in got if center_in_radius(element, lat, lng)]
 
 
-def fetch_elements(cache: Path | None = None) -> list[dict]:
+def fetch_elements(cache: Path | None = None, only: set[str] | None = None) -> list[dict]:
     if cache:
         cache.mkdir(parents=True, exist_ok=True)
     elements: list[dict] = []
     for station in STATIONS.values():
+        if only and station["id"] not in only:
+            continue
         cached = cache / f"osm-{station['id']}.json" if cache else None
         if cached and cached.exists():
             got = json.loads(cached.read_text())["elements"]
@@ -566,7 +590,7 @@ def skipped_unnamed(elements: list[dict]) -> dict[str, int]:
 
 def stamp_existing(building: dict) -> dict:
     """Keep a directory building and refresh which station areas its center falls in."""
-    areas = areas_for(building["lat"], building["lng"])
+    areas = areas_for(building["lat"], building["lng"]) or list(building.get("areas") or [])
     row = {
         "id": building["id"],
         "name": building["name"],
@@ -587,27 +611,69 @@ def stamp_existing(building: dict) -> dict:
     return row
 
 
-def build(existing: list[dict], elements: list[dict]) -> dict:
+def build(
+    existing: list[dict],
+    elements: list[dict],
+    stats: dict | None = None,
+    require_areas: set[str] | None = None,
+) -> dict:
     accepted: list[dict] = []
     seen_ids = set()
-    seen_names: list[tuple[str, float, float]] = []
+    # name, lat, lng, origin ("existing" or "new")
+    seen_names: list[tuple[str, float, float, str]] = []
+    if stats is None:
+        stats = {}
+    stats.update({
+        "existing_kept": 0,
+        "existing_gained_area": 0,
+        "gained_areas": {},
+        "candidates": 0,
+        "added": 0,
+        "added_named": 0,
+        "deduped_existing_id": 0,
+        "deduped_existing_name": 0,
+        "deduped_new_name": 0,
+        "outside": 0,
+    })
 
-    def accept(item: dict) -> bool:
+    def accept(item: dict, origin: str) -> bool:
         if not item.get("areas"):
+            if origin == "osm":
+                stats["outside"] += 1
             return False
         if item["id"] in seen_ids:
+            if origin == "osm":
+                stats["deduped_existing_id"] += 1
             return False
         folded = fold_name(item["name"])
-        for name, lat, lng in seen_names:
+        for name, lat, lng, src in seen_names:
             if name == folded and haversine_m((lat, lng), (item["lat"], item["lng"])) < 80:
+                if origin == "osm":
+                    if src == "existing":
+                        stats["deduped_existing_name"] += 1
+                    else:
+                        stats["deduped_new_name"] += 1
                 return False
         seen_ids.add(item["id"])
-        seen_names.append((folded, item["lat"], item["lng"]))
+        seen_names.append((folded, item["lat"], item["lng"], origin))
         accepted.append(item)
+        if origin == "osm":
+            stats["added"] += 1
+            if item.get("named"):
+                stats["added_named"] += 1
+        else:
+            stats["existing_kept"] += 1
         return True
 
     for building in existing:
-        accept(stamp_existing(building))
+        before = set(building.get("areas") or [])
+        stamped = stamp_existing(building)
+        gained = [area for area in stamped["areas"] if area not in before]
+        if gained:
+            stats["existing_gained_area"] += 1
+            for area in gained:
+                stats["gained_areas"][area] = stats["gained_areas"].get(area, 0) + 1
+        accept(stamped, "existing")
 
     unique = {}
     for element in elements:
@@ -618,19 +684,27 @@ def build(existing: list[dict], elements: list[dict]) -> dict:
     for element in ordered:
         if not include_element(element):
             continue
-        accept(record(element))
+        item = record(element)
+        if not item.get("areas") or (
+            require_areas and not any(area in require_areas for area in item["areas"])
+        ):
+            stats["outside"] += 1
+            continue
+        stats["candidates"] += 1
+        accept(item, "osm")
 
     accepted.sort(key=lambda item: (item["name"] or "").casefold())
     boxes = [circle_bbox(row["lat"], row["lng"]) for row in STATIONS.values()]
     return {
         "area": {
             "id": "bangkok",
-            "name": "Sukhumvit (Nana–Bearing), Ari and Silom–Sathorn",
+            "name": "Sukhumvit (Nana–Bearing), Ari, Silom–Sathorn and Bang Na (BITEC)",
             "description": (
                 "Every residential building within 2.5 km of a BTS Sukhumvit station "
-                "from Nana (E3) through Bearing (E14), within 2.5 km of BTS Ari, and "
-                "within 2.5 km of BTS Sala Daeng (Silom–Sathorn). A building in more "
-                "than one station area is stored once."
+                "from Nana (E3) through Bearing (E14), within 2.5 km of BTS Ari, "
+                "within 2.5 km of BTS Sala Daeng (Silom–Sathorn), and within 2.5 km "
+                "of BITEC in Bang Na. A building in more than one station area is "
+                "stored once."
             ),
             "bbox": union_bbox(boxes),
         },
@@ -663,7 +737,12 @@ def build(existing: list[dict], elements: list[dict]) -> dict:
 
 
 def station_description(station: dict) -> str:
-    text = f"Residential buildings within {RADIUS_M} m of BTS {station['osm_name']} ({station['ref']})"
+    if station.get("description"):
+        return station["description"]
+    if station.get("ref"):
+        text = f"Residential buildings within {RADIUS_M} m of BTS {station['osm_name']} ({station['ref']})"
+    else:
+        text = f"Residential buildings within {RADIUS_M} m of {station['osm_name']}"
     if station.get("detail"):
         text += f", {station['detail']}"
     return text + "."
@@ -780,6 +859,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--cache", help="Directory of per-station Overpass JSON files. Missing stations are fetched and saved here.")
     parser.add_argument("--base", default="data/buildings.json", help="Existing directory to keep and dedupe against")
+    parser.add_argument("--only", help="Comma-separated area ids to fetch from Overpass. Other areas stay in the directory and only have membership refreshed.")
     parser.add_argument("-o", default="data/buildings.json")
     parser.add_argument(
         "--enrich-addresses",
@@ -801,12 +881,20 @@ def main() -> None:
     existing = []
     if base_path.exists():
         existing = json.loads(base_path.read_text()).get("buildings") or []
+    only = None
+    if args.only:
+        only = {part.strip() for part in args.only.split(",") if part.strip()}
+        unknown = sorted(only - set(STATIONS))
+        if unknown:
+            raise SystemExit(f"Unknown area id: {', '.join(unknown)}")
     cache = Path(args.cache) if args.cache else None
-    elements = fetch_elements(cache)
-    payload = build(existing, elements)
+    elements = fetch_elements(cache, only)
+    stats: dict = {}
+    payload = build(existing, elements, stats=stats, require_areas=only)
     skipped = skipped_unnamed(elements)
     Path(args.o).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     summarize(payload, skipped)
+    print("dedupe", json.dumps(stats, ensure_ascii=False))
     print(f"wrote {args.o}")
 
 

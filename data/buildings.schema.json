@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.invalid/thailand-rental-map/buildings.schema.json",
   "title": "Thailand Rental Map building directory",
-  "description": "Residential buildings along the Sukhumvit BTS corridor from Nana to Bearing, plus Ari and Silom–Sathorn. Names and coordinates come from OpenStreetMap under the Open Database License.",
+  "description": "Residential buildings along the Sukhumvit BTS corridor from Nana to Bearing, plus Ari, Silom–Sathorn, and Bang Na (BITEC). Names and coordinates come from OpenStreetMap under the Open Database License.",
   "type": "object",
   "additionalProperties": false,
   "required": ["area", "areas", "attribution", "retrieved_at", "buildings"],
@@ -64,17 +64,22 @@
             "enum": [
               "nana", "asok", "phrom-phong", "thong-lo", "ekamai", "phra-khanong",
               "on-nut", "bang-chak", "punnawithi", "udom-suk", "bang-na", "bearing",
-              "ari", "silom-sathorn"
+              "ari", "silom-sathorn", "bang-na-bitec"
             ]
           }
         },
         "named": { "type": "boolean" },
         "source": { "type": "string", "minLength": 1 },
         "osm_ref": { "type": "string" },
+        "source_url": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Public page the name and coordinates were copied from, when the record is not from OpenStreetMap."
+        },
         "address": {
           "type": "string",
           "minLength": 1,
-          "description": "Street line from OSM addr:street, addr:housenumber, addr:place, or addr:full. Omitted when OpenStreetMap has no street address. Unnamed buildings already use that label as name."
+          "description": "Street line from OSM addr tags, or from the public portal page when that page states a street address for a portal-sourced project. Omitted when neither source has a usable street address."
         },
         "locality": {
           "type": "string",
