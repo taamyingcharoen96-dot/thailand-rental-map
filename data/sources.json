@@ -3,8 +3,8 @@
     "source": "OpenStreetMap",
     "type": "open-data",
     "status": "active",
-    "notes": "Building directory for the Sukhumvit BTS corridor from Nana (E3) through Bearing (E14), each a 2.5 km radius. The Ekamai zone is the 2.5 km around BTS Ekkamai and is labeled on its own. Also 2.5 km around BTS Ari and BTS Sala Daeng (Silom–Sathorn). Names and coordinates only, under the Open Database License. Not a listing source.",
-    "last_checked": "2026-10-27"
+    "notes": "Building directory for the Sukhumvit BTS corridor from Nana (E3) through Bearing (E14), each a 2.5 km radius. The Ekamai zone is the 2.5 km around BTS Ekkamai and is labeled on its own. Also 2.5 km around BTS Ari, BTS Sala Daeng (Silom–Sathorn), and BITEC in Bang Na (way/25621160). Names and coordinates only, under the Open Database License. Not a listing source.",
+    "last_checked": "2026-11-03"
   },
   {
     "source": "Manual (Taam)",

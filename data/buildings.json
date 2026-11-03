@@ -1,8 +1,8 @@
 {
   "area": {
     "id": "bangkok",
-    "name": "Sukhumvit (Nana–Bearing), Ari and Silom–Sathorn",
-    "description": "Every residential building within 2.5 km of a BTS Sukhumvit station from Nana (E3) through Bearing (E14), within 2.5 km of BTS Ari, and within 2.5 km of BTS Sala Daeng (Silom–Sathorn). A building in more than one station area is stored once.",
+    "name": "Sukhumvit (Nana–Bearing), Ari, Silom–Sathorn and Bang Na (BITEC)",
+    "description": "Every residential building within 2.5 km of a BTS Sukhumvit station from Nana (E3) through Bearing (E14), within 2.5 km of BTS Ari, within 2.5 km of BTS Sala Daeng (Silom–Sathorn), and within 2.5 km of BITEC in Bang Na. A building in more than one station area is stored once.",
     "bbox": {
       "south": 13.638726820625225,
       "west": 100.5112233533952,
@@ -234,10 +234,26 @@
         "lat": 13.7285677,
         "lng": 100.5343416
       }
+    },
+    {
+      "id": "bang-na-bitec",
+      "name": "Bang Na (BITEC)",
+      "kind": "radius",
+      "corridor": "bang-na-bitec",
+      "radius_m": 2500,
+      "description": "Residential buildings within 2500 m of BITEC (Bangkok International Trade & Exhibition Centre, OpenStreetMap way/25621160). BTS Bang Na (E13, node/5391610964) is 455 m west.",
+      "station": {
+        "name": "BITEC",
+        "name_th": "ไบเทค",
+        "ref": null,
+        "osm_id": "way/25621160",
+        "lat": 13.6697339,
+        "lng": 100.608542
+      }
     }
   ],
   "attribution": "© OpenStreetMap contributors. Building names, addresses, and locations are from OpenStreetMap, available under the Open Database License (ODbL).",
-  "retrieved_at": "2026-10-27",
+  "retrieved_at": "2026-11-03",
   "buildings": [
     {
       "id": "osm-way-532862534",
@@ -787,7 +803,8 @@
         "on-nut",
         "bang-chak",
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -1077,7 +1094,8 @@
       "lng": 100.6247662,
       "areas": [
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -1368,7 +1386,8 @@
         "on-nut",
         "bang-chak",
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -2018,7 +2037,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3027,7 +3047,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3047,7 +3068,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3685,7 +3707,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3707,7 +3730,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3862,7 +3886,8 @@
       "lng": 100.6051454,
       "areas": [
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -3879,7 +3904,8 @@
       "lng": 100.607747,
       "areas": [
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4000,7 +4026,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4292,7 +4319,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4546,7 +4574,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4798,7 +4827,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4816,7 +4846,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -4834,7 +4865,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -6489,7 +6521,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -6633,7 +6666,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -7948,7 +7982,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -8210,7 +8245,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -8536,7 +8572,8 @@
       "lng": 100.6205801,
       "areas": [
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -8965,7 +9002,8 @@
         "on-nut",
         "bang-chak",
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -9290,7 +9328,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -9346,7 +9385,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -9680,7 +9720,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10337,7 +10378,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10356,7 +10398,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10375,7 +10418,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10394,7 +10438,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10413,7 +10458,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10614,7 +10660,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10633,7 +10680,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -10652,7 +10700,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -11500,7 +11549,8 @@
       "areas": [
         "bang-chak",
         "punnawithi",
-        "udom-suk"
+        "udom-suk",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -11796,7 +11846,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -12148,7 +12199,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -12170,7 +12222,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -12773,7 +12826,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13405,7 +13459,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13511,7 +13566,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13647,7 +13703,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13934,7 +13991,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13953,7 +14011,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -13972,7 +14031,8 @@
         "bang-chak",
         "punnawithi",
         "udom-suk",
-        "bang-na"
+        "bang-na",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -115850,7 +115910,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -115950,7 +116011,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116172,7 +116234,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116276,7 +116339,8 @@
       "lng": 100.6178109,
       "areas": [
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116735,7 +116799,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116769,7 +116834,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116820,7 +116886,8 @@
         "punnawithi",
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
@@ -116889,7 +116956,8 @@
       "areas": [
         "udom-suk",
         "bang-na",
-        "bearing"
+        "bearing",
+        "bang-na-bitec"
       ],
       "named": true,
       "source": "openstreetmap",
