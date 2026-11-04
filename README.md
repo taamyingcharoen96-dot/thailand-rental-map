@@ -8,9 +8,9 @@ The page is a split list and map (Leaflet, OpenStreetMap). Listings in the same 
 
 Pet friendly and furnishing match only a value stated in that listing’s title, notes, or source URL. `null` or an omitted field means unknown. Unknown listings stay visible until that filter is set. They are not treated as “no”.
 
-Four ads state a pet rule. Marque Sukhumvit 197 sqm (`portal-marque-3br-197-219k-pet`) and The Estelle 162 sqm (`portal-estelle-3br-162-210k-u6844923`) say pet-friendly in the title or notes. Phatsana Garden (`portal-phatsana-garden-4br-345-160k-5001441`) has `pet-friendly` in the source URL. 38 Mansion (`portal-38-mansion-1br-57-25k-6404018`) has `cat-friendly` in the source URL, so it counts as pet friendly. The other 44 listings do not state a pet rule. The Marque 197 sqm / ฿250,000 note only distinguishes that unit from the pet-friendly one, so its pet field stays unknown.
+Four ads state a pet rule. Marque Sukhumvit 197 sqm (`portal-marque-3br-197-219k-pet`) and The Estelle 162 sqm (`portal-estelle-3br-162-210k-u6844923`) say pet-friendly in the title or notes. Phatsana Garden (`portal-phatsana-garden-4br-345-160k-5001441`) has `pet-friendly` in the source URL. 38 Mansion (`portal-38-mansion-1br-57-25k-6404018`) has `cat-friendly` in the source URL, so it counts as pet friendly. The other 79 listings do not state a pet rule. The Marque 197 sqm / ฿250,000 note only distinguishes that unit from the pet-friendly one, so its pet field stays unknown.
 
-Twelve ads say “fully furnished” in the notes: Hyde Heritage Thonglor, Rhythm Sukhumvit 36-38, Hive Sukhumvit 65, The Seed Musee, Royal Kensington Mansion, Phatsana Garden, Siamese Exclusive 42, Tongtip Mansion, The Room Sukhumvit 40, Noble Remix, The Prestige 49, and The Strand Thonglor. The other 36 leave furnishing unknown, including every note that says “furnishing not stated”. 38 Mansion’s URL slug also says fully furnished, but the notes say furnishing was not stated, so that field stays unknown. Khun by Yoo’s “furnished interior renders” describes the gallery, not the unit. Nothing in the copied text states partly furnished, unfurnished, or “no pets”. Rhythm Sukhumvit 36-38 is the one studio (`bedrooms` 0).
+Twenty-three ads say “fully furnished.” Twelve are from the earlier batches: Hyde Heritage Thonglor, Rhythm Sukhumvit 36-38, Hive Sukhumvit 65, The Seed Musee, Royal Kensington Mansion, Phatsana Garden, Siamese Exclusive 42, Tongtip Mansion, The Room Sukhumvit 40, Noble Remix, The Prestige 49, and The Strand Thonglor. Eleven are in the Sukhumvit, Ari, Silom–Sathorn and Bang Na batch below: Sukhumvit Suite, Noble State 39, Baan Siri 24, Aspire Sukhumvit 48, Q House Condo Sukhumvit 79, Ideo Blucove Sukhumvit, City Home Sukhumvit, The Coast Condominium, Ideo Mobi Sukhumvit Eastpoint, The Gallery Bearing, and The Address Sathorn. The other 60 leave furnishing unknown, including every note that says “furnishing not stated”. 38 Mansion’s URL slug also says fully furnished, but the notes say furnishing was not stated, so that field stays unknown. Khun by Yoo’s “furnished interior renders” describes the gallery, not the unit. Nothing in the copied text states partly furnished, unfurnished, or “no pets”. Three listings are studios (`bedrooms` 0): Rhythm Sukhumvit 36-38, Noble Reflex, and Ashton Chula–Silom.
 
 Not in this filter bar yet: bathrooms, size, distance to BTS/MRT, amenities, zone, and sort.
 
@@ -114,6 +114,50 @@ Twenty-five more condominium and apartment ads within about 1.5 km of BTS Thong 
 
 Ads whose portal pin did not match the directory building were left off, including Greenery Place, Aree Place, Lumpini Suite, and River Place. A PropertyHub ad filed under Grand 39 Tower whose title names D.H. Grand Tower was left off. Khun by Yoo, Tela Thonglor, and Hyde Heritage Thonglor already had ads and were not repeated.
 
+## Sukhumvit, Ari, Silom–Sathorn and Bang Na rentals
+
+Thirty-five more condominium ads were copied on 2026-11-04 from public PropertyHub pages. One unit per project, each at least ฿20,000 a month. Each `building_id` is an existing directory pin, and the coordinates are that pin. They are agent listings, not owner-verified. Each `contact` is the Line id, phone, or WhatsApp on the ad. Four public-gallery photos were saved per unit. Neighborhood is the map station closest to that pin.
+
+| Project | Area | Rent (THB/mo) | Beds | Size | Contact |
+| --- | --- | --- | --- | --- | --- |
+| Sukhumvit Suite | Nana | 25,000 | 1 | 50 sqm | LINE @lazudi · 024609389 · WhatsApp 66959242968 |
+| Saranjai Mansion | Nana | 27,000 | 1 | 62 sqm | LINE @386ybdef · 0921318369 |
+| 15 Sukhumvit Residences | Nana | 30,000 | 1 | 59 sqm | LINE @950iqyse · 0993321768 |
+| Ashton Asoke | Asok | 25,000 | 1 | 31 sqm | LINE @910xjpyn · 0950208583 |
+| CELES Asoke | Asok | 35,000 | 1 | 35 sqm | LINE @330zzhdy · 0827189785 |
+| Las Colinas | Asok | 66,000 | 2 | 145 sqm | LINE @998ynrnr · 0827481996 · WhatsApp 66827481996 |
+| NOBLE STATE 39 | Phrom Phong | 25,000 | 1 | 29.81 sqm | LINE @servepm · 0876968665 · WhatsApp 66876968665 |
+| The Address Sukhumvit 28 | Phrom Phong | 52,000 | 2 | 70 sqm | LINE @pfagent · 0962453665 |
+| Baan Siri 24 | Phrom Phong | 62,000 | 2 | 98 sqm | LINE @pfagent · 0962453665 |
+| The Crest Sukhumvit 34 | Thonglor | 25,000 | 1 | 35 sqm | LINE @688tvdsw · 0948701685 |
+| Siri at Sukhumvit | Thonglor | 35,000 | 1 | 52 sqm | LINE @688tvdsw · 0948701685 |
+| THE ESSE Sukhumvit 36 | Thonglor | 73,000 | 1 | 72 sqm | LINE @p2nproperty · 0982545162 |
+| Noble Reveal | Ekamai | 30,000 | 1 | 47 sqm | LINE @223ifjvn · 0963784472 |
+| MODE Sukhumvit 61 | Ekamai | 38,000 | 1 | 57 sqm | LINE @247sbpis · 0612702990 |
+| Aspire Sukhumvit 48 | Phra Khanong | 25,000 | 2 | 64.33 sqm | LINE 0809824926 |
+| The President Sukhumvit | On Nut | 25,000 | 2 | 49 sqm | LINE @065ikeep · 0617375554 |
+| IDEO Mobi Sukhumvit | On Nut | 32,000 | 2 | 55 sqm | LINE @578ovtcs · 0816059481 |
+| Q House Condo Sukhumvit 79 | On Nut | 33,000 | 2 | 60 sqm | LINE @pd.residence · 0947404590 |
+| Plum Condo Sukhumvit 62 | Bang Chak | 20,000 | 1 | 35 sqm | LINE @600bgvxt · 0944129822 |
+| Whizdom Essence Sukhumvit | Punnawithi | 26,000 | 1 | 34 sqm | LINE @539shqpr · 0661384441 |
+| IDEO Blucove Sukhumvit | Udom Suk | 20,000 | 2 | 44 sqm | LINE @pfagent · 0962453665 |
+| City Home Sukhumvit | Udom Suk | 22,000 | 2 | 75 sqm | LINE @easythaihome · 0855922897 |
+| IDEO Mobi Sukhumvit 66 | Udom Suk | 30,000 | 1 | 53 sqm | LINE @046jqoyl · 0633971825 |
+| IDEO Mobi Sukhumvit Eastpoint | Bang Na | 25,999 | 2 | 57 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| IDEO O2 | Bang Na | 26,000 | 2 | 53 sqm | LINE @247sbpis · 0612702990 |
+| The Coast Condominium | Bang Na | 55,000 | 3 | 92 sqm | LINE happyplace.condo · 0624541459 · WhatsApp 6624541459 |
+| The Gallery Bearing | Bearing | 22,000 | 2 | 66 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Niche Mono Sukhumvit - Bearing | Bearing | 22,500 | 1 | 49 sqm | LINE @539shqpr · 0661384441 |
+| Very Lasalle | Bearing | 25,000 | 2 | 65 sqm | LINE @319helvo · 0633975106 |
+| Noble Reform | Ari | 28,000 | 1 | 47 sqm | LINE @433vejpz · 0963431893 |
+| Noble Reflex | Ari | 33,000 | Studio | 42 sqm | LINE @197mqixl · 0620672551 |
+| The Address Sathorn | Silom–Sathorn | 25,000 | 1 | 54 sqm | LINE @839owdml · 0630795665 · WhatsApp 66630795665 |
+| Sathorn House | Silom–Sathorn | 25,000 | 2 | 55 sqm | LINE @454hhbsx · 0658209826 |
+| Supalai Elite Surawong | Silom–Sathorn | 29,000 | 1 | 50 sqm | LINE @046jqoyl · 0633971825 |
+| Ashton Chula - Silom | Silom–Sathorn | 35,000 | Studio | 36 sqm | LINE @950iqyse · 0993321768 |
+
+Eleven of these ads say fully furnished: Sukhumvit Suite, Noble State 39, Baan Siri 24, Aspire Sukhumvit 48, Q House Condo Sukhumvit 79, Ideo Blucove Sukhumvit, City Home Sukhumvit, Ideo Mobi Sukhumvit Eastpoint, The Coast Condominium, The Gallery Bearing, and The Address Sathorn. None of these 35 state a pet rule. Noble Reflex and Ashton Chula–Silom are studios. The Gallery Bearing and Niche Mono Sukhumvit - Bearing sit in the Bearing circle; those ads place the projects in Samut Prakan, so city and province follow the ad. An ad filed under Thru Thonglor whose text names True Thonglor was left off. Ads with no public Line, phone, WhatsApp, or email were left off, as were projects whose name and pin did not match a directory building.
+
 ## Run locally
 
 GitHub Pages serves the repository root on `main` (`index.html`, `data/`, `photos/`). The same layout works locally:
@@ -157,4 +201,4 @@ The page still only opens the card for the EmQuartier center in `index.html` (`E
 
 ## Sources
 
-`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and hand copies of public ads at Marque Sukhumvit, The Estelle Phrom Phong, the other ฿200,000–฿400,000 projects, and the Thonglor rentals listed above.
+`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and hand copies of public ads at Marque Sukhumvit, The Estelle Phrom Phong, the other ฿200,000–฿400,000 projects, the Thonglor rentals, and the Sukhumvit, Ari, Silom–Sathorn and Bang Na rentals listed above.
