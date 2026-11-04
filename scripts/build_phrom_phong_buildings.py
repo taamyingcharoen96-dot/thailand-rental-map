@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Build data/buildings.json for the Sukhumvit corridor, Ari, Silom–Sathorn, and Bang Na (BITEC).
+"""Build data/buildings.json for Bangkok residential station radii.
 
 Sukhumvit is every residential building whose center is within 2.5 km of a
 BTS station from Nana (E3) through Bearing (E14). Ari and Silom–Sathorn stay
 2.5 km radii around BTS Ari and BTS Sala Daeng. Bang Na (BITEC) is a 2.5 km
 radius around the OpenStreetMap centroid of BITEC (way/25621160), not the
-BTS Bang Na station. Station coordinates are OpenStreetMap railway=station
+BTS Bang Na station. Further radii, also 2.5 km, cover MRT Phra Ram 9, BTS
+Phaya Thai, BTS Ratchathewi, BTS Chit Lom, BTS Phloen Chit, MRT Lumphini, and
+BTS Saphan Taksin. Station coordinates are OpenStreetMap railway=station
 nodes, except BITEC. Buildings in more than one station area are stored once
 and list every area they fall in. Unnamed buildings are included only when
 the address is specific enough to label them.
@@ -81,6 +83,92 @@ STATIONS = {
             "(Bangkok International Trade & Exhibition Centre, OpenStreetMap way/25621160). "
             "BTS Bang Na (E13, node/5391610964) is 455 m west."
         ),
+    ),
+    # Popular rental areas outside the Nana–Bearing, Ari, Sala Daeng, and BITEC circles.
+    # Coordinates are OpenStreetMap railway=station nodes (queried 2026-11-04).
+    "phra-ram-9": station(
+        "phra-ram-9",
+        "Phra Ram 9",
+        "Phra Ram 9",
+        "พระราม 9",
+        "BL20",
+        "node/280179427",
+        13.7578166,
+        100.5652774,
+        "phra-ram-9",
+        "Asok–Rama 9, MRT Blue Line",
+    ),
+    "phaya-thai": station(
+        "phaya-thai",
+        "Phaya Thai",
+        "Phaya Thai",
+        "พญาไท",
+        "N2",
+        "node/5388610344",
+        13.7569644,
+        100.5338214,
+        "phaya-thai",
+        "BTS Sukhumvit Line, Phaya Thai / Ratchathewi",
+    ),
+    "ratchathewi": station(
+        "ratchathewi",
+        "Ratchathewi",
+        "Ratchathewi",
+        "ราชเทวี",
+        "N1",
+        "node/5388611982",
+        13.7518605,
+        100.5315534,
+        "ratchathewi",
+        "BTS Sukhumvit Line, Phaya Thai / Ratchathewi",
+    ),
+    "chit-lom": station(
+        "chit-lom",
+        "Chit Lom",
+        "Chit Lom",
+        "ชิดลม",
+        "E1",
+        "node/5391636575",
+        13.7440974,
+        100.5430684,
+        "chit-lom",
+        "Chidlom, BTS Sukhumvit Line",
+    ),
+    "phloen-chit": station(
+        "phloen-chit",
+        "Phloen Chit",
+        "Phloen Chit",
+        "เพลินจิต",
+        "E2",
+        "node/5391631777",
+        13.7430684,
+        100.5489762,
+        "phloen-chit",
+        "Ploenchit, BTS Sukhumvit Line",
+    ),
+    "lumphini": station(
+        "lumphini",
+        "Lumphini",
+        "Lumphini",
+        "ลุมพินี",
+        "BL25",
+        "node/280222462",
+        13.7256066,
+        100.5457249,
+        "lumphini",
+        "MRT Blue Line, Chidlom / Ploenchit / Lumpini",
+    ),
+    "saphan-taksin": station(
+        "saphan-taksin",
+        "Riverside",
+        "Saphan Taksin",
+        "สะพานตากสิน",
+        "S6",
+        "node/257067085",
+        13.7188128,
+        100.514223,
+        "saphan-taksin",
+        "Riverside / Charoen Krung, BTS Silom Line",
     ),
 }
 AREA_IDS = list(STATIONS)
@@ -605,7 +693,7 @@ def stamp_existing(building: dict) -> dict:
         "source": building.get("source") or "openstreetmap",
         "osm_ref": building.get("osm_ref") or "",
     }
-    for key in ("address", "locality", "photo_url"):
+    for key in ("address", "locality", "photo_url", "source_url"):
         if building.get(key):
             row[key] = building[key]
     return row
@@ -698,13 +786,17 @@ def build(
     return {
         "area": {
             "id": "bangkok",
-            "name": "Sukhumvit (Nana–Bearing), Ari, Silom–Sathorn and Bang Na (BITEC)",
+            "name": "Sukhumvit (Nana–Bearing), Ari, Silom–Sathorn, Bang Na (BITEC) and central Bangkok",
             "description": (
                 "Every residential building within 2.5 km of a BTS Sukhumvit station "
                 "from Nana (E3) through Bearing (E14), within 2.5 km of BTS Ari, "
                 "within 2.5 km of BTS Sala Daeng (Silom–Sathorn), and within 2.5 km "
-                "of BITEC in Bang Na. A building in more than one station area is "
-                "stored once."
+                "of BITEC in Bang Na. Named residential buildings within 2.5 km of MRT Phra Ram 9, "
+                "BTS Phaya Thai, BTS Ratchathewi, BTS Chit Lom, BTS Phloen Chit, MRT Lumphini, "
+                "and BTS Saphan Taksin (Riverside / Charoen Krung) are included too. A building in more than "
+                "one station area is stored once. Condominium projects inside these "
+                "circles that were not already in OpenStreetMap were added from public "
+                "FazWaz project pages, with that page's coordinates."
             ),
             "bbox": union_bbox(boxes),
         },
