@@ -23006,6 +23006,25 @@
       "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/watthana/khlong-toei-nuea/siamese-gioia"
     },
     {
+      "id": "fazwaz-1156",
+      "name": "Siamese Ratchakru",
+      "name_en": "Siamese Ratchakru",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7758312,
+      "lng": 100.5431864,
+      "areas": [
+        "ari",
+        "phaya-thai"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/phaya-thai/sam-sen-nai/siamese-ratchakru",
+      "address": "Phahon Yothin Road, Sam Sen Nai, Phaya Thai, Bangkok"
+    },
+    {
       "id": "osm-way-1495988239",
       "name": "Siamese Residence",
       "name_en": "Siamese Residence",
@@ -28394,6 +28413,26 @@
       "source": "fazwaz",
       "osm_ref": "",
       "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/suan-luang/suan-luang/the-millionaire-masters"
+    },
+    {
+      "id": "fazwaz-3085",
+      "name": "The Monument Sanampao",
+      "name_en": "The Monument Sanampao",
+      "name_th": null,
+      "aliases": [],
+      "type": "condo",
+      "lat": 13.7692688,
+      "lng": 100.5406176,
+      "areas": [
+        "ari",
+        "phaya-thai",
+        "ratchathewi"
+      ],
+      "named": true,
+      "source": "fazwaz",
+      "osm_ref": "",
+      "source_url": "https://www.fazwaz.com/projects/thailand/bangkok/phaya-thai/sam-sen-nai/the-monument-sanampao",
+      "address": "911/3 Phaholyothin Road, Samsen Nai, Phaya Thai, Bangkok"
     },
     {
       "id": "fazwaz-175219",
