@@ -484,6 +484,18 @@ A listing pin is purple when its monthly rent is ฿100,000 or more. A building 
 | The Monument Thong Lo | Thonglor | 380,000 | 3 | 253 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
 | The Strand Thonglor | Thonglor | 350,000 | 3 | 185 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
 
+## Train lines
+
+The map draws the operating Bangkok urban rail network under the listing pins: BTS Sukhumvit, BTS Silom, BTS Gold, MRT Blue (including the Tha Phra loop), MRT Purple, MRT Yellow, MRT Pink (including the Muang Thong Thani branch), the Airport Rail Link, and the SRT Dark Red and Light Red lines. Colours are the OpenStreetMap `colour` tags on those route relations. A station is a small white circle with that line’s colour on the rim. An interchange keeps its own dot and adds a second ring in the other line’s colour. From zoom 14 the English name and station code stay on the map; zoom out and those labels hide. Hover or tap a station at any zoom for the Thai name and the lines it serves. **Train lines** in the filter bar is on by default. Turning it off stores `trains=0` in the URL, the same way the other filters are stored. The lines do not take clicks away from listing or building pins.
+
+Rebuild both files from the public Overpass API:
+
+```bash
+python3 scripts/fetch_transit.py
+```
+
+That writes `data/transit_lines.geojson` and `data/transit_stations.json`. Coordinates are copied from OpenStreetMap. The MRT Orange Line, the Purple Line south of Tao Poon, and the Red Line extensions past Rangsit and Taling Chan are left out because they are not open.
+
 ## Run locally
 
 GitHub Pages serves the repository root on `main` (`index.html`, `data/`, `photos/`). The same layout works locally:
