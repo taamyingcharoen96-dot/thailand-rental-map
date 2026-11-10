@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Roomie">
+  <g fill="none" stroke="#2B90CC" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.4 25.4V7.2"/>
+    <path d="M10.4 9h6.1a4.35 4.35 0 0 1 0 8.7h-6.1"/>
+    <path d="M15.8 17.2 22.6 25.4"/>
+  </g>
+</svg>

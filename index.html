@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thailand Rental Map</title>
+  <title>Roomie — Bangkok rentals</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <style>
     :root {
@@ -47,9 +51,14 @@
     }
     .topbar h1 {
       margin: 0;
-      font-size: 18px;
-      font-weight: 700;
+      flex: 0 0 auto;
+      font-family: "Nunito", ui-rounded, "Arial Rounded MT Bold", "Segoe UI", system-ui, sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
       letter-spacing: -0.02em;
+      color: #2B90CC;
+      white-space: nowrap;
     }
     .loc-label {
       display: flex;
@@ -1095,6 +1104,7 @@
       body.view-map .map-pane { display: block; }
       .mobile-toggle { display: flex; }
       .card { grid-template-columns: 120px 1fr; }
+      .topbar h1 { font-size: 24px; }
       .loc-label { font-size: 12px; }
       .filters input[type="search"] { flex: 1 1 100%; }
       .search-wrap { flex: 1 1 100%; }
@@ -1116,7 +1126,7 @@
 <body>
   <header class="topbar">
     <div class="topbar-row1">
-      <h1>Thailand Rental Map</h1>
+      <h1>Roomie</h1>
       <p class="loc-label">
         <span class="loc-areas">
           <span>Sukhumvit (Nana–Bearing)</span>
