@@ -677,8 +677,18 @@ def skipped_unnamed(elements: list[dict]) -> dict[str, int]:
 
 
 def stamp_existing(building: dict) -> dict:
-    """Keep a directory building and refresh which station areas its center falls in."""
-    areas = areas_for(building["lat"], building["lng"]) or list(building.get("areas") or [])
+    """Keep a directory building and refresh which station areas its center falls in.
+
+    Area ids that are not station radii (the Chao Phraya district zones) stay on
+    the building. A later station rebuild does not drop them.
+    """
+    station_areas = areas_for(building["lat"], building["lng"])
+    extras = [
+        area
+        for area in (building.get("areas") or [])
+        if area not in STATIONS and area not in station_areas
+    ]
+    areas = station_areas + extras or list(building.get("areas") or [])
     row = {
         "id": building["id"],
         "name": building["name"],
@@ -704,6 +714,7 @@ def build(
     elements: list[dict],
     stats: dict | None = None,
     require_areas: set[str] | None = None,
+    extra_areas: list[dict] | None = None,
 ) -> dict:
     accepted: list[dict] = []
     seen_ids = set()
@@ -818,7 +829,7 @@ def build(
                 },
             }
             for row in STATIONS.values()
-        ],
+        ] + [area for area in (extra_areas or []) if area.get("id") not in STATIONS],
         "attribution": (
             "© OpenStreetMap contributors. Building names, addresses, and locations "
             "are from OpenStreetMap, available under the Open Database License (ODbL)."
@@ -971,8 +982,15 @@ def main() -> None:
     # directory (the Phrom Phong trial set and earlier station radii) and
     # refresh area membership. Overpass adds buildings for the station radii.
     existing = []
+    extra_areas = []
     if base_path.exists():
-        existing = json.loads(base_path.read_text()).get("buildings") or []
+        base_payload = json.loads(base_path.read_text())
+        existing = base_payload.get("buildings") or []
+        extra_areas = [
+            area
+            for area in (base_payload.get("areas") or [])
+            if area.get("id") not in STATIONS
+        ]
     only = None
     if args.only:
         only = {part.strip() for part in args.only.split(",") if part.strip()}
@@ -982,7 +1000,7 @@ def main() -> None:
     cache = Path(args.cache) if args.cache else None
     elements = fetch_elements(cache, only)
     stats: dict = {}
-    payload = build(existing, elements, stats=stats, require_areas=only)
+    payload = build(existing, elements, stats=stats, require_areas=only, extra_areas=extra_areas)
     skipped = skipped_unnamed(elements)
     Path(args.o).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     summarize(payload, skipped)

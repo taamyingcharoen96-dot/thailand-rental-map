@@ -1008,6 +1008,7 @@
           <span>Phloen Chit</span>
           <span>Lumphini</span>
           <span>Riverside</span>
+          <span>Chao Phraya Riverside</span>
         </span>
       </p>
       <p class="osm-note">Buildings © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, ODbL</p>
@@ -1265,9 +1266,14 @@
     if (!suk.length) return;
     const labels = [`Sukhumvit (${suk[0].name}–${suk[suk.length - 1].name})`];
     if (areas.some((area) => area && area.id === "ekamai")) labels.push(AREA_LABEL.ekamai || "Ekamai");
+    let chaoPhraya = false;
     areas.filter((area) => area && area.corridor && area.corridor !== "sukhumvit").forEach((area) => {
-      labels.push(area.name);
+      if (area.corridor === "chao-phraya") chaoPhraya = true;
+      else labels.push(area.name);
     });
+    // One header chip for the river. Each building still carries its district
+    // label (Chao Phraya Riverside – Khlong San, and the other khets).
+    if (chaoPhraya) labels.push("Chao Phraya Riverside");
     locAreas.innerHTML = labels.map((name) => `<span>${esc(name)}</span>`).join("");
   }
 
