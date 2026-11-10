@@ -1,0 +1,6019 @@
+{
+  "source": "OpenStreetMap via the Overpass API",
+  "license": "ODbL",
+  "retrieved": "2026-11-10",
+  "merge_m": 80.0,
+  "link_m": 450.0,
+  "station_count": 190,
+  "interchange_count": 32,
+  "stations": [
+    {
+      "id": "n16",
+      "name_en": "11th Infantry Regiment",
+      "name_th": "สถานีกรมทหารราบที่ 11",
+      "names_th": [
+        "สถานีกรมทหารราบที่ 11"
+      ],
+      "lat": 13.867586,
+      "lng": 100.591953,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N16",
+          "station_name_en": "11th Infantry Regiment",
+          "station_name_th": "สถานีกรมทหารราบที่ 11",
+          "lat": 13.867586,
+          "lng": 100.591953,
+          "osm_id": "node/12885893603"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885893603"
+      ]
+    },
+    {
+      "id": "n5",
+      "name_en": "Ari",
+      "name_th": "อารีย์",
+      "names_th": [
+        "อารีย์"
+      ],
+      "lat": 13.779718,
+      "lng": 100.544604,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N5",
+          "station_name_en": "Ari",
+          "station_name_th": "อารีย์",
+          "lat": 13.779718,
+          "lng": 100.544604,
+          "osm_id": "node/12885877702"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877702"
+      ]
+    },
+    {
+      "id": "e4",
+      "name_en": "Asok",
+      "name_th": "อโศก",
+      "names_th": [
+        "อโศก"
+      ],
+      "lat": 13.73703,
+      "lng": 100.560342,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E4",
+          "station_name_en": "Asok",
+          "station_name_th": "อโศก",
+          "lat": 13.73703,
+          "lng": 100.560342,
+          "osm_id": "node/275514816"
+        }
+      ],
+      "connections": [
+        {
+          "id": "bl22",
+          "name_en": "Sukhumvit",
+          "lines": [
+            {
+              "code": "BL22",
+              "name_en": "Sukhumvit",
+              "name_th": "สุขุมวิท",
+              "line_id": "mrt-blue",
+              "line_short": "Blue",
+              "line_name_en": "MRT Blue"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/275514816"
+      ]
+    },
+    {
+      "id": "a3",
+      "name_en": "Ban Thap Chang",
+      "name_th": "บ้านทับช้าง",
+      "names_th": [
+        "บ้านทับช้าง"
+      ],
+      "lat": 13.732915,
+      "lng": 100.690819,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "arl",
+          "name_en": "Airport Rail Link",
+          "name_th": "รถไฟฟ้าแอร์พอร์ต เรล ลิงก์",
+          "short": "Airport Rail Link",
+          "code": "A3",
+          "station_name_en": "Ban Thap Chang",
+          "station_name_th": "บ้านทับช้าง",
+          "lat": 13.732915,
+          "lng": 100.690819,
+          "osm_id": "node/3180278582"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3180278582"
+      ]
+    },
+    {
+      "id": "rw05",
+      "name_en": "Bang Bamru",
+      "name_th": "บางบำหรุ",
+      "names_th": [
+        "บางบำหรุ"
+      ],
+      "lat": 13.792242,
+      "lng": 100.477418,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-light-red",
+          "name_en": "SRT Light Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงอ่อน",
+          "short": "Light Red",
+          "code": "RW05",
+          "station_name_en": "Bang Bamru",
+          "station_name_th": "บางบำหรุ",
+          "lat": 13.792242,
+          "lng": 100.477418,
+          "osm_id": "node/2039197279"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/2039197279"
+      ]
+    },
+    {
+      "id": "n15",
+      "name_en": "Bang Bua",
+      "name_th": "บางบัว",
+      "names_th": [
+        "บางบัว"
+      ],
+      "lat": 13.856061,
+      "lng": 100.585159,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N15",
+          "station_name_en": "Bang Bua",
+          "station_name_th": "บางบัว",
+          "lat": 13.856061,
+          "lng": 100.585159,
+          "osm_id": "node/12885877999"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877999"
+      ]
+    },
+    {
+      "id": "e10",
+      "name_en": "Bang Chak",
+      "name_th": "บางจาก",
+      "names_th": [
+        "บางจาก"
+      ],
+      "lat": 13.696756,
+      "lng": 100.605318,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E10",
+          "station_name_en": "Bang Chak",
+          "station_name_th": "บางจาก",
+          "lat": 13.696756,
+          "lng": 100.605318,
+          "osm_id": "node/1560656072"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/1560656072"
+      ]
+    },
+    {
+      "id": "pk27",
+      "name_en": "Bang Chan",
+      "name_th": "บางชัน",
+      "names_th": [
+        "บางชัน"
+      ],
+      "lat": 13.812702,
+      "lng": 100.702928,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK27",
+          "station_name_en": "Bang Chan",
+          "station_name_th": "บางชัน",
+          "lat": 13.812702,
+          "lng": 100.702928,
+          "osm_id": "node/8730802242"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8730802242"
+      ]
+    },
+    {
+      "id": "yl08",
+      "name_en": "Bang Kapi",
+      "name_th": "บางกะปิ",
+      "names_th": [
+        "บางกะปิ"
+      ],
+      "lat": 13.769098,
+      "lng": 100.639756,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL08",
+          "station_name_en": "Bang Kapi",
+          "station_name_th": "บางกะปิ",
+          "lat": 13.769098,
+          "lng": 100.639756,
+          "osm_id": "node/8717933831"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717933831"
+      ]
+    },
+    {
+      "id": "bl37",
+      "name_en": "Bang Khae",
+      "name_th": "บางแค",
+      "names_th": [
+        "บางแค"
+      ],
+      "lat": 13.711917,
+      "lng": 100.422336,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL37",
+          "station_name_en": "Bang Khae",
+          "station_name_th": "บางแค",
+          "lat": 13.711917,
+          "lng": 100.422336,
+          "osm_id": "node/12800326860"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800326860"
+      ]
+    },
+    {
+      "id": "rn04",
+      "name_en": "Bang Khen",
+      "name_th": "บางเขน",
+      "names_th": [
+        "บางเขน"
+      ],
+      "lat": 13.849339,
+      "lng": 100.561724,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN04",
+          "station_name_en": "Bang Khen",
+          "station_name_th": "บางเขน",
+          "lat": 13.849339,
+          "lng": 100.561724,
+          "osm_id": "node/7314656186"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7314656186"
+      ]
+    },
+    {
+      "id": "bl04",
+      "name_en": "Bang Khun Non",
+      "name_th": "บางขุนนนท์",
+      "names_th": [
+        "บางขุนนนท์"
+      ],
+      "lat": 13.763344,
+      "lng": 100.473274,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL04",
+          "station_name_en": "Bang Khun Non",
+          "station_name_th": "บางขุนนนท์",
+          "lat": 13.763344,
+          "lng": 100.473274,
+          "osm_id": "node/12800442507"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800442507"
+      ]
+    },
+    {
+      "id": "pp10",
+      "name_en": "Bang Krasor",
+      "name_th": "บางกระสอ",
+      "names_th": [
+        "บางกระสอ"
+      ],
+      "lat": 13.861714,
+      "lng": 100.504668,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP10",
+          "station_name_en": "Bang Krasor",
+          "station_name_th": "บางกระสอ",
+          "lat": 13.861714,
+          "lng": 100.504668,
+          "osm_id": "node/3487511084"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511084"
+      ]
+    },
+    {
+      "id": "e13",
+      "name_en": "Bang Na",
+      "name_th": "บางนา",
+      "names_th": [
+        "บางนา"
+      ],
+      "lat": 13.668148,
+      "lng": 100.604645,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E13",
+          "station_name_en": "Bang Na",
+          "station_name_th": "บางนา",
+          "lat": 13.668148,
+          "lng": 100.604645,
+          "osm_id": "node/12888242249"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12888242249"
+      ]
+    },
+    {
+      "id": "bl08",
+      "name_en": "Bang O",
+      "name_th": "บางอ้อ",
+      "names_th": [
+        "บางอ้อ"
+      ],
+      "lat": 13.799001,
+      "lng": 100.50976,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL08",
+          "station_name_en": "Bang O",
+          "station_name_th": "บางอ้อ",
+          "lat": 13.799001,
+          "lng": 100.50976,
+          "osm_id": "node/12800442598"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800442598"
+      ]
+    },
+    {
+      "id": "bl33",
+      "name_en": "Bang Phai",
+      "name_th": "บางไผ่",
+      "names_th": [
+        "บางไผ่"
+      ],
+      "lat": 13.72461,
+      "lng": 100.465086,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL33",
+          "station_name_en": "Bang Phai",
+          "station_name_th": "บางไผ่",
+          "lat": 13.72461,
+          "lng": 100.465086,
+          "osm_id": "node/12800326949"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800326949"
+      ]
+    },
+    {
+      "id": "bl07",
+      "name_en": "Bang Phlat",
+      "name_th": "บางพลัด",
+      "names_th": [
+        "บางพลัด"
+      ],
+      "lat": 13.79242,
+      "lng": 100.504859,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL07",
+          "station_name_en": "Bang Phlat",
+          "station_name_th": "บางพลัด",
+          "lat": 13.79242,
+          "lng": 100.504859,
+          "osm_id": "node/12800442590"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800442590"
+      ]
+    },
+    {
+      "id": "pp4",
+      "name_en": "Bang Phlu",
+      "name_th": "บางพลู",
+      "names_th": [
+        "บางพลู"
+      ],
+      "lat": 13.875824,
+      "lng": 100.433798,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP4",
+          "station_name_en": "Bang Phlu",
+          "station_name_th": "บางพลู",
+          "lat": 13.875824,
+          "lng": 100.433798,
+          "osm_id": "node/3487511468"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511468"
+      ]
+    },
+    {
+      "id": "bl09",
+      "name_en": "Bang Pho",
+      "name_th": "บางโพ",
+      "names_th": [
+        "บางโพ"
+      ],
+      "lat": 13.80645,
+      "lng": 100.521026,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL09",
+          "station_name_en": "Bang Pho",
+          "station_name_th": "บางโพ",
+          "lat": 13.80645,
+          "lng": 100.521026,
+          "osm_id": "node/12803915083"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12803915083"
+      ]
+    },
+    {
+      "id": "pp6",
+      "name_en": "Bang Rak Noi Tha It",
+      "name_th": "บางรักน้อยท่าอิฐ",
+      "names_th": [
+        "บางรักน้อยท่าอิฐ"
+      ],
+      "lat": 13.874866,
+      "lng": 100.455998,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP6",
+          "station_name_en": "Bang Rak Noi Tha It",
+          "station_name_th": "บางรักน้อยท่าอิฐ",
+          "lat": 13.874866,
+          "lng": 100.455998,
+          "osm_id": "node/3487511444"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511444"
+      ]
+    },
+    {
+      "id": "pp5",
+      "name_en": "Bang Rak Yai",
+      "name_th": "บางรักใหญ่",
+      "names_th": [
+        "บางรักใหญ่"
+      ],
+      "lat": 13.876669,
+      "lng": 100.444934,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP5",
+          "station_name_en": "Bang Rak Yai",
+          "station_name_th": "บางรักใหญ่",
+          "lat": 13.876669,
+          "lng": 100.444934,
+          "osm_id": "node/3487511701"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511701"
+      ]
+    },
+    {
+      "id": "pp15",
+      "name_en": "Bang Son",
+      "name_th": "บางซ่อน",
+      "names_th": [
+        "บางซ่อน"
+      ],
+      "lat": 13.820087,
+      "lng": 100.532521,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP15",
+          "station_name_en": "Bang Son",
+          "station_name_th": "บางซ่อน",
+          "lat": 13.820087,
+          "lng": 100.532521,
+          "osm_id": "node/3487510793"
+        }
+      ],
+      "connections": [
+        {
+          "id": "rw02",
+          "name_en": "Bang Son",
+          "lines": [
+            {
+              "code": "RW02",
+              "name_en": "Bang Son",
+              "name_th": "บางซ่อน",
+              "line_id": "srt-light-red",
+              "line_short": "Light Red",
+              "line_name_en": "SRT Light Red"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/3487510793"
+      ]
+    },
+    {
+      "id": "rw02",
+      "name_en": "Bang Son",
+      "name_th": "บางซ่อน",
+      "names_th": [
+        "บางซ่อน"
+      ],
+      "lat": 13.822154,
+      "lng": 100.534215,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "srt-light-red",
+          "name_en": "SRT Light Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงอ่อน",
+          "short": "Light Red",
+          "code": "RW02",
+          "station_name_en": "Bang Son",
+          "station_name_th": "บางซ่อน",
+          "lat": 13.822154,
+          "lng": 100.534215,
+          "osm_id": "node/1648414719"
+        }
+      ],
+      "connections": [
+        {
+          "id": "pp15",
+          "name_en": "Bang Son",
+          "lines": [
+            {
+              "code": "PP15",
+              "name_en": "Bang Son",
+              "name_th": "บางซ่อน",
+              "line_id": "mrt-purple",
+              "line_short": "Purple",
+              "line_name_en": "MRT Purple"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/1648414719"
+      ]
+    },
+    {
+      "id": "bl11",
+      "name_en": "Bang Sue",
+      "name_th": "บางซื่อ",
+      "names_th": [
+        "บางซื่อ"
+      ],
+      "lat": 13.802427,
+      "lng": 100.54106,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL11",
+          "station_name_en": "Bang Sue",
+          "station_name_th": "บางซื่อ",
+          "lat": 13.802427,
+          "lng": 100.54106,
+          "osm_id": "node/12800442678"
+        }
+      ],
+      "connections": [
+        {
+          "id": "node-7314652465",
+          "name_en": "Krung Thep Aphiwat",
+          "lines": [
+            {
+              "code": null,
+              "name_en": "Krung Thep Aphiwat",
+              "name_th": "กรุงเทพอภิวัฒน์",
+              "line_id": "srt-dark-red",
+              "line_short": "Dark Red",
+              "line_name_en": "SRT Dark Red"
+            },
+            {
+              "code": null,
+              "name_en": "Krung Thep Aphiwat",
+              "name_th": "กรุงเทพอภิวัฒน์",
+              "line_id": "srt-light-red",
+              "line_short": "Light Red",
+              "line_name_en": "SRT Light Red"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/12800442678"
+      ]
+    },
+    {
+      "id": "bl34",
+      "name_en": "Bang Wa",
+      "name_th": "บางหว้า",
+      "names_th": [
+        "บางหว้า"
+      ],
+      "lat": 13.720259,
+      "lng": 100.457037,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL34",
+          "station_name_en": "Bang Wa",
+          "station_name_th": "บางหว้า",
+          "lat": 13.720259,
+          "lng": 100.457037,
+          "osm_id": "node/3801037854"
+        }
+      ],
+      "connections": [
+        {
+          "id": "s12",
+          "name_en": "Bang Wa",
+          "lines": [
+            {
+              "code": "S12",
+              "name_en": "Bang Wa",
+              "name_th": "บางหว้า",
+              "line_id": "bts-silom",
+              "line_short": "Silom",
+              "line_name_en": "BTS Silom"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/3801037854"
+      ]
+    },
+    {
+      "id": "s12",
+      "name_en": "Bang Wa",
+      "name_th": "บางหว้า",
+      "names_th": [
+        "บางหว้า"
+      ],
+      "lat": 13.720796,
+      "lng": 100.457802,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S12",
+          "station_name_en": "Bang Wa",
+          "station_name_th": "บางหว้า",
+          "lat": 13.720796,
+          "lng": 100.457802,
+          "osm_id": "node/1672566455"
+        }
+      ],
+      "connections": [
+        {
+          "id": "bl34",
+          "name_en": "Bang Wa",
+          "lines": [
+            {
+              "code": "BL34",
+              "name_en": "Bang Wa",
+              "name_th": "บางหว้า",
+              "line_id": "mrt-blue",
+              "line_short": "Blue",
+              "line_name_en": "MRT Blue"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/1672566455"
+      ]
+    },
+    {
+      "id": "bl05",
+      "name_en": "Bang Yi Khan",
+      "name_th": "บางยี่ขัน",
+      "names_th": [
+        "บางยี่ขัน"
+      ],
+      "lat": 13.777413,
+      "lng": 100.485231,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL05",
+          "station_name_en": "Bang Yi Khan",
+          "station_name_th": "บางยี่ขัน",
+          "lat": 13.777413,
+          "lng": 100.485231,
+          "osm_id": "node/12800442510"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800442510"
+      ]
+    },
+    {
+      "id": "e14",
+      "name_en": "Bearing",
+      "name_th": "แบริ่ง",
+      "names_th": [
+        "แบริ่ง"
+      ],
+      "lat": 13.661194,
+      "lng": 100.601789,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E14",
+          "station_name_en": "Bearing",
+          "station_name_th": "แบริ่ง",
+          "lat": 13.661194,
+          "lng": 100.601789,
+          "osm_id": "node/1726177804"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/1726177804"
+      ]
+    },
+    {
+      "id": "n21",
+      "name_en": "Bhumibol Adulyadej Hospital",
+      "name_th": "โรงพยาบาลภูมิพลอดุลยเดช",
+      "names_th": [
+        "โรงพยาบาลภูมิพลอดุลยเดช"
+      ],
+      "lat": 13.910723,
+      "lng": 100.617375,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N21",
+          "station_name_en": "Bhumibol Adulyadej Hospital",
+          "station_name_th": "โรงพยาบาลภูมิพลอดุลยเดช",
+          "lat": 13.910723,
+          "lng": 100.617375,
+          "osm_id": "node/12885902275"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885902275"
+      ]
+    },
+    {
+      "id": "pk11",
+      "name_en": "Chaeng Watthana 14",
+      "name_th": "แจ้งวัฒนะ 14",
+      "names_th": [
+        "แจ้งวัฒนะ 14"
+      ],
+      "lat": 13.893283,
+      "lng": 100.560143,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK11",
+          "station_name_en": "Chaeng Watthana 14",
+          "station_name_th": "แจ้งวัฒนะ 14",
+          "lat": 13.893283,
+          "lng": 100.560143,
+          "osm_id": "node/11364361948"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/11364361948"
+      ]
+    },
+    {
+      "id": "pk08",
+      "name_en": "Chaeng Watthana-Pak Kret 28",
+      "name_th": "แจ้งวัฒนะ-ปากเกร็ด 28",
+      "names_th": [
+        "แจ้งวัฒนะ-ปากเกร็ด 28"
+      ],
+      "lat": 13.904138,
+      "lng": 100.529267,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK08",
+          "station_name_en": "Chaeng Watthana-Pak Kret 28",
+          "station_name_th": "แจ้งวัฒนะ-ปากเกร็ด 28",
+          "lat": 13.904138,
+          "lng": 100.529267,
+          "osm_id": "node/10867419312"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/10867419312"
+      ]
+    },
+    {
+      "id": "e17",
+      "name_en": "Chang Erawan",
+      "name_th": "ช้างเอราวัณ",
+      "names_th": [
+        "ช้างเอราวัณ"
+      ],
+      "lat": 13.621536,
+      "lng": 100.590139,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E17",
+          "station_name_en": "Chang Erawan",
+          "station_name_th": "ช้างเอราวัณ",
+          "lat": 13.621536,
+          "lng": 100.590139,
+          "osm_id": "node/14235691473"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/14235691473"
+      ]
+    },
+    {
+      "id": "bl02",
+      "name_en": "Charan 13",
+      "name_th": "จรัญฯ 13",
+      "names_th": [
+        "จรัญฯ 13"
+      ],
+      "lat": 13.740179,
+      "lng": 100.470688,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL02",
+          "station_name_en": "Charan 13",
+          "station_name_th": "จรัญฯ 13",
+          "lat": 13.740179,
+          "lng": 100.470688,
+          "osm_id": "node/12800399150"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800399150"
+      ]
+    },
+    {
+      "id": "g2",
+      "name_en": "Charoen Nakhon",
+      "name_th": "เจริญนคร",
+      "names_th": [
+        "เจริญนคร"
+      ],
+      "lat": 13.726466,
+      "lng": 100.509093,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-gold",
+          "name_en": "BTS Gold",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีทอง",
+          "short": "Gold",
+          "code": "G2",
+          "station_name_en": "Charoen Nakhon",
+          "station_name_th": "เจริญนคร",
+          "lat": 13.726466,
+          "lng": 100.509093,
+          "osm_id": "node/11012357560"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/11012357560"
+      ]
+    },
+    {
+      "id": "rn02",
+      "name_en": "Chatuchak",
+      "name_th": "จตุจักร",
+      "names_th": [
+        "จตุจักร"
+      ],
+      "lat": 13.826595,
+      "lng": 100.549524,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN02",
+          "station_name_en": "Chatuchak",
+          "station_name_th": "จตุจักร",
+          "lat": 13.826595,
+          "lng": 100.549524,
+          "osm_id": "node/6433543893"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6433543893"
+      ]
+    },
+    {
+      "id": "e1",
+      "name_en": "Chit Lom",
+      "name_th": "ชิดลม",
+      "names_th": [
+        "ชิดลม"
+      ],
+      "lat": 13.744078,
+      "lng": 100.543067,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E1",
+          "station_name_en": "Chit Lom",
+          "station_name_th": "ชิดลม",
+          "lat": 13.744078,
+          "lng": 100.543067,
+          "osm_id": "node/12888241902"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12888241902"
+      ]
+    },
+    {
+      "id": "yl03",
+      "name_en": "Chok Chai 4",
+      "name_th": "โชคชัย 4",
+      "names_th": [
+        "โชคชัย 4"
+      ],
+      "lat": 13.794431,
+      "lng": 100.594465,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL03",
+          "station_name_en": "Chok Chai 4",
+          "station_name_th": "โชคชัย 4",
+          "lat": 13.794431,
+          "lng": 100.594465,
+          "osm_id": "node/6695196338"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6695196338"
+      ]
+    },
+    {
+      "id": "s3",
+      "name_en": "Chong Nonsi",
+      "name_th": "ช่องนนทรี",
+      "names_th": [
+        "ช่องนนทรี"
+      ],
+      "lat": 13.723797,
+      "lng": 100.529325,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S3",
+          "station_name_en": "Chong Nonsi",
+          "station_name_th": "ช่องนนทรี",
+          "lat": 13.723797,
+          "lng": 100.529325,
+          "osm_id": "node/257066790"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/257066790"
+      ]
+    },
+    {
+      "id": "rn08",
+      "name_en": "Don Muang",
+      "name_th": "ดอนเมือง",
+      "names_th": [
+        "ดอนเมือง"
+      ],
+      "lat": 13.914624,
+      "lng": 100.597991,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN08",
+          "station_name_en": "Don Muang",
+          "station_name_th": "ดอนเมือง",
+          "lat": 13.914624,
+          "lng": 100.597991,
+          "osm_id": "node/7314656147"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7314656147"
+      ]
+    },
+    {
+      "id": "e7",
+      "name_en": "Ekkamai",
+      "name_th": "ekkamai",
+      "names_th": [
+        "ekkamai"
+      ],
+      "lat": 13.719522,
+      "lng": 100.585098,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E7",
+          "station_name_en": "Ekkamai",
+          "station_name_th": "ekkamai",
+          "lat": 13.719522,
+          "lng": 100.585098,
+          "osm_id": "node/12888242051"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12888242051"
+      ]
+    },
+    {
+      "id": "bl03",
+      "name_en": "Fai Chai",
+      "name_th": "ไฟฉาย",
+      "names_th": [
+        "ไฟฉาย"
+      ],
+      "lat": 13.755796,
+      "lng": 100.469299,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL03",
+          "station_name_en": "Fai Chai",
+          "station_name_th": "ไฟฉาย",
+          "lat": 13.755796,
+          "lng": 100.469299,
+          "osm_id": "node/12800399154"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800399154"
+      ]
+    },
+    {
+      "id": "pk12",
+      "name_en": "Government Complex",
+      "name_th": "ศูนย์ราชการเฉลิมพระเกียรติ",
+      "names_th": [
+        "ศูนย์ราชการเฉลิมพระเกียรติ"
+      ],
+      "lat": 13.890753,
+      "lng": 100.567342,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK12",
+          "station_name_en": "Government Complex",
+          "station_name_th": "ศูนย์ราชการเฉลิมพระเกียรติ",
+          "lat": 13.890753,
+          "lng": 100.567342,
+          "osm_id": "node/11364465362"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/11364465362"
+      ]
+    },
+    {
+      "id": "n9",
+      "name_en": "Ha Yaek Lat Phrao",
+      "name_th": "ห้าแยกลาดพร้าว",
+      "names_th": [
+        "ห้าแยกลาดพร้าว"
+      ],
+      "lat": 13.816725,
+      "lng": 100.561943,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N9",
+          "station_name_en": "Ha Yaek Lat Phrao",
+          "station_name_th": "ห้าแยกลาดพร้าว",
+          "lat": 13.816725,
+          "lng": 100.561943,
+          "osm_id": "node/6681609031"
+        }
+      ],
+      "connections": [
+        {
+          "id": "bl14",
+          "name_en": "Phahon Yothin",
+          "lines": [
+            {
+              "code": "BL14",
+              "name_en": "Phahon Yothin",
+              "name_th": "พหลโยธิน",
+              "line_id": "mrt-blue",
+              "line_short": "Blue",
+              "line_name_en": "MRT Blue"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/6681609031"
+      ]
+    },
+    {
+      "id": "bl28",
+      "name_en": "Hua Lamphong",
+      "name_th": "หัวลำโพง",
+      "names_th": [
+        "หัวลำโพง"
+      ],
+      "lat": 13.737408,
+      "lng": 100.517047,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL28",
+          "station_name_en": "Hua Lamphong",
+          "station_name_th": "หัวลำโพง",
+          "lat": 13.737408,
+          "lng": 100.517047,
+          "osm_id": "node/12800326775"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800326775"
+      ]
+    },
+    {
+      "id": "a4",
+      "name_en": "Hua Mak",
+      "name_th": "หัวหมาก",
+      "names_th": [
+        "หัวหมาก"
+      ],
+      "lat": 13.73806,
+      "lng": 100.645878,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "arl",
+          "name_en": "Airport Rail Link",
+          "name_th": "รถไฟฟ้าแอร์พอร์ต เรล ลิงก์",
+          "short": "Airport Rail Link",
+          "code": "A4",
+          "station_name_en": "Hua Mak",
+          "station_name_th": "หัวหมาก",
+          "lat": 13.73806,
+          "lng": 100.645878,
+          "osm_id": "node/3180278585"
+        }
+      ],
+      "connections": [
+        {
+          "id": "yl11",
+          "name_en": "Hua Mak",
+          "lines": [
+            {
+              "code": "YL11",
+              "name_en": "Hua Mak",
+              "name_th": "หัวหมาก",
+              "line_id": "mrt-yellow",
+              "line_short": "Yellow",
+              "line_name_en": "MRT Yellow"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/3180278585"
+      ]
+    },
+    {
+      "id": "yl11",
+      "name_en": "Hua Mak",
+      "name_th": "หัวหมาก",
+      "names_th": [
+        "หัวหมาก"
+      ],
+      "lat": 13.736148,
+      "lng": 100.641138,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL11",
+          "station_name_en": "Hua Mak",
+          "station_name_th": "หัวหมาก",
+          "lat": 13.736148,
+          "lng": 100.641138,
+          "osm_id": "node/10867419324"
+        }
+      ],
+      "connections": [
+        {
+          "id": "a4",
+          "name_en": "Hua Mak",
+          "lines": [
+            {
+              "code": "A4",
+              "name_en": "Hua Mak",
+              "name_th": "หัวหมาก",
+              "line_id": "arl",
+              "line_short": "Airport Rail Link",
+              "line_name_en": "Airport Rail Link"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/10867419324"
+      ]
+    },
+    {
+      "id": "bl18",
+      "name_en": "Huai Khwang",
+      "name_th": "ห้วยขวาง",
+      "names_th": [
+        "ห้วยขวาง"
+      ],
+      "lat": 13.778688,
+      "lng": 100.573566,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL18",
+          "station_name_en": "Huai Khwang",
+          "station_name_th": "ห้วยขวาง",
+          "lat": 13.778688,
+          "lng": 100.573566,
+          "osm_id": "node/280239009"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/280239009"
+      ]
+    },
+    {
+      "id": "mt01",
+      "name_en": "Impact Muang Thong Thani",
+      "name_th": "อิมแพ็ค เมืองทองธานี",
+      "names_th": [
+        "อิมแพ็ค เมืองทองธานี"
+      ],
+      "lat": 13.910445,
+      "lng": 100.544248,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "MT01",
+          "station_name_en": "Impact Muang Thong Thani",
+          "station_name_th": "อิมแพ็ค เมืองทองธานี",
+          "lat": 13.910445,
+          "lng": 100.544248,
+          "osm_id": "node/7156540353"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7156540353"
+      ]
+    },
+    {
+      "id": "bl32",
+      "name_en": "Itsaraphap",
+      "name_th": "อิสรภาพ",
+      "names_th": [
+        "อิสรภาพ"
+      ],
+      "lat": 13.738327,
+      "lng": 100.485702,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL32",
+          "station_name_en": "Itsaraphap",
+          "station_name_th": "อิสรภาพ",
+          "lat": 13.738327,
+          "lng": 100.485702,
+          "osm_id": "node/3801040562"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3801040562"
+      ]
+    },
+    {
+      "id": "yl12",
+      "name_en": "Kalantan",
+      "name_th": "กลันตัน",
+      "names_th": [
+        "กลันตัน"
+      ],
+      "lat": 13.725271,
+      "lng": 100.64178,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL12",
+          "station_name_en": "Kalantan",
+          "station_name_th": "กลันตัน",
+          "lat": 13.725271,
+          "lng": 100.64178,
+          "osm_id": "node/10867419323"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/10867419323"
+      ]
+    },
+    {
+      "id": "bl12",
+      "name_en": "Kamphaeng Phet",
+      "name_th": "กำแพงเพชร",
+      "names_th": [
+        "กำแพงเพชร"
+      ],
+      "lat": 13.797948,
+      "lng": 100.547884,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL12",
+          "station_name_en": "Kamphaeng Phet",
+          "station_name_th": "กำแพงเพชร",
+          "lat": 13.797948,
+          "lng": 100.547884,
+          "osm_id": "node/280240589"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/280240589"
+      ]
+    },
+    {
+      "id": "rn07",
+      "name_en": "Kan Kheha",
+      "name_th": "การเคหะ",
+      "names_th": [
+        "การเคหะ"
+      ],
+      "lat": 13.898631,
+      "lng": 100.588924,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN07",
+          "station_name_en": "Kan Kheha",
+          "station_name_th": "การเคหะ",
+          "lat": 13.898631,
+          "lng": 100.588924,
+          "osm_id": "node/7314656165"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7314656165"
+      ]
+    },
+    {
+      "id": "n13",
+      "name_en": "Kasetsart University",
+      "name_th": "มหาวิทยาลัยเกษตรศาสตร์",
+      "names_th": [
+        "มหาวิทยาลัยเกษตรศาสตร์"
+      ],
+      "lat": 13.842326,
+      "lng": 100.577087,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N13",
+          "station_name_en": "Kasetsart University",
+          "station_name_th": "มหาวิทยาลัยเกษตรศาสตร์",
+          "lat": 13.842326,
+          "lng": 100.577087,
+          "osm_id": "node/12885877969"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877969"
+      ]
+    },
+    {
+      "id": "pk02",
+      "name_en": "Khae Rai",
+      "name_th": "แคราย",
+      "names_th": [
+        "แคราย"
+      ],
+      "lat": 13.86264,
+      "lng": 100.520642,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK02",
+          "station_name_en": "Khae Rai",
+          "station_name_th": "แคราย",
+          "lat": 13.86264,
+          "lng": 100.520642,
+          "osm_id": "node/11364361870"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/11364361870"
+      ]
+    },
+    {
+      "id": "e23",
+      "name_en": "Kheha",
+      "name_th": "เคหะฯ",
+      "names_th": [
+        "เคหะฯ"
+      ],
+      "lat": 13.567706,
+      "lng": 100.607726,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E23",
+          "station_name_en": "Kheha",
+          "station_name_th": "เคหะฯ",
+          "lat": 13.567706,
+          "lng": 100.607726,
+          "osm_id": "node/6123597374"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6123597374"
+      ]
+    },
+    {
+      "id": "pp1",
+      "name_en": "Khlong Bang Phai",
+      "name_th": "คลองบางไผ่",
+      "names_th": [
+        "คลองบางไผ่"
+      ],
+      "lat": 13.89244,
+      "lng": 100.408285,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP1",
+          "station_name_en": "Khlong Bang Phai",
+          "station_name_th": "คลองบางไผ่",
+          "lat": 13.89244,
+          "lng": 100.408285,
+          "osm_id": "node/3487511748"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511748"
+      ]
+    },
+    {
+      "id": "g3",
+      "name_en": "Khlong San",
+      "name_th": "คลองสาน",
+      "names_th": [
+        "คลองสาน"
+      ],
+      "lat": 13.730325,
+      "lng": 100.507728,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-gold",
+          "name_en": "BTS Gold",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีทอง",
+          "short": "Gold",
+          "code": "G3",
+          "station_name_en": "Khlong San",
+          "station_name_th": "คลองสาน",
+          "lat": 13.730325,
+          "lng": 100.507728,
+          "osm_id": "node/11012357562"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/11012357562"
+      ]
+    },
+    {
+      "id": "bl24",
+      "name_en": "Khlong Toei",
+      "name_th": "คลองเตย",
+      "names_th": [
+        "คลองเตย"
+      ],
+      "lat": 13.722053,
+      "lng": 100.554306,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL24",
+          "station_name_en": "Khlong Toei",
+          "station_name_th": "คลองเตย",
+          "lat": 13.722053,
+          "lng": 100.554306,
+          "osm_id": "node/12800442843"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800442843"
+      ]
+    },
+    {
+      "id": "pk23",
+      "name_en": "Khu Bon",
+      "name_th": "คู้บอน",
+      "names_th": [
+        "คู้บอน"
+      ],
+      "lat": 13.840609,
+      "lng": 100.658781,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK23",
+          "station_name_en": "Khu Bon",
+          "station_name_th": "คู้บอน",
+          "lat": 13.840609,
+          "lng": 100.658781,
+          "osm_id": "node/9734277461"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9734277461"
+      ]
+    },
+    {
+      "id": "n24",
+      "name_en": "Khu Khot",
+      "name_th": "คูคต",
+      "names_th": [
+        "คูคต"
+      ],
+      "lat": 13.932384,
+      "lng": 100.646523,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N24",
+          "station_name_en": "Khu Khot",
+          "station_name_th": "คูคต",
+          "lat": 13.932384,
+          "lng": 100.646523,
+          "osm_id": "node/12886086388"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12886086388"
+      ]
+    },
+    {
+      "id": "node-7314652465",
+      "name_en": "Krung Thep Aphiwat",
+      "name_th": "กรุงเทพอภิวัฒน์",
+      "names_th": [
+        "กรุงเทพอภิวัฒน์",
+        "กรุงเทพอภิวัฒน์"
+      ],
+      "lat": 13.803987,
+      "lng": 100.541462,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": null,
+          "station_name_en": "Krung Thep Aphiwat",
+          "station_name_th": "กรุงเทพอภิวัฒน์",
+          "lat": 13.803987,
+          "lng": 100.541462,
+          "osm_id": "node/7314652465"
+        },
+        {
+          "id": "srt-light-red",
+          "name_en": "SRT Light Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงอ่อน",
+          "short": "Light Red",
+          "code": null,
+          "station_name_en": "Krung Thep Aphiwat",
+          "station_name_th": "กรุงเทพอภิวัฒน์",
+          "lat": 13.80378,
+          "lng": 100.542004,
+          "osm_id": "node/7314652453"
+        }
+      ],
+      "connections": [
+        {
+          "id": "bl11",
+          "name_en": "Bang Sue",
+          "lines": [
+            {
+              "code": "BL11",
+              "name_en": "Bang Sue",
+              "name_th": "บางซื่อ",
+              "line_id": "mrt-blue",
+              "line_short": "Blue",
+              "line_name_en": "MRT Blue"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/7314652465",
+        "node/7314652453"
+      ]
+    },
+    {
+      "id": "g1",
+      "name_en": "Krung Thon Buri",
+      "name_th": "กรุงธนบุรี",
+      "names_th": [
+        "กรุงธนบุรี"
+      ],
+      "lat": 13.721168,
+      "lng": 100.503714,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-gold",
+          "name_en": "BTS Gold",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีทอง",
+          "short": "Gold",
+          "code": "G1",
+          "station_name_en": "Krung Thon Buri",
+          "station_name_th": "กรุงธนบุรี",
+          "lat": 13.721168,
+          "lng": 100.503714,
+          "osm_id": "node/7781133227"
+        }
+      ],
+      "connections": [
+        {
+          "id": "s7",
+          "name_en": "Krung Thon Buri",
+          "lines": [
+            {
+              "code": "S7",
+              "name_en": "Krung Thon Buri",
+              "name_th": "กรุงธนบุรี",
+              "line_id": "bts-silom",
+              "line_short": "Silom",
+              "line_name_en": "BTS Silom"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/7781133227"
+      ]
+    },
+    {
+      "id": "s7",
+      "name_en": "Krung Thon Buri",
+      "name_th": "กรุงธนบุรี",
+      "names_th": [
+        "กรุงธนบุรี"
+      ],
+      "lat": 13.720931,
+      "lng": 100.502718,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S7",
+          "station_name_en": "Krung Thon Buri",
+          "station_name_th": "กรุงธนบุรี",
+          "lat": 13.720931,
+          "lng": 100.502718,
+          "osm_id": "node/443815144"
+        }
+      ],
+      "connections": [
+        {
+          "id": "g1",
+          "name_en": "Krung Thon Buri",
+          "lines": [
+            {
+              "code": "G1",
+              "name_en": "Krung Thon Buri",
+              "name_th": "กรุงธนบุรี",
+              "line_id": "bts-gold",
+              "line_short": "Gold",
+              "line_name_en": "BTS Gold"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/443815144"
+      ]
+    },
+    {
+      "id": "rn09",
+      "name_en": "Lak Hok (Rangsit U.)",
+      "name_th": "หลักหก (ม.รังสิต)",
+      "names_th": [
+        "หลักหก (ม.รังสิต)"
+      ],
+      "lat": 13.965726,
+      "lng": 100.605396,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN09",
+          "station_name_en": "Lak Hok (Rangsit U.)",
+          "station_name_th": "หลักหก (ม.รังสิต)",
+          "lat": 13.965726,
+          "lng": 100.605396,
+          "osm_id": "node/6433572919"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6433572919"
+      ]
+    },
+    {
+      "id": "pk14",
+      "name_en": "Lak Si",
+      "name_th": "หลักสี่",
+      "names_th": [
+        "หลักสี่"
+      ],
+      "lat": 13.884049,
+      "lng": 100.582681,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK14",
+          "station_name_en": "Lak Si",
+          "station_name_th": "หลักสี่",
+          "lat": 13.884049,
+          "lng": 100.582681,
+          "osm_id": "node/9913078093"
+        }
+      ],
+      "connections": [
+        {
+          "id": "rn06",
+          "name_en": "Lak Si",
+          "lines": [
+            {
+              "code": "RN06",
+              "name_en": "Lak Si",
+              "name_th": "หลักสี่",
+              "line_id": "srt-dark-red",
+              "line_short": "Dark Red",
+              "line_name_en": "SRT Dark Red"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/9913078093"
+      ]
+    },
+    {
+      "id": "rn06",
+      "name_en": "Lak Si",
+      "name_th": "หลักสี่",
+      "names_th": [
+        "หลักสี่"
+      ],
+      "lat": 13.886289,
+      "lng": 100.581987,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN06",
+          "station_name_en": "Lak Si",
+          "station_name_th": "หลักสี่",
+          "lat": 13.886289,
+          "lng": 100.581987,
+          "osm_id": "node/3699968297"
+        }
+      ],
+      "connections": [
+        {
+          "id": "pk14",
+          "name_en": "Lak Si",
+          "lines": [
+            {
+              "code": "PK14",
+              "name_en": "Lak Si",
+              "name_th": "หลักสี่",
+              "line_id": "mrt-pink",
+              "line_short": "Pink",
+              "line_name_en": "MRT Pink"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/3699968297"
+      ]
+    },
+    {
+      "id": "bl38",
+      "name_en": "Lak Song",
+      "name_th": "หลักสอง",
+      "names_th": [
+        "หลักสอง"
+      ],
+      "lat": 13.710856,
+      "lng": 100.409493,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL38",
+          "station_name_en": "Lak Song",
+          "station_name_th": "หลักสอง",
+          "lat": 13.710856,
+          "lng": 100.409493,
+          "osm_id": "node/12800326821"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800326821"
+      ]
+    },
+    {
+      "id": "mt02",
+      "name_en": "Lake Muang Thong Thani",
+      "name_th": "ทะเลสาบเมืองทองธานี",
+      "names_th": [
+        "ทะเลสาบเมืองทองธานี"
+      ],
+      "lat": 13.918379,
+      "lng": 100.545652,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "MT02",
+          "station_name_en": "Lake Muang Thong Thani",
+          "station_name_th": "ทะเลสาบเมืองทองธานี",
+          "lat": 13.918379,
+          "lng": 100.545652,
+          "osm_id": "node/8067064024"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8067064024"
+      ]
+    },
+    {
+      "id": "a2",
+      "name_en": "Lat Krabang",
+      "name_th": "ลาดกระบัง",
+      "names_th": [
+        "ลาดกระบัง"
+      ],
+      "lat": 13.727708,
+      "lng": 100.74932,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "arl",
+          "name_en": "Airport Rail Link",
+          "name_th": "รถไฟฟ้าแอร์พอร์ต เรล ลิงก์",
+          "short": "Airport Rail Link",
+          "code": "A2",
+          "station_name_en": "Lat Krabang",
+          "station_name_th": "ลาดกระบัง",
+          "lat": 13.727708,
+          "lng": 100.74932,
+          "osm_id": "node/3180278584"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3180278584"
+      ]
+    },
+    {
+      "id": "bl15",
+      "name_en": "Lat Phrao",
+      "name_th": "ลาดพร้าว",
+      "names_th": [
+        "ลาดพร้าว"
+      ],
+      "lat": 13.806503,
+      "lng": 100.57287,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL15",
+          "station_name_en": "Lat Phrao",
+          "station_name_th": "ลาดพร้าว",
+          "lat": 13.806503,
+          "lng": 100.57287,
+          "osm_id": "node/280240577"
+        }
+      ],
+      "connections": [
+        {
+          "id": "yl01",
+          "name_en": "Lat Phrao",
+          "lines": [
+            {
+              "code": "YL01",
+              "name_en": "Lat Phrao",
+              "name_th": "ลาดพร้าว",
+              "line_id": "mrt-yellow",
+              "line_short": "Yellow",
+              "line_name_en": "MRT Yellow"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/280240577"
+      ]
+    },
+    {
+      "id": "yl01",
+      "name_en": "Lat Phrao",
+      "name_th": "ลาดพร้าว",
+      "names_th": [
+        "ลาดพร้าว"
+      ],
+      "lat": 13.806991,
+      "lng": 100.574808,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL01",
+          "station_name_en": "Lat Phrao",
+          "station_name_th": "ลาดพร้าว",
+          "lat": 13.806991,
+          "lng": 100.574808,
+          "osm_id": "node/8717933837"
+        }
+      ],
+      "connections": [
+        {
+          "id": "bl15",
+          "name_en": "Lat Phrao",
+          "lines": [
+            {
+              "code": "BL15",
+              "name_en": "Lat Phrao",
+              "name_th": "ลาดพร้าว",
+              "line_id": "mrt-blue",
+              "line_short": "Blue",
+              "line_name_en": "MRT Blue"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/8717933837"
+      ]
+    },
+    {
+      "id": "yl07",
+      "name_en": "Lat Phrao 101",
+      "name_th": "ลาดพร้าว 101",
+      "names_th": [
+        "ลาดพร้าว 101"
+      ],
+      "lat": 13.774678,
+      "lng": 100.629803,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL07",
+          "station_name_en": "Lat Phrao 101",
+          "station_name_th": "ลาดพร้าว 101",
+          "lat": 13.774678,
+          "lng": 100.629803,
+          "osm_id": "node/8717933832"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717933832"
+      ]
+    },
+    {
+      "id": "yl04",
+      "name_en": "Lat Phrao 71",
+      "name_th": "ลาดพร้าว 71",
+      "names_th": [
+        "ลาดพร้าว 71"
+      ],
+      "lat": 13.787103,
+      "lng": 100.60759,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL04",
+          "station_name_en": "Lat Phrao 71",
+          "station_name_th": "ลาดพร้าว 71",
+          "lat": 13.787103,
+          "lng": 100.60759,
+          "osm_id": "node/8717933834"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717933834"
+      ]
+    },
+    {
+      "id": "yl05",
+      "name_en": "Lat Phrao 83",
+      "name_th": "ลาดพร้าว 83",
+      "names_th": [
+        "ลาดพร้าว 83"
+      ],
+      "lat": 13.783753,
+      "lng": 100.613605,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL05",
+          "station_name_en": "Lat Phrao 83",
+          "station_name_th": "ลาดพร้าว 83",
+          "lat": 13.783753,
+          "lng": 100.613605,
+          "osm_id": "node/8717933833"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717933833"
+      ]
+    },
+    {
+      "id": "pk18",
+      "name_en": "Lat Pla Khao",
+      "name_th": "ลาดปลาเค้า",
+      "names_th": [
+        "ลาดปลาเค้า"
+      ],
+      "lat": 13.862778,
+      "lng": 100.617802,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK18",
+          "station_name_en": "Lat Pla Khao",
+          "station_name_th": "ลาดปลาเค้า",
+          "lat": 13.862778,
+          "lng": 100.617802,
+          "osm_id": "node/9734277456"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9734277456"
+      ]
+    },
+    {
+      "id": "bl25",
+      "name_en": "Lumphini",
+      "name_th": "ลุมพินี",
+      "names_th": [
+        "ลุมพินี"
+      ],
+      "lat": 13.725594,
+      "lng": 100.545718,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL25",
+          "station_name_en": "Lumphini",
+          "station_name_th": "ลุมพินี",
+          "lat": 13.725594,
+          "lng": 100.545718,
+          "osm_id": "node/12803915070"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12803915070"
+      ]
+    },
+    {
+      "id": "yl06",
+      "name_en": "Mahatthai",
+      "name_th": "มหาดไทย",
+      "names_th": [
+        "มหาดไทย"
+      ],
+      "lat": 13.778377,
+      "lng": 100.623187,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL06",
+          "station_name_en": "Mahatthai",
+          "station_name_th": "มหาดไทย",
+          "lat": 13.778377,
+          "lng": 100.623187,
+          "osm_id": "node/6695196331"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6695196331"
+      ]
+    },
+    {
+      "id": "pk20",
+      "name_en": "Maiyalap",
+      "name_th": "มัยลาภ",
+      "names_th": [
+        "มัยลาภ"
+      ],
+      "lat": 13.855001,
+      "lng": 100.632213,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK20",
+          "station_name_en": "Maiyalap",
+          "station_name_th": "มัยลาภ",
+          "lat": 13.855001,
+          "lng": 100.632213,
+          "osm_id": "node/9734277458"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9734277458"
+      ]
+    },
+    {
+      "id": "a6",
+      "name_en": "Makkasan",
+      "name_th": "มักกะสัน",
+      "names_th": [
+        "มักกะสัน"
+      ],
+      "lat": 13.750749,
+      "lng": 100.562194,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "arl",
+          "name_en": "Airport Rail Link",
+          "name_th": "รถไฟฟ้าแอร์พอร์ต เรล ลิงก์",
+          "short": "Airport Rail Link",
+          "code": "A6",
+          "station_name_en": "Makkasan",
+          "station_name_th": "มักกะสัน",
+          "lat": 13.750749,
+          "lng": 100.562194,
+          "osm_id": "node/3178943413"
+        }
+      ],
+      "connections": [
+        {
+          "id": "bl21",
+          "name_en": "Phetchaburi",
+          "lines": [
+            {
+              "code": "BL21",
+              "name_en": "Phetchaburi",
+              "name_th": "เพชรบุรี",
+              "line_id": "mrt-blue",
+              "line_short": "Blue",
+              "line_name_en": "MRT Blue"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/3178943413"
+      ]
+    },
+    {
+      "id": "pk30",
+      "name_en": "Min Buri",
+      "name_th": "มีนบุรี",
+      "names_th": [
+        "มีนบุรี"
+      ],
+      "lat": 13.808402,
+      "lng": 100.732674,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK30",
+          "station_name_en": "Min Buri",
+          "station_name_th": "มีนบุรี",
+          "lat": 13.808402,
+          "lng": 100.732674,
+          "osm_id": "node/8730762308"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8730762308"
+      ]
+    },
+    {
+      "id": "pk29",
+      "name_en": "Min Buri Market",
+      "name_th": "ตลาดมีนบุรี",
+      "names_th": [
+        "ตลาดมีนบุรี"
+      ],
+      "lat": 13.812493,
+      "lng": 100.725833,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK29",
+          "station_name_en": "Min Buri Market",
+          "station_name_th": "ตลาดมีนบุรี",
+          "lat": 13.812493,
+          "lng": 100.725833,
+          "osm_id": "node/8730802232"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8730802232"
+      ]
+    },
+    {
+      "id": "pp12",
+      "name_en": "Ministry of Public Health",
+      "name_th": "กระทรวงสาธารณสุข",
+      "names_th": [
+        "กระทรวงสาธารณสุข"
+      ],
+      "lat": 13.848499,
+      "lng": 100.514776,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP12",
+          "station_name_en": "Ministry of Public Health",
+          "station_name_th": "กระทรวงสาธารณสุข",
+          "lat": 13.848499,
+          "lng": 100.514776,
+          "osm_id": "node/3487511003"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511003"
+      ]
+    },
+    {
+      "id": "n8-bl13",
+      "name_en": "Mo Chit / Chatuchak Park",
+      "name_th": "หมอชิต",
+      "names_th": [
+        "หมอชิต",
+        "สวนจตุจักร"
+      ],
+      "lat": 13.802599,
+      "lng": 100.553791,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N8",
+          "station_name_en": "Mo Chit",
+          "station_name_th": "หมอชิต",
+          "lat": 13.802599,
+          "lng": 100.553791,
+          "osm_id": "node/5388599065"
+        },
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL13",
+          "station_name_en": "Chatuchak Park",
+          "station_name_th": "สวนจตุจักร",
+          "lat": 13.802964,
+          "lng": 100.553285,
+          "osm_id": "node/280240585"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/5388599065",
+        "node/280240585"
+      ]
+    },
+    {
+      "id": "pk10",
+      "name_en": "Muang Thong Thani",
+      "name_th": "เมืองทองธานี",
+      "names_th": [
+        "เมืองทองธานี"
+      ],
+      "lat": 13.897398,
+      "lng": 100.548436,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK10",
+          "station_name_en": "Muang Thong Thani",
+          "station_name_th": "เมืองทองธานี",
+          "lat": 13.897398,
+          "lng": 100.548436,
+          "osm_id": "node/11364361936"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/11364361936"
+      ]
+    },
+    {
+      "id": "e3",
+      "name_en": "Nana",
+      "name_th": "นานา",
+      "names_th": [
+        "นานา"
+      ],
+      "lat": 13.740526,
+      "lng": 100.555412,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E3",
+          "station_name_en": "Nana",
+          "station_name_th": "นานา",
+          "lat": 13.740526,
+          "lng": 100.555412,
+          "osm_id": "node/12888241949"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12888241949"
+      ]
+    },
+    {
+      "id": "w1",
+      "name_en": "National Stadium",
+      "name_th": "สนามกีฬาแห่งชาติ",
+      "names_th": [
+        "สนามกีฬาแห่งชาติ"
+      ],
+      "lat": 13.746532,
+      "lng": 100.52909,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "W1",
+          "station_name_en": "National Stadium",
+          "station_name_th": "สนามกีฬาแห่งชาติ",
+          "lat": 13.746532,
+          "lng": 100.52909,
+          "osm_id": "node/257066819"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/257066819"
+      ]
+    },
+    {
+      "id": "pk13",
+      "name_en": "National Telecom",
+      "name_th": "โทรคมนาคมแห่งชาติ",
+      "names_th": [
+        "โทรคมนาคมแห่งชาติ"
+      ],
+      "lat": 13.887563,
+      "lng": 100.575709,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK13",
+          "station_name_en": "National Telecom",
+          "station_name_th": "โทรคมนาคมแห่งชาติ",
+          "lat": 13.887563,
+          "lng": 100.575709,
+          "osm_id": "node/11364501869"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/11364501869"
+      ]
+    },
+    {
+      "id": "pk01",
+      "name_en": "Nonthaburi Civic Center",
+      "name_th": "ศูนย์ราชการนนทบุรี",
+      "names_th": [
+        "ศูนย์ราชการนนทบุรี"
+      ],
+      "lat": 13.8597,
+      "lng": 100.518106,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK01",
+          "station_name_en": "Nonthaburi Civic Center",
+          "station_name_th": "ศูนย์ราชการนนทบุรี",
+          "lat": 13.8597,
+          "lng": 100.518106,
+          "osm_id": "node/11364308558"
+        }
+      ],
+      "connections": [
+        {
+          "id": "pp11",
+          "name_en": "Nonthaburi Civic Center",
+          "lines": [
+            {
+              "code": "PP11",
+              "name_en": "Nonthaburi Civic Center",
+              "name_th": "ศูนย์ราชการนนทบุรี",
+              "line_id": "mrt-purple",
+              "line_short": "Purple",
+              "line_name_en": "MRT Purple"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/11364308558"
+      ]
+    },
+    {
+      "id": "pp11",
+      "name_en": "Nonthaburi Civic Center",
+      "name_th": "ศูนย์ราชการนนทบุรี",
+      "names_th": [
+        "ศูนย์ราชการนนทบุรี"
+      ],
+      "lat": 13.860233,
+      "lng": 100.513072,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP11",
+          "station_name_en": "Nonthaburi Civic Center",
+          "station_name_th": "ศูนย์ราชการนนทบุรี",
+          "lat": 13.860233,
+          "lng": 100.513072,
+          "osm_id": "node/3487511061"
+        }
+      ],
+      "connections": [
+        {
+          "id": "pk01",
+          "name_en": "Nonthaburi Civic Center",
+          "lines": [
+            {
+              "code": "PK01",
+              "name_en": "Nonthaburi Civic Center",
+              "name_th": "ศูนย์ราชการนนทบุรี",
+              "line_id": "mrt-pink",
+              "line_short": "Pink",
+              "line_name_en": "MRT Pink"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/3487511061"
+      ]
+    },
+    {
+      "id": "pk26",
+      "name_en": "Nopparat",
+      "name_th": "นพรัตน์",
+      "names_th": [
+        "นพรัตน์"
+      ],
+      "lat": 13.81652,
+      "lng": 100.685641,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK26",
+          "station_name_en": "Nopparat",
+          "station_name_th": "นพรัตน์",
+          "lat": 13.81652,
+          "lng": 100.685641,
+          "osm_id": "node/8730802246"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8730802246"
+      ]
+    },
+    {
+      "id": "e9",
+      "name_en": "On Nut",
+      "name_th": "อ่อนนุช",
+      "names_th": [
+        "อ่อนนุช"
+      ],
+      "lat": 13.705619,
+      "lng": 100.600983,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E9",
+          "station_name_en": "On Nut",
+          "station_name_th": "อ่อนนุช",
+          "lat": 13.705619,
+          "lng": 100.600983,
+          "osm_id": "node/277361532"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/277361532"
+      ]
+    },
+    {
+      "id": "pk25",
+      "name_en": "Outer Ring Road-Ram Inthra",
+      "name_th": "วงแหวนรามอินทรา",
+      "names_th": [
+        "วงแหวนรามอินทรา"
+      ],
+      "lat": 13.82444,
+      "lng": 100.677195,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK25",
+          "station_name_en": "Outer Ring Road-Ram Inthra",
+          "station_name_th": "วงแหวนรามอินทรา",
+          "lat": 13.82444,
+          "lng": 100.677195,
+          "osm_id": "node/9697341535"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9697341535"
+      ]
+    },
+    {
+      "id": "pk07",
+      "name_en": "Pak Kret Bypass",
+      "name_th": "เลี่ยงเมืองปากเกร็ด",
+      "names_th": [
+        "เลี่ยงเมืองปากเกร็ด"
+      ],
+      "lat": 13.906477,
+      "lng": 100.515558,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK07",
+          "station_name_en": "Pak Kret Bypass",
+          "station_name_th": "เลี่ยงเมืองปากเกร็ด",
+          "lat": 13.906477,
+          "lng": 100.515558,
+          "osm_id": "node/10867419318"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/10867419318"
+      ]
+    },
+    {
+      "id": "e19",
+      "name_en": "Pak Nam",
+      "name_th": "ปากน้ำ",
+      "names_th": [
+        "ปากน้ำ"
+      ],
+      "lat": 13.602095,
+      "lng": 100.597137,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E19",
+          "station_name_en": "Pak Nam",
+          "station_name_th": "ปากน้ำ",
+          "lat": 13.602095,
+          "lng": 100.597137,
+          "osm_id": "node/6123597370"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6123597370"
+      ]
+    },
+    {
+      "id": "bl14",
+      "name_en": "Phahon Yothin",
+      "name_th": "พหลโยธิน",
+      "names_th": [
+        "พหลโยธิน"
+      ],
+      "lat": 13.812881,
+      "lng": 100.561463,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL14",
+          "station_name_en": "Phahon Yothin",
+          "station_name_th": "พหลโยธิน",
+          "lat": 13.812881,
+          "lng": 100.561463,
+          "osm_id": "node/280240580"
+        }
+      ],
+      "connections": [
+        {
+          "id": "n9",
+          "name_en": "Ha Yaek Lat Phrao",
+          "lines": [
+            {
+              "code": "N9",
+              "name_en": "Ha Yaek Lat Phrao",
+              "name_th": "ห้าแยกลาดพร้าว",
+              "line_id": "bts-sukhumvit",
+              "line_short": "Sukhumvit",
+              "line_name_en": "BTS Sukhumvit"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/280240580"
+      ]
+    },
+    {
+      "id": "n10",
+      "name_en": "Phahonyothin 24",
+      "name_th": "พหลโยธิน 24",
+      "names_th": [
+        "พหลโยธิน 24"
+      ],
+      "lat": 13.824128,
+      "lng": 100.566409,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N10",
+          "station_name_en": "Phahonyothin 24",
+          "station_name_th": "พหลโยธิน 24",
+          "lat": 13.824128,
+          "lng": 100.566409,
+          "osm_id": "node/12885877879"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877879"
+      ]
+    },
+    {
+      "id": "n18",
+      "name_en": "Phahonyothin 59",
+      "name_th": "พหลโยธิน 59",
+      "names_th": [
+        "พหลโยธิน 59"
+      ],
+      "lat": 13.882458,
+      "lng": 100.600712,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N18",
+          "station_name_en": "Phahonyothin 59",
+          "station_name_th": "พหลโยธิน 59",
+          "lat": 13.882458,
+          "lng": 100.600712,
+          "osm_id": "node/12885893662"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885893662"
+      ]
+    },
+    {
+      "id": "bl36",
+      "name_en": "Phasi Charoen",
+      "name_th": "ภาษีเจริญ",
+      "names_th": [
+        "ภาษีเจริญ"
+      ],
+      "lat": 13.712898,
+      "lng": 100.434332,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL36",
+          "station_name_en": "Phasi Charoen",
+          "station_name_th": "ภาษีเจริญ",
+          "lat": 13.712898,
+          "lng": 100.434332,
+          "osm_id": "node/12800326879"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800326879"
+      ]
+    },
+    {
+      "id": "yl02",
+      "name_en": "Phawana",
+      "name_th": "ภาวนา",
+      "names_th": [
+        "ภาวนา"
+      ],
+      "lat": 13.800171,
+      "lng": 100.584217,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL02",
+          "station_name_en": "Phawana",
+          "station_name_th": "ภาวนา",
+          "lat": 13.800171,
+          "lng": 100.584217,
+          "osm_id": "node/8717933835"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717933835"
+      ]
+    },
+    {
+      "id": "n2-a8",
+      "name_en": "Phaya Thai",
+      "name_th": "พญาไท",
+      "names_th": [
+        "พญาไท",
+        "พญาไท"
+      ],
+      "lat": 13.756978,
+      "lng": 100.533807,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N2",
+          "station_name_en": "Phaya Thai",
+          "station_name_th": "พญาไท",
+          "lat": 13.756978,
+          "lng": 100.533807,
+          "osm_id": "node/270666790"
+        },
+        {
+          "id": "arl",
+          "name_en": "Airport Rail Link",
+          "name_th": "รถไฟฟ้าแอร์พอร์ต เรล ลิงก์",
+          "short": "Airport Rail Link",
+          "code": "A8",
+          "station_name_en": "Phaya Thai",
+          "station_name_th": "พญาไท",
+          "lat": 13.75683,
+          "lng": 100.53449,
+          "osm_id": "node/917014975"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/270666790",
+        "node/917014975"
+      ]
+    },
+    {
+      "id": "bl21",
+      "name_en": "Phetchaburi",
+      "name_th": "เพชรบุรี",
+      "names_th": [
+        "เพชรบุรี"
+      ],
+      "lat": 13.749177,
+      "lng": 100.563483,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL21",
+          "station_name_en": "Phetchaburi",
+          "station_name_th": "เพชรบุรี",
+          "lat": 13.749177,
+          "lng": 100.563483,
+          "osm_id": "node/12805950166"
+        }
+      ],
+      "connections": [
+        {
+          "id": "a6",
+          "name_en": "Makkasan",
+          "lines": [
+            {
+              "code": "A6",
+              "name_en": "Makkasan",
+              "name_th": "มักกะสัน",
+              "line_id": "arl",
+              "line_short": "Airport Rail Link",
+              "line_name_en": "Airport Rail Link"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/12805950166"
+      ]
+    },
+    {
+      "id": "bl35",
+      "name_en": "Phetkasem 48",
+      "name_th": "เพชรเกษม 48",
+      "names_th": [
+        "เพชรเกษม 48"
+      ],
+      "lat": 13.715538,
+      "lng": 100.445453,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL35",
+          "station_name_en": "Phetkasem 48",
+          "station_name_th": "เพชรเกษม 48",
+          "lat": 13.715538,
+          "lng": 100.445453,
+          "osm_id": "node/12800326904"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800326904"
+      ]
+    },
+    {
+      "id": "e2",
+      "name_en": "Phloen Chit",
+      "name_th": "เพลินจิต",
+      "names_th": [
+        "เพลินจิต"
+      ],
+      "lat": 13.74305,
+      "lng": 100.548971,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E2",
+          "station_name_en": "Phloen Chit",
+          "station_name_th": "เพลินจิต",
+          "lat": 13.74305,
+          "lng": 100.548971,
+          "osm_id": "node/275515851"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/275515851"
+      ]
+    },
+    {
+      "id": "s9",
+      "name_en": "Pho Nimit",
+      "name_th": "โพธิ์นิมิตร",
+      "names_th": [
+        "โพธิ์นิมิตร"
+      ],
+      "lat": 13.719243,
+      "lng": 100.485968,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S9",
+          "station_name_en": "Pho Nimit",
+          "station_name_th": "โพธิ์นิมิตร",
+          "lat": 13.719243,
+          "lng": 100.485968,
+          "osm_id": "node/305693940"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/305693940"
+      ]
+    },
+    {
+      "id": "e8",
+      "name_en": "Phra Khanong",
+      "name_th": "พระโขนง",
+      "names_th": [
+        "พระโขนง"
+      ],
+      "lat": 13.715157,
+      "lng": 100.591225,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E8",
+          "station_name_en": "Phra Khanong",
+          "station_name_th": "พระโขนง",
+          "lat": 13.715157,
+          "lng": 100.591225,
+          "osm_id": "node/277360879"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/277360879"
+      ]
+    },
+    {
+      "id": "pp8",
+      "name_en": "Phra Nang Klao Bridge",
+      "name_th": "สะพานพระนั่งเกล้า",
+      "names_th": [
+        "สะพานพระนั่งเกล้า"
+      ],
+      "lat": 13.870348,
+      "lng": 100.480126,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP8",
+          "station_name_en": "Phra Nang Klao Bridge",
+          "station_name_th": "สะพานพระนั่งเกล้า",
+          "lat": 13.870348,
+          "lng": 100.480126,
+          "osm_id": "node/3487511268"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511268"
+      ]
+    },
+    {
+      "id": "bl20",
+      "name_en": "Phra Ram 9",
+      "name_th": "พระราม 9",
+      "names_th": [
+        "พระราม 9"
+      ],
+      "lat": 13.757817,
+      "lng": 100.565277,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL20",
+          "station_name_en": "Phra Ram 9",
+          "station_name_th": "พระราม 9",
+          "lat": 13.757817,
+          "lng": 100.565277,
+          "osm_id": "node/280179427"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/280179427"
+      ]
+    },
+    {
+      "id": "e21",
+      "name_en": "Phraek Sa",
+      "name_th": "แพรกษา",
+      "names_th": [
+        "แพรกษา"
+      ],
+      "lat": 13.584224,
+      "lng": 100.607882,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E21",
+          "station_name_en": "Phraek Sa",
+          "station_name_th": "แพรกษา",
+          "lat": 13.584224,
+          "lng": 100.607882,
+          "osm_id": "node/6123597372"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6123597372"
+      ]
+    },
+    {
+      "id": "e5",
+      "name_en": "Phrom Phong",
+      "name_th": "พร้อมพงษ์",
+      "names_th": [
+        "พร้อมพงษ์"
+      ],
+      "lat": 13.730418,
+      "lng": 100.569704,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E5",
+          "station_name_en": "Phrom Phong",
+          "station_name_th": "พร้อมพงษ์",
+          "lat": 13.730418,
+          "lng": 100.569704,
+          "osm_id": "node/12888242010"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12888242010"
+      ]
+    },
+    {
+      "id": "e16",
+      "name_en": "Pu Chao",
+      "name_th": "ปู่เจ้า",
+      "names_th": [
+        "ปู่เจ้า"
+      ],
+      "lat": 13.637287,
+      "lng": 100.59199,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E16",
+          "station_name_en": "Pu Chao",
+          "station_name_th": "ปู่เจ้า",
+          "lat": 13.637287,
+          "lng": 100.59199,
+          "osm_id": "node/6123597367"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6123597367"
+      ]
+    },
+    {
+      "id": "e11",
+      "name_en": "Punnawithi",
+      "name_th": "ปุณณวิถี",
+      "names_th": [
+        "ปุณณวิถี"
+      ],
+      "lat": 13.689272,
+      "lng": 100.608977,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E11",
+          "station_name_en": "Punnawithi",
+          "station_name_th": "ปุณณวิถี",
+          "lat": 13.689272,
+          "lng": 100.608977,
+          "osm_id": "node/1726172762"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/1726172762"
+      ]
+    },
+    {
+      "id": "bl23",
+      "name_en": "Queen Sirikit National Convention Centre",
+      "name_th": "ศูนย์การประชุมแห่งชาติสิริกิติ์",
+      "names_th": [
+        "ศูนย์การประชุมแห่งชาติสิริกิติ์"
+      ],
+      "lat": 13.722622,
+      "lng": 100.560067,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL23",
+          "station_name_en": "Queen Sirikit National Convention Centre",
+          "station_name_th": "ศูนย์การประชุมแห่งชาติสิริกิติ์",
+          "lat": 13.722622,
+          "lng": 100.560067,
+          "osm_id": "node/12803915069"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12803915069"
+      ]
+    },
+    {
+      "id": "pk15",
+      "name_en": "Rajabhat Phranakhon",
+      "name_th": "ราชภัฏพระนคร",
+      "names_th": [
+        "ราชภัฏพระนคร"
+      ],
+      "lat": 13.879928,
+      "lng": 100.589283,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK15",
+          "station_name_en": "Rajabhat Phranakhon",
+          "station_name_th": "ราชภัฏพระนคร",
+          "lat": 13.879928,
+          "lng": 100.589283,
+          "osm_id": "node/9733987641"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9733987641"
+      ]
+    },
+    {
+      "id": "pk17",
+      "name_en": "Ram Inthra 3",
+      "name_th": "รามอินทรา 3",
+      "names_th": [
+        "รามอินทรา 3"
+      ],
+      "lat": 13.870939,
+      "lng": 100.602604,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK17",
+          "station_name_en": "Ram Inthra 3",
+          "station_name_th": "รามอินทรา 3",
+          "lat": 13.870939,
+          "lng": 100.602604,
+          "osm_id": "node/9734277455"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9734277455"
+      ]
+    },
+    {
+      "id": "pk19",
+      "name_en": "Ram Inthra Kor Mor 4",
+      "name_th": "รามอินทรา กม.4",
+      "names_th": [
+        "รามอินทรา กม.4"
+      ],
+      "lat": 13.858291,
+      "lng": 100.626119,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK19",
+          "station_name_en": "Ram Inthra Kor Mor 4",
+          "station_name_th": "รามอินทรา กม.4",
+          "lat": 13.858291,
+          "lng": 100.626119,
+          "osm_id": "node/9734277457"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9734277457"
+      ]
+    },
+    {
+      "id": "pk22",
+      "name_en": "Ram Inthra Kor Mor 6",
+      "name_th": "รามอินทรา กม.6",
+      "names_th": [
+        "รามอินทรา กม.6"
+      ],
+      "lat": 13.845243,
+      "lng": 100.650234,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK22",
+          "station_name_en": "Ram Inthra Kor Mor 6",
+          "station_name_th": "รามอินทรา กม.6",
+          "lat": 13.845243,
+          "lng": 100.650234,
+          "osm_id": "node/9734277460"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9734277460"
+      ]
+    },
+    {
+      "id": "pk24",
+      "name_en": "Ram Inthra Kor Mor 9",
+      "name_th": "รามอินทรา กม.9",
+      "names_th": [
+        "รามอินทรา กม.9"
+      ],
+      "lat": 13.833766,
+      "lng": 100.667563,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK24",
+          "station_name_en": "Ram Inthra Kor Mor 9",
+          "station_name_th": "รามอินทรา กม.9",
+          "lat": 13.833766,
+          "lng": 100.667563,
+          "osm_id": "node/9697341538"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9697341538"
+      ]
+    },
+    {
+      "id": "a5",
+      "name_en": "Ramkhamhaeng",
+      "name_th": "รามคำแหง",
+      "names_th": [
+        "รามคำแหง"
+      ],
+      "lat": 13.742973,
+      "lng": 100.600618,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "arl",
+          "name_en": "Airport Rail Link",
+          "name_th": "รถไฟฟ้าแอร์พอร์ต เรล ลิงก์",
+          "short": "Airport Rail Link",
+          "code": "A5",
+          "station_name_en": "Ramkhamhaeng",
+          "station_name_th": "รามคำแหง",
+          "lat": 13.742973,
+          "lng": 100.600618,
+          "osm_id": "node/3180278583"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3180278583"
+      ]
+    },
+    {
+      "id": "rn10",
+      "name_en": "Rangsit",
+      "name_th": "รังสิต",
+      "names_th": [
+        "รังสิต"
+      ],
+      "lat": 13.990545,
+      "lng": 100.602179,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN10",
+          "station_name_en": "Rangsit",
+          "station_name_th": "รังสิต",
+          "lat": 13.990545,
+          "lng": 100.602179,
+          "osm_id": "node/7314656140"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7314656140"
+      ]
+    },
+    {
+      "id": "s1",
+      "name_en": "Ratchadamri",
+      "name_th": "ราชดำริ",
+      "names_th": [
+        "ราชดำริ"
+      ],
+      "lat": 13.739471,
+      "lng": 100.53945,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S1",
+          "station_name_en": "Ratchadamri",
+          "station_name_th": "ราชดำริ",
+          "lat": 13.739471,
+          "lng": 100.53945,
+          "osm_id": "node/257066809"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/257066809"
+      ]
+    },
+    {
+      "id": "bl16",
+      "name_en": "Ratchadaphisek",
+      "name_th": "รัชดาภิเษก",
+      "names_th": [
+        "รัชดาภิเษก"
+      ],
+      "lat": 13.798971,
+      "lng": 100.574554,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL16",
+          "station_name_en": "Ratchadaphisek",
+          "station_name_th": "รัชดาภิเษก",
+          "lat": 13.798971,
+          "lng": 100.574554,
+          "osm_id": "node/280239363"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/280239363"
+      ]
+    },
+    {
+      "id": "a7",
+      "name_en": "Ratchaprarop",
+      "name_th": "ราชปรารภ",
+      "names_th": [
+        "ราชปรารภ"
+      ],
+      "lat": 13.755068,
+      "lng": 100.542324,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "arl",
+          "name_en": "Airport Rail Link",
+          "name_th": "รถไฟฟ้าแอร์พอร์ต เรล ลิงก์",
+          "short": "Airport Rail Link",
+          "code": "A7",
+          "station_name_en": "Ratchaprarop",
+          "station_name_th": "ราชปรารภ",
+          "lat": 13.755068,
+          "lng": 100.542324,
+          "osm_id": "node/3178943414"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3178943414"
+      ]
+    },
+    {
+      "id": "n1",
+      "name_en": "Ratchathewi",
+      "name_th": "ราชเทวี",
+      "names_th": [
+        "ราชเทวี"
+      ],
+      "lat": 13.751886,
+      "lng": 100.531533,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N1",
+          "station_name_en": "Ratchathewi",
+          "station_name_th": "ราชเทวี",
+          "lat": 13.751886,
+          "lng": 100.531533,
+          "osm_id": "node/12885545795"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885545795"
+      ]
+    },
+    {
+      "id": "n11",
+      "name_en": "Ratchayothin",
+      "name_th": "รัชโยธิน",
+      "names_th": [
+        "รัชโยธิน"
+      ],
+      "lat": 13.829757,
+      "lng": 100.569704,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N11",
+          "station_name_en": "Ratchayothin",
+          "station_name_th": "รัชโยธิน",
+          "lat": 13.829757,
+          "lng": 100.569704,
+          "osm_id": "node/12885877902"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877902"
+      ]
+    },
+    {
+      "id": "n14",
+      "name_en": "Royal Forest Department",
+      "name_th": "กรมป่าไม้",
+      "names_th": [
+        "กรมป่าไม้"
+      ],
+      "lat": 13.850335,
+      "lng": 100.581797,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N14",
+          "station_name_en": "Royal Forest Department",
+          "station_name_th": "กรมป่าไม้",
+          "lat": 13.850335,
+          "lng": 100.581797,
+          "osm_id": "node/12885877972"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877972"
+      ]
+    },
+    {
+      "id": "pk05",
+      "name_en": "Royal Irrigation Department",
+      "name_th": "กรมชลประทาน",
+      "names_th": [
+        "กรมชลประทาน"
+      ],
+      "lat": 13.898537,
+      "lng": 100.507079,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK05",
+          "station_name_en": "Royal Irrigation Department",
+          "station_name_th": "กรมชลประทาน",
+          "lat": 13.898537,
+          "lng": 100.507079,
+          "osm_id": "node/10147872913"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/10147872913"
+      ]
+    },
+    {
+      "id": "n22",
+      "name_en": "Royal Thai Air Force Museum",
+      "name_th": "พิพิธภัณฑ์กองทัพอากาศ",
+      "names_th": [
+        "พิพิธภัณฑ์กองทัพอากาศ"
+      ],
+      "lat": 13.917981,
+      "lng": 100.621668,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N22",
+          "station_name_en": "Royal Thai Air Force Museum",
+          "station_name_th": "พิพิธภัณฑ์กองทัพอากาศ",
+          "lat": 13.917981,
+          "lng": 100.621668,
+          "osm_id": "node/12885902286"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885902286"
+      ]
+    },
+    {
+      "id": "e18",
+      "name_en": "Royal Thai Naval Academy",
+      "name_th": "โรงเรียนนายเรือ",
+      "names_th": [
+        "โรงเรียนนายเรือ"
+      ],
+      "lat": 13.608433,
+      "lng": 100.59494,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E18",
+          "station_name_en": "Royal Thai Naval Academy",
+          "station_name_th": "โรงเรียนนายเรือ",
+          "lat": 13.608433,
+          "lng": 100.59494,
+          "osm_id": "node/6123597369"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6123597369"
+      ]
+    },
+    {
+      "id": "e22",
+      "name_en": "Sai Luat",
+      "name_th": "สายลวด",
+      "names_th": [
+        "สายลวด"
+      ],
+      "lat": 13.577864,
+      "lng": 100.605488,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E22",
+          "station_name_en": "Sai Luat",
+          "station_name_th": "สายลวด",
+          "lat": 13.577864,
+          "lng": 100.605488,
+          "osm_id": "node/6123597373"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6123597373"
+      ]
+    },
+    {
+      "id": "pp7",
+      "name_en": "Sai Ma",
+      "name_th": "ไทรม้า",
+      "names_th": [
+        "ไทรม้า"
+      ],
+      "lat": 13.870573,
+      "lng": 100.466711,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP7",
+          "station_name_en": "Sai Ma",
+          "station_name_th": "ไทรม้า",
+          "lat": 13.870573,
+          "lng": 100.466711,
+          "osm_id": "node/3487511288"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511288"
+      ]
+    },
+    {
+      "id": "n19",
+      "name_en": "Sai Yud",
+      "name_th": "สายหยุด",
+      "names_th": [
+        "สายหยุด"
+      ],
+      "lat": 13.888461,
+      "lng": 100.604249,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N19",
+          "station_name_en": "Sai Yud",
+          "station_name_th": "สายหยุด",
+          "lat": 13.888461,
+          "lng": 100.604249,
+          "osm_id": "node/12885893670"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885893670"
+      ]
+    },
+    {
+      "id": "s4",
+      "name_en": "Saint Louis",
+      "name_th": "เซนต์หลุยส์",
+      "names_th": [
+        "เซนต์หลุยส์"
+      ],
+      "lat": 13.720816,
+      "lng": 100.526686,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S4",
+          "station_name_en": "Saint Louis",
+          "station_name_th": "เซนต์หลุยส์",
+          "lat": 13.720816,
+          "lng": 100.526686,
+          "osm_id": "node/7781158247"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7781158247"
+      ]
+    },
+    {
+      "id": "s2",
+      "name_en": "Sala Daeng",
+      "name_th": "ศาลาแดง",
+      "names_th": [
+        "ศาลาแดง"
+      ],
+      "lat": 13.728568,
+      "lng": 100.534342,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S2",
+          "station_name_en": "Sala Daeng",
+          "station_name_th": "ศาลาแดง",
+          "lat": 13.728568,
+          "lng": 100.534342,
+          "osm_id": "node/451697335"
+        }
+      ],
+      "connections": [
+        {
+          "id": "bl26",
+          "name_en": "Si Lom",
+          "lines": [
+            {
+              "code": "BL26",
+              "name_en": "Si Lom",
+              "name_th": "สีลม",
+              "line_id": "mrt-blue",
+              "line_short": "Blue",
+              "line_name_en": "MRT Blue"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/451697335"
+      ]
+    },
+    {
+      "id": "pp3",
+      "name_en": "Sam Yaek Bang Yai",
+      "name_th": "สามแยกบางใหญ่",
+      "names_th": [
+        "สามแยกบางใหญ่"
+      ],
+      "lat": 13.874737,
+      "lng": 100.419357,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP3",
+          "station_name_en": "Sam Yaek Bang Yai",
+          "station_name_th": "สามแยกบางใหญ่",
+          "lat": 13.874737,
+          "lng": 100.419357,
+          "osm_id": "node/3487511435"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511435"
+      ]
+    },
+    {
+      "id": "bl27",
+      "name_en": "Sam Yan",
+      "name_th": "สามย่าน",
+      "names_th": [
+        "สามย่าน"
+      ],
+      "lat": 13.732046,
+      "lng": 100.530114,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL27",
+          "station_name_en": "Sam Yan",
+          "station_name_th": "สามย่าน",
+          "lat": 13.732046,
+          "lng": 100.530114,
+          "osm_id": "node/280222869"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/280222869"
+      ]
+    },
+    {
+      "id": "bl30",
+      "name_en": "Sam Yot",
+      "name_th": "สามยอด",
+      "names_th": [
+        "สามยอด"
+      ],
+      "lat": 13.746981,
+      "lng": 100.502303,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL30",
+          "station_name_en": "Sam Yot",
+          "station_name_th": "สามยอด",
+          "lat": 13.746981,
+          "lng": 100.502303,
+          "osm_id": "node/2324802007"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/2324802007"
+      ]
+    },
+    {
+      "id": "pk04",
+      "name_en": "Samakkhi",
+      "name_th": "สามัคคี",
+      "names_th": [
+        "สามัคคี"
+      ],
+      "lat": 13.889258,
+      "lng": 100.510563,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK04",
+          "station_name_en": "Samakkhi",
+          "station_name_th": "สามัคคี",
+          "lat": 13.889258,
+          "lng": 100.510563,
+          "osm_id": "node/7647114249"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7647114249"
+      ]
+    },
+    {
+      "id": "e15",
+      "name_en": "Samrong",
+      "name_th": "สำโรง",
+      "names_th": [
+        "สำโรง"
+      ],
+      "lat": 13.646523,
+      "lng": 100.595713,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E15",
+          "station_name_en": "Samrong",
+          "station_name_th": "สำโรง",
+          "lat": 13.646523,
+          "lng": 100.595713,
+          "osm_id": "node/8222573842"
+        }
+      ],
+      "connections": [
+        {
+          "id": "yl23",
+          "name_en": "Samrong",
+          "lines": [
+            {
+              "code": "YL23",
+              "name_en": "Samrong",
+              "name_th": "สำโรง",
+              "line_id": "mrt-yellow",
+              "line_short": "Yellow",
+              "line_name_en": "MRT Yellow"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/8222573842"
+      ]
+    },
+    {
+      "id": "yl23",
+      "name_en": "Samrong",
+      "name_th": "สำโรง",
+      "names_th": [
+        "สำโรง"
+      ],
+      "lat": 13.645044,
+      "lng": 100.596616,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL23",
+          "station_name_en": "Samrong",
+          "station_name_th": "สำโรง",
+          "lat": 13.645044,
+          "lng": 100.596616,
+          "osm_id": "node/6703032849"
+        }
+      ],
+      "connections": [
+        {
+          "id": "e15",
+          "name_en": "Samrong",
+          "lines": [
+            {
+              "code": "E15",
+              "name_en": "Samrong",
+              "name_th": "สำโรง",
+              "line_id": "bts-sukhumvit",
+              "line_short": "Sukhumvit",
+              "line_name_en": "BTS Sukhumvit"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/6703032849"
+      ]
+    },
+    {
+      "id": "bl31",
+      "name_en": "Sanam Chai",
+      "name_th": "สนามไชย",
+      "names_th": [
+        "สนามไชย"
+      ],
+      "lat": 13.744334,
+      "lng": 100.494692,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL31",
+          "station_name_en": "Sanam Chai",
+          "station_name_th": "สนามไชย",
+          "lat": 13.744334,
+          "lng": 100.494692,
+          "osm_id": "node/3801040560"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3801040560"
+      ]
+    },
+    {
+      "id": "n4",
+      "name_en": "Sanam Pao",
+      "name_th": "สนามเป้า",
+      "names_th": [
+        "สนามเป้า"
+      ],
+      "lat": 13.772637,
+      "lng": 100.542053,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N4",
+          "station_name_en": "Sanam Pao",
+          "station_name_th": "สนามเป้า",
+          "lat": 13.772637,
+          "lng": 100.542053,
+          "osm_id": "node/12885877711"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877711"
+      ]
+    },
+    {
+      "id": "pk03",
+      "name_en": "Sanambin Nam",
+      "name_th": "สนามบินน้ำ",
+      "names_th": [
+        "สนามบินน้ำ"
+      ],
+      "lat": 13.8741,
+      "lng": 100.516307,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK03",
+          "station_name_en": "Sanambin Nam",
+          "station_name_th": "สนามบินน้ำ",
+          "lat": 13.8741,
+          "lng": 100.516307,
+          "osm_id": "node/7647114250"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7647114250"
+      ]
+    },
+    {
+      "id": "n7",
+      "name_en": "Saphan Khwai",
+      "name_th": "สะพานควาย",
+      "names_th": [
+        "สะพานควาย"
+      ],
+      "lat": 13.793831,
+      "lng": 100.549693,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N7",
+          "station_name_en": "Saphan Khwai",
+          "station_name_th": "สะพานควาย",
+          "lat": 13.793831,
+          "lng": 100.549693,
+          "osm_id": "node/12885877748"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877748"
+      ]
+    },
+    {
+      "id": "n20",
+      "name_en": "Saphan Mai",
+      "name_th": "สะพานใหม่",
+      "names_th": [
+        "สะพานใหม่"
+      ],
+      "lat": 13.896622,
+      "lng": 100.609057,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N20",
+          "station_name_en": "Saphan Mai",
+          "station_name_th": "สะพานใหม่",
+          "lat": 13.896622,
+          "lng": 100.609057,
+          "osm_id": "node/12885902271"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885902271"
+      ]
+    },
+    {
+      "id": "s6",
+      "name_en": "Saphan Taksin",
+      "name_th": "สะพานตากสิน",
+      "names_th": [
+        "สะพานตากสิน"
+      ],
+      "lat": 13.718813,
+      "lng": 100.514223,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S6",
+          "station_name_en": "Saphan Taksin",
+          "station_name_th": "สะพานตากสิน",
+          "lat": 13.718813,
+          "lng": 100.514223,
+          "osm_id": "node/257067085"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/257067085"
+      ]
+    },
+    {
+      "id": "n12",
+      "name_en": "Sena Nikhom",
+      "name_th": "เสนานิคม",
+      "names_th": [
+        "เสนานิคม"
+      ],
+      "lat": 13.836419,
+      "lng": 100.573609,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N12",
+          "station_name_en": "Sena Nikhom",
+          "station_name_th": "เสนานิคม",
+          "lat": 13.836419,
+          "lng": 100.573609,
+          "osm_id": "node/12885877921"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877921"
+      ]
+    },
+    {
+      "id": "pk28",
+      "name_en": "Setthabutbamphen",
+      "name_th": "เศรษฐบุตรบำเพ็ญ",
+      "names_th": [
+        "เศรษฐบุตรบำเพ็ญ"
+      ],
+      "lat": 13.812678,
+      "lng": 100.712628,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK28",
+          "station_name_en": "Setthabutbamphen",
+          "station_name_th": "เศรษฐบุตรบำเพ็ญ",
+          "lat": 13.812678,
+          "lng": 100.712628,
+          "osm_id": "node/8730802243"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8730802243"
+      ]
+    },
+    {
+      "id": "yl19",
+      "name_en": "Si Bearing",
+      "name_th": "ศรีแบริ่ง",
+      "names_th": [
+        "ศรีแบริ่ง"
+      ],
+      "lat": 13.643471,
+      "lng": 100.636241,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL19",
+          "station_name_en": "Si Bearing",
+          "station_name_th": "ศรีแบริ่ง",
+          "lat": 13.643471,
+          "lng": 100.636241,
+          "osm_id": "node/6703032843"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6703032843"
+      ]
+    },
+    {
+      "id": "yl20",
+      "name_en": "Si Dan",
+      "name_th": "ศรีด่าน",
+      "names_th": [
+        "ศรีด่าน"
+      ],
+      "lat": 13.633125,
+      "lng": 100.630104,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL20",
+          "station_name_en": "Si Dan",
+          "station_name_th": "ศรีด่าน",
+          "lat": 13.633125,
+          "lng": 100.630104,
+          "osm_id": "node/6703032848"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6703032848"
+      ]
+    },
+    {
+      "id": "yl17",
+      "name_en": "Si Iam",
+      "name_th": "ศรีเอี่ยม",
+      "names_th": [
+        "ศรีเอี่ยม"
+      ],
+      "lat": 13.667663,
+      "lng": 100.645081,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL17",
+          "station_name_en": "Si Iam",
+          "station_name_th": "ศรีเอี่ยม",
+          "lat": 13.667663,
+          "lng": 100.645081,
+          "osm_id": "node/8717828065"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717828065"
+      ]
+    },
+    {
+      "id": "yl10",
+      "name_en": "Si Kritha",
+      "name_th": "ศรีกรีฑา",
+      "names_th": [
+        "ศรีกรีฑา"
+      ],
+      "lat": 13.750433,
+      "lng": 100.644812,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL10",
+          "station_name_en": "Si Kritha",
+          "station_name_th": "ศรีกรีฑา",
+          "lat": 13.750433,
+          "lng": 100.644812,
+          "osm_id": "node/7271108084"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7271108084"
+      ]
+    },
+    {
+      "id": "yl18",
+      "name_en": "Si La Salle",
+      "name_th": "ศรีลาซาล",
+      "names_th": [
+        "ศรีลาซาล"
+      ],
+      "lat": 13.654958,
+      "lng": 100.642136,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL18",
+          "station_name_en": "Si La Salle",
+          "station_name_th": "ศรีลาซาล",
+          "lat": 13.654958,
+          "lng": 100.642136,
+          "osm_id": "node/8717828067"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717828067"
+      ]
+    },
+    {
+      "id": "bl26",
+      "name_en": "Si Lom",
+      "name_th": "สีลม",
+      "names_th": [
+        "สีลม"
+      ],
+      "lat": 13.729174,
+      "lng": 100.537068,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL26",
+          "station_name_en": "Si Lom",
+          "station_name_th": "สีลม",
+          "lat": 13.729174,
+          "lng": 100.537068,
+          "osm_id": "node/280179442"
+        }
+      ],
+      "connections": [
+        {
+          "id": "s2",
+          "name_en": "Sala Daeng",
+          "lines": [
+            {
+              "code": "S2",
+              "name_en": "Sala Daeng",
+              "name_th": "ศาลาแดง",
+              "line_id": "bts-silom",
+              "line_short": "Silom",
+              "line_name_en": "BTS Silom"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/280179442"
+      ]
+    },
+    {
+      "id": "yl13",
+      "name_en": "Si Nut",
+      "name_th": "ศรีนุช",
+      "names_th": [
+        "ศรีนุช"
+      ],
+      "lat": 13.711097,
+      "lng": 100.644196,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL13",
+          "station_name_en": "Si Nut",
+          "station_name_th": "ศรีนุช",
+          "lat": 13.711097,
+          "lng": 100.644196,
+          "osm_id": "node/10867419322"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/10867419322"
+      ]
+    },
+    {
+      "id": "pk09",
+      "name_en": "Si Rat",
+      "name_th": "ศรีรัช",
+      "names_th": [
+        "ศรีรัช"
+      ],
+      "lat": 13.900635,
+      "lng": 100.540031,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK09",
+          "station_name_en": "Si Rat",
+          "station_name_th": "ศรีรัช",
+          "lat": 13.900635,
+          "lng": 100.540031,
+          "osm_id": "node/11364361909"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/11364361909"
+      ]
+    },
+    {
+      "id": "yl21",
+      "name_en": "Si Thepha",
+      "name_th": "ศรีเทพา",
+      "names_th": [
+        "ศรีเทพา"
+      ],
+      "lat": 13.629879,
+      "lng": 100.622682,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL21",
+          "station_name_en": "Si Thepha",
+          "station_name_th": "ศรีเทพา",
+          "lat": 13.629879,
+          "lng": 100.622682,
+          "osm_id": "node/6703032861"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6703032861"
+      ]
+    },
+    {
+      "id": "yl16",
+      "name_en": "Si Udom",
+      "name_th": "ศรีอุดม",
+      "names_th": [
+        "ศรีอุดม"
+      ],
+      "lat": 13.676638,
+      "lng": 100.646171,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL16",
+          "station_name_en": "Si Udom",
+          "station_name_th": "ศรีอุดม",
+          "lat": 13.676638,
+          "lng": 100.646171,
+          "osm_id": "node/10867419319"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/10867419319"
+      ]
+    },
+    {
+      "id": "cen-cen",
+      "name_en": "Siam",
+      "name_th": "สยาม",
+      "names_th": [
+        "สยาม",
+        "สยาม"
+      ],
+      "lat": 13.745684,
+      "lng": 100.534231,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "CEN",
+          "station_name_en": "Siam",
+          "station_name_th": "สยาม",
+          "lat": 13.745684,
+          "lng": 100.534231,
+          "osm_id": "node/1697004551"
+        },
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "CEN",
+          "station_name_en": "Siam",
+          "station_name_th": "สยาม",
+          "lat": 13.745558,
+          "lng": 100.534208,
+          "osm_id": "node/1697004544"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/1697004551",
+        "node/1697004544"
+      ]
+    },
+    {
+      "id": "bl06",
+      "name_en": "Sirindhorn",
+      "name_th": "สิรินธร",
+      "names_th": [
+        "สิรินธร"
+      ],
+      "lat": 13.783893,
+      "lng": 100.493306,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL06",
+          "station_name_en": "Sirindhorn",
+          "station_name_th": "สิรินธร",
+          "lat": 13.783893,
+          "lng": 100.493306,
+          "osm_id": "node/12800442536"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800442536"
+      ]
+    },
+    {
+      "id": "e20",
+      "name_en": "Srinagarindra",
+      "name_th": "ศรีนครินทร์",
+      "names_th": [
+        "ศรีนครินทร์"
+      ],
+      "lat": 13.592023,
+      "lng": 100.609025,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E20",
+          "station_name_en": "Srinagarindra",
+          "station_name_th": "ศรีนครินทร์",
+          "lat": 13.592023,
+          "lng": 100.609025,
+          "osm_id": "node/6123597371"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6123597371"
+      ]
+    },
+    {
+      "id": "yl14",
+      "name_en": "Srinagarindra 38",
+      "name_th": "ศรีนครินทร์ 38",
+      "names_th": [
+        "ศรีนครินทร์ 38"
+      ],
+      "lat": 13.701115,
+      "lng": 100.646484,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL14",
+          "station_name_en": "Srinagarindra 38",
+          "station_name_th": "ศรีนครินทร์ 38",
+          "lat": 13.701115,
+          "lng": 100.646484,
+          "osm_id": "node/8717841716"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717841716"
+      ]
+    },
+    {
+      "id": "yl15",
+      "name_en": "Suan Luang Rama IX",
+      "name_th": "สวนหลวง ร.9",
+      "names_th": [
+        "สวนหลวง ร.9"
+      ],
+      "lat": 13.690864,
+      "lng": 100.647103,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL15",
+          "station_name_en": "Suan Luang Rama IX",
+          "station_name_th": "สวนหลวง ร.9",
+          "lat": 13.690864,
+          "lng": 100.647103,
+          "osm_id": "node/10867419320"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/10867419320"
+      ]
+    },
+    {
+      "id": "bl22",
+      "name_en": "Sukhumvit",
+      "name_th": "สุขุมวิท",
+      "names_th": [
+        "สุขุมวิท"
+      ],
+      "lat": 13.737472,
+      "lng": 100.561609,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL22",
+          "station_name_en": "Sukhumvit",
+          "station_name_th": "สุขุมวิท",
+          "lat": 13.737472,
+          "lng": 100.561609,
+          "osm_id": "node/12800442805"
+        }
+      ],
+      "connections": [
+        {
+          "id": "e4",
+          "name_en": "Asok",
+          "lines": [
+            {
+              "code": "E4",
+              "name_en": "Asok",
+              "name_th": "อโศก",
+              "line_id": "bts-sukhumvit",
+              "line_short": "Sukhumvit",
+              "line_name_en": "BTS Sukhumvit"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/12800442805"
+      ]
+    },
+    {
+      "id": "s5",
+      "name_en": "Surasak",
+      "name_th": "สุรศักดิ์",
+      "names_th": [
+        "สุรศักดิ์"
+      ],
+      "lat": 13.719268,
+      "lng": 100.521462,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S5",
+          "station_name_en": "Surasak",
+          "station_name_th": "สุรศักดิ์",
+          "lat": 13.719268,
+          "lng": 100.521462,
+          "osm_id": "node/257066779"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/257066779"
+      ]
+    },
+    {
+      "id": "bl17",
+      "name_en": "Sutthisan",
+      "name_th": "สุทธิสาร",
+      "names_th": [
+        "สุทธิสาร"
+      ],
+      "lat": 13.789488,
+      "lng": 100.57408,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL17",
+          "station_name_en": "Sutthisan",
+          "station_name_th": "สุทธิสาร",
+          "lat": 13.789488,
+          "lng": 100.57408,
+          "osm_id": "node/280239362"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/280239362"
+      ]
+    },
+    {
+      "id": "a1",
+      "name_en": "Suvarnabhumi",
+      "name_th": "สุวรรณภูมิ",
+      "names_th": [
+        "สุวรรณภูมิ"
+      ],
+      "lat": 13.694297,
+      "lng": 100.75134,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "arl",
+          "name_en": "Airport Rail Link",
+          "name_th": "รถไฟฟ้าแอร์พอร์ต เรล ลิงก์",
+          "short": "Airport Rail Link",
+          "code": "A1",
+          "station_name_en": "Suvarnabhumi",
+          "station_name_th": "สุวรรณภูมิ",
+          "lat": 13.694297,
+          "lng": 100.75134,
+          "osm_id": "node/3180277903"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3180277903"
+      ]
+    },
+    {
+      "id": "pp2",
+      "name_en": "Talad Bang Yai",
+      "name_th": "ตลาดบางใหญ่",
+      "names_th": [
+        "ตลาดบางใหญ่"
+      ],
+      "lat": 13.881018,
+      "lng": 100.409354,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP2",
+          "station_name_en": "Talad Bang Yai",
+          "station_name_th": "ตลาดบางใหญ่",
+          "lat": 13.881018,
+          "lng": 100.409354,
+          "osm_id": "node/3487511734"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511734"
+      ]
+    },
+    {
+      "id": "s10",
+      "name_en": "Talat Phlu",
+      "name_th": "ตลาดพลู",
+      "names_th": [
+        "ตลาดพลู"
+      ],
+      "lat": 13.71422,
+      "lng": 100.476691,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S10",
+          "station_name_en": "Talat Phlu",
+          "station_name_th": "ตลาดพลู",
+          "lat": 13.71422,
+          "lng": 100.476691,
+          "osm_id": "node/340133002"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/340133002"
+      ]
+    },
+    {
+      "id": "rw06",
+      "name_en": "Taling Chan Junction",
+      "name_th": "ชุมทางตลิ่งชัน",
+      "names_th": [
+        "ชุมทางตลิ่งชัน"
+      ],
+      "lat": 13.789283,
+      "lng": 100.440097,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-light-red",
+          "name_en": "SRT Light Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงอ่อน",
+          "short": "Light Red",
+          "code": "RW06",
+          "station_name_en": "Taling Chan Junction",
+          "station_name_th": "ชุมทางตลิ่งชัน",
+          "lat": 13.789283,
+          "lng": 100.440097,
+          "osm_id": "node/2039197506"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/2039197506"
+      ]
+    },
+    {
+      "id": "bl10-pp16",
+      "name_en": "Tao Poon",
+      "name_th": "เตาปูน",
+      "names_th": [
+        "เตาปูน",
+        "เตาปูน"
+      ],
+      "lat": 13.806198,
+      "lng": 100.530776,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL10",
+          "station_name_en": "Tao Poon",
+          "station_name_th": "เตาปูน",
+          "lat": 13.806198,
+          "lng": 100.530776,
+          "osm_id": "node/12800442665"
+        },
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP16",
+          "station_name_en": "Tao Poon",
+          "station_name_th": "เตาปูน",
+          "lat": 13.80609,
+          "lng": 100.530849,
+          "osm_id": "node/3487509478"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12800442665",
+        "node/3487509478"
+      ]
+    },
+    {
+      "id": "bl01",
+      "name_en": "Tha Phra",
+      "name_th": "ท่าพระ",
+      "names_th": [
+        "ท่าพระ"
+      ],
+      "lat": 13.729609,
+      "lng": 100.473966,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL01",
+          "station_name_en": "Tha Phra",
+          "station_name_th": "ท่าพระ",
+          "lat": 13.729609,
+          "lng": 100.473966,
+          "osm_id": "node/8446348865"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8446348865"
+      ]
+    },
+    {
+      "id": "bl19",
+      "name_en": "Thailand Cultural Centre",
+      "name_th": "ศูนย์วัฒนธรรมแห่งประเทศไทย",
+      "names_th": [
+        "ศูนย์วัฒนธรรมแห่งประเทศไทย"
+      ],
+      "lat": 13.766104,
+      "lng": 100.570193,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL19",
+          "station_name_en": "Thailand Cultural Centre",
+          "station_name_th": "ศูนย์วัฒนธรรมแห่งประเทศไทย",
+          "lat": 13.766104,
+          "lng": 100.570193,
+          "osm_id": "node/13980371099"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/13980371099"
+      ]
+    },
+    {
+      "id": "yl22",
+      "name_en": "Thipphawan",
+      "name_th": "ทิพวัล",
+      "names_th": [
+        "ทิพวัล"
+      ],
+      "lat": 13.636736,
+      "lng": 100.609916,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL22",
+          "station_name_en": "Thipphawan",
+          "station_name_th": "ทิพวัล",
+          "lat": 13.636736,
+          "lng": 100.609916,
+          "osm_id": "node/7781234528"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7781234528"
+      ]
+    },
+    {
+      "id": "e6",
+      "name_en": "Thong Lo",
+      "name_th": "ทองหล่อ",
+      "names_th": [
+        "ทองหล่อ"
+      ],
+      "lat": 13.72422,
+      "lng": 100.5785,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E6",
+          "station_name_en": "Thong Lo",
+          "station_name_th": "ทองหล่อ",
+          "lat": 13.72422,
+          "lng": 100.5785,
+          "osm_id": "node/12888242031"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12888242031"
+      ]
+    },
+    {
+      "id": "rn05",
+      "name_en": "Thung Song Hong",
+      "name_th": "ทุ่งสองห้อง",
+      "names_th": [
+        "ทุ่งสองห้อง"
+      ],
+      "lat": 13.860182,
+      "lng": 100.567583,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN05",
+          "station_name_en": "Thung Song Hong",
+          "station_name_th": "ทุ่งสองห้อง",
+          "lat": 13.860182,
+          "lng": 100.567583,
+          "osm_id": "node/7314656183"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/7314656183"
+      ]
+    },
+    {
+      "id": "e12",
+      "name_en": "Udom Suk",
+      "name_th": "อุดมสุข",
+      "names_th": [
+        "อุดมสุข"
+      ],
+      "lat": 13.679884,
+      "lng": 100.609447,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "E12",
+          "station_name_en": "Udom Suk",
+          "station_name_th": "อุดมสุข",
+          "lat": 13.679884,
+          "lng": 100.609447,
+          "osm_id": "node/12888242250"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12888242250"
+      ]
+    },
+    {
+      "id": "pk21",
+      "name_en": "Vacharaphol",
+      "name_th": "วัชรพล",
+      "names_th": [
+        "วัชรพล"
+      ],
+      "lat": 13.84925,
+      "lng": 100.642869,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK21",
+          "station_name_en": "Vacharaphol",
+          "station_name_th": "วัชรพล",
+          "lat": 13.84925,
+          "lng": 100.642869,
+          "osm_id": "node/9734277459"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/9734277459"
+      ]
+    },
+    {
+      "id": "n3",
+      "name_en": "Victory Monument",
+      "name_th": "อนุสาวรีย์ชัยสมรภูมิ",
+      "names_th": [
+        "อนุสาวรีย์ชัยสมรภูมิ"
+      ],
+      "lat": 13.762768,
+      "lng": 100.53704,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N3",
+          "station_name_en": "Victory Monument",
+          "station_name_th": "อนุสาวรีย์ชัยสมรภูมิ",
+          "lat": 13.762768,
+          "lng": 100.53704,
+          "osm_id": "node/12885877729"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885877729"
+      ]
+    },
+    {
+      "id": "bl29",
+      "name_en": "Wat Mangkon",
+      "name_th": "วัดมังกร",
+      "names_th": [
+        "วัดมังกร"
+      ],
+      "lat": 13.742201,
+      "lng": 100.509905,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-blue",
+          "name_en": "MRT Blue",
+          "name_th": "รถไฟฟ้ามหานคร สายสีน้ำเงิน",
+          "short": "Blue",
+          "code": "BL29",
+          "station_name_en": "Wat Mangkon",
+          "station_name_th": "วัดมังกร",
+          "lat": 13.742201,
+          "lng": 100.509905,
+          "osm_id": "node/3801040563"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3801040563"
+      ]
+    },
+    {
+      "id": "n17",
+      "name_en": "Wat Phra Sri Mahathat",
+      "name_th": "วัดพระศรีมหาธาตุ",
+      "names_th": [
+        "วัดพระศรีมหาธาตุ"
+      ],
+      "lat": 13.875339,
+      "lng": 100.59668,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N17",
+          "station_name_en": "Wat Phra Sri Mahathat",
+          "station_name_th": "วัดพระศรีมหาธาตุ",
+          "lat": 13.875339,
+          "lng": 100.59668,
+          "osm_id": "node/7613336661"
+        }
+      ],
+      "connections": [
+        {
+          "id": "pk16",
+          "name_en": "Wat Phra Sri Mahathat",
+          "lines": [
+            {
+              "code": "PK16",
+              "name_en": "Wat Phra Sri Mahathat",
+              "name_th": "วัดพระศรีมหาธาตุ",
+              "line_id": "mrt-pink",
+              "line_short": "Pink",
+              "line_name_en": "MRT Pink"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/7613336661"
+      ]
+    },
+    {
+      "id": "pk16",
+      "name_en": "Wat Phra Sri Mahathat",
+      "name_th": "วัดพระศรีมหาธาตุ",
+      "names_th": [
+        "วัดพระศรีมหาธาตุ"
+      ],
+      "lat": 13.874461,
+      "lng": 100.597268,
+      "interchange": true,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK16",
+          "station_name_en": "Wat Phra Sri Mahathat",
+          "station_name_th": "วัดพระศรีมหาธาตุ",
+          "lat": 13.874461,
+          "lng": 100.597268,
+          "osm_id": "node/9733987646"
+        }
+      ],
+      "connections": [
+        {
+          "id": "n17",
+          "name_en": "Wat Phra Sri Mahathat",
+          "lines": [
+            {
+              "code": "N17",
+              "name_en": "Wat Phra Sri Mahathat",
+              "name_th": "วัดพระศรีมหาธาตุ",
+              "line_id": "bts-sukhumvit",
+              "line_short": "Sukhumvit",
+              "line_name_en": "BTS Sukhumvit"
+            }
+          ]
+        }
+      ],
+      "osm_ids": [
+        "node/9733987646"
+      ]
+    },
+    {
+      "id": "rn03",
+      "name_en": "Wat Samian Nari",
+      "name_th": "วัดเสมียนนารี",
+      "names_th": [
+        "วัดเสมียนนารี"
+      ],
+      "lat": 13.841576,
+      "lng": 100.557551,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "srt-dark-red",
+          "name_en": "SRT Dark Red",
+          "name_th": "รถไฟฟ้าชานเมือง สายสีแดงเข้ม",
+          "short": "Dark Red",
+          "code": "RN03",
+          "station_name_en": "Wat Samian Nari",
+          "station_name_th": "วัดเสมียนนารี",
+          "lat": 13.841576,
+          "lng": 100.557551,
+          "osm_id": "node/6697089669"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/6697089669"
+      ]
+    },
+    {
+      "id": "pp14",
+      "name_en": "Wong Sawang",
+      "name_th": "วงศ์สว่าง",
+      "names_th": [
+        "วงศ์สว่าง"
+      ],
+      "lat": 13.829919,
+      "lng": 100.526532,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP14",
+          "station_name_en": "Wong Sawang",
+          "station_name_th": "วงศ์สว่าง",
+          "lat": 13.829919,
+          "lng": 100.526532,
+          "osm_id": "node/3487510834"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487510834"
+      ]
+    },
+    {
+      "id": "s8",
+      "name_en": "Wongwian Yai",
+      "name_th": "วงเวียนใหญ่",
+      "names_th": [
+        "วงเวียนใหญ่"
+      ],
+      "lat": 13.721082,
+      "lng": 100.495159,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S8",
+          "station_name_en": "Wongwian Yai",
+          "station_name_th": "วงเวียนใหญ่",
+          "lat": 13.721082,
+          "lng": 100.495159,
+          "osm_id": "node/443815142"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/443815142"
+      ]
+    },
+    {
+      "id": "s11",
+      "name_en": "Wutthakat",
+      "name_th": "วุฒากาศ",
+      "names_th": [
+        "วุฒากาศ"
+      ],
+      "lat": 13.713023,
+      "lng": 100.468903,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-silom",
+          "name_en": "BTS Silom",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสีลม",
+          "short": "Silom",
+          "code": "S11",
+          "station_name_en": "Wutthakat",
+          "station_name_th": "วุฒากาศ",
+          "lat": 13.713023,
+          "lng": 100.468903,
+          "osm_id": "node/1113055052"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/1113055052"
+      ]
+    },
+    {
+      "id": "n23",
+      "name_en": "Yaek Kor Por Aor",
+      "name_th": "แยก คปอ.",
+      "names_th": [
+        "แยก คปอ."
+      ],
+      "lat": 13.925024,
+      "lng": 100.62582,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "bts-sukhumvit",
+          "name_en": "BTS Sukhumvit",
+          "name_th": "รถไฟฟ้าบีทีเอส สายสุขุมวิท",
+          "short": "Sukhumvit",
+          "code": "N23",
+          "station_name_en": "Yaek Kor Por Aor",
+          "station_name_th": "แยก คปอ.",
+          "lat": 13.925024,
+          "lng": 100.62582,
+          "osm_id": "node/12885876727"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/12885876727"
+      ]
+    },
+    {
+      "id": "yl09",
+      "name_en": "Yaek Lam Sali",
+      "name_th": "แยกลำสาลี",
+      "names_th": [
+        "แยกลำสาลี"
+      ],
+      "lat": 13.761844,
+      "lng": 100.645552,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-yellow",
+          "name_en": "MRT Yellow",
+          "name_th": "รถไฟฟ้ามหานคร สายสีเหลือง",
+          "short": "Yellow",
+          "code": "YL09",
+          "station_name_en": "Yaek Lam Sali",
+          "station_name_th": "แยกลำสาลี",
+          "lat": 13.761844,
+          "lng": 100.645552,
+          "osm_id": "node/8717933829"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/8717933829"
+      ]
+    },
+    {
+      "id": "pp9",
+      "name_en": "Yaek Nonthaburi 1",
+      "name_th": "แยกนนทบุรี 1",
+      "names_th": [
+        "แยกนนทบุรี 1"
+      ],
+      "lat": 13.866011,
+      "lng": 100.494108,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP9",
+          "station_name_en": "Yaek Nonthaburi 1",
+          "station_name_th": "แยกนนทบุรี 1",
+          "lat": 13.866011,
+          "lng": 100.494108,
+          "osm_id": "node/3487511212"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487511212"
+      ]
+    },
+    {
+      "id": "pk06",
+      "name_en": "Yaek Pak Kret",
+      "name_th": "แยกปากเกร็ด",
+      "names_th": [
+        "แยกปากเกร็ด"
+      ],
+      "lat": 13.906148,
+      "lng": 100.5054,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-pink",
+          "name_en": "MRT Pink",
+          "name_th": "รถไฟฟ้ามหานคร สายสีชมพู",
+          "short": "Pink",
+          "code": "PK06",
+          "station_name_en": "Yaek Pak Kret",
+          "station_name_th": "แยกปากเกร็ด",
+          "lat": 13.906148,
+          "lng": 100.5054,
+          "osm_id": "node/10867419311"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/10867419311"
+      ]
+    },
+    {
+      "id": "pp13",
+      "name_en": "Yaek Tiwanon",
+      "name_th": "แยกติวานนท์",
+      "names_th": [
+        "แยกติวานนท์"
+      ],
+      "lat": 13.839575,
+      "lng": 100.515011,
+      "interchange": false,
+      "lines": [
+        {
+          "id": "mrt-purple",
+          "name_en": "MRT Purple",
+          "name_th": "รถไฟฟ้ามหานคร สายสีม่วง",
+          "short": "Purple",
+          "code": "PP13",
+          "station_name_en": "Yaek Tiwanon",
+          "station_name_th": "แยกติวานนท์",
+          "lat": 13.839575,
+          "lng": 100.515011,
+          "osm_id": "node/3487510858"
+        }
+      ],
+      "connections": [],
+      "osm_ids": [
+        "node/3487510858"
+      ]
+    }
+  ]
+}

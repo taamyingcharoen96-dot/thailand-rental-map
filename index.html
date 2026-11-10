@@ -860,6 +860,85 @@
       color: #374151;
     }
     .map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .line-legend {
+      position: absolute;
+      z-index: 400;
+      left: 12px;
+      bottom: 46px;
+      max-width: min(250px, calc(100% - 24px));
+      background: rgba(255,255,255,.94);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px 8px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 10px;
+      font-size: 11px;
+      line-height: 1.2;
+      color: #374151;
+      pointer-events: none;
+    }
+    .line-legend[hidden] { display: none; }
+    .line-legend span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      min-width: 0;
+      white-space: nowrap;
+    }
+    .line-legend i {
+      width: 14px;
+      height: 3px;
+      border-radius: 2px;
+      flex: 0 0 auto;
+    }
+    .station-label {
+      background: none !important;
+      border: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      overflow: visible !important;
+    }
+    .station-label span {
+      display: inline-block;
+      transform: translate(7px, -50%);
+      background: rgba(255,255,255,.92);
+      border-radius: 4px;
+      padding: 0 4px;
+      font-size: 11px;
+      font-weight: 650;
+      line-height: 1.35;
+      color: #111827;
+      white-space: nowrap;
+      box-shadow: 0 1px 2px rgba(0,0,0,.18);
+      pointer-events: none;
+    }
+    .leaflet-tooltip.station-tip {
+      background: rgba(255,255,255,.97);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.16);
+      padding: 4px 8px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #111827;
+    }
+    .leaflet-tooltip.station-tip::before { display: none; }
+    .station-pop .leaflet-popup-content { margin: 8px 10px; }
+    .st-pop { font-size: 13px; line-height: 1.35; }
+    .st-line { display: flex; gap: 6px; align-items: flex-start; margin-bottom: 6px; }
+    .st-swatch {
+      width: 10px;
+      height: 10px;
+      margin-top: 3px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.18);
+    }
+    .st-th { color: var(--muted); font-size: 12px; font-weight: 500; }
+    .st-link { color: #374151; font-size: 12px; margin-top: 2px; }
     .legend-dot {
       width: 10px;
       height: 10px;
@@ -1026,6 +1105,7 @@
       body.view-map .detail-pane { display: none !important; }
       .detail-map { display: inline-flex; align-items: center; }
       .building-hover .bh-photo { height: 120px; }
+      .line-legend { font-size: 10px; gap: 2px 8px; bottom: 44px; }
     }
     @media (max-width: 480px) {
       .card { grid-template-columns: 1fr; }
@@ -1054,7 +1134,7 @@
           <span>Chao Phraya Riverside</span>
         </span>
       </p>
-      <p class="osm-note">Buildings © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, ODbL</p>
+      <p class="osm-note">Buildings and rail lines © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, ODbL</p>
     </div>
     <div class="filters" id="filters">
       <div class="search-wrap">
@@ -1080,6 +1160,10 @@
         <option value="apartment">Apartment</option>
         <option value="house">House</option>
       </select>
+      <label class="chip-check" title="Show Bangkok train and metro lines">
+        <input type="checkbox" id="trains" checked>
+        Train lines
+      </label>
       <button type="button" class="btn btn-more" id="moreBtn" aria-expanded="false" aria-controls="moreFilters">More filters</button>
       <button type="button" class="btn btn-reset" id="resetBtn">Reset</button>
       <div class="result-count" id="resultCount" role="status">—</div>
@@ -1108,6 +1192,7 @@
         <input type="checkbox" id="searchAsMove">
         Search as I move the map
       </label>
+      <div class="line-legend" id="lineLegend" hidden aria-label="Train line colors"></div>
       <div class="map-legend" aria-label="Pin colors">
         <span><i class="legend-dot" aria-hidden="true"></i> Listings</span>
         <span><i class="legend-dot legend-high" aria-hidden="true"></i> ฿100,000+ / month</span>
@@ -1359,6 +1444,8 @@
     reset: document.getElementById("resetBtn"),
     count: document.getElementById("resultCount"),
     searchAsMove: document.getElementById("searchAsMove"),
+    trains: document.getElementById("trains"),
+    lineLegend: document.getElementById("lineLegend"),
     overlay: document.getElementById("mapOverlay"),
     ovPhoto: document.getElementById("ovPhoto"),
     ovPrice: document.getElementById("ovPrice"),
@@ -1393,6 +1480,164 @@
     attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, ODbL",
   }).addTo(map);
   markerLayer.addTo(map);
+
+  const transitLineLayer = L.layerGroup();
+  const transitStationLayer = L.layerGroup();
+  const transitLabelLayer = L.layerGroup();
+  const STATION_LABEL_ZOOM = 14;
+  let transitStations = [];
+  let transitReady = false;
+  const lineColorById = {};
+
+  function stationNames(s) {
+    const names = [];
+    (s.lines || []).forEach((line) => {
+      const name = line.station_name_en || s.name_en;
+      if (name && !names.includes(name)) names.push(name);
+    });
+    return names;
+  }
+
+  function stationCodes(s) {
+    const codes = [];
+    (s.lines || []).forEach((line) => {
+      if (line.code && !codes.includes(line.code)) codes.push(line.code);
+    });
+    return codes;
+  }
+
+  function stationLabelText(s) {
+    const name = stationNames(s).join(" / ") || s.name_en || s.name_th || "Station";
+    const codes = stationCodes(s);
+    return codes.length ? `${name} · ${codes.join(" · ")}` : name;
+  }
+
+  function stationTipHtml(s) {
+    const thai = [];
+    (s.lines || []).forEach((line) => {
+      if (line.station_name_th && !thai.includes(line.station_name_th)) thai.push(line.station_name_th);
+    });
+    const lineNames = (s.lines || []).map((line) => line.name_en).filter(Boolean).join(" · ");
+    const links = (s.connections || []).map((link) => {
+      const bits = (link.lines || []).map((line) => [line.line_short, line.code].filter(Boolean).join(" "));
+      return `Interchange with ${link.name_en}${bits.length ? " · " + bits.join(", ") : ""}`;
+    });
+    return [stationLabelText(s), thai.join(" · "), lineNames, ...links].filter(Boolean).map(esc).join("<br>");
+  }
+
+  function stationPopupHtml(s) {
+    const rows = (s.lines || []).map((line) => {
+      const color = lineColorById[line.id] || "#111827";
+      const code = line.code ? ` · ${esc(line.code)}` : "";
+      const thai = line.station_name_th ? `<div class="st-th">${esc(line.station_name_th)}</div>` : "";
+      return `<div class="st-line"><i class="st-swatch" style="background:${esc(color)}"></i><div><strong>${esc(line.station_name_en || s.name_en || "Station")}${code}</strong><div>${esc(line.name_en || "")}</div>${thai}</div></div>`;
+    }).join("");
+    const links = (s.connections || []).map((link) => {
+      const bits = (link.lines || []).map((line) => [line.line_short, line.code].filter(Boolean).join(" ")).join(", ");
+      const thai = (link.lines || []).map((line) => line.name_th).filter(Boolean)[0];
+      return `<div class="st-link">Interchange with ${esc(link.name_en)}${bits ? " · " + esc(bits) : ""}${thai ? " · " + esc(thai) : ""}</div>`;
+    }).join("");
+    return `<div class="st-pop">${rows}${links}</div>`;
+  }
+
+  function accentColor(s) {
+    if (s.lines && s.lines.length > 1) return lineColorById[s.lines[1].id] || null;
+    const other = s.connections && s.connections[0] && s.connections[0].lines && s.connections[0].lines[0];
+    return other ? lineColorById[other.line_id] || null : null;
+  }
+
+  function latLngsFromGeometry(geometry) {
+    if (!geometry) return [];
+    const toLatLng = (pair) => [pair[1], pair[0]];
+    if (geometry.type === "LineString") return geometry.coordinates.map(toLatLng);
+    if (geometry.type === "MultiLineString") return geometry.coordinates.map((part) => part.map(toLatLng));
+    return [];
+  }
+
+  function addTransit(linesGeo, stationsDoc) {
+    const features = linesGeo && Array.isArray(linesGeo.features) ? linesGeo.features : [];
+    features.forEach((feature) => {
+      const props = feature.properties || {};
+      const color = props.color || "#111827";
+      if (props.id) lineColorById[props.id] = color;
+      const latlngs = latLngsFromGeometry(feature.geometry);
+      if (!latlngs.length) return;
+      const casing = { interactive: false, lineCap: "round", lineJoin: "round", opacity: 0.92 };
+      L.polyline(latlngs, { ...casing, color: "#ffffff", weight: 6.5 }).addTo(transitLineLayer);
+      L.polyline(latlngs, { ...casing, color, weight: 3.5, opacity: 0.95 }).addTo(transitLineLayer);
+    });
+    transitStations = stationsDoc && Array.isArray(stationsDoc.stations) ? stationsDoc.stations : [];
+    transitStations.forEach((s) => {
+      if (!Number.isFinite(Number(s.lat)) || !Number.isFinite(Number(s.lng))) return;
+      const primary = (s.lines && s.lines[0] && lineColorById[s.lines[0].id]) || "#111827";
+      const accent = s.interchange ? accentColor(s) : null;
+      if (accent) {
+        L.circleMarker([s.lat, s.lng], {
+          radius: 10,
+          color: accent,
+          weight: 2.5,
+          fillOpacity: 0,
+          opacity: 1,
+          interactive: false,
+        }).addTo(transitStationLayer);
+      }
+      const marker = L.circleMarker([s.lat, s.lng], {
+        radius: s.interchange ? 7 : 6,
+        color: primary,
+        weight: 2,
+        fillColor: "#ffffff",
+        fillOpacity: 1,
+        opacity: 1,
+      });
+      marker.bindTooltip(stationTipHtml(s), {
+        direction: "top",
+        offset: [0, -8],
+        opacity: 1,
+        className: "station-tip",
+      });
+      marker.bindPopup(stationPopupHtml(s), { className: "station-pop", maxWidth: 260, autoPan: true });
+      marker.on("click", () => { suppressMapClick = true; });
+      marker.addTo(transitStationLayer);
+    });
+    el.lineLegend.innerHTML = features.map((feature) => {
+      const props = feature.properties || {};
+      return `<span><i style="background:${esc(props.color || "#111")}"></i>${esc(props.short || props.name_en || "")}</span>`;
+    }).join("");
+    transitReady = true;
+    applyTransitVisibility();
+  }
+
+  function syncStationLabels() {
+    transitLabelLayer.clearLayers();
+    if (!transitReady || !el.trains.checked || map.getZoom() < STATION_LABEL_ZOOM) return;
+    const bounds = map.getBounds().pad(0.15);
+    transitStations.forEach((s) => {
+      if (!bounds.contains([Number(s.lat), Number(s.lng)])) return;
+      L.marker([Number(s.lat), Number(s.lng)], {
+        icon: L.divIcon({
+          className: "station-label",
+          html: `<span>${esc(stationLabelText(s))}</span>`,
+          iconSize: [0, 0],
+          iconAnchor: [0, 0],
+        }),
+        interactive: false,
+        keyboard: false,
+        zIndexOffset: -50,
+      }).addTo(transitLabelLayer);
+    });
+  }
+
+  function applyTransitVisibility() {
+    if (!transitReady) return;
+    const show = el.trains.checked;
+    [transitLineLayer, transitStationLayer, transitLabelLayer].forEach((layer) => {
+      if (show && !map.hasLayer(layer)) layer.addTo(map);
+      if (!show && map.hasLayer(layer)) map.removeLayer(layer);
+    });
+    el.lineLegend.hidden = !show;
+    if (show) syncStationLabels();
+    if (markerLayer.bringToFront) markerLayer.bringToFront();
+  }
 
   function buildingOf(listing) {
     return listing && listing.building_id ? buildingById.get(listing.building_id) : null;
@@ -1875,6 +2120,7 @@
         closeBuildingHover();
       }
     }
+    if (markerLayer.bringToFront) markerLayer.bringToFront();
   }
 
   function paintMarkerSelection() {
@@ -2289,6 +2535,8 @@
     const pt = p.get("type");
     if (pt && [...el.ptype.options].some((o) => o.value === pt)) el.ptype.value = pt;
     if (p.get("pets") === "1") el.pets.checked = true;
+    const trains = p.get("trains");
+    if (trains === "0" || trains === "off" || trains === "false") el.trains.checked = false;
     const furnish = p.get("furnish");
     if (["fully", "partly", "unfurnished"].includes(furnish)) el.furnish.value = furnish;
     if (el.pets.checked || el.furnish.value) setMoreOpen(true);
@@ -2304,6 +2552,7 @@
     if (el.ptype.value) p.set("type", el.ptype.value);
     if (el.pets.checked) p.set("pets", "1");
     if (el.furnish.value) p.set("furnish", el.furnish.value);
+    if (!el.trains.checked) p.set("trains", "0");
     const qs = p.toString();
     const next = qs ? `${location.pathname}?${qs}` : location.pathname;
     if (location.pathname + location.search !== next) history.replaceState(null, "", next);
@@ -2505,6 +2754,10 @@
     });
   });
   el.pets.addEventListener("change", () => refresh());
+  el.trains.addEventListener("change", () => {
+    applyTransitVisibility();
+    if (urlReady) writeFiltersToUrl();
+  });
   el.moreBtn.addEventListener("click", () => setMoreOpen(!el.more.classList.contains("open")));
   el.searchAsMove.addEventListener("change", () => refresh());
   el.reset.addEventListener("click", () => {
@@ -2515,16 +2768,20 @@
     el.pets.checked = false;
     el.furnish.value = "";
     el.searchAsMove.checked = false;
+    el.trains.checked = true;
+    applyTransitVisibility();
     setMoreOpen(false);
     showAll();
   });
 
   map.on("moveend", () => {
+    syncStationLabels();
     if (suppressMoveFilter) return;
     if (el.searchAsMove.checked) refresh();
     else if (map.getZoom() >= EMPTY_ZOOM) syncMarkers();
   });
   map.on("zoomend", () => {
+    syncStationLabels();
     if (suppressMoveFilter) return;
     syncMarkers();
   });
@@ -2549,7 +2806,7 @@
   let hoverRaf = 0;
   let queuedHoverPt = null;
   map.getContainer().addEventListener("mousemove", (ev) => {
-    if (ev.target.closest && ev.target.closest("input, button, a, .leaflet-control, .map-controls, .map-legend")) {
+    if (ev.target.closest && ev.target.closest("input, button, a, .leaflet-control, .leaflet-popup, .leaflet-tooltip, .map-controls, .map-legend, .line-legend")) {
       map.getContainer().style.cursor = "";
       queuedHoverPt = null;
       if (!hoverState.pinned) scheduleHoverHide();
@@ -2607,11 +2864,24 @@
     return r.json();
   });
 
+  const bootAll = (listings, directory, lines, stations) => {
+    boot(listings, directory);
+    if (lines && stations) addTransit(lines, stations);
+  };
+
   if (Array.isArray(window.__LISTINGS__)) {
-    boot(window.__LISTINGS__, window.__BUILDINGS__ || null);
+    bootAll(window.__LISTINGS__, window.__BUILDINGS__ || null, window.__TRANSIT_LINES__ || null, window.__TRANSIT_STATIONS__ || null);
   } else {
-    Promise.all([loadJson("data/listings.json"), loadJson("data/buildings.json")])
-      .then(([listings, directory]) => boot(listings, directory))
+    const optionalJson = (url) => loadJson(url).catch((err) => {
+      console.error(err);
+      return null;
+    });
+    Promise.all([
+      loadJson("data/listings.json"),
+      loadJson("data/buildings.json"),
+      optionalJson("data/transit_lines.geojson"),
+      optionalJson("data/transit_stations.json"),
+    ]).then(([listings, directory, lines, stations]) => bootAll(listings, directory, lines, stations))
       .catch((err) => {
         console.error(err);
         el.list.innerHTML = `<div class="empty-state">Listings could not be loaded.</div>`;
