@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.invalid/thailand-rental-map/buildings.schema.json",
   "title": "Thailand Rental Map building directory",
-  "description": "Residential buildings along the Sukhumvit BTS corridor from Nana to Bearing, plus Ari, Silom–Sathorn, Bang Na (BITEC), MRT Phra Ram 9, Phaya Thai, Ratchathewi, Chit Lom, Phloen Chit, Lumphini, and Saphan Taksin. Names and coordinates come from OpenStreetMap under the Open Database License, or from a public FazWaz project page when OpenStreetMap has no match.",
+  "description": "Residential buildings along the Sukhumvit BTS corridor from Nana to Bearing, plus Ari, Silom–Sathorn, Bang Na (BITEC), MRT Phra Ram 9, Phaya Thai, Ratchathewi, Chit Lom, Phloen Chit, Lumphini, Saphan Taksin, and the Chao Phraya riverside inside Bangkok (1.5 km of the river, clipped to the Bangkok boundary, labeled by district). Names and coordinates come from OpenStreetMap under the Open Database License, or from a public FazWaz project page when OpenStreetMap has no match.",
   "type": "object",
   "additionalProperties": false,
   "required": ["area", "areas", "attribution", "retrieved_at", "buildings"],
@@ -66,7 +66,15 @@
               "on-nut", "bang-chak", "punnawithi", "udom-suk", "bang-na", "bearing",
               "ari", "silom-sathorn", "bang-na-bitec",
               "phra-ram-9", "phaya-thai", "ratchathewi", "chit-lom", "phloen-chit",
-              "lumphini", "saphan-taksin"
+              "lumphini", "saphan-taksin",
+              "chao-phraya-bang-kho-laem", "chao-phraya-bang-na", "chao-phraya-bang-phlat",
+              "chao-phraya-bang-rak", "chao-phraya-bang-sue", "chao-phraya-bangkok-noi",
+              "chao-phraya-bangkok-yai", "chao-phraya-chom-thong", "chao-phraya-dusit",
+              "chao-phraya-khlong-san", "chao-phraya-khlong-toei", "chao-phraya-pathum-wan",
+              "chao-phraya-phra-khanong", "chao-phraya-phra-nakhon",
+              "chao-phraya-pom-prap-sattru-phai", "chao-phraya-rat-burana",
+              "chao-phraya-samphanthawong", "chao-phraya-sathon", "chao-phraya-thon-buri",
+              "chao-phraya-yan-nawa"
             ]
           }
         },
