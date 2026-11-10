@@ -8,9 +8,9 @@ The page is a split list and map (Leaflet, OpenStreetMap). Listings in the same 
 
 Pet friendly and furnishing match only a value stated in that listing’s title, notes, or source URL. `null` or an omitted field means unknown. Unknown listings stay visible until that filter is set. They are not treated as “no”.
 
-Nine ads state a pet rule. Marque Sukhumvit 197 sqm (`portal-marque-3br-197-219k-pet`) and The Estelle 162 sqm (`portal-estelle-3br-162-210k-u6844923`) say pet-friendly in the title or notes. Phatsana Garden (`portal-phatsana-garden-4br-345-160k-5001441`) has `pet-friendly` in the source URL. 38 Mansion (`portal-38-mansion-1br-57-25k-6404018`) has `cat-friendly` in the source URL, so it counts as pet friendly. Centurion Park (`portal-centurion-park-1br-53-23k-6368997`) says no pets. Tonson One Residence, Muniq Langsuan, and SCOPE Langsuan in the Lumphini corridor batch below say pet-friendly in the ad text. M Silom in the Chong Nonsi, Saint Louis and Surasak batch below says pet-friendly. The other 178 listings do not state a pet rule. The Marque 197 sqm / ฿250,000 note only distinguishes that unit from the pet-friendly one, so its pet field stays unknown.
+Eleven ads state a pet rule. Marque Sukhumvit 197 sqm (`portal-marque-3br-197-219k-pet`) and The Estelle 162 sqm (`portal-estelle-3br-162-210k-u6844923`) say pet-friendly in the title or notes. Phatsana Garden (`portal-phatsana-garden-4br-345-160k-5001441`) has `pet-friendly` in the source URL. 38 Mansion (`portal-38-mansion-1br-57-25k-6404018`) has `cat-friendly` in the source URL, so it counts as pet friendly. Centurion Park (`portal-centurion-park-1br-53-23k-6368997`) says no pets. Tonson One Residence, Muniq Langsuan, and SCOPE Langsuan in the Lumphini corridor batch below say pet-friendly in the ad text. M Silom in the Chong Nonsi, Saint Louis and Surasak batch below says pet-friendly. The Chao Phraya riverside batch adds a second M Silom unit, 160 sqm (`portal-m-silom-2br-160-119k-6035197`), which says pet-friendly, and Nue Riverest Ratburana (`portal-nue-riverest-ratburana-2br-78-45k-6476049`), which says no pets. The other 276 listings do not state a pet rule. The Marque 197 sqm / ฿250,000 note only distinguishes that unit from the pet-friendly one, so its pet field stays unknown.
 
-Eighty-six ads say “fully furnished.” Twelve are from the earlier batches: Hyde Heritage Thonglor, Rhythm Sukhumvit 36-38, Hive Sukhumvit 65, The Seed Musee, Royal Kensington Mansion, Phatsana Garden, Siamese Exclusive 42, Tongtip Mansion, The Room Sukhumvit 40, Noble Remix, The Prestige 49, and The Strand Thonglor. Eleven are in the Sukhumvit, Ari, Silom–Sathorn and Bang Na batch below: Sukhumvit Suite, Noble State 39, Baan Siri 24, Aspire Sukhumvit 48, Q House Condo Sukhumvit 79, Ideo Blucove Sukhumvit, City Home Sukhumvit, The Coast Condominium, Ideo Mobi Sukhumvit Eastpoint, The Gallery Bearing, and The Address Sathorn. Twenty are in the Phaya Thai and Ari batch below: FYNN Aree, Onyx Phaholyothin, Life @ Phahon–Ari, Centric Scene Aree 2, Centurion Park, The Fine by Fine Home Ari 4, Aritier Penthouse At Ari, Baan Yoswadi, Harmony Living Paholyothin 11, Intro Phaholyothin-Pradipat, KARA Ari-Rama 6, Suanbua Residence Ari-Ratchakru, The Signature by URBANO, Le Monaco Residence Ari, The Monument Sanampao, Siamese Ratchakru, Park Origin Ratchathewi, The Address Siam-Ratchathewi, CONNER Ratchathewi, and Pyne by Sansiri. Seventeen are in the Lumphini / Rajdamri / Wireless batch: Lumpini Park View, Amanta Lumpini, Saladaeng One, The Sukhothai Residences, The Rajdamri, Noble Ambience Sarasin, The Private Residence Rajdamri, Q Langsuan, Magnolias Ratchadamri Boulevard, Muniq Langsuan, The Residences at Sindhorn Kempinski Hotel Bangkok, 98 Wireless, Klass Langsuan, SCOPE Langsuan, The Nest Ploenchit, Noble Ploenchit, and Ploenchit Terrace. Twenty-two are in the Chong Nonsi, Saint Louis and Surasak batch below: both Ivy Sathorn units, Collezio Sathorn-Pipat, both Quad Silom units, both Noble Revo Silom units, Baan Siri Silom, The Diplomat Sathorn, The Infinity, Klass Silom, Silom Suite, Pikul Place, The Room Sathorn, the Life @ Sathorn 10 2BR, Pearl Garden, M Silom, The Empire Place, Sathorn Prime Residence, The Lofts Silom, Ascott Sathorn Bangkok, and Ashton Silom. Four are at The XXXIX by Sansiri: the 60 sqm, 65.62 sqm, 90 sqm, and 120 sqm units. The other 101 leave furnishing unknown, including every note that says “furnishing not stated”. 38 Mansion’s URL slug also says fully furnished, but the notes say furnishing was not stated, so that field stays unknown. Khun by Yoo’s “furnished interior renders” describes the gallery, not the unit. Nothing in the copied text states partly furnished or unfurnished. Six listings are studios (`bedrooms` 0): Rhythm Sukhumvit 36-38, Noble Reflex, Ashton Chula–Silom, Life One Wireless, Noble Ploenchit, and Sindhorn Residence.
+One hundred twenty-seven ads say “fully furnished.” Twelve are from the earlier batches: Hyde Heritage Thonglor, Rhythm Sukhumvit 36-38, Hive Sukhumvit 65, The Seed Musee, Royal Kensington Mansion, Phatsana Garden, Siamese Exclusive 42, Tongtip Mansion, The Room Sukhumvit 40, Noble Remix, The Prestige 49, and The Strand Thonglor. Eleven are in the Sukhumvit, Ari, Silom–Sathorn and Bang Na batch below: Sukhumvit Suite, Noble State 39, Baan Siri 24, Aspire Sukhumvit 48, Q House Condo Sukhumvit 79, Ideo Blucove Sukhumvit, City Home Sukhumvit, The Coast Condominium, Ideo Mobi Sukhumvit Eastpoint, The Gallery Bearing, and The Address Sathorn. Twenty are in the Phaya Thai and Ari batch below: FYNN Aree, Onyx Phaholyothin, Life @ Phahon–Ari, Centric Scene Aree 2, Centurion Park, The Fine by Fine Home Ari 4, Aritier Penthouse At Ari, Baan Yoswadi, Harmony Living Paholyothin 11, Intro Phaholyothin-Pradipat, KARA Ari-Rama 6, Suanbua Residence Ari-Ratchakru, The Signature by URBANO, Le Monaco Residence Ari, The Monument Sanampao, Siamese Ratchakru, Park Origin Ratchathewi, The Address Siam-Ratchathewi, CONNER Ratchathewi, and Pyne by Sansiri. Seventeen are in the Lumphini / Rajdamri / Wireless batch: Lumpini Park View, Amanta Lumpini, Saladaeng One, The Sukhothai Residences, The Rajdamri, Noble Ambience Sarasin, The Private Residence Rajdamri, Q Langsuan, Magnolias Ratchadamri Boulevard, Muniq Langsuan, The Residences at Sindhorn Kempinski Hotel Bangkok, 98 Wireless, Klass Langsuan, SCOPE Langsuan, The Nest Ploenchit, Noble Ploenchit, and Ploenchit Terrace. Twenty-two are in the Chong Nonsi, Saint Louis and Surasak batch below: both Ivy Sathorn units, Collezio Sathorn-Pipat, both Quad Silom units, both Noble Revo Silom units, Baan Siri Silom, The Diplomat Sathorn, The Infinity, Klass Silom, Silom Suite, Pikul Place, The Room Sathorn, the Life @ Sathorn 10 2BR, Pearl Garden, M Silom, The Empire Place, Sathorn Prime Residence, The Lofts Silom, Ascott Sathorn Bangkok, and Ashton Silom. Four are at The XXXIX by Sansiri: the 60 sqm, 65.62 sqm, 90 sqm, and 120 sqm units. Forty-one are in the Chao Phraya riverside batch below. The other 160 leave furnishing unknown, including every note that says “furnishing not stated”. 38 Mansion’s URL slug also says fully furnished, but the notes say furnishing was not stated, so that field stays unknown. Khun by Yoo’s “furnished interior renders” describes the gallery, not the unit. Nothing in the copied text states partly furnished or unfurnished. Six listings are studios (`bedrooms` 0): Rhythm Sukhumvit 36-38, Noble Reflex, Ashton Chula–Silom, Life One Wireless, Noble Ploenchit, and Sindhorn Residence.
 
 Not in this filter bar yet: bathrooms, size, distance to BTS/MRT, amenities, zone, and sort.
 
@@ -306,6 +306,119 @@ Four of these ads say fully furnished: the 60 sqm, 65.62 sqm, 90 sqm, and 120 sq
 
 PropertyHub listing 4328270 was left off. Its price field says ฿74,000 and the text says ฿75,000, and the room-type line says 1 bedroom while the bedroom count says 2. Ads whose floor field was a range or a placeholder (1x, 20+, 21–50, 15–39) were left off. Same size, price, and floor already shown by another card on the project page was not repeated. PropertyScout’s own pages hide the poster’s phone, Line, and email, so those pages were not copied. Direct requests to DDproperty, FazWaz, Hipflat, and Dot Property were refused, so ads that appeared only there were not copied. No copied ad states that the poster is the unit owner.
 
+## Chao Phraya riverside rentals
+
+One hundred condominium ads in the Chao Phraya Riverside zone were copied on 2026-11-10 from public PropertyHub pages. Each building’s zone label starts with Chao Phraya Riverside. Each `building_id` is a directory pin, and the coordinates are that pin. They are current public ads, and availability was not confirmed with the owner. Each `contact` is a Line id, phone, or WhatsApp printed on that ad. Ads with no public contact were left off. Each ad has four public-gallery photos.
+
+Thirty-three rent for ฿20,000–฿30,000, thirty-three for ฿30,001–฿79,999, and thirty-four for ฿80,000 or more. The rents run from ฿20,000 to ฿250,000. The 100 ads sit in 51 buildings and 12 districts: Khlong San 16, Bang Kho Laem 15, Yan Nawa 15, Bang Rak 13, Sathon 10, Bang Phlat 8, Thon Buri 7, Bang Sue 6, Rat Burana 6, Samphanthawong 2, Bangkok Noi 1, and Phra Nakhon 1. No building has more than three of these ads. All 100 have a public Line id or phone. Seventy-four name the poster as an agent on the public profile. Twenty-six do not get a role: the profile user type says owner while the profile text describes a brokerage, or the profile page does not state a role, and the ad does not say the poster owns the unit. No copied ad states that the poster is the unit owner.
+
+Forty-one of these ads say fully furnished. The other fifty-nine do not state furnishing. Nothing in this batch states partly furnished or unfurnished. M Silom 160 sqm says pet-friendly. Nue Riverest Ratburana says no pets. The other 98 do not state a pet rule.
+
+Two Flexi ads are filed on PropertyHub under Flexi Riverview Charoennakorn. The ad text and the listing pin name Flexi Sathorn - Charoennakorn in Khlong San, which is a different directory building, so those rows use that pin. The Bangkok Sathorn ad is filed under The Bangkok Sathorn - Taksin. The text says The Bangkok Sathorn, about 50 m from BTS Surasak, so that row uses the Surasak directory pin. Banyan Tree rows use the FazWaz directory pin whose name matches the ad. An August Charoenkrung 80 page whose text is a sale at ฿1,580,000, an Origin Plug & Play Sirindhorn Station card whose rent field says ฿3,290,000 for 25.74 sqm while the text does not state that rent, and a Chateau In Town Pinklao card whose text is a unit at The Line Ratchathewi were left off. Ads whose text named a different project, and same-size same-floor reposts, were not repeated.
+
+| Project | District | Rent (THB/mo) | Beds | Size | Contact |
+| --- | --- | --- | --- | --- | --- |
+| Bangkok Feliz Sathorn-Taksin | Khlong San | 20,000 | 2 | 47 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Bangkok Feliz Sathorn-Taksin | Khlong San | 25,000 | 2 | 47 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Banyan Tree Residences Riverside Bangkok | Khlong San | 65,000 | 1 | 70 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Banyan Tree Residences Riverside Bangkok | Khlong San | 70,000 | 1 | 70 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Banyan Tree Residences Riverside Bangkok | Khlong San | 190,000 | 2 | 178.34 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Flexi Sathorn - Charoennakorn | Khlong San | 24,000 | 1 | 34 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Flexi Sathorn - Charoennakorn | Khlong San | 26,000 | 1 | 32 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| FLO by Sansiri | Khlong San | 32,000 | 2 | 48 sqm | LINE off_ro · 0859737217 · WhatsApp 66859737217 |
+| FLO by Sansiri | Khlong San | 38,000 | 2 | 64 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Magnolias Waterfront Residences | Khlong San | 90,000 | 2 | 102 sqm | LINE @jennyproperties · 0961941966 · WhatsApp 66961941966 |
+| Magnolias Waterfront Residences | Khlong San | 110,000 | 2 | 102 sqm | LINE @755pqudx · 0944126961 |
+| River House Condominium | Khlong San | 80,000 | 3 | 220 sqm | LINE @holtop · 0632133317 · 0979211009 · WhatsApp 66632133317 |
+| Saichol Mansion | Khlong San | 85,000 | 4 | 339 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Saichol Mansion | Khlong San | 95,000 | 4 | 245 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| The River | Khlong San | 85,000 | 2 | 110 sqm | LINE @217jgcbp · 0653619502 · WhatsApp 66638692663 |
+| Urbano Absolute Sathon–Taksin | Khlong San | 99,000 | 3 | 165 sqm | LINE @755pqudx · 0944126961 |
+| Altitude Symphony Charoenkrung | Bang Kho Laem | 25,000 | 1 | 30.14 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Altitude Symphony Charoenkrung | Bang Kho Laem | 25,000 | 1 | 30 sqm | LINE @688tvdsw · 0948701685 |
+| Altitude Symphony Charoenkrung | Bang Kho Laem | 52,000 | 2 | 69 sqm | LINE @319helvo · 0633975106 |
+| Canapaya Residences | Bang Kho Laem | 47,000 | 1 | 45 sqm | LINE @645kcgmo · 0634573294 |
+| Canapaya Residences | Bang Kho Laem | 78,000 | 2 | 110 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Canapaya Residences | Bang Kho Laem | 225,000 | 4 | 248 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Lumpini Place Rama III-Riverview | Bang Kho Laem | 30,000 | 2 | 88 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Lumpini Place Rama III-Riverview | Bang Kho Laem | 30,000 | 2 | 70 sqm | LINE @condo78 · 0645356369 · WhatsApp 66645356369 |
+| Lumpini Place Rama III-Riverview | Bang Kho Laem | 32,000 | 2 | 72 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Menam Residences Condominium | Bang Kho Laem | 80,000 | 3 | 127 sqm | LINE @pfagent · 0962453665 |
+| Menam Residences Condominium | Bang Kho Laem | 80,000 | 2 | 99 sqm | LINE @217jgcbp · 0614453194 · WhatsApp 66638692663 |
+| One Altitude Charoenkrung | Bang Kho Laem | 120,000 | 3 | 133 sqm | LINE @holtop · 0632133317 · 0979211009 · WhatsApp 66632133317 |
+| One Altitude Charoenkrung | Bang Kho Laem | 130,000 | 3 | 132 sqm | LINE @303bkkms · 0819299510 · WhatsApp 66819299510 |
+| Rhythm Charoenkrung Pavillion | Bang Kho Laem | 105,000 | 3 | 98 sqm | LINE @217jgcbp · 0614453194 · WhatsApp 66638692663 |
+| Rhythm Charoenkrung Pavillion | Bang Kho Laem | 120,000 | 3 | 136 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Baan Lux-Sathon | Yan Nawa | 170,000 | 3 | 370 sqm | LINE @servepm · 0876968665 · WhatsApp 66876968665 |
+| Baan Yen Akard | Yan Nawa | 70,000 | 2 | 245 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Baan Yen Akard | Yan Nawa | 80,000 | 2 | 240 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Baan Yen Akard | Yan Nawa | 100,000 | 3 | 300 sqm | LINE @lazudi · 024609389 · WhatsApp 66959242968 |
+| Bridge Sathorn-Narathiwas | Yan Nawa | 20,000 | 1 | 45 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Lumpini Park Riverside Rama 3 | Yan Nawa | 24,000 | 2 | 56 sqm | LINE @kanokestate · 0844279988 |
+| Lumpini Park Riverside Rama 3 | Yan Nawa | 25,000 | 2 | 62.02 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Lumpini Park Riverside Rama 3 | Yan Nawa | 37,000 | 3 | 104 sqm | LINE @conmatch · 0923437972 · 0628373269 · 0954920090 · WhatsApp 66628373269 |
+| Lumpini Place Water Cliff | Yan Nawa | 20,000 | 2 | 57 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Lumpini Place Water Cliff | Yan Nawa | 50,000 | 3 | 126 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Royal River Place | Yan Nawa | 40,000 | 2 | 139 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Royal River Place | Yan Nawa | 120,000 | 3 | 312.04 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Royal River Place | Yan Nawa | 250,000 | 6 | 539 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Supalai Prima Riva | Yan Nawa | 90,000 | 3 | 255 sqm | LINE @645kcgmo · 0634573294 |
+| Supalai Prima Riva | Yan Nawa | 90,000 | 3 | 255.6 sqm | LINE @jennyproperties · 0961941966 · WhatsApp 66961941966 |
+| Altitude Samyan-Silom | Bang Rak | 25,000 | 1 | 35 sqm | LINE @280lpyyi · 0968711343 |
+| Altitude Samyan-Silom | Bang Rak | 26,000 | 1 | 37 sqm | LINE @280lpyyi · 0968711343 |
+| Altitude Samyan-Silom | Bang Rak | 33,000 | 2 | 44 sqm | LINE @holtop · 0632133317 · 0979211009 · WhatsApp 66632133317 |
+| Anil Sathorn 12 | Bang Rak | 47,000 | 1 | 46 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Anil Sathorn 12 | Bang Rak | 50,000 | 1 | 46 sqm | LINE @950iqyse · 0993321768 |
+| Baan Siri Silom | Bang Rak | 20,000 | 1 | 46 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| Baan Siri Silom | Bang Rak | 32,000 | 1 | 60.7 sqm | LINE @lazudi · 024609389 · WhatsApp 66959242968 |
+| M Silom | Bang Rak | 119,000 | 2 | 160 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Nusa State Tower Condominium | Bang Rak | 120,000 | 2 | 265 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Nusa State Tower Condominium | Bang Rak | 120,000 | 2 | 267 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| State Tower | Bang Rak | 120,000 | 2 | 268 sqm | LINE @condoboy · 021143566 · WhatsApp 66926647892 |
+| State Tower | Bang Rak | 120,000 | 2 | 267 sqm | LINE @conmatch · 0923437972 · 0628373269 · 0954920090 · WhatsApp 66628373269 |
+| Tanida Residence | Bang Rak | 85,000 | 2 | 87 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Blossom Condo @ Sathorn-Charoenrat | Sathon | 30,000 | 2 | 63 sqm | LINE @535iehwm · 0807911574 |
+| Blossom Condo @ Sathorn-Charoenrat | Sathon | 30,000 | 2 | 62 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Rhythm Sathorn | Sathon | 25,000 | 1 | 45 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Rhythm Sathorn | Sathon | 32,000 | 1 | 45 sqm | LINE @easythaihome · 0855922897 |
+| Rhythm Sathorn | Sathon | 45,000 | 2 | 66 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Supreme Ville | Sathon | 35,000 | 1 | 71 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Supreme Ville | Sathon | 130,000 | 4 | 301.1 sqm | LINE @lazudi · 024609389 · WhatsApp 66959242968 |
+| The Bangkok Sathorn | Sathon | 80,000 | 2 | 119 sqm | LINE @conmatch · 0923437972 · 0628373269 · 0954920090 · WhatsApp 66628373269 |
+| The Issara Sathorn | Sathon | 95,000 | 2 | 110 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| The Issara Sathorn | Sathon | 125,000 | 3 | 188 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Bangkok River Marina | Bang Phlat | 61,000 | 3 | 185 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Bangkok River Marina | Bang Phlat | 70,000 | 2 | 170 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Bangkok River Marina | Bang Phlat | 80,000 | 3 | 181.07 sqm | LINE @holtop · 0632133317 · 0979211009 · WhatsApp 66632133317 |
+| Ideo Charan 70 - Riverview | Bang Phlat | 24,000 | 2 | 56 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Ideo Charan 70 - Riverview | Bang Phlat | 25,000 | 2 | 56 sqm | LINE @280lpyyi · 0968711343 |
+| Ideo Charan 70 - Riverview | Bang Phlat | 32,000 | 2 | 51 sqm | LINE @280lpyyi · 0968711343 |
+| Lumpini Place Rama VIII | Bang Phlat | 28,000 | 2 | 65 sqm | LINE @holtop · 0632133317 · 0979211009 · WhatsApp 66632133317 |
+| Thew River Place | Bang Phlat | 47,500 | 2 | 136.59 sqm | LINE @baanlounge · 0628782251 · 0825936597 · WhatsApp 66825936597 |
+| 333 Riverside | Bang Sue | 22,000 | 1 | 46 sqm | LINE @330zzhdy · 0827189785 |
+| 333 Riverside | Bang Sue | 27,000 | 1 | 45 sqm | LINE @454hhbsx · 0658209826 |
+| 333 Riverside | Bang Sue | 50,000 | 2 | 94 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Chapter One Flow Bangpo | Bang Sue | 27,000 | 2 | 66 sqm | LINE off_ro · 0859737217 · WhatsApp 66859737217 |
+| Chapter One Flow Bangpo | Bang Sue | 35,000 | 2 | 65.73 sqm | LINE @holtop · 0632133317 · 0979211009 · WhatsApp 66632133317 |
+| Chapter One Shine Bangpo | Bang Sue | 35,000 | 2 | 57 sqm | LINE @condopremium · 0633282456 |
+| Na Reva Charoennakhon | Thon Buri | 20,000 | 1 | 33.3 sqm | LINE @lazudi · 024609389 · WhatsApp 66959242968 |
+| Na Reva Charoennakhon | Thon Buri | 22,000 | 1 | 38 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Na Reva Charoennakhon | Thon Buri | 35,000 | 1 | 55 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Niche Mono Charoen Nakorn | Thon Buri | 20,000 | 1 | 50 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Niche Mono Charoen Nakorn | Thon Buri | 32,000 | 2 | 60 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Supalai River Resort | Thon Buri | 32,000 | 2 | 115 sqm | LINE @454hhbsx · 0658209826 |
+| Supalai River Resort | Thon Buri | 120,000 | 3 | 253 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Chapter One Modern Dutch Rat Burana 33 | Rat Burana | 20,000 | 2 | 59 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Chapter One Modern Dutch Rat Burana 33 | Rat Burana | 25,000 | 2 | 60 sqm | LINE @jennyproperties · 0961941966 · WhatsApp 66961941966 |
+| Garden Court | Rat Burana | 25,000 | 1 | 81 sqm | LINE @condo42 · 0821416464 · WhatsApp 66652936444 |
+| Ivy River | Rat Burana | 33,000 | 2 | 114 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Ivy River | Rat Burana | 35,000 | 2 | 100 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| Nue Riverest Ratburana | Rat Burana | 45,000 | 2 | 78 sqm | LINE @jennyproperties · 0961941966 · WhatsApp 66961941966 |
+| Si Phraya River View | Samphanthawong | 29,500 | 1 | 64 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+| Si Phraya River View | Samphanthawong | 35,000 | 2 | 64 sqm | LINE @513eqepl · 024607070 · WhatsApp 66985629903 |
+| dBURA Pran Nok | Bangkok Noi | 20,000 | 2 | 68 sqm | LINE @837jruwp · 024304496 · WhatsApp 66935578313 |
+| The 8 Collection | Phra Nakhon | 28,000 | 2 | 44.5 sqm | LINE @connexproperty · 0990199900 · WhatsApp 66990199900 |
+
 ## Run locally
 
 GitHub Pages serves the repository root on `main` (`index.html`, `data/`, `photos/`). The same layout works locally:
@@ -349,4 +462,4 @@ The page still only opens the card for the EmQuartier center in `index.html` (`E
 
 ## Sources
 
-`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and hand copies of public ads at Marque Sukhumvit, The Estelle Phrom Phong, the other ฿200,000–฿400,000 projects, the Thonglor rentals, the Sukhumvit, Ari, Silom–Sathorn and Bang Na rentals, the Phaya Thai and Ari rentals, the Lumphini, Rajdamri and Wireless Road rentals, the Chong Nonsi, Saint Louis and Surasak rentals, and The XXXIX by Sansiri rentals listed above.
+`sources.md` and `data/sources.json` list places future listings might come from. Active entries today are the owner’s manual post for D.S. Tower 1 and hand copies of public ads at Marque Sukhumvit, The Estelle Phrom Phong, the other ฿200,000–฿400,000 projects, the Thonglor rentals, the Sukhumvit, Ari, Silom–Sathorn and Bang Na rentals, the Phaya Thai and Ari rentals, the Lumphini, Rajdamri and Wireless Road rentals, the Chong Nonsi, Saint Louis and Surasak rentals, The XXXIX by Sansiri rentals, and the Chao Phraya riverside rentals listed above.
