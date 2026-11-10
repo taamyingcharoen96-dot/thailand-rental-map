@@ -9,6 +9,8 @@
     :root {
       --green: #22c55e;
       --green-dark: #16a34a;
+      --purple: #7B2CBF;
+      --purple-dark: #5A189A;
       --border: #e5e7eb;
       --muted: #6b7280;
       --text: #111827;
@@ -298,6 +300,10 @@
       border-color: var(--green);
       box-shadow: 0 0 0 2px rgba(34,197,94,.35), var(--shadow);
     }
+    .card.high.selected {
+      border-color: var(--purple);
+      box-shadow: 0 0 0 2px rgba(123,44,191,.35), var(--shadow);
+    }
     .card-photo {
       background: #e5e7eb;
       position: relative;
@@ -364,6 +370,7 @@
       color: var(--green-dark);
       margin-top: 2px;
     }
+    .card-price.high { color: var(--purple); }
     .card-price.unset { color: var(--muted); font-weight: 600; font-size: 14px; }
     .card-meta {
       font-size: 12px;
@@ -464,6 +471,7 @@
       color: var(--green-dark);
       font-size: 14px;
     }
+    .map-overlay .ov-price.high { color: var(--purple); }
     .map-overlay .ov-title {
       font-weight: 650;
       font-size: 13px;
@@ -650,6 +658,7 @@
       font-weight: 750;
       color: var(--green-dark);
     }
+    .detail-price.high { color: var(--purple); }
     .detail-price.unset {
       color: var(--muted);
       font-size: 16px;
@@ -827,6 +836,40 @@
       height: 30px;
       background: var(--green-dark);
     }
+    .pin-dot.pin-high { background: var(--purple); }
+    .pin-dot.pin-high.selected {
+      background: var(--purple-dark);
+      box-shadow: 0 0 0 3px rgba(123,44,191,.35), 0 1px 4px rgba(0,0,0,.35);
+    }
+    .pin-dot.pin-count.pin-high.selected { background: var(--purple-dark); }
+
+    .map-legend {
+      position: absolute;
+      z-index: 400;
+      left: 12px;
+      bottom: 12px;
+      background: rgba(255,255,255,.96);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 12px;
+      box-shadow: var(--shadow);
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #374151;
+    }
+    .map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--green);
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.18);
+      box-sizing: border-box;
+    }
+    .legend-dot.legend-high { background: var(--purple); }
     .pin-dot.pin-empty {
       width: 12px;
       height: 12px;
@@ -1065,6 +1108,10 @@
         <input type="checkbox" id="searchAsMove">
         Search as I move the map
       </label>
+      <div class="map-legend" aria-label="Pin colors">
+        <span><i class="legend-dot" aria-hidden="true"></i> Listings</span>
+        <span><i class="legend-dot legend-high" aria-hidden="true"></i> ฿100,000+ / month</span>
+      </div>
       <div class="building-hover" id="buildingHover" role="tooltip">
         <button type="button" class="bh-close" id="bhClose" aria-label="Close building info">×</button>
         <div class="bh-photo" id="bhPhoto"></div>
@@ -1110,6 +1157,14 @@
   const BANGKOK = [13.7563, 100.5018];
   const PLACEHOLDER = '<div class="placeholder">No photo</div>';
   const EMPTY_ZOOM = 16;
+  // A listing at or above this monthly rent uses the purple pin and price accent.
+  const HIGH_RENT_THB = 100000;
+
+  function isHighRent(l) {
+    if (!l || l.price_thb == null) return false;
+    const n = Number(l.price_thb);
+    return Number.isFinite(n) && n >= HIGH_RENT_THB;
+  }
 
   const esc = (v) => String(v ?? "")
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -1497,13 +1552,14 @@
       const place = [b && b.name, l.neighborhood, l.district].filter(Boolean).join(" · ");
       const notes = shortNotes(l);
       const unset = l.price_thb == null;
+      const high = isHighRent(l);
       const nPhotos = photoCount(l);
-      return `<article class="card${l.id === selectedId ? " selected" : ""}" data-id="${esc(l.id)}" tabindex="0" role="button">
+      return `<article class="card${l.id === selectedId ? " selected" : ""}${high ? " high" : ""}" data-id="${esc(l.id)}" tabindex="0" role="button">
         <div class="card-photo">${src ? `<img src="${esc(src)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder',textContent:'No photo'}))">` : PLACEHOLDER}${nPhotos > 1 ? `<span class="photo-count">${nPhotos} photos</span>` : ""}</div>
         <div class="card-body">
           <h2 class="card-title">${esc(l.title || "Untitled")}</h2>
           <div class="card-loc">${esc(place || l.city || "Bangkok")}</div>
-          <div class="card-price${unset ? " unset" : ""}">${esc(priceText(l))}</div>
+          <div class="card-price${unset ? " unset" : ""}${high ? " high" : ""}">${esc(priceText(l))}</div>
           <div class="card-meta">${esc(metaParts(l).join(" · "))}</div>
           ${notes ? `<div class="card-notes">${esc(notes)}</div>` : ""}
         </div>
@@ -1511,11 +1567,12 @@
     }).join("");
   }
 
-  function buildingIcon(count, selected) {
+  function buildingIcon(count, selected, high) {
     const size = selected ? 30 : 26;
+    const cls = ["pin-dot", "pin-count", high ? "pin-high" : "", selected ? "selected" : ""].filter(Boolean).join(" ");
     return L.divIcon({
       className: "pin-marker",
-      html: `<div class="pin-dot pin-count${selected ? " selected" : ""}">${count}</div>`,
+      html: `<div class="${cls}">${count}</div>`,
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2],
     });
@@ -1548,8 +1605,9 @@
       if (l.building_id && buildingById.has(l.building_id)) {
         const b = buildingById.get(l.building_id);
         if (!inMoveBounds(b.lat, b.lng)) return;
-        const pin = pins.get(b.id) || { building: b, count: 0 };
+        const pin = pins.get(b.id) || { building: b, count: 0, high: false };
         pin.count += 1;
+        if (isHighRent(l)) pin.high = true;
         pins.set(b.id, pin);
         return;
       }
@@ -1559,6 +1617,7 @@
       pins.set("listing:" + l.id, {
         listing: l,
         count: 1,
+        high: isHighRent(l),
         lat: Number(l.lat),
         lng: Number(l.lng),
       });
@@ -1572,7 +1631,10 @@
     });
     if (focusedBuildingId && !pins.has(focusedBuildingId)) {
       const b = buildingById.get(focusedBuildingId);
-      if (b) pins.set(b.id, { building: b, count: unitsFor(b.id).length });
+      if (b) {
+        const units = unitsFor(b.id);
+        pins.set(b.id, { building: b, count: units.length, high: units.some(isHighRent) });
+      }
     }
     return pins;
   }
@@ -1764,10 +1826,11 @@
       const lng = pin.building ? pin.building.lng : pin.lng;
       if (!Number.isFinite(Number(lat)) || !Number.isFinite(Number(lng))) return;
       const selected = id === focusedBuildingId || id === selectedBuilding || id === "listing:" + selectedId;
+      const high = !!pin.high;
       const marker = pin.count > 0
         ? L.marker([Number(lat), Number(lng)], {
-            icon: buildingIcon(pin.count, selected),
-            zIndexOffset: selected ? 500 : 200,
+            icon: buildingIcon(pin.count, selected, high),
+            zIndexOffset: selected ? 500 : (high ? 300 : 200),
           })
         : L.circleMarker([Number(lat), Number(lng)], emptyPinStyle(selected));
       marker.on("click", (ev) => {
@@ -1795,6 +1858,7 @@
       markersById.set(id, {
         marker,
         count: pin.count,
+        high,
         building: pin.building || null,
         lat: Number(lat),
         lng: Number(lng),
@@ -1820,8 +1884,8 @@
     markersById.forEach((entry, id) => {
       const selected = id === focusedBuildingId || id === selectedBuilding || id === "listing:" + selectedId;
       if (entry.count > 0) {
-        entry.marker.setIcon(buildingIcon(entry.count, selected));
-        entry.marker.setZIndexOffset(selected ? 500 : 200);
+        entry.marker.setIcon(buildingIcon(entry.count, selected, entry.high));
+        entry.marker.setZIndexOffset(selected ? 500 : (entry.high ? 300 : 200));
       } else {
         entry.marker.setStyle(emptyPinStyle(selected));
         if (selected && entry.marker.bringToFront) entry.marker.bringToFront();
@@ -1849,6 +1913,7 @@
     overlayPhotoIndex = 0;
     renderOverlayPhoto();
     el.ovPrice.textContent = priceText(l);
+    el.ovPrice.classList.toggle("high", isHighRent(l));
     el.ovTitle.textContent = l.title || "Untitled";
     const b = buildingOf(l);
     el.ovLoc.textContent = [b && b.name, l.neighborhood, l.district].filter(Boolean).join(" · ") || (l.city || "Bangkok");
@@ -1988,7 +2053,7 @@
             <h2 class="detail-title" id="detailTitle">${esc(l.title || "Untitled")}</h2>
             ${place ? `<div class="detail-loc">${esc(place)}</div>` : ""}
             <div class="detail-price-row">
-              <div class="detail-price${l.price_thb == null ? " unset" : ""}">${esc(detailPrice(l))}</div>
+              <div class="detail-price${l.price_thb == null ? " unset" : ""}${isHighRent(l) ? " high" : ""}">${esc(detailPrice(l))}</div>
               ${statusText ? `<span class="status-pill${statusClass}">${esc(statusText)}</span>` : ""}
             </div>
             ${specs ? `<div class="detail-specs">${esc(specs)}</div>` : ""}
@@ -2484,7 +2549,7 @@
   let hoverRaf = 0;
   let queuedHoverPt = null;
   map.getContainer().addEventListener("mousemove", (ev) => {
-    if (ev.target.closest && ev.target.closest("input, button, a, .leaflet-control, .map-controls")) {
+    if (ev.target.closest && ev.target.closest("input, button, a, .leaflet-control, .map-controls, .map-legend")) {
       map.getContainer().style.cursor = "";
       queuedHoverPt = null;
       if (!hoverState.pinned) scheduleHoverHide();
